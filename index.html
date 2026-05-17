@@ -2,169 +2,303 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>☀️ AI 晨报 | 5月17日</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI 新闻日报 - 2026-05-17 08:04</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
-    background: #f8f9fa; color: #212529;
-    padding: 0; max-width: 680px; margin: 0 auto;
-  }
-  .hero {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: #fff; padding: 36px 28px 32px; text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .hero h1 { font-size: 26px; margin-bottom: 6px; }
-  .hero .sub { font-size: 14px; opacity: 0.9; margin-top: 8px; }
-  .hero .stats {
-    display: flex; justify-content: center; gap: 24px; margin-top: 20px;
-  }
-  .hero .stat { text-align: center; }
-  .hero .stat .num { font-size: 28px; font-weight: 800; }
-  .hero .stat .label { font-size: 11px; opacity: 0.75; margin-top: 2px; }
-
-  .content { padding: 24px 20px 32px; }
-  .section-title {
-    font-size: 17px; font-weight: 700; color: #495057;
-    margin: 28px 0 14px 0; padding: 6px 0 8px 0;
-    border-bottom: 2px solid #dee2e6;
-  }
-
-  .card {
-    background: #fff; border-radius: 12px; padding: 20px;
-    margin-bottom: 10px; border: 1px solid #e9ecef;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    position: relative;
-  }
-  .card .rank {
-    position: absolute; top: -8px; left: -8px;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: #ff6b6b; color: #fff;
-    font-size: 13px; font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-  .card h3 { font-size: 15px; line-height: 1.5; margin-bottom: 6px; padding-left: 22px; }
-  .card h3 a { color: #4c6ef5; text-decoration: none; }
-  .card h3 a:hover { text-decoration: underline; }
-  .card .meta {
-    font-size: 12px; color: #868e96; margin-bottom: 8px;
-    padding-left: 22px; display: flex; gap: 12px;
-  }
-  .card .summary {
-    font-size: 14px; line-height: 1.7; color: #495057;
-    border-left: 3px solid #ffe3e3; padding-left: 14px;
-    margin-left: 8px;
-  }
-
-  .footer {
-    text-align: center; padding: 28px 20px;
-    color: #adb5bd; font-size: 12px;
-    border-top: 1px solid #e9ecef;
-  }
-  .footer strong { color: #868e96; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 28px 20px; border-radius: 16px; margin-bottom: 16px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 14px; opacity: 0.9; }
+.header .count { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+.section { margin-bottom: 16px; }
+.section-title { font-size: 17px; font-weight: 700; padding: 12px 16px; background: white; border-radius: 12px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.card { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.card-title { font-size: 15px; font-weight: 600; line-height: 1.4; }
+.card-title a { color: #333; text-decoration: none; }
+.card-title a:hover { color: #667eea; text-decoration: underline; }
+.card-source { font-size: 12px; color: #999; margin: 4px 0 8px; }
+.card-summary { font-size: 14px; color: #555; line-height: 1.6; }
+.hot .card { border-left: 3px solid #ff6b6b; }
+.hot .card-title a { color: #c0392b; }
+.model .card { border-left: 3px solid #667eea; }
+.biz .card { border-left: 3px solid #2ecc71; }
+.academic .card { border-left: 3px solid #f39c12; }
+.footer { text-align: center; padding: 16px; color: #999; font-size: 12px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; margin-right: 4px; }
+.tag-hot { background: #ffeaa7; color: #d35400; }
+.tag-model { background: #dfe6e9; color: #2d3436; }
+.tag-biz { background: #d5f5e3; color: #27ae60; }
+.tag-academic { background: #fdebd0; color: #e67e22; }
 </style>
 </head>
 <body>
-
-<div class="hero">
-  <h1>☀️ AI 晨报</h1>
-  <div class="sub">5月17日 · 昨夜至今晨</div>
-  <div class="stats">
-    <div class="stat"><div class="num">101</div><div class="label">采集</div></div>
-    <div class="stat"><div class="num">15</div><div class="label">精选</div></div>
-    <div class="stat"><div class="num">40</div><div class="label">来源</div></div>
-  </div>
+<div class="container">
+<div class="header">
+<h1>🤖 AI 新闻日报</h1>
+<div class="sub">2026-05-17 08:04</div>
+<div class="count">共 48 条新闻 | 来源: Google News · 量子位 · AI工具集 · CNMO</div>
+</div><div class="section">
+<div class="section-title">⭐ 今日热点 <span class="tag tag-hot">3条</span></div>
+<div class="card hot">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808757.html" target="_blank" rel="noopener">OpenAI推出Daybreak项目 对标Anthropic的Glasswing</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">OpenAI推出Daybreak网络安全项目，对标Anthropic的Glasswing，利用AI自动化漏洞发现、分析与修复，标志着AI在网络安全领域的竞争进一步升级。</div>
 </div>
-
-<div class="content">
-
-<div class="section-title">☀️ 今日必读</div>
-<div class="card">
-  <div class="rank">1</div>
-  <h3><a href="https://mp.weixin.qq.com/s/i3_dHCSWQjRkOdEn0Ma8Fw" target="_blank">OpenAI推出GPT-5.5 Instant作为ChatGPT默认模型</a></h3>
-  <p class="meta">📰 APPSO</p>
-  <p class="summary">OpenAI正式推出GPT-5.5 Instant，取代GPT-5.3 Instant成为ChatGPT默认模型。医疗/法律/金融领域幻觉率下降52.5%，回复更简短自然，推理速度显著提升。</p>
-</div><div class="card">
-  <div class="rank">2</div>
-  <h3><a href="https://news.google.com/read/CBMidEFVX3lxTE5kOW1FOE5TMUp6Y2xYZWdwV3pMaVBnR0Rwb2R4d2lsb0JsOVlDSm5SSV8tSVBDUjlkY3dXT0lCUmFIRmRfa0NVSDdaUzRNaVg4ZU9vV0VUOVZNVldHVUdxT2hENS03cnJCcUFvMUx1a3NiOVNV?hl=en-US&gl=US&ceid=US%3Aen" target="_blank">Cerebras上市首日暴涨89%，成今年最大科技IPO</a></h3>
-  <p class="meta">📰 The New York Times</p>
-  <p class="summary">AI芯片制造商Cerebras上市首日股价飙升89%，Sam Altman投资的这家公司受到市场热捧，折射出AI基础设施需求的空前高涨，成为2026年最大科技IPO。</p>
-</div><div class="card">
-  <div class="rank">3</div>
-  <h3><a href="https://news.google.com/read/CBMiZkFVX3lxTE5CZ2ZnT19GQ0dmN1RjYkEtNVd2czVlS19ldnBJZ2RRYnQweU1ZRGp2Y1dTN1FRcFlfSGpnelBHNmlNTjItNFAtVFFUSUdNamFJazVISGI1SjdKM1JzOTU3TFdwck9NQdIBa0FVX3lxTE84Tk5WMml6WHE2QlMxcFVlaFBDOXcwengtME9xYUR2YlhwRDRZaVh5RDJNc0YwSWI4ay1VN2lrcE5lWVdCcEstcjNQS3FfbklqdU5QWTlSaU9QOFNSU3paYi0zdjl6cEtkRDQ0" target="_blank">中国阻止Meta以20亿美元收购AI初创公司Manus</a></h3>
-  <p class="meta">📰 纽约时报</p>
-  <p class="summary">中国政府依据国家安全审查阻止Meta以20亿美元收购AI初创公司Manus，反映中美科技竞争加剧背景下AI领域跨境收购的严格监管新常态。</p>
+<div class="card hot">
+<div class="card-title"><a href="https://news.google.com/read/CBMicEFVX3lxTE5OX1BRenk3Q2ZSS1FDclA4aDh4Wmd0RzJINW5najZ0RHo2NUVDbFZsMUV3U0djcV9NLVdoR25XalB6WE5zVGxsemdId1hMOVN3X0ZzVXkwLTJuM2NleHBWNGNWUjhVOHJDUDlxUEhrQXo" target="_blank" rel="noopener">Greg Brockman正式接管OpenAI产品部门</a></div>
+<div class="card-source">The Verge</div>
+<div class="card-summary">在OpenAI最新人事调整中，联合创始人Greg Brockman正式接管产品部门，负责所有产品的战略规划与执行，标志着OpenAI产品管理架构的重大变革。</div>
 </div>
-
-<div class="section-title">🤖 模型与技术</div>
-<div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/-ewhh9yqowqFdieLSecrJA" target="_blank">xAI推出Grok 4.3模型，API价格降低40%-60%</a></h3>
-  <p class="meta">📰 新智元</p>
-  <p class="summary">xAI推出Grok 4.3，API价格大幅降低40%-60%，输出速度达196 Tokens/s，支持100万Token长上下文。在代理任务和办公辅助能力上显著提升，更擅长文档和演示文稿处理。</p>
-</div><div class="card">
-  <h3><a href="https://ai-bot.cn/mamoda2-5/" target="_blank">字节跳动开源全球首个25B级统一多模态模型Mamoda2.5</a></h3>
-  <p class="meta">📰 AI工具集</p>
-  <p class="summary">字节跳动开源Mamoda2.5，全球首个25B级统一多模态模型，基于Qwen3-VL-8B架构，总参数250亿每次仅激活约3亿。实现文生图、文生视频、视频编辑等全任务SOTA。</p>
-</div><div class="card">
-  <h3><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank">OpenAI推出三款实时语音模型：GPT-Realtime-2/Translate/Whisper</a></h3>
-  <p class="meta">📰 OpenAI</p>
-  <p class="summary">OpenAI推出三款实时语音模型：GPT-Realtime-2具备GPT-5级推理能力；GPT-Realtime-Translate支持70多种语言实时互译，每分钟成本约0.25元；GPT-Realtime-Whisper实现低延迟转录。</p>
-</div><div class="card">
-  <h3><a href="https://www.ithome.com/0/945/740.htm" target="_blank">DeepSeek公布多模态模型技术报告，提出视觉原语推理框架</a></h3>
-  <p class="meta">📰 IT之家</p>
-  <p class="summary">DeepSeek在GitHub发布多模态大模型并公开技术报告，提出基于视觉原语的思考框架，将点、边界框等空间标记提升为推理基本思维单元，使模型具备精确空间指代与推演能力。</p>
+<div class="card hot">
+<div class="card-title"><a href="https://news.google.com/read/CBMiZkFVX3lxTE8wMTBlSVU0bmRSeU53cDNzSlFhbWhyZ3N4bG9HSENwZ21MdzVyU1VMTFNiVWNXR0xQMDlVSmJOUVBrUTRtQmtrRFh2UmFSX3NoajY0UEFjdk5wSjRtS1lqeEt4emQ4QQ?hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans" target="_blank" rel="noopener">科创'圳'时代丨数千款AI产品集结！直击2026全球人工智能终端展的科幻秀场</a></div>
+<div class="card-source">央广网</div>
+<div class="card-summary">2026全球人工智能终端展在深圳开幕，数千款AI产品集中亮相，展示AI终端设备、软硬件生态协同等前沿成果。涵盖AI机器人、智能穿戴、AI PC等全品类终端产品。</div>
 </div>
-
-<div class="section-title">💼 商业与融资</div>
-<div class="card">
-  <h3><a href="https://ai.cnmo.com/news/815054.html" target="_blank">DeepSeek融资450亿估值，国家集成电路产业基金参与</a></h3>
-  <p class="meta">📰 CNMO科技</p>
-  <p class="summary">DeepSeek以450亿估值完成新一轮融资，国家集成电路产业投资基金参与其中。此前DeepSeek V4技术报告中300人作者名单中有10位核心研究者已离职，引发行业热议。</p>
-</div><div class="card">
-  <h3><a href="https://www.qbitai.com/2026/05/417468.html" target="_blank">田渊栋AI创业估值315亿，英伟达黄仁勋与AMD苏姿丰均参投</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">田渊栋AI创业公司估值达315亿元，英伟达CEO黄仁勋、AMD CEO苏姿丰均参与投资，姚班施天麟为合伙人之一。顶级AI科学家创业获芯片巨头联合加持。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/0NL2sdsv9Ge3MzotCOTUgQ" target="_blank">OpenAI成立部署公司获超40亿美元投资，推出Daybreak网络安全工具</a></h3>
-  <p class="meta">📰 机器之心</p>
-  <p class="summary">OpenAI宣布成立OpenAI Deployment Company，获超40亿美元初始投资并收购英国AI咨询公司Tomoro。同时推出AI网络安全工具Daybreak，对标Anthropic的Glasswing，自动化漏洞发现与修复。</p>
 </div>
-
-<div class="section-title">🔧 工具与开源</div>
-<div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/iy0MjNjAj2Yb23CSDmx19w" target="_blank">阿里推出Qoder 1.0：从AI IDE升级为智能体自主开发工作台</a></h3>
-  <p class="meta">📰 阿里云</p>
-  <p class="summary">阿里推出Qoder 1.0，从AI IDE升级为智能体自主开发工作台。新版本推出Quest独立视窗支持跨项目多任务并行，整合记忆、Repo Wiki与知识卡片为团队级知识引擎。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/EUC1XLOkmo3MTblTvolFTg" target="_blank">月之暗面推出Kimi WebBridge，让AI帮你操作浏览器</a></h3>
-  <p class="meta">📰 月之暗面 Kimi</p>
-  <p class="summary">月之暗面推出Kimi WebBridge浏览器插件，面向Kimi Code、Claude Code、Cursor、Codex等本地AI Agent，让AI携带用户登录状态与Cookie直接操作浏览器，大幅提升Agent自动化能力。</p>
-</div><div class="card">
-  <h3><a href="https://runwayml.com/news/introducing-runway-agent" target="_blank">Runway推出AI视频创作智能体Runway Agent</a></h3>
-  <p class="meta">📰 Runway</p>
-  <p class="summary">Runway正式推出Runway Agent，对话式AI视频创作智能体。用户仅需描述需求，Agent在单轮对话中完成从概念构思、故事分镜到视觉方向的全流程规划，自动生成高分辨率成品视频。</p>
+<div class="section">
+<div class="section-title">🤖 模型发布 <span class="tag tag-model">15条</span></div>
+<div class="card model">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/417968.html" target="_blank" rel="noopener">手机的智能体AI，正在因为天玑全面跃升</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">MediaTek天玑芯片推动智能手机端侧智能体AI全面升级，手机AI性能显著提升。联发科通过天玑移动平台内置的AI处理器，让手机端侧运行大语言模型和智能体应用成为现实。</div>
 </div>
-
-<div class="section-title">📚 研究 &amp; 其他</div>
-<div class="card">
-  <h3><a href="https://www.qbitai.com/2026/05/418379.html" target="_blank">浙大校友用AI突破数学领域32年未解的拉姆齐数下界</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">浙江大学校友利用AI技术突破数学领域32年未解的拉姆齐数(Ramsey数)下限问题，展示AI在数学研究和定理发现中的巨大潜力，引发数学界和AI界广泛关注。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w" target="_blank">OpenAI联合AMD/博通/英特尔/微软/英伟达开源超大规模AI训练网络协议MRC</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">OpenAI联合AMD、博通、英特尔、微软、英伟达五大巨头推出多路径可靠连接(MRC)协议并开源。采用多平面网络设计与自适应数据包喷淋技术，使故障恢复从秒级缩短至微秒级。</p>
+<div class="card model">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418571.html" target="_blank" rel="noopener">OpenHuman用20分钟了解你的一切，存成卡帕西式知识库</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">继Shoelace之后，OpenHuman项目走红。该项目仅需20分钟就能深入了解用户，将个人信息组织成类似Andrej Karpathy风格的知识库，实现个性化的AI交互体验。</div>
 </div>
-
+<div class="card model">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418518.html" target="_blank" rel="noopener">别让模型烧Token了！GitHub 20k星神作：把全网变成命令行</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">GitHub上20k星的开源项目（Browser-Use等Web Agent工具）将整个互联网转化为可命令行操作的环境，大幅降低API调用成本，让AI Agent更高效地与网页交互。</div>
 </div>
-
+<div class="card model">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808038.html" target="_blank" rel="noopener">阿里HappyHorse开启灰测</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">阿里巴巴旗下AI产品HappyHorse开启灰度测试，面向部分用户开放体验。HappyHorse是阿里在AI Agent领域的又一重要布局。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://news.google.com/read/CBMie0FVX3lxTFBGT25GZUdIUVB1NUxWd2RUaDJoY1F5QmljMG9JdE0xV1lmMVM5dmhVeDBNaWc5OTdrMFlOQ013NWh2bDhXdTl5VFhWWUd0bG8xdGtnN3RBWTBjcFhONmlKWHhfY3Y2M1NGZW9MdVhHaDhKeWYzTmxqdkhNVQ" target="_blank" rel="noopener">Animistic推出Mythos AI模型引发全球警觉</a></div>
+<div class="card-source">纽约时报</div>
+<div class="card-summary">Anthropic推出新版AI模型Mythos，其强大的推理和能力引发全球AI安全界关注。专家呼吁加强对前沿AI模型的监管和安全评估。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://news.google.com/read/CBMihwFBVV95cUxNeXl0eGNHU29tczAwSWtkRjlkODFhVkJmdTVCTVg2bGdKZWVJMHA3NEtiZHlDWENZZ1lQLWJKd3k1dHJrOWo2a1hBRl9hcnpFemRJbEoxLUtkcnR4NlB5ZG1FVW5OVEVHT1JqY2RRalhFTkJnZzBDVlBVUFhPbFozX1RQRk1Bdk0" target="_blank" rel="noopener">Meta因性能问题推迟新AI模型发布</a></div>
+<div class="card-source">纽约时报</div>
+<div class="card-summary">Meta因新AI模型性能表现未达预期，决定推迟其发布时间以进行进一步优化。这反映出AI模型竞争日趋激烈，性能标准不断提高。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/BDEjgBgTbSsaOY0_QXbT1w" target="_blank" rel="noopener">OpenAI Codex登陆ChatGPT手机App，所有用户都能用</a></div>
+<div class="card-source">机器之心</div>
+<div class="card-summary">OpenAI宣布Codex正式登陆ChatGPT手机App，iOS与Android双端同步开启预览，免费用户也能使用。用户可随时随地在手机上审批代码、查看线程动态、批准命令或启动新项目。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/EUC1XLOkmo3MTblTvolFTg" target="_blank" rel="noopener">月之暗面推出Kimi WebBridge，让AI帮你操作浏览器</a></div>
+<div class="card-source">月之暗面 Kimi</div>
+<div class="card-summary">月之暗面推出Kimi WebBridge浏览器插件，面向Kimi Code、Claude Code、Cursor、Codex等本地AI Agent，让AI携带用户登录状态与Cookie直接操作浏览器。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/iy0MjNjAj2Yb23CSDmx19w" target="_blank" rel="noopener">阿里推出Qoder 1.0，从AI IDE升级为智能体自主开发工作台</a></div>
+<div class="card-source">阿里云</div>
+<div class="card-summary">阿里推出Qoder 1.0，从AI IDE升级为智能体自主开发工作台。新版本推出Quest独立视窗，支持跨项目多任务并行；整合记忆、Repo Wiki与知识卡片为团队级知识引擎。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://runwayml.com/news/introducing-runway-agent" target="_blank" rel="noopener">Runway推出AI视频创作智能体Runway Agent</a></div>
+<div class="card-source">Runway</div>
+<div class="card-summary">Runway正式推出Runway Agent，对话式AI视频创作智能体。用户仅需描述需求，Agent在单轮对话中完成从概念构思、故事分镜到视觉方向的全流程规划，自动生成高分辨率成品视频。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/_I9ziafHheXiJpA-QY2F7A" target="_blank" rel="noopener">百度推出旗舰大语言模型文心5.1</a></div>
+<div class="card-source">百度</div>
+<div class="card-summary">百度推出旗舰大语言模型文心5.1，在多项基准测试中表现优异，进一步巩固百度在中国AI大模型领域的领先地位。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/eg4m5lngCeRjiEzKnE-7ZA" target="_blank" rel="noopener">蚣蚁百灵推出万亿级旗舰思考模型Ring-2.6-1T</a></div>
+<div class="card-source">蚣蚁集团</div>
+<div class="card-summary">蚣蚁百灵推出万亿级旗舰思考模型Ring-2.6-1T，开源Agent执行能力全面增强，标志着蚣蚁在AI大模型领域的重大突破。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/2j5lju0TlYEgQbycpjTu9w" target="_blank" rel="noopener">谷歌推出Gemini电脑Googlebook，把AI塞进光标</a></div>
+<div class="card-source">智东西</div>
+<div class="card-summary">谷歌在安卓Show大会上推出首款为Gemini量身打造的Googlebook笔记本，搭载智能光标并支持跨设备体验。同时发布安卓版Gemini Intelligence。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://ai.cnmo.com/news/814902.html" target="_blank" rel="noopener">阿里企业级Agent平台“悟空”开始逐步规模化放量</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">阿里巴巴财报显示，企业级Agent平台“悟空”已于近期逐步规模化放量。悟空是阿里AI原生旗舰应用，能自主规划步骤、操作电脑、调用工具完成完整闭环。</div>
+</div>
+<div class="card model">
+<div class="card-title"><a href="https://ai-bot.cn/sites/56948.html" target="_blank" rel="noopener">Claude Code推出Agent View，一个界面管理所有AI会话</a></div>
+<div class="card-source">AI工具集</div>
+<div class="card-summary">Anthropic为Claude Code推出Agent View研究预览版，支持开发者在一个终端界面内同时调度、监控多个并行AI会话，无需多开窗口。</div>
+</div>
+</div>
+<div class="section">
+<div class="section-title">💼 产业应用 <span class="tag tag-biz">20条</span></div>
+<div class="card biz">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418491.html" target="_blank" rel="noopener">中国500万医生的新AI：顶刊独家联手，卷的就是证据源</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">面向中国500万医生的AI新工具正式推出，与顶级医学期刊独家合作，基于高质量证据源构建AI辅助诊疗系统，旨在提升临床决策的循证水平。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/417935.html" target="_blank" rel="noopener">数亿元融资落地！国内最早布局人类学习路线的具身公司</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">国内最早布局人类学习路线的具身智能公司完成数亿元融资，采用人类视角重新训练机器人，让机器人通过模仿人类行为学习复杂任务，开辟具身智能新范式。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418198.html" target="_blank" rel="noopener">硅谷刷屏的AI护城河新论：代码能抄，产品能抄，但有一样东西谁都抄不走</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">硅谷热议AI护城河新理论：代码可复制、产品可模仿，但数据飞轮效应和用户行为网络效应才是真正的竞争壁垒，任何公司都无法轻易复制。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418386.html" target="_blank" rel="noopener">亚历山大王回应一切：LeCun、Manus，我的父母都是中国人</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">AI创业者亚历山大王公开回应近期争议，谈及与Yann LeCun的分歧、Manus AI产品争议，并首次透露自己的华裔身份背景——'我的父母都是中国人'。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418135.html" target="_blank" rel="noopener">华为云创想者大会主题论坛议程公布：释放Agentic AI新布局</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">华为云创想者大会公布主题论坛议程，聚焦Agentic AI新布局，展示华为云在AI Agent和全栈AI能力方面的最新战略，推动企业AI化转型。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/807992.html" target="_blank" rel="noopener">舜宇光学2025年首次量产割草机器人</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">舜宇光学宣布2025年首次实现割草机器人量产，利用其在光学领域的深厚积累，扩展AI+机器人业务版图，进军智能家居机器人市场。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808037.html" target="_blank" rel="noopener">谷歌DeepMind CEO访韩 谷歌AI校园将落地</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">谷歌DeepMind CEO访问韩国，宣布谷歌AI校园项目将在韩国落地，旨在培养AI人才并加强与韩国科技生态的合作。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808989.html" target="_blank" rel="noopener">轻信豆包亏600元 AI幻觉已成生活隐形隐患</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">有用户因轻信字节跳动豆包AI的机票退款建议导致损失600元，引发对AI幻觉问题的广泛讨论——当AI以'一本正经'的语气输出虚假信息时，用户财产安全面临风险。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808802.html" target="_blank" rel="noopener">宇树发布GD01载人变形机甲 起售价390万元</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">宇树科技发布GD01载人变形机甲，起售价390万元，体重约500kg，可从机器人形态变形为载人模式，是具身智能领域的前沿探索产品。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808794.html" target="_blank" rel="noopener">智元发布香港具身智能产业共创计划</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">智元机器人发布香港具身智能产业共创计划，围绕应用场景、技术研发和产业落地等方向推进合作，加速具身智能在香港及大湾区的产业化进程。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808790.html" target="_blank" rel="noopener">谷歌地图CarPlay版将集成Gemini AI</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">谷歌地图CarPlay版本将集成Gemini AI，用户可通过语音交互获得智能导航建议、实时路况分析和个性化推荐，大幅提升车载导航体验。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808765.html" target="_blank" rel="noopener">微软发布全球AI使用率数据：26个经济体AI使用率超30%</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">微软发布全球AI使用率数据报告，显示全球26个经济体的AI使用率已超过30%，AI应用正在全球范围内快速普及，企业数字化转型加速。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://news.google.com/read/CBMiZkFVX3lxTE5CZ2ZnT19GQ0dmN1RjYkEtNVd2czVlS19ldnBJZ2RRYnQweU1ZRGp2Y1dTN1FRcFlfSGpnelBHNmlNTjItNFAtVFFUSUdNamFJazVISGI1SjdKM1JzOTU3TFdwck9NQdIBa0FVX3lxTE84Tk5WMml6WHE2QlMxcFVlaFBDOXcwengtME9xYUR2YlhwRDRZaVh5RDJNc0YwSWI4ay1VN2lrcE5lWVdCcEstcjNQS3FfbklqdU5QWTlSaU9QOFNSU3paYi0zdjl6cEtkRDQ0" target="_blank" rel="noopener">中国阻止Meta以20亿美元收购AI初创公司Manus</a></div>
+<div class="card-source">纽约时报</div>
+<div class="card-summary">中国政府阻止了Meta以20亿美元收购AI初创公司Manus的交易，涉及国家安全审查，反映出中美科技竞争背景下AI收购交易的严格监管。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://news.google.com/read/CBMimAFBVV95cUxNb29VLXFRSFNHREdvYnF6LVpvLUZoSEhBbkwtWTc2Z1dkSjVkNmZ1VUtIY21BZkJRd043RlBZVmxjQ2s0bC1JMDROYkVVVmZRb25XdERwRVVMQVRRbGJxWG50SzV2b0V1STFmZ0lXUGFsZE1NUUJjTF9XZk5JSm5vLVZ0OG45MlprUEs1cDA0ZDdoeFR4LUtUYQ" target="_blank" rel="noopener">AI数据中心导致美国东部电价飙升76%</a></div>
+<div class="card-source">彭博社</div>
+<div class="card-summary">由于AI数据中心的电力需求激增，美国东部地区电价飙升76%。AI算力扩张引发能源供应担忧，多个社区开始对数据中心建设实施限制。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://news.google.com/read/CBMiqwFBVV95cUxQQnVaakJ1OWFZeFBQa2VfUHR3akowMnB1M2FJaDJNVC1Gc0tOWkgtYkY1cVk0TDZvVGJQVkZqanJKaWpiNVhUT1hmUHRZSHdVakZ5V3lxbnRkeWZ0Z05FYWVQRE1IR05DeWhJQklocGNQaGJuaXVvREVGNno4M2toOXNNb0VJTEI0bHBHaUlyYXVsZHg5TFhwZl9IejdfRGlaR2VzeVo3VjVLVXc" target="_blank" rel="noopener">Pershing Square押注微软AI战略</a></div>
+<div class="card-source">彭博社</div>
+<div class="card-summary">Bill Ackman的Pershing Square对冲基金购入微软大量股份，押注微软在AI领域的战略前景。微软凭借Azure和Copilot在AI商业化方面持续领先。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808041.html" target="_blank" rel="noopener">荣耀机器人闪电致敬萨维全马破二</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">荣耀推出机器人'闪电'致敬萨维全马破二壮举，展示AI机器人在运动领域的应用能力，体现了AI与体育融合的新趋势。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://news.google.com/read/CBMidEFVX3lxTE5kOW1FOE5TMUp6Y2xYZWdwV3pMaVBnR0Rwb2R4d2lsb0JsOVlDSm5SSV8tSVBDUjlkY3dXT0lCUmFIRmRfa0NVSDdaUzRNaVg4ZU9vV0VUOVZNVldHVUdxT2hENS03cnJCcUFvMUx1a3NiOVNV?hl=en-US&gl=US&ceid=US%3Aen" target="_blank" rel="noopener">Cerebras上市首日暴涨89% 今年最大科技IPO</a></div>
+<div class="card-source">The New York Times</div>
+<div class="card-summary">AI芯片制造商Cerebras上市首日股价飙升89%，成为今年最大科技IPO之一。Sam Altman投资的这家公司受到市场热拭，折射出市场对AI芯片的强烈需求。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://mp.weixin.qq.com/s/0NL2sdsv9Ge3MzotCOTUgQ" target="_blank" rel="noopener">OpenAI推出AI网络防御工具Daybreak，斗40亿美元成立新公司</a></div>
+<div class="card-source">机器之心</div>
+<div class="card-summary">OpenAI宣布成立OpenAI Deployment Company，获超40亿美元初始投资并收购英国AI咨询公司Tomoro。同时推出AI网络安全工具Daybreak，自动化漏洞发现与修复。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/815054.html" target="_blank" rel="noopener">DeepSeek融资450亿估值，引发行业热议</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">DeepSeek以450亿估值进行融资，国家集成电路产业投资基金参与。此前DeepSeek发布的V4技术报告中，300人作者名单中有10位核心研究者已离职。</div>
+</div>
+<div class="card biz">
+<div class="card-title"><a href="https://ai.cnmo.com/news/815097.html" target="_blank" rel="noopener">华为在海外发布AI采矿解决方案，AI+5G破解数据孤岛</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">在印尼国际煤炭与能源博览会上，华为正式发布AI驱动采矿解决方案。该方案以AI+5G技术破解采矿行业数据孤岛问题，提升运营效率和安全水平。</div>
+</div>
+</div>
+<div class="section">
+<div class="section-title">📚 学术前沿 <span class="tag tag-academic">10条</span></div>
+<div class="card academic">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418379.html" target="_blank" rel="noopener">浙大校友用AI突破32年拉姆齐数下界</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">浙江大学校友利用AI技术突破数学领域32年未解的拉姆齐数（Ramsey数）下限问题，展示AI在数学研究和定理发现中的巨大潜力。这一成果被科技和数学界广泛关注。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/418240.html" target="_blank" rel="noopener">浙大推出让AI会导演的角色扮演框架</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">浙江大学推出AI角色扮演框架，采用四通道消息沉浸式交互机制，让AI可以像导演一样控制多角色对话，大幅提升LLM在角色扮演场景中的表现力和一致性。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/417958.html" target="_blank" rel="noopener">智能无处不在：OpenClaw预示的AI未来</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">OpenClaw项目预示AI将无处不在的新时代，通过将AI能力嵌入到各种边缘设备中，实现从云端到边缘的AI全覆盖，展现AI在物联网和智能硬件领域的广阔前景。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://ai.cnmo.com/news/808801.html" target="_blank" rel="noopener">谷歌确认黑客利用AI生成零日漏洞攻击</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">谷歌确认黑客正在利用AI技术生成零日漏洞进行攻击，AI可显著提升攻击速度和效率，网络安全领域的攻防竞赛进入AI驱动的新阶段。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://news.google.com/read/CBMihAFBVV95cUxQdTVSYzZJcXIxNFJqVG50YmU3cjE5MGdfVzBkTVp1aGo4S1pqOUhSSzRscVZQb0tSYWtHSllFMzRjUUk5cndRTEZJZElUOUVxZ2ktN0gyTC1ZZTFnbVM0ZUJ3V093b1VnWTB1amQzS3dfcWNiOWpZYXpadU82cS1MdTRNSlk" target="_blank" rel="noopener">EY撤回研究报告：AI幻觉问题严重</a></div>
+<div class="card-source">华尔街日报</div>
+<div class="card-summary">安永(EY)撤回一份已发布的研究报告，原因是研究人员发现报告中存在严重的AI幻觉问题，AI生成的不准确内容混入了专业研究报告中，引发对AI可靠性的质疑。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://news.google.com/read/CBMimwFBVV95cUxPQjB1NHdwOUJ3N29SWkJFRm9fVnp6Y2V2MmxESURTX29KWUE1SWdrWU0wUVBOYnAxcDBRbWF2LW1LbUhibDN3Tm8zNTNnRzhMWUNoZmQtNUtIcXBqTWVuU2xiUUx0eTNYS2I3LXdCOU5XWDYxa20xa29KUVJvM3JpNDZOY2VqdU5GMHdpOG5UQ1JOSUxIZjlYd0RsMA" target="_blank" rel="noopener">新AI技术使模型在训练过程中变得更精简高效</a></div>
+<div class="card-source">MIT Technology Review</div>
+<div class="card-summary">MIT研究人员开发新技术，让AI模型在训练过程中就能自动变得更精简高效，消除了后续压缩和蒸馏的需求，可大幅降低模型部署成本。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://news.google.com/read/CBMieEFVX3lxTE9NeGN6bHA4RTlVUWQyZlM4Vk1ZQ1JOSUd2eEhjVDNHTVFKQkFFOUxVU3IwYkNHQVFZUWpBcEx0ZWR3OWM5Q1l5WU5ES1I3S2ZFanZ0RXNJSWFieE1pY1BSVkdzSVl4alJZQ3d0UGJrc2o2SHVaLTdoXw" target="_blank" rel="noopener">ArXiv将禁止上传充斥AI垃圾论文的研究者</a></div>
+<div class="card-source">TechCrunch</div>
+<div class="card-summary">预印本平台ArXiv宣布新政策，将禁止上传充斥AI生成内容（AI slop）的研究者。此举旨在维护学术论文的质量标准和学术诚信。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://www.ithome.com/0/949/956.htm" target="_blank" rel="noopener">小米具身智能团队开源自动驾驶大模型 Xiaomi OneVL</a></div>
+<div class="card-source">IT之家</div>
+<div class="card-summary">小米具身智能团队开源Xiaomi OneVL一步式潜空间语言视觉推理框架。模型在业内率先实现VLA、世界模型与潜空间推理的统一，在ROADWork等多项基准上达到SOTA。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://ai.cnmo.com/news/815106.html" target="_blank" rel="noopener">GC绿十字获选韩国AI新药开发国家项目，资助177亿韩元</a></div>
+<div class="card-source">CNMO科技</div>
+<div class="card-summary">GC绿十字被选为韩国AI新药开发国家项目的核心研究机构。该项目为期57个月，政府资助约177亿韩元，旨在构建AI制药多智能体平台。</div>
+</div>
+<div class="card academic">
+<div class="card-title"><a href="https://www.qbitai.com/2026/05/417753.html" target="_blank" rel="noopener">腾讯开源Agent记忆技术方案，Token消耗最高降低61%</a></div>
+<div class="card-source">量子位</div>
+<div class="card-summary">腾讯开源Agent记忆技术方案，通过优化记忆管理机制，使Token消耗最高降低61%，大幅降低AI Agent运行成本。</div>
+</div>
+</div>
 <div class="footer">
-  <strong>Hermes AI 新闻监控</strong> · 基于 101 条采集新闻精选 · 自动生成<br>
-  下次更新: 今晚 20:00 · 🌙 AI 晚报
+生成于 2026-05-17 08:04 · 数据来源: Google News, 量子位, AI工具集, CNMO<br>
+<a href="https://news.google.com/search?q=AI%20%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD&hl=zh-CN&gl=CN" target="_blank">Google News CN</a> · 
+<a href="https://news.google.com/search?q=artificial%20intelligence%20latest&hl=en-US&gl=US" target="_blank">Google News EN</a> · 
+<a href="https://ai-bot.cn/daily-ai-news/" target="_blank">AI工具集</a> · 
+<a href="https://www.qbitai.com/" target="_blank">量子位</a> · 
+<a href="https://ai.cnmo.com/" target="_blank">CNMO</a>
 </div>
-
+</div>
 </body>
 </html>
