@@ -3,168 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>☀️ AI 晨报 | 5月17日</title>
+<title>☀️ AI 晨报 | 2026-05-17</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
-    background: #f8f9fa; color: #212529;
-    padding: 0; max-width: 680px; margin: 0 auto;
-  }
-  .hero {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    color: #fff; padding: 36px 28px 32px; text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .hero h1 { font-size: 26px; margin-bottom: 6px; }
-  .hero .sub { font-size: 14px; opacity: 0.9; margin-top: 8px; }
-  .hero .stats {
-    display: flex; justify-content: center; gap: 24px; margin-top: 20px;
-  }
-  .hero .stat { text-align: center; }
-  .hero .stat .num { font-size: 28px; font-weight: 800; }
-  .hero .stat .label { font-size: 11px; opacity: 0.75; margin-top: 2px; }
-
-  .content { padding: 24px 20px 32px; }
-  .section-title {
-    font-size: 17px; font-weight: 700; color: #495057;
-    margin: 28px 0 14px 0; padding: 6px 0 8px 0;
-    border-bottom: 2px solid #dee2e6;
-  }
-
-  .card {
-    background: #fff; border-radius: 12px; padding: 20px;
-    margin-bottom: 10px; border: 1px solid #e9ecef;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    position: relative;
-  }
-  .card .rank {
-    position: absolute; top: -8px; left: -8px;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: #ff6b6b; color: #fff;
-    font-size: 13px; font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-  .card h3 { font-size: 15px; line-height: 1.5; margin-bottom: 6px; padding-left: 22px; }
-  .card h3 a { color: #4c6ef5; text-decoration: none; }
-  .card h3 a:hover { text-decoration: underline; }
-  .card .meta {
-    font-size: 12px; color: #868e96; margin-bottom: 8px;
-    padding-left: 22px; display: flex; gap: 12px;
-  }
-  .card .summary {
-    font-size: 14px; line-height: 1.7; color: #495057;
-    border-left: 3px solid #ffe3e3; padding-left: 14px;
-    margin-left: 8px;
-  }
-
-  .footer {
-    text-align: center; padding: 28px 20px;
-    color: #adb5bd; font-size: 12px;
-    border-top: 1px solid #e9ecef;
-  }
-  .footer strong { color: #868e96; }
+  body { background: #fff5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; color: #1a1a2e; line-height: 1.6; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0; }
+  .hero { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 40px 30px 32px; text-align: center; }
+  .hero h1 { font-size: 32px; margin-bottom: 6px; font-weight: 700; letter-spacing: 2px; }
+  .hero .date { font-size: 15px; opacity: 0.9; margin-bottom: 16px; }
+  .hero .subtitle { font-size: 18px; font-weight: 400; opacity: 0.95; }
+  .stats-bar { display: flex; justify-content: center; gap: 32px; margin-top: 20px; }
+  .stat-item { text-align: center; }
+  .stat-item .num { font-size: 28px; font-weight: 700; }
+  .stat-item .label { font-size: 12px; opacity: 0.8; }
+  .content { padding: 24px 20px 8px; }
+  .section { margin-bottom: 28px; }
+  .section-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 3px solid #ff6b6b; display: flex; align-items: center; gap: 8px; }
+  .section-title .icon { font-size: 20px; }
+  .article { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid #ffe3e3; transition: border-color 0.2s; }
+  .article:hover { border-left-color: #ff6b6b; }
+  .article .title { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+  .article .summary { font-size: 13px; color: #555; margin-bottom: 6px; }
+  .article .meta { font-size: 11px; color: #999; display: flex; align-items: center; gap: 8px; }
+  .article .meta .source { background: #ffe3e3; color: #e74c3c; padding: 1px 8px; border-radius: 10px; font-weight: 500; }
+  .article .meta a { color: #ff6b6b; text-decoration: none; font-weight: 500; font-size: 12px; }
+  .article .meta a:hover { text-decoration: underline; }
+  .footer { text-align: center; padding: 24px 20px 32px; color: #999; font-size: 12px; }
+  .footer .tagline { font-size: 13px; color: #ff6b6b; font-weight: 600; margin-bottom: 4px; }
+  .footer .credit { margin-top: 4px; }
+  .must-read .article { border-left-color: #ff6b6b; background: #fff8f8; }
+  .must-read .article .title { color: #c0392b; }
 </style>
 </head>
 <body>
+<div class="container">
+  <div class="hero">
+    <h1>☀️ AI 晨报</h1>
+    <div class="date">2026年5月17日 · 星期日</div>
+    <div class="subtitle">今日 AI 要闻速览</div>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="num">14</div><div class="label">精选报道</div></div>
+      <div class="stat-item"><div class="num">10</div><div class="label">信息来源</div></div>
+    </div>
+  </div>
 
-<div class="hero">
-  <h1>☀️ AI 晨报</h1>
-  <div class="sub">5月17日 · 昨夜至今晨</div>
-  <div class="stats">
-    <div class="stat"><div class="num">101</div><div class="label">采集</div></div>
-    <div class="stat"><div class="num">15</div><div class="label">精选</div></div>
-    <div class="stat"><div class="num">40</div><div class="label">来源</div></div>
+  <div class="content">
+
+    <div class="section must-read">
+      <div class="section-title"><span class="icon">🔥</span> 今日必读</div>
+
+      <div class="article">
+        <div class="title">OpenAI 正式推出 GPT-5.5 Instant 作为 ChatGPT 默认模型</div>
+        <div class="summary">医疗/法律/金融领域幻觉率下降 52.5%，回复更简短自然，取代 GPT-5.3 Instant 成为默认模型。</div>
+        <div class="meta"><span class="source">APPSO</span> <a href="https://mp.weixin.qq.com/s/i3_dHCSWQjRkOdEn0Ma8Fw" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">Cerebras 上市首日暴涨 89%，成今年最大科技 IPO</div>
+        <div class="summary">AI 芯片制造商 Cerebras 上市首日股价飙升 89%，Sam Altman 投资的这家公司受到市场热捧，折射出对 AI 芯片的强烈需求。</div>
+        <div class="meta"><span class="source">The New York Times</span> <a href="https://news.google.com/read/CBMidEFVX3lxTE5kOW1FOE5TMUp6Y2xYZWdwV3pMaVBnR0Rwb2R4d2lsb0JsOVlDSm5SSV8tSVBDUjlkY3dXT0lCUmFIRmRfa0NVSDdaUzRNaVg4ZU9vV0VUOVZNVldHVUdxT2hENS03cnJCcUFvMUx1a3NiOVNV?hl=en-US&gl=US&ceid=US%3Aen" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">中国阻止 Meta 以 20 亿美元收购 AI 初创公司 Manus</div>
+        <div class="summary">中国政府阻止了 Meta 以 20 亿美元收购 AI 初创公司 Manus 的交易，涉及国家安全审查，反映中美科技竞争下的严格监管。</div>
+        <div class="meta"><span class="source">纽约时报</span> <a href="https://news.google.com/read/CBMiZkFVX3lxTE5CZ2ZnT19GQ0dmN1RjYkEtNVd2czVlS19ldnBJZ2RRYnQweU1ZRGp2Y1dTN1FRcFlfSGpnelBHNmlNTjItNFAtVFFUSUdNamFJazVISGI1SjdKM1JzOTU3TFdwck9NQdIBa0FVX3lxTE84Tk5WMml6WHE2QlMxcFVlaFBDOXcwengtME9xYUR2YlhwRDRZaVh5RDJNc0YwSWI4ay1VN2lrcE5lWVdCcEstcjNQS3FfbklqdU5QWTlSaU9QOFNSU3paYi0zdjl6cEtkRDQ0" target="_blank">查看完整报道 →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="icon">🤖</span> 模型与技术</div>
+
+      <div class="article">
+        <div class="title">xAI 推出 Grok 4.3 模型，API 价格降低 40%-60%</div>
+        <div class="summary">支持 100 万 Token 长上下文，输出速度达 196 Tokens/s，在代理任务和办公辅助能力上明显提升，更擅长文档和演示文稿处理。</div>
+        <div class="meta"><span class="source">新智元</span> <a href="https://mp.weixin.qq.com/s/-ewhh9yqowqFdieLSecrJA" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">字节跳动开源全球首个 25B 级统一多模态模型 Mamoda2.5</div>
+        <div class="summary">基于 Qwen3-VL-8B 架构，总参数 250 亿每次仅激活约 3 亿，实现文生图、文生视频、视频编辑等全任务 SOTA。</div>
+        <div class="meta"><span class="source">AI工具集</span> <a href="https://ai-bot.cn/mamoda2-5/" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">OpenAI 推出三款实时语音模型及 GPT-5.5-Cyber 安全专用模型</div>
+        <div class="summary">GPT-Realtime-2 具备 GPT-5 级推理能力；GPT-Realtime-Translate 支持 70+ 语言实时互译；同时推出 GPT-5.5-Cyber 网络安全专用限量预览版。</div>
+        <div class="meta"><span class="source">OpenAI</span> <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">百度推出旗舰大语言模型文心 5.1</div>
+        <div class="summary">在多项基准测试中表现优异，李彦宏同期提出 AI 时代度量衡 "DAA"，强调 AI 已步入"自我进化"时代。</div>
+        <div class="meta"><span class="source">百度</span> <a href="https://mp.weixin.qq.com/s/_I9ziafHheXiJpA-QY2F7A" target="_blank">查看完整报道 →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="icon">💼</span> 商业与融资</div>
+
+      <div class="article">
+        <div class="title">DeepSeek 以 450 亿估值融资，国家集成电路产业投资基金参与</div>
+        <div class="summary">此前 DeepSeek V4 技术报告中 10 位核心研究者被标注已离职，行业热议融资是留人的解药还是资本的枷锁。</div>
+        <div class="meta"><span class="source">CNMO科技</span> <a href="https://ai.cnmo.com/news/815054.html" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">OpenAI 成立部署公司获超 40 亿美元投资，推出 Daybreak 安全工具</div>
+        <div class="summary">OpenAI 宣布成立 OpenAI Deployment Company，获超 40 亿美元初始投资并收购英国 AI 咨询公司 Tomoro，同时推出 AI 网络安全工具 Daybreak。</div>
+        <div class="meta"><span class="source">机器之心</span> <a href="https://mp.weixin.qq.com/s/0NL2sdsv9Ge3MzotCOTUgQ" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">Greg Brockman 正式接管 OpenAI 产品部门</div>
+        <div class="summary">OpenAI 联合创始人 Greg Brockman 正式接管产品部门，负责所有产品的战略规划与执行，标志着 OpenAI 产品管理架构的重大变革。</div>
+        <div class="meta"><span class="source">The Verge</span> <a href="https://news.google.com/read/CBMicEFVX3lxTE5OX1BRenk3Q2ZSS1FDclA4aDh4Wmd0RzJINW5najZ0RHo2NUVDbFZsMUV3U0djcV9NLVdoR25XalB6WE5zVGxsemdId1hMOVN3X0ZzVXkwLTJuM2NleHBWNGNWUjhVOHJDUDlxUEhrQXo" target="_blank">查看完整报道 →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="icon">🔧</span> 工具与开源</div>
+
+      <div class="article">
+        <div class="title">阿里推出 Qoder 1.0：从 AI IDE 升级为智能体自主开发工作台</div>
+        <div class="summary">新版本推出 Quest 独立视窗，支持跨项目多任务并行；整合记忆、Repo Wiki 与知识卡片为团队级知识引擎，可全面接管代码生成。</div>
+        <div class="meta"><span class="source">阿里云</span> <a href="https://mp.weixin.qq.com/s/iy0MjNjAj2Yb23CSDmx19w" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">月之暗面推出 Kimi WebBridge，让 AI 帮你操作浏览器</div>
+        <div class="summary">面向 Kimi Code、Claude Code、Cursor、Codex 等本地 AI Agent 的浏览器插件，让 AI 携带用户登录状态与 Cookie 直接操作浏览器。</div>
+        <div class="meta"><span class="source">月之暗面 Kimi</span> <a href="https://mp.weixin.qq.com/s/EUC1XLOkmo3MTblTvolFTg" target="_blank">查看完整报道 →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="icon">📚</span> 研究 & 其他</div>
+
+      <div class="article">
+        <div class="title">浙大校友用 AI 突破 32 年拉姆齐数下界</div>
+        <div class="summary">利用 AI 技术突破数学领域 32 年未解的拉姆齐数（Ramsey 数）下限问题，展示 AI 在数学研究和定理发现中的巨大潜力。</div>
+        <div class="meta"><span class="source">量子位</span> <a href="https://www.qbitai.com/2026/05/418379.html" target="_blank">查看完整报道 →</a></div>
+      </div>
+
+      <div class="article">
+        <div class="title">OpenAI 联合五大巨头开源超大规模 AI 训练网络协议 MRC</div>
+        <div class="summary">OpenAI 联合 AMD、博通、英特尔、微软、英伟达推出多路径可靠连接（MRC）协议并开源，使故障恢复从秒级缩短至微秒级。</div>
+        <div class="meta"><span class="source">量子位</span> <a href="https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w" target="_blank">查看完整报道 →</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="tagline">☀️ 基于 1025 条采集新闻精选</div>
+    <div>开启一天的 AI 资讯 · 昨夜至今晨要闻</div>
+    <div class="credit">Hermes AI News Digest · 2026-05-17</div>
   </div>
 </div>
-
-<div class="content">
-
-<div class="section-title">☀️ 今日必读</div>
-<div class="card">
-  <div class="rank">1</div>
-  <h3><a href="https://mp.weixin.qq.com/s/i3_dHCSWQjRkOdEn0Ma8Fw" target="_blank">OpenAI推出GPT-5.5 Instant作为ChatGPT默认模型</a></h3>
-  <p class="meta">📰 APPSO</p>
-  <p class="summary">OpenAI正式推出GPT-5.5 Instant，取代GPT-5.3 Instant成为ChatGPT默认模型。医疗/法律/金融领域幻觉率下降52.5%，回复更简短自然，推理速度显著提升。</p>
-</div><div class="card">
-  <div class="rank">2</div>
-  <h3><a href="https://news.google.com/read/CBMidEFVX3lxTE5kOW1FOE5TMUp6Y2xYZWdwV3pMaVBnR0Rwb2R4d2lsb0JsOVlDSm5SSV8tSVBDUjlkY3dXT0lCUmFIRmRfa0NVSDdaUzRNaVg4ZU9vV0VUOVZNVldHVUdxT2hENS03cnJCcUFvMUx1a3NiOVNV?hl=en-US&gl=US&ceid=US%3Aen" target="_blank">Cerebras上市首日暴涨89%，成今年最大科技IPO</a></h3>
-  <p class="meta">📰 The New York Times</p>
-  <p class="summary">AI芯片制造商Cerebras上市首日股价飙升89%，Sam Altman投资的这家公司受到市场热捧，折射出AI基础设施需求的空前高涨，成为2026年最大科技IPO。</p>
-</div><div class="card">
-  <div class="rank">3</div>
-  <h3><a href="https://news.google.com/read/CBMiZkFVX3lxTE5CZ2ZnT19GQ0dmN1RjYkEtNVd2czVlS19ldnBJZ2RRYnQweU1ZRGp2Y1dTN1FRcFlfSGpnelBHNmlNTjItNFAtVFFUSUdNamFJazVISGI1SjdKM1JzOTU3TFdwck9NQdIBa0FVX3lxTE84Tk5WMml6WHE2QlMxcFVlaFBDOXcwengtME9xYUR2YlhwRDRZaVh5RDJNc0YwSWI4ay1VN2lrcE5lWVdCcEstcjNQS3FfbklqdU5QWTlSaU9QOFNSU3paYi0zdjl6cEtkRDQ0" target="_blank">中国阻止Meta以20亿美元收购AI初创公司Manus</a></h3>
-  <p class="meta">📰 纽约时报</p>
-  <p class="summary">中国政府依据国家安全审查阻止Meta以20亿美元收购AI初创公司Manus，反映中美科技竞争加剧背景下AI领域跨境收购的严格监管新常态。</p>
-</div>
-
-<div class="section-title">🤖 模型与技术</div>
-<div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/-ewhh9yqowqFdieLSecrJA" target="_blank">xAI推出Grok 4.3模型，API价格降低40%-60%</a></h3>
-  <p class="meta">📰 新智元</p>
-  <p class="summary">xAI推出Grok 4.3，API价格大幅降低40%-60%，输出速度达196 Tokens/s，支持100万Token长上下文。在代理任务和办公辅助能力上显著提升，更擅长文档和演示文稿处理。</p>
-</div><div class="card">
-  <h3><a href="https://ai-bot.cn/mamoda2-5/" target="_blank">字节跳动开源全球首个25B级统一多模态模型Mamoda2.5</a></h3>
-  <p class="meta">📰 AI工具集</p>
-  <p class="summary">字节跳动开源Mamoda2.5，全球首个25B级统一多模态模型，基于Qwen3-VL-8B架构，总参数250亿每次仅激活约3亿。实现文生图、文生视频、视频编辑等全任务SOTA。</p>
-</div><div class="card">
-  <h3><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank">OpenAI推出三款实时语音模型：GPT-Realtime-2/Translate/Whisper</a></h3>
-  <p class="meta">📰 OpenAI</p>
-  <p class="summary">OpenAI推出三款实时语音模型：GPT-Realtime-2具备GPT-5级推理能力；GPT-Realtime-Translate支持70多种语言实时互译，每分钟成本约0.25元；GPT-Realtime-Whisper实现低延迟转录。</p>
-</div><div class="card">
-  <h3><a href="https://www.ithome.com/0/945/740.htm" target="_blank">DeepSeek公布多模态模型技术报告，提出视觉原语推理框架</a></h3>
-  <p class="meta">📰 IT之家</p>
-  <p class="summary">DeepSeek在GitHub发布多模态大模型并公开技术报告，提出基于视觉原语的思考框架，将点、边界框等空间标记提升为推理基本思维单元，使模型具备精确空间指代与推演能力。</p>
-</div>
-
-<div class="section-title">💼 商业与融资</div>
-<div class="card">
-  <h3><a href="https://ai.cnmo.com/news/815054.html" target="_blank">DeepSeek融资450亿估值，国家集成电路产业基金参与</a></h3>
-  <p class="meta">📰 CNMO科技</p>
-  <p class="summary">DeepSeek以450亿估值完成新一轮融资，国家集成电路产业投资基金参与其中。此前DeepSeek V4技术报告中300人作者名单中有10位核心研究者已离职，引发行业热议。</p>
-</div><div class="card">
-  <h3><a href="https://www.qbitai.com/2026/05/417468.html" target="_blank">田渊栋AI创业估值315亿，英伟达黄仁勋与AMD苏姿丰均参投</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">田渊栋AI创业公司估值达315亿元，英伟达CEO黄仁勋、AMD CEO苏姿丰均参与投资，姚班施天麟为合伙人之一。顶级AI科学家创业获芯片巨头联合加持。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/0NL2sdsv9Ge3MzotCOTUgQ" target="_blank">OpenAI成立部署公司获超40亿美元投资，推出Daybreak网络安全工具</a></h3>
-  <p class="meta">📰 机器之心</p>
-  <p class="summary">OpenAI宣布成立OpenAI Deployment Company，获超40亿美元初始投资并收购英国AI咨询公司Tomoro。同时推出AI网络安全工具Daybreak，对标Anthropic的Glasswing，自动化漏洞发现与修复。</p>
-</div>
-
-<div class="section-title">🔧 工具与开源</div>
-<div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/iy0MjNjAj2Yb23CSDmx19w" target="_blank">阿里推出Qoder 1.0：从AI IDE升级为智能体自主开发工作台</a></h3>
-  <p class="meta">📰 阿里云</p>
-  <p class="summary">阿里推出Qoder 1.0，从AI IDE升级为智能体自主开发工作台。新版本推出Quest独立视窗支持跨项目多任务并行，整合记忆、Repo Wiki与知识卡片为团队级知识引擎。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/EUC1XLOkmo3MTblTvolFTg" target="_blank">月之暗面推出Kimi WebBridge，让AI帮你操作浏览器</a></h3>
-  <p class="meta">📰 月之暗面 Kimi</p>
-  <p class="summary">月之暗面推出Kimi WebBridge浏览器插件，面向Kimi Code、Claude Code、Cursor、Codex等本地AI Agent，让AI携带用户登录状态与Cookie直接操作浏览器，大幅提升Agent自动化能力。</p>
-</div><div class="card">
-  <h3><a href="https://runwayml.com/news/introducing-runway-agent" target="_blank">Runway推出AI视频创作智能体Runway Agent</a></h3>
-  <p class="meta">📰 Runway</p>
-  <p class="summary">Runway正式推出Runway Agent，对话式AI视频创作智能体。用户仅需描述需求，Agent在单轮对话中完成从概念构思、故事分镜到视觉方向的全流程规划，自动生成高分辨率成品视频。</p>
-</div>
-
-<div class="section-title">📚 研究 &amp; 其他</div>
-<div class="card">
-  <h3><a href="https://www.qbitai.com/2026/05/418379.html" target="_blank">浙大校友用AI突破数学领域32年未解的拉姆齐数下界</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">浙江大学校友利用AI技术突破数学领域32年未解的拉姆齐数(Ramsey数)下限问题，展示AI在数学研究和定理发现中的巨大潜力，引发数学界和AI界广泛关注。</p>
-</div><div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w" target="_blank">OpenAI联合AMD/博通/英特尔/微软/英伟达开源超大规模AI训练网络协议MRC</a></h3>
-  <p class="meta">📰 量子位</p>
-  <p class="summary">OpenAI联合AMD、博通、英特尔、微软、英伟达五大巨头推出多路径可靠连接(MRC)协议并开源。采用多平面网络设计与自适应数据包喷淋技术，使故障恢复从秒级缩短至微秒级。</p>
-</div>
-
-</div>
-
-<div class="footer">
-  <strong>Hermes AI 新闻监控</strong> · 基于 101 条采集新闻精选 · 自动生成<br>
-  下次更新: 今晚 20:00 · 🌙 AI 晚报
-</div>
-
 </body>
 </html>
