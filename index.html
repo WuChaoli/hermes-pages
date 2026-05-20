@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>☀️ AI 晨报 · 5月20日</title>
+<title>🌙 AI 晚报</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
-.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 28px 20px 24px; text-align: center; }
 .header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
 .header .sub { font-size: 13px; opacity: 0.85; }
 .header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
@@ -15,801 +15,405 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 .tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
 .tabs::-webkit-scrollbar { display: none; }
 .tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
-.tab:hover { color: #ee5a24; }
-.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.tab:hover { color: #764ba2; }
+.tab.active { color: #764ba2; border-bottom-color: #764ba2; font-weight: 600; }
 .content { padding: 12px 16px; }
 .category { display: none; }
 .category.active { display: block; }
 .card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
 .card .title { font-size: 15px; font-weight: 600; color: #2d3436; margin-bottom: 6px; line-height: 1.4; }
 .card .title a { color: inherit; text-decoration: none; }
-.card .title a:hover { color: #ee5a24; }
+.card .title a:hover { color: #764ba2; }
 .card .meta { font-size: 12px; color: #999; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
 .card .meta .source { color: #636e72; }
-.card .summary { font-size: 13px; color: #555; line-height: 1.5; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
-.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #764ba215; color: #764ba2; margin-top: 6px; }
 .empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
 .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
 </style>
 </head>
 <body>
 <div class="header">
-  <h1>☀️ AI 晨报</h1>
-  <div class="sub">5月20日 · 开启一天的 AI 资讯</div>
+  <h1>🌙 AI 晚报</h1>
+  <div class="sub">今日 AI 大事回顾 · 2026-05-20</div>
   <div class="stats">
-    <span>📊 62 条</span>
-    <span>📡 9 个来源</span>
+    <span>📊 173 条</span>
+    <span>📡 12 个来源</span>
   </div>
 </div>
 <div class="tabs" id="tabs">
-  <div class="tab active" data-cat="全部">🏠 全部 (62)</div>
-    <div class="tab" data-cat="模型与技术">🤖 模型与技术 (20)</div>
-    <div class="tab" data-cat="商业与融资">💼 商业与融资 (11)</div>
-    <div class="tab" data-cat="产业应用">🏭 产业应用 (18)</div>
-    <div class="tab" data-cat="工具与开源">🔧 工具与开源 (9)</div>
-    <div class="tab" data-cat="学术与政策">📚 学术与政策 (4)</div>
+  <div class="tab active" data-cat="all">🏠 全部 (173)</div>
+  <div class="tab" data-cat="模型与技术">🤖 模型与技术 (56)</div>
+<div class="tab" data-cat="商业与融资">💼 商业与融资 (21)</div>
+<div class="tab" data-cat="产业应用">🏭 产业应用 (75)</div>
+<div class="tab" data-cat="工具与开源">🔧 工具与开源 (4)</div>
+<div class="tab" data-cat="学术政策">📚 学术与政策 (17)</div>
+
 </div>
 <div class="content">
-  <div class="category active" id="cat-全部">
-    <div class="card">
-  <div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I've joined Anthropic</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">340分 by dmarcos | 120评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Gentoo News: Copy Fail, Dirty Frag, and Fragnesia Kernel Vulnerabilities</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">13分 by akhuettel | 0评论</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://arstechnica.com/tech-policy/2026/05/iran-demands-big-tech-pay-fees-for-undersea-internet-cables-in-strait-of-hormuz/" target="_blank" rel="noopener">Iran demands Big Tech pay fees for undersea Internet cables in Strait of Hormuz</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">55分 by JeanKage | 38评论</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.wheresyoured.at/ai-is-too-expensive/" target="_blank" rel="noopener">AI is too expensive</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">61分 by unknown | 0评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://io.google/2026/" target="_blank" rel="noopener">Google I/O</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">47分 by thanhhaimai | 20评论</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://apnews.com/article/ai-college-commencement-anxiety-boo-35aec9bac660eaeb05c5b8d392db2cac" target="_blank" rel="noopener">Graduates are booing pep talks on AI at college commencements</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">42分 by 1vuio0pswjnm7 | 22评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I’ve joined Anthropic</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">770分 by dmarcos | 296评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash: frontier intelligence with action</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">109分 by meetpateltech | 49评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://forum.cursor.com/t/cloud-agents-broken-ii/161036" target="_blank" rel="noopener">Cursor Cloud Agents Down</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">9分 by mopatches | 1评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.qbitai.com/2026/05/416762.html" target="_blank" rel="noopener">AI步入“自我进化”时代，李彦宏首提AI时代度量衡“DAA”｜Create2026百度AI开发者⼤会速览
-2026-05-13</a></div>
-  <div class="meta"><span class="source">📰 量子位</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3805660478184966?f=rss" target="_blank" rel="noopener">高瓮出手了一家AI体育科技公司，曾获李泽湘天使轮融资｜硬氪首发</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">作者｜黄楠 编辑｜袁斯来 硬氪获悉，AI体育科技公司SportVision近日已完成天使+轮融资，高瓮创投（GL Ventures）领投，谦恒资本担任独家财务顾问。本轮资金将重点用于核心技术研发、产品量产落地及市场的推广拓展。其新款AI网球</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814695536336387?f=rss" target="_blank" rel="noopener">氫星场报 ￥百度：一季度营收321亿元，AI业务收入136亿元；马斯克预计今年美国将广泛使用自动驾驶汽车；巨力索具旗下十余家企业已注销</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">大公司： 索晨科技：物理AI业务目前尚处于布局初期 36氪获悉，索晨科技公告，公司股票于2026年5月14日至5月18日连续三个交易日内收盘价格涨幅偏离累计达到30%，属于股票交易异常动波情形。公司近期实施的募投项目“物理合成数据核心技术</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://deepmind.google/models/gemini-omni/" target="_blank" rel="noopener">Gemini Omni</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">53分 by meetpateltech | 13评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3816109626138119?f=rss" target="_blank" rel="noopener">氪星晚报 ｜SpaceX即将成为马斯克旗下第二家上市公司；京东、洋河集团等在宿迁成立新动能股权投资基金，出资额10亿</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">大公司： 圆通速递：4月快递产品收入60.71亿元，同比增长5.49% 36氪获悉，圆通速递公告，4月快递产品收入60.71亿元，同比增长5.49%；业务完成量27.26亿票，同比增长1.22%；快递产品单票收入2.23元，同比增长4.21</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3816036564147718?f=rss" target="_blank" rel="noopener">裸辞九个月，降薪跳槽，一个80后营销人如何上岸甲方？｜百万年薪系列013</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">图源：公众号「有三思 U Sense」） 2023年秋，杭州亚运会湖州赛区。于成龙手持亚运火炬跑过城市街巷</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3815841756028425?f=rss" target="_blank" rel="noopener">影石：重新定义性价比</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">作者 | 张帆 坚持做后来者 近日，影石创新发布了登陆资本市场后的首份年报</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814860909600261?f=rss" target="_blank" rel="noopener">鲸跃动力获星海图数千万元种子轮投资，用数据+模型+末端执行打造开箱即用的Robo Labor</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">文｜王欣逸 编辑｜邱晓芬</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814570248412677?f=rss" target="_blank" rel="noopener">科氪 | 性能极限与跨界尝试：红魔11S Pro系列深度体验</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">在智能手机行业普遍面临镜头模组日益凸出的背景下</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816218027983239?f=rss" target="_blank" rel="noopener">ST金鸿：松树资本产业导入上市公司等属不实言论</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">ST金鸿发布关于市场传闻的澄清及风险提示的公告</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816215984570760?f=rss" target="_blank" rel="noopener">*ST阳光：公司股票自5月21日起撤销退市风险警示</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">公司股票自2026年5月20日开市起停牌1天</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816212978680200?f=rss" target="_blank" rel="noopener">热门中概股美股盘前涨跌互现，哔哩哔哩跌超4%</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">热门中概股美股盘前涨跌互现</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816210396250497?f=rss" target="_blank" rel="noopener">美股大型科技股盘前多数下跌，英特尔跌超1%</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">美股大型科技股盘前多数下跌</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816205974552962?f=rss" target="_blank" rel="noopener">隆扬电子：控股股东及其一致行动人拟减持不超2%公司股份</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">公司控股股东隆扬国际计划通过大宗交易的方式减持</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816197908726146?f=rss" target="_blank" rel="noopener">富祥股份：股东拟减持不超2.45%股份</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">富祥股份公告，股东拟减持</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816195083034373?f=rss" target="_blank" rel="noopener">中控技术决定上调部分自有产品价格</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">中控技术发布产品价格调整通知公告</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816191185673993?f=rss" target="_blank" rel="noopener">印尼计划收紧对大宗商品出口的管控</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">印尼计划加强对煤炭、棕榈油等大宗商品出口的管控</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816189625753346?f=rss" target="_blank" rel="noopener">ADP：截至5月2日四周美国私营部门就业人数平均每周增加42250人</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">ADP数据显示，截至5月2日的四周，美国私营部门就业人数平均每周增加42250人</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816183071858184?f=rss" target="_blank" rel="noopener">奕帆传动：计划8400万元收购北京和利时电机技术有限公司40%股权</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">奕帆传动公告，计划使用自有或自筹资金8400万元收购</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">123分 by spectraldrift | 132评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://virtualosmuseum.org/" target="_blank" rel="noopener">I've built a virtual museum with nearly every operating system you can think of</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">366分 by andreww591 | 79评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google changes its search box</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">35分 by berkeleyjunk | 158评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/" target="_blank" rel="noopener">Apple unveils new accessibility features</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">490分 by interpol_p | 259评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://superspl.at/scene/84df8849" target="_blank" rel="noopener">Show HN: Gaussian Splat of a Strawberry</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">415分 by danybittel | 164评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Copy Fail, Dirty Frag, and Fragnesia kernel vulnerabilities</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">70分 by akhuettel | 17评</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.natesilver.net/p/disney-erased-fivethirtyeight" target="_blank" rel="noopener">Disney erased FiveThirtyEight</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">35分 by 7777777phil | 1评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://thebowesmuseum.org.uk/collections/the-silver-swan/" target="_blank" rel="noopener">The Silver Swan</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">7分 by pseudolus | 0评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://superlog.sh/" target="_blank" rel="noopener">Show HN: Superlog (YC P26) – Observability that installs itself and fixes bugs</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">33分 by Magnanten | 30评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://haystackeditor.com/" target="_blank" rel="noopener">Show HN: Haystack – Review the PRs that need human attention</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">14分 by akshaysg | 6评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" target="_blank" rel="noopener">CISA Admin Leaked AWS GovCloud Keys on GitHub</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">305分 by LelouBil | 141评</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.producthunt.com/products/autoshelf" target="_blank" rel="noopener">AutoShelf</a></div>
-  <div class="meta"><span class="source">📰 ProductHunt</span><span>2026-05-20</span></div>
-  <div class="summary">Auto-organize files on your Mac</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.producthunt.com/products/monocle-clear-workspace-clear-mind" target="_blank" rel="noopener">Monocle 3.5 for macOS</a></div>
-  <div class="meta"><span class="source">📰 ProductHunt</span><span>2026-05-20</span></div>
-  <div class="summary">Noise-cancelling for your screen</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai" target="_blank" rel="noopener">Mistral AI Acquires Emmi AI to Create the Leading AI Stack</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">22分 by doener | 1评</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://github.com/antoinezambelli/forge" target="_blank" rel="noopener">Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">18分 by zambelli | 12评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI Adopts Google's SynthID Watermark for AI Images with Verification Tool</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">34分 by anonymous | 0评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://distill.pub/2020/growing-ca/" target="_blank" rel="noopener">Growing Neural Cellular Automata</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">23分 by pulkitsh1234 | 3评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28137" target="_blank" rel="noopener">5 hours ago.AIbaseVisual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-SourcedTencent&amp;#x27;s Hunyuan large model, in collaboration with the Palace Museum and other institutions, launched &amp;#x27;Chronicles-OCR,&amp;#x27; the industry&amp;#x27;s first ancient script perception benchmark covering the evolution trajectory of the &amp;#x27;seven script styles&amp;#x27; of Chinese characters. The dataset, cross-annotated by experts with 2,800 images, tests AI&amp;#x27;s ability to recognize ancient scripts like oracle bone inscriptions, advancing AI&amp;#x27;s understanding of Chinese charact....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28135" target="_blank" rel="noopener">5 hours ago.AIbaseOptical Module Becomes the Smart Glasses&amp;#x27; &amp;#x27;Invisible Game-Changer&amp;#x27;! South Korean Startup LetinAR Secures $18.5 Million in FundingImagine speeding at 160 km/h, with navigation arrows appearing on the road ahead, integrated into your helmet visor without needing a phone or looking down. This is not sci-fi but a smart glasses technology launching in Europe this year, just an early glimpse of the evolving wave.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28132" target="_blank" rel="noopener">7 hours ago.AIbaseState-owned capital enters! The new $2 billion financing of Moonshot is nearing completionMajor changes in Kimi&amp;#x27;s shareholder list include new state-owned investors like Guozhitou, Beijing AI Fund, and China Mobile, marking critical integration of state-backed computing and capital support.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28129" target="_blank" rel="noopener">7 hours ago.AIbaseAlexa+ Launches On-Demand Podcast Feature - What You Want to Listen to, You Can Just Click!Amazon Alexa+ launches &amp;#x27;Alexa Podcasts,&amp;#x27; enabling users to generate personalized podcasts via voice commands. Simply say &amp;#x27;Create a podcast about XX&amp;#x27; to get a custom episode in minutes without uploading materials or scripting. Available for US users starting today, it aims to quickly turn any topic into podcast content.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28127" target="_blank" rel="noopener">8 hours ago.AIbaseAI Glasses Enter Urban Service Scenarios, Ant GPASS Launches City Tour Guide FunctionAnt Group&amp;#x27;s self-developed GPASS technology framework has expanded its application boundaries, with the city companion feature now available in the latest version of Leqi AI glasses. In companion mode, users can access information while walking, as the system provides location-based explanations of nearby attractions, supports real-time Q&amp;amp;A, navigation, and first-person content recording and sharing.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28125" target="_blank" rel="noopener">8 hours ago.AIbaseDual Approach to Cloud and Local: Open-Source Tool Osaurus Turns Mac Computers into Versatile AI ServersTech startups are accelerating the development of large model-based applications. Osaurus, an open-source platform for the Apple ecosystem, allows users to switch between local and cloud models while keeping core files locally. Born from privacy and token cost concerns, its predecessor has gained significant attention.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28123" target="_blank" rel="noopener">9 hours ago.AIbaseMonthly AI Computing Power Bill! Major Telecommunications Operators All Enter the Market and Launch Token PlansDuring World Telecommunication Day, the three major telecom operators packaged AI large model tokens as monthly subscription products, supporting phone bill payment and cross-platform use. This allows ordinary users, developers, and SMEs to access computing resources as easily as buying data packages, breaking the exclusive billing barriers of internet giants and making large model basic energy accessible to the public.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28121" target="_blank" rel="noopener">9 hours ago.AIbaseThe AI Hardware Revolution Is Coming: How Giants Are Planning for the Future of Technology!Former Apple and Meta hardware lead Caitlin Kalinowski argues that AI will fundamentally reshape hardware design. She attributes consumer VR&amp;#x27;s failure not to technology but to poor market fit. Despite Meta Quest&amp;#x27;s technical lead, it missed core user needs. Future hardware must focus on practical applications.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28119" target="_blank" rel="noopener">11 hours ago.AIbaseGlobal AI Market: OpenAI and Anthropic Capture 89% of Annual Revenue ShareA survey shows that 34 major AI companies globally generated nearly $80 billion in annual revenue, a 112% increase in six months. OpenAI and Anthropic dominate with about 89% of revenue, highlighting a highly concentrated market.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28117" target="_blank" rel="noopener">11 hours ago.AIbaseAI Large Models Accelerate Deployment in Cultural and Tourism Scenarios, Doubao Launches Museum Guide ModeOn the 50th International Museum Day, ByteDance&amp;#x27;s AI app Doubao launched a museum guide mode using generative AI to enhance cultural heritage tours. It has partnered with over 20 leading institutions like the National Museum of China, Pudong Art Museum, and Gansu Provincial Museum, supporting online knowledge retrieval and offline exhibition experiences.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/iHlnN2YGafxWweVLCP2--g" target="_blank" rel="noopener">阶跃星辰推出新一代图像生成编辑模型&amp;nbsp;Step Image Edit 2</a></div>
-  <div class="meta"><span class="source">📰 阶跃星辰</span><span>2026-05-20</span></div>
-  <div class="summary">阶跃星辰正式推出新一代图像生成编辑模型 Step Image Edit 2 。模型仅3.5B参数，在实际表现中超越12B-20B级开源图像编辑大模型，单次生图只需0.5-2秒，在KRIS-Bench榜单轻量级图像编辑模型综合排名第一。模型支持图像生成与编辑、中英文渲染、局部编辑、视觉推理、风格迁移等功能，覆盖IP创作、海报设计、人像美颜等场景。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/FQPdUQjbxdEMZjgWk7Zukg" target="_blank" rel="noopener">腾讯WorkBuddy小程序上线，支持”云端+本机”双模式运行</a></div>
-  <div class="meta"><span class="source">📰 腾讯云</span><span>2026-05-20</span></div>
-  <div class="summary">腾讯 WorkBuddy 微信小程序正式上线，支持”云端+本机”双模式运行。用户可通过手机语音、拍照、传文件等方式派活，AI 在云端沙箱或本地电脑远程执行，生成文档、PPT、视频等产物可一键下载转发。小程序内置 GLM-5.0、Kimi-K2.5 等多模型，支持灵活切换和定时任务，实现”手机遥控，电脑/云端干活”的移动办公体验。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/S3CZBNf9Rks9twQzZ6m3Ow?scene=1&amp;click_id=90" target="_blank" rel="noopener">阿里在海外推出”企业级龙虾”Accio Work</a></div>
-  <div class="meta"><span class="source">📰 量子位</span><span>2026-05-20</span></div>
-  <div class="summary">阿里在海外上线企业级Agent产品 Accio Work ，定位”企业版龙虾”。用户只需提出想法，内置的AI Agent团队可7×24小时自动完成选品、采购、建站、运营等全流程，30分钟生成可运营的海外网店。产品支持单个Agent对话或Agent Team群聊模式，可自定义角色与技能，关键操作需用户授权保障安全。</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://ai-bot.cn/jvs-claw/" target="_blank" rel="noopener">阿里版OpenClaw更名”JVS Claw”，并开启内测</a></div>
-  <div class="meta"><span class="source">📰 AI工具集</span><span>2026-05-20</span></div>
-  <div class="summary">阿里云旗下AI Agent产品”无影JVS”正式更名为” JVS Claw “，目前已推出独立APP和网页版，处于邀请码内测阶段。产品以可定制的Clawbot为核心，搭配6核/12GB独立云端ClawSpace环境，支持实时查看AI操作链路。内置浏览器自动化、Office文档处理等预制技能，用户可通过”技能查找”安装ClawHub新技能，或用自然语言创建自定义技能。</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/T1hlZCX4JRtLmooiSLTIjg" target="_blank" rel="noopener">Skywork AI 正式发布多模态视频基础模型&amp;nbsp;SkyReels V4</a></div>
-  <div class="meta"><span class="source">📰 昆仑万维集团</span><span>2026-05-20</span></div>
-  <div class="summary">Skywork AI发布全新多模态视频基础模型 SkyReels V4 。模型采用创新的双流多模态扩散Transformer（MMDiT）架构，是全球首个能同时处理多模态输入、联合生成视频与音频、并统一完成视频生成、修复、编辑三大任务的模型。支持文本、图像、视频、音频、掩码等丰富输入，可输出1080p分辨率、32FPS、长达15秒的高质量音视频同步内容。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816851360908423?f=rss" target="_blank" rel="noopener">OpenAI创始成员Karpathy表示他已加入Anthropic</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">OpenAI创始成员Karpathy表示他已加入Anthropic。（财联社）</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816300637668483?f=rss" target="_blank" rel="noopener">微软计划年内启用印度最大数据中心，持续加大AI基础设施投入</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">微软印度及南非地区总裁普尼特·昌多克（Puneet Chandok）周二接受采访时表示，微软在印度建设的最大数据中心预计将于2026年中期正式启用。此举是这家科技巨头在印度市场大规模资本支出的核心举措，旨在加速布局全球最大的人工智能（AI）</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
+  <div class="category active" id="cat-all">
+    <div class="card"><div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I&#39;ve joined Anthropic</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">340分 by dmarcos | 120评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Gentoo News: Copy Fail, Dirty Frag, and Fragnesia Kernel Vulnerabilities</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">13分 by akhuettel | 0评论</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://arstechnica.com/tech-policy/2026/05/iran-demands-big-tech-pay-fees-for-undersea-internet-cables-in-strait-of-hormuz/" target="_blank" rel="noopener">Iran demands Big Tech pay fees for undersea Internet cables in Strait of Hormuz</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">55分 by JeanKage | 38评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.wheresyoured.at/ai-is-too-expensive/" target="_blank" rel="noopener">AI is too expensive</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">61分 by unknown | 0评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://io.google/2026/" target="_blank" rel="noopener">Google I/O</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">47分 by thanhhaimai | 20评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://apnews.com/article/ai-college-commencement-anxiety-boo-35aec9bac660eaeb05c5b8d392db2cac" target="_blank" rel="noopener">Graduates are booing pep talks on AI at college commencements</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">42分 by 1vuio0pswjnm7 | 22评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash: frontier intelligence with action</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">109分 by meetpateltech | 49评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://forum.cursor.com/t/cloud-agents-broken-ii/161036" target="_blank" rel="noopener">Cursor Cloud Agents Down</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">9分 by mopatches | 1评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/416762.html" target="_blank" rel="noopener">AI步入“自我进化”时代，李彦宏首提AI时代度量衡“DAA”｜Create2026百度AI开发者⼤会速览
+2026-05-13</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3805660478184966?f=rss" target="_blank" rel="noopener">高瓮出手了一家AI体育科技公司，曾获李泽湘天使轮融资｜硬氪首发</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">作者｜黄楠 编辑｜袁斯来 硬氪获悉，AI体育科技公司SportVision近日已完成天使+轮融资，高瓮创投（GL Ventures）领投，谦恒资本担任独家财务顾问。本轮资金将重点用于核心技术研发、产品量产落地及市场的推广拓展。其新款AI网球</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814695536336387?f=rss" target="_blank" rel="noopener">氫星场报 ￥百度：一季度营收321亿元，AI业务收入136亿元；马斯克预计今年美国将广泛使用自动驾驶汽车；巨力索具旗下十余家企业已注销</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-18</span></div><div class="summary">大公司： 索晨科技：物理AI业务目前尚处于布局初期 36氪获悉，索晨科技公告，公司股票于2026年5月14日至5月18日连续三个交易日内收盘价格涨幅偏离累计达到30%，属于股票交易异常动波情形。公司近期实施的募投项目“物理合成数据核心技术</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://deepmind.google/models/gemini-omni/" target="_blank" rel="noopener">Gemini Omni</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">53分 by meetpateltech | 13评论</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816109626138119?f=rss" target="_blank" rel="noopener">氪星晚报 ｜SpaceX即将成为马斯克旗下第二家上市公司；京东、洋河集团等在宿迁成立新动能股权投资基金，出资额10亿</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">大公司： 圆通速递：4月快递产品收入60.71亿元，同比增长5.49% 36氪获悉，圆通速递公告，4月快递产品收入60.71亿元，同比增长5.49%；业务完成量27.26亿票，同比增长1.22%；快递产品单票收入2.23元，同比增长4.21</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816036564147718?f=rss" target="_blank" rel="noopener">裸辞九个月，降薪跳槽，一个80后营销人如何上岸甲方？｜百万年薪系列013</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">图源：公众号「有三思 U Sense」） 2023年秋，杭州亚运会湖州赛区。于成龙手持亚运火炬跑过城市街巷</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3815841756028425?f=rss" target="_blank" rel="noopener">影石：重新定义性价比</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">作者 | 张帆 坚持做后来者 近日，影石创新发布了登陆资本市场后的首份年报</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814860909600261?f=rss" target="_blank" rel="noopener">鲸跃动力获星海图数千万元种子轮投资，用数据+模型+末端执行打造开箱即用的Robo Labor</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">文｜王欣逸 编辑｜邱晓芬</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814570248412677?f=rss" target="_blank" rel="noopener">科氪 | 性能极限与跨界尝试：红魔11S Pro系列深度体验</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-18</span></div><div class="summary">在智能手机行业普遍面临镜头模组日益凸出的背景下</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816218027983239?f=rss" target="_blank" rel="noopener">ST金鸿：松树资本产业导入上市公司等属不实言论</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">ST金鸿发布关于市场传闻的澄清及风险提示的公告</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816215984570760?f=rss" target="_blank" rel="noopener">*ST阳光：公司股票自5月21日起撤销退市风险警示</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">公司股票自2026年5月20日开市起停牌1天</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816212978680200?f=rss" target="_blank" rel="noopener">热门中概股美股盘前涨跌互现，哔哩哔哩跌超4%</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">热门中概股美股盘前涨跌互现</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816210396250497?f=rss" target="_blank" rel="noopener">美股大型科技股盘前多数下跌，英特尔跌超1%</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">美股大型科技股盘前多数下跌</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816205974552962?f=rss" target="_blank" rel="noopener">隆扬电子：控股股东及其一致行动人拟减持不超2%公司股份</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">公司控股股东隆扬国际计划通过大宗交易的方式减持</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816197908726146?f=rss" target="_blank" rel="noopener">富祥股份：股东拟减持不超2.45%股份</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">富祥股份公告，股东拟减持</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816195083034373?f=rss" target="_blank" rel="noopener">中控技术决定上调部分自有产品价格</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">中控技术发布产品价格调整通知公告</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816191185673993?f=rss" target="_blank" rel="noopener">印尼计划收紧对大宗商品出口的管控</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">印尼计划加强对煤炭、棕榈油等大宗商品出口的管控</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816189625753346?f=rss" target="_blank" rel="noopener">ADP：截至5月2日四周美国私营部门就业人数平均每周增加42250人</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">ADP数据显示，截至5月2日的四周，美国私营部门就业人数平均每周增加42250人</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816183071858184?f=rss" target="_blank" rel="noopener">奕帆传动：计划8400万元收购北京和利时电机技术有限公司40%股权</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">奕帆传动公告，计划使用自有或自筹资金8400万元收购</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://virtualosmuseum.org/" target="_blank" rel="noopener">I&#39;ve built a virtual museum with nearly every operating system you can think of</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">366分 by andreww591 | 79评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google changes its search box</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">35分 by berkeleyjunk | 158评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/" target="_blank" rel="noopener">Apple unveils new accessibility features</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">490分 by interpol_p | 259评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://superspl.at/scene/84df8849" target="_blank" rel="noopener">Show HN: Gaussian Splat of a Strawberry</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">415分 by danybittel | 164评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://www.natesilver.net/p/disney-erased-fivethirtyeight" target="_blank" rel="noopener">Disney erased FiveThirtyEight</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">35分 by 7777777phil | 1评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://thebowesmuseum.org.uk/collections/the-silver-swan/" target="_blank" rel="noopener">The Silver Swan</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">7分 by pseudolus | 0评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://superlog.sh/" target="_blank" rel="noopener">Show HN: Superlog (YC P26) – Observability that installs itself and fixes bugs</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">33分 by Magnanten | 30评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://haystackeditor.com/" target="_blank" rel="noopener">Show HN: Haystack – Review the PRs that need human attention</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">14分 by akshaysg | 6评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" target="_blank" rel="noopener">CISA Admin Leaked AWS GovCloud Keys on GitHub</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">305分 by LelouBil | 141评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/autoshelf" target="_blank" rel="noopener">AutoShelf</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-20</span></div><div class="summary">Auto-organize files on your Mac</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/monocle-clear-workspace-clear-mind" target="_blank" rel="noopener">Monocle 3.5 for macOS</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-20</span></div><div class="summary">Noise-cancelling for your screen</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai" target="_blank" rel="noopener">Mistral AI Acquires Emmi AI to Create the Leading AI Stack</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">22分 by doener | 1评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://github.com/antoinezambelli/forge" target="_blank" rel="noopener">Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">18分 by zambelli | 12评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI Adopts Google&#39;s SynthID Watermark for AI Images with Verification Tool</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">34分 by anonymous | 0评</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://distill.pub/2020/growing-ca/" target="_blank" rel="noopener">Growing Neural Cellular Automata</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">23分 by pulkitsh1234 | 3评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28137" target="_blank" rel="noopener">5 hours ago.AIbaseVisual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-SourcedTencent&amp;#x27;s Hunyuan large model, in collaboration with the Palace Museum and other institutions, launched &amp;#x27;Chronicles-OCR,&amp;#x27; the industry&amp;#x27;s first ancient script perception benchmark covering the evolution trajectory of the &amp;#x27;seven script styles&amp;#x27; of Chinese characters. The dataset, cross-annotated by experts with 2,800 images, tests AI&amp;#x27;s ability to recognize ancient scripts like oracle bone inscriptions, advancing AI&amp;#x27;s understanding of Chinese charact....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28135" target="_blank" rel="noopener">5 hours ago.AIbaseOptical Module Becomes the Smart Glasses&amp;#x27; &amp;#x27;Invisible Game-Changer&amp;#x27;! South Korean Startup LetinAR Secures $18.5 Million in FundingImagine speeding at 160 km/h, with navigation arrows appearing on the road ahead, integrated into your helmet visor without needing a phone or looking down. This is not sci-fi but a smart glasses technology launching in Europe this year, just an early glimpse of the evolving wave.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28132" target="_blank" rel="noopener">7 hours ago.AIbaseState-owned capital enters! The new $2 billion financing of Moonshot is nearing completionMajor changes in Kimi&amp;#x27;s shareholder list include new state-owned investors like Guozhitou, Beijing AI Fund, and China Mobile, marking critical integration of state-backed computing and capital support.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28129" target="_blank" rel="noopener">7 hours ago.AIbaseAlexa+ Launches On-Demand Podcast Feature - What You Want to Listen to, You Can Just Click!Amazon Alexa+ launches &amp;#x27;Alexa Podcasts,&amp;#x27; enabling users to generate personalized podcasts via voice commands. Simply say &amp;#x27;Create a podcast about XX&amp;#x27; to get a custom episode in minutes without uploading materials or scripting. Available for US users starting today, it aims to quickly turn any topic into podcast content.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28127" target="_blank" rel="noopener">8 hours ago.AIbaseAI Glasses Enter Urban Service Scenarios, Ant GPASS Launches City Tour Guide FunctionAnt Group&amp;#x27;s self-developed GPASS technology framework has expanded its application boundaries, with the city companion feature now available in the latest version of Leqi AI glasses. In companion mode, users can access information while walking, as the system provides location-based explanations of nearby attractions, supports real-time Q&amp;amp;A, navigation, and first-person content recording and sharing.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28125" target="_blank" rel="noopener">8 hours ago.AIbaseDual Approach to Cloud and Local: Open-Source Tool Osaurus Turns Mac Computers into Versatile AI ServersTech startups are accelerating the development of large model-based applications. Osaurus, an open-source platform for the Apple ecosystem, allows users to switch between local and cloud models while keeping core files locally. Born from privacy and token cost concerns, its predecessor has gained significant attention.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28123" target="_blank" rel="noopener">9 hours ago.AIbaseMonthly AI Computing Power Bill! Major Telecommunications Operators All Enter the Market and Launch Token PlansDuring World Telecommunication Day, the three major telecom operators packaged AI large model tokens as monthly subscription products, supporting phone bill payment and cross-platform use. This allows ordinary users, developers, and SMEs to access computing resources as easily as buying data packages, breaking the exclusive billing barriers of internet giants and making large model basic energy accessible to the public.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28121" target="_blank" rel="noopener">9 hours ago.AIbaseThe AI Hardware Revolution Is Coming: How Giants Are Planning for the Future of Technology!Former Apple and Meta hardware lead Caitlin Kalinowski argues that AI will fundamentally reshape hardware design. She attributes consumer VR&amp;#x27;s failure not to technology but to poor market fit. Despite Meta Quest&amp;#x27;s technical lead, it missed core user needs. Future hardware must focus on practical applications.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28119" target="_blank" rel="noopener">11 hours ago.AIbaseGlobal AI Market: OpenAI and Anthropic Capture 89% of Annual Revenue ShareA survey shows that 34 major AI companies globally generated nearly $80 billion in annual revenue, a 112% increase in six months. OpenAI and Anthropic dominate with about 89% of revenue, highlighting a highly concentrated market.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28117" target="_blank" rel="noopener">11 hours ago.AIbaseAI Large Models Accelerate Deployment in Cultural and Tourism Scenarios, Doubao Launches Museum Guide ModeOn the 50th International Museum Day, ByteDance&amp;#x27;s AI app Doubao launched a museum guide mode using generative AI to enhance cultural heritage tours. It has partnered with over 20 leading institutions like the National Museum of China, Pudong Art Museum, and Gansu Provincial Museum, supporting online knowledge retrieval and offline exhibition experiences.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/iHlnN2YGafxWweVLCP2--g" target="_blank" rel="noopener">阶跃星辰推出新一代图像生成编辑模型&amp;nbsp;Step Image Edit 2</a></div><div class="meta"><span class="source">阶跃星辰</span><span>2026-04-29</span></div><div class="summary">阶跃星辰正式推出新一代图像生成编辑模型 Step Image Edit 2 。模型仅3.5B参数，在实际表现中超越12B-20B级开源图像编辑大模型，单次生图只需0.5-2秒，在KRIS-Bench榜单轻量级图像编辑模型综合排名第一。模型支持图像生成与编辑、中英文渲染、局部编辑、视觉推理、风格...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/FQPdUQjbxdEMZjgWk7Zukg" target="_blank" rel="noopener">腾讯WorkBuddy小程序上线，支持”云端+本机”双模式运行</a></div><div class="meta"><span class="source">腾讯云</span><span>2026-03-31</span></div><div class="summary">腾讯 WorkBuddy 微信小程序正式上线，支持”云端+本机”双模式运行。用户可通过手机语音、拍照、传文件等方式派活，AI 在云端沙箱或本地电脑远程执行，生成文档、PPT、视频等产物可一键下载转发。小程序内置 GLM-5.0、Kimi-K2.5 等多模型，支持灵活切换和定时任务，实现”手机遥...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/S3CZBNf9Rks9twQzZ6m3Ow?scene=1&amp;amp;click_id=90" target="_blank" rel="noopener">阿里在海外推出”企业级龙虾”Accio Work</a></div><div class="meta"><span class="source">量子位</span><span>2026-03-25</span></div><div class="summary">阿里在海外上线企业级Agent产品 Accio Work ，定位”企业版龙虾”。用户只需提出想法，内置的AI Agent团队可7×24小时自动完成选品、采购、建站、运营等全流程，30分钟生成可运营的海外网店。产品支持单个Agent对话或Agent Team群聊模式，可自定义角色与技能，关键操作...</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/jvs-claw/" target="_blank" rel="noopener">阿里版OpenClaw更名”JVS Claw”，并开启内测</a></div><div class="meta"><span class="source">AI工具集</span><span>2026-03-10</span></div><div class="summary">阿里云旗下AI Agent产品”无影JVS”正式更名为” JVS Claw “，目前已推出独立APP和网页版，处于邀请码内测阶段。产品以可定制的Clawbot为核心，搭配6核/12GB独立云端ClawSpace环境，支持实时查看AI操作链路。内置浏览器自动化、Office文档处理等预制技能，用...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/T1hlZCX4JRtLmooiSLTIjg" target="_blank" rel="noopener">Skywork AI 正式发布多模态视频基础模型&amp;nbsp;SkyReels V4</a></div><div class="meta"><span class="source">昆仑万维集团</span><span>2026-02-27</span></div><div class="summary">Skywork AI发布全新多模态视频基础模型 SkyReels V4 。模型采用创新的双流多模态扩散Transformer（MMDiT）架构，是全球首个能同时处理多模态输入、联合生成视频与音频、并统一完成视频生成、修复、编辑三大任务的模型。支持文本、图像、视频、音频、掩码等丰富输入，可输出1...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816851360908423?f=rss" target="_blank" rel="noopener">OpenAI创始成员Karpathy表示他已加入Anthropic</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">OpenAI创始成员Karpathy表示他已加入Anthropic。（财联社）</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816300637668483?f=rss" target="_blank" rel="noopener">微软计划年内启用印度最大数据中心，持续加大AI基础设施投入</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">微软印度及南非地区总裁普尼特·昌多克（Puneet Chandok）周二接受采访时表示，微软在印度建设的最大数据中心预计将于2026年中期正式启用。此举是这家科技巨头在印度市场大规模资本支出的核心举措，旨在加速布局全球最大的人工智能（AI）</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816865952301953?f=rss" target="_blank" rel="noopener">OpenAI推出&quot;保障容量&quot;服务：提供长期算力访问承诺</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">当地时间5月19日，OpenAI宣布推出一项名为&quot;保障容量&quot;的新服务，旨在为客户最重要的产品、智能体以及客户工作流提供长期的算力访问保障。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816856258151298?f=rss" target="_blank" rel="noopener">瑞穗押注AI需求外溢，大幅上调美光、意法及德州仪器目标价</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">瑞穗证券周二发布行业报告，基于人工智能基础设施建设带来的连锁效应，显著调高了对美光科技、意法半导体及德州仪器的目标股价</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816847749153664?f=rss" target="_blank" rel="noopener">SpaceX据悉打算在美国IPO过后30天收购初创公司Cursor</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">据知情人士透露，SpaceX预计将在其正式挂牌上市（IPO）满30天后，推进对人工智能编程初创公司Cursor的收购案。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816848622306436?f=rss" target="_blank" rel="noopener">谷歌CEO：Gemini月活跃用户达9亿</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">谷歌CEO皮查伊在2026年I/O开发者大会上表示，Gemini AI应用的月活跃用户在过去一年中增长了一倍多，达到9亿人次</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816885092910212?f=rss" target="_blank" rel="noopener">8点1氪丨谷歌推出Gemini 3.5系列模型；DeepSeek回应用户“对话泄露”疑虑；全国存款十强城市出炉</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">今日热点导览 谷歌推出Gemini 3.5系列模型</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816884140589960?f=rss" target="_blank" rel="noopener">沙特AI公司Humain聘请高盛，为数据中心建设筹措超53亿美元融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">由沙特主权基金PIF支持的AI公司Humain已聘请高盛</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816933425857670?f=rss" target="_blank" rel="noopener">江苏：实施提振消费专项行动，培育壮大智能穿戴设备、首发首店经济、AI流量消费等新增长点</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">5月19日</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816885492564871?f=rss" target="_blank" rel="noopener">中信证券：AI浪潮下，MLCC迎来新一轮上行周期</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://status.railway.com/?date=20260519" target="_blank" rel="noopener">Railway Blocked by Google Cloud</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">16分 by aarondf | 3评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://github.com/wiltodelta/remove-ai-watermarks" target="_blank" rel="noopener">Remove-AI-Watermarks - CLI and library for removing AI watermarks from images</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">89分 by janalsncm | 61评论</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816909945029760?f=rss" target="_blank" rel="noopener">要做数字劳动力生产工厂，「未来式智能」完成Pre-A轮融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">文｜王欣逸 编辑｜邓咏仪 36氪获悉，未来式智能（AutoAgents.ai）近日完成Pre-A轮融资，新进投资方包括凡创资本、中关村资本、探元资本，老股东东证创新、麟阁创投跟投，本轮融资主要用于算力投入、团队扩张以及新产品的生态建设运营。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816947890471812?f=rss" target="_blank" rel="noopener">早期项目 | Chance AI获美图等数百万美元投资，用户数已达20万</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">作者丨欧雪 编辑丨袁斯来 硬氪获悉，Visual Agent（视觉智能体）创业公司Chance AI宣布完成数百万美元天使轮融资。本轮由美图领投，NYX Ventures、阿里系投资机构等跟投。融资将用于模型能力迭代、北美学生群体增长、以及</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28150" target="_blank" rel="noopener">Google Launches Gemini Omni Model, Opening a New Era of Multimodal Interaction!</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google released its latest multimodal AI model, Gemini Omni, on May 19th, marking a major breakthrough in the Gemini family. This model can process...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28148" target="_blank" rel="noopener">Soy MiniMax3 Monitor Speakers: Big Power in a Small Package</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Audio brand Soy launched the MiniMax3 Monitor professional studio monitor speakers, priced at 2099 yuan per unit, specifically designed for persona...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28146" target="_blank" rel="noopener">Google Launches Its First AI Smart Glasses, Compatible with iPhone and Android Phones</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google announces its first smart glasses launching this fall, partnering with Samsung, Gentle Monster, and Warby Parker for AI audio glasses series...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28144" target="_blank" rel="noopener">OpenAI Launches &#39;Guaranteed Capacity&#39; Service: Enhanced Access to Computational Power</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">OpenAI launched the &#39;Guaranteed Capacity&#39; service on May 19th, aiming to provide customers with long-term commitments for access to computa...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28142" target="_blank" rel="noopener">Eliminate Complex Prompting: Google Launches Its First Native Interactive AI Design Tool, Pics</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google introduced the AI design application Pics at the 2026 I/O conference, integrated into Google Workspace. Users can generate social media imag...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28140" target="_blank" rel="noopener">Young Genius Makes a Comeback! Former OpenAI Researcher Turns to Stock Trading, Fund Size Surges 52 Times!</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">After being fired for leaking information, former OpenAI researcher Leopold Aschenbrenner founded the investment fund Situational Awareness LP, foc...</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28138" target="_blank" rel="noopener">Reimagining the Web Gateway: Google Collaborates with DeepMind to Launch an Interactive Search Experience Powered by Gemini Flash 3.5</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google announced at I/O that search is undergoing its biggest change in 25 years, ending the era of &#39;10 blue links&#39; with an AI-powered inte...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28136" target="_blank" rel="noopener">Google AI Studio Mobile App Officially Launches on Google Play, Supports Pre-Registration</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Google launches AI Studio as a standalone mobile app, now available for pre-registration on Google Play, extending its Gemini-powered AI developmen...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28134" target="_blank" rel="noopener">Free Beta Test Countdown: Tencent Cloud&#39;s Two Major AI Models to Enter Official Commercial Use at the End of the Month</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Tencent Cloud announced that its two core large models, Hy3preview and DeepSeek-V4-Pro, on its agent development platform will end free public beta...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28130" target="_blank" rel="noopener">More Quantity, Same Price! The Two Main AI Tools of Anthropic&#39;s Claude Receive a Major Upgrade</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Anthropic recently announced major performance upgrades to its AI toolchain, focusing on optimizing the visual creation tool Claude Design and code...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817018077447040?f=rss" target="_blank" rel="noopener">阿里发布基于新一代真武芯片的超节点服务器，可支持海量Agent并发推理</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，阿里发布基于平头哥新一代AI芯片真武M890的128卡超节点服务器</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816998205801352?f=rss" target="_blank" rel="noopener">FSD入华信号增强？特斯拉九城急招智驾测试技师，官方客服：正积极推进审批</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">日前，特斯拉中国发布多个与智能驾驶测试相关的招聘岗位</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816962733229191?f=rss" target="_blank" rel="noopener">扩博智能Sparrow刷新两项海上风电纪录</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，2026年5月，在丹麦北海的海上风电运维作业中，扩博智能Sparrow机器人刷新了两项行业纪录</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814411349581316?f=rss" target="_blank" rel="noopener">做出百万台割草机器人后，未岚大陆CEO决定让自己变得不重要｜硬氪专访</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">作者｜黄楠 编辑｜袁斯来 未岚大陆CEO任冠佼等了7年</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817050950665353?f=rss" target="_blank" rel="noopener">&quot;趋境科技&quot;完成数亿元Pre-A轮融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，近日，AI Token生产服务商&quot;趋境科技&quot;（Approaching.AI）宣布完成数亿元Pre-A轮融资。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817048257151876?f=rss" target="_blank" rel="noopener">联想全新发布的天禧AI 4.0</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">5月19日，&quot;联想天禧AI一体多端全场景新品超能之夜&quot;上，联想全新发布的天禧AI 4.0。据了解，天禧AI 4.0带来了多模态融合与仿生记忆。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817080294999168?f=rss" target="_blank" rel="noopener">平头哥AI芯片真武M890首次亮相，性能提升至3倍</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，平头哥新一代训推一体AI芯片真武M890首次亮相</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817070340342921?f=rss" target="_blank" rel="noopener">阿里发布新一代千问旗舰模型Qwen3.7-Max</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，阿里巴巴发布全新一代千问旗舰模型Qwen3.7-Max，在三方机构Arena全球大模型盲测总榜中，Qwen3.7-Max位列国产模型第一。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817085893788546?f=rss" target="_blank" rel="noopener">Seedance 2.1即将推出？接近字节跳动人士：不属实</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">日前有市场消息称，字节跳动准备推出其AI视频生成模型Seedance 2.0的升级版本Seedance 2.1，而新模型的生成质量预计提升约20%。5月20日，接近字节跳动人士表示，市场上关于Seedance2.1即将发布的传言不属实。今年</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817111570482304?f=rss" target="_blank" rel="noopener">平头哥真武系列GPU已累计出货超56万片</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，平头哥首次公布真武系列芯片的规划，未来两年将陆续推出算力更强的真武V900、真武J900两代芯片，以满足Agentic时代千行百业的AI算力需求。目前，真武系列芯片已累计出货56万片，服务了中</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">Gemini CLI will stop working from June 18, 2026</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">104分 by primaprashant | 39评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817110991799169?f=rss" target="_blank" rel="noopener">飞猪推出酒店商家智能助理</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，飞猪正式推出酒店商家智能助理，向平台上所有酒店免费开放。商家智能助理“上岗”后，一句话即可指挥AI批量调房态、改库存、录发票。它还能进行实时数据分析，向酒店提出科学的价格和库存管理策略参考；发现入住全流程中的服务关键</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817109218575489?f=rss" target="_blank" rel="noopener">地瓜机器人与千寻智能达成战略合作</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，地瓜机器人与千寻智能宣布达成战略合作。双方已完成开源VLA模型Spirit v1.5与旭日S600旗舰大算力芯片的深度适配，联合打造高性能、可量产的软硬一体化解决方案。Spirit v1.5是国内首个综合性能超越国际</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817084193866889?f=rss" target="_blank" rel="noopener">“贝塔无限”连续完成种子轮、种子+轮数亿元融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，近日，聚焦消费级通用具身智能的企业“贝塔无限 Beta Infinity”宣布，公司已先后完成种子轮、种子+轮数亿元融资。种子轮由洪泰基金、正景基金、银杏谷资本、水木清华校友种子基金、粤科金融等投资机构联合投资，种子+轮由世纪华</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817119265457027?f=rss" target="_blank" rel="noopener">新加坡加码人工智能布局，英伟达将落地本地研发中心</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">全球AI芯片巨头英伟达将在新加坡新设研发中心...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817118508713092?f=rss" target="_blank" rel="noopener">圆周率智能发布 iMLite AI（悟境）端侧实时决策引擎</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，今日，圆周率智能正式发布 iMLite AI（悟境）端侧实时决策引擎...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">AI影视“军备竞赛”升级：Netflix组建动画工作室，爱奇艺财报揭示AI增效新路径</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">DeepMind 首席执行官痛批“AI 裁员论”：用 AI 取代开发者是重大错误</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌I/O大会上，DeepMind CEO哈萨比斯反对“AI取代程序员”论调，认为这是缺乏想象力的表现。他强调，AI提升生产力不应成为裁员借口，技术进步应赋能人类而非替代岗位。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">AI办公新物种：出门问问CodeBanana斩获 36 氪年度大奖，重新定义“超级组织”</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">36氪公布「2026AI最佳场景渗透案例」评选结果，上海羽扇智信息科技旗下AI协作平台CodeBanana(CB)因在复杂企业协作场景中的出色表现，从数百案例中胜出入选。评选历时3个月，经多轮严格评审，CodeBanana代表AI技术产业渗透领先水平。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">记忆大模型赛道黑马：MemoraX AI完成种子+轮融资，累计吸金超亿元</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">深圳忆纪元科技（MemoraX AI）一个月内再获数千万人民币种子+轮融资，累计金额突破1亿元。公司专注“大模型记忆系统”垂直赛道，由光源资本担任财务顾问，凸显资本市场对其技术潜力的高度认可。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">正面迎战安索匹克！谷歌发布安全 AI 工具打响代码保卫战</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在I/O开发者大会上宣布，邀请特定专家对旗下代码安全AI智能体CodeMender进行API测试。该工具由深度思维团队开发，自去年十月亮相后备受关注，此次推向外部市场旨在修复全球漏洞。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">通义实验室发布Qwen3.7-Max，以“正交解耦”技术斩获多项评测国内第一</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">通义实验室发布新一代AI Agent基座大模型Qwen3.7-Max，在多项评测中获国内第一，旨在解决智能体长链路运行中断、崩溃问题。在未知硬件ZW-M890L PPU的极限压力测试中，该模型无文档和先验数据，凭运行时反馈展现长程策略连贯性与泛化力，连续运行35小时、1158次工具调用零中断。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">估值破 200 亿美元！月之暗面“拆墙”赴港，AI独角兽开启资本新纪元</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">月之暗面完成约20亿美元融资，估值突破200亿美元后，宣布拆除红筹架构，正式启动赴港上市进程。此举旨在响应北京对境内企业境外上市的新监管规定，红筹架构作为科技企业常用模式，正面临调整。公司架构重整将为IPO铺路。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">阿里发布“真武M890”128卡超节点服务器，百纳秒级时延助力Agentic时代</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">在2026阿里云峰会上，阿里巴巴发布基于平头哥“真武M890”AI芯片的128卡超节点服务器，搭载自研ICN Switch1.0互联芯片，实现百纳秒级超低通信时延。该服务器通过超节点架构将128张芯片融合为超级计算机，旨在应对智能体时代的极致算力挑战，未来重点服务海量AI Agent。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">Gemini免费时代落幕？谷歌悄然开启“限额模式”，AI行业迎来残酷“变现考”</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在I/O大会前夕调整AI使用规则，为Gemini大模型引入精细化计数器，告别“几乎不限量”的免费时代。新规则不再简单限制聊天条数，而是通过计数功能更精确管控用户使用量，预示着免费服务将面临更严格限制。此举旨在为即将发布的Gemini升级和新硬件布局做准备，但令用户意外。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">OpenAI联合创始人Andrej Karpathy宣布加盟Anthropic，发力下一代LLM研发</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">OpenAI联合创始人兼前特斯拉自动驾驶负责人Andrej Karpathy加入Anthropic，加剧了AI人才向OpenAI主要竞争对手的流动。此前OpenAI已有多位核心骨干离职，Karpathy将专注于大型语言模型的底层架构与深层集成研究。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">中国企业零的突破！微信 AI 团队论文斩获信号处理国际大奖</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">微信AI团队在ICASSP 2026国际会议上，凭借一项创新学术成果荣获最佳工业论文奖，这是该奖项自2016年设立以来首次由中国企业团队获得，打破了海外科技巨头的垄断。获奖论文聚焦于创新模型赋能视障行走，展示了AI在无障碍技术领域的突破性应用。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">DeepSeek 回应模型异常回复：特殊字符引发幻觉并无安全隐患</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">近日，DeepSeek网页版因用户输入特殊字符后自动跳出无关文本，引发“对话隐私泄露”担忧。官方迅速排查并定性为模型幻觉，澄清非数据泄露问题，缓解了用户疑虑。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">告别低头族！谷歌与时尚大牌联手，两款硬核AI智能眼镜惊艳亮相</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌与三星在2026年I/O大会上联合发布两款智能眼镜，携手Gentle Monster和Warby Parker打造。产品定位为手机延伸，深度集成Gemini AI，解放双手，用户无需频繁掏手机即可在通勤、散步、购物等场景中使用。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">谷歌推出 “Ask Play”：全新对式应用筛选体验</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上推出“Ask Play”功能，旨在优化Play商店的应用和游戏搜索体验。该功能通过自然连续问答替代传统翻找和试错，能理解用户上下文，允许在后续对话中逐步添加条件，提升搜索效率。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">谷歌Wear OS 7发布：续航涨10%，戴上手腕的Gemini能帮你点外卖了</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上发布Wear OS 7，重点解决手表电池续航和智能交互问题。续航方面，从Wear OS 6升级后最高可提升10%，缓解每日充电痛点。智能方面，引入Gemini Intelligence系统，增强手表AI能力。整体升级更注重实用性和日常体验。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"> 谷歌版“大龙虾”Gemini Spark发布：由3.5 Flash驱动并支持24/ 7 后台运行</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">2026年谷歌I/O大会发布“Gemini Spark”全时在线AI代理平台，由Gemini 3.5 Flash模型驱动，依托谷歌云虚拟机运行。该平台能在用户关闭设备后持续后台执行邮件撰写、学习指南生成、账单监控等任务，实现跨平台生态整合，重新定义智能助手标准。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">谷歌推出 Gemini Omni 模型，开启多模态交互新时代！</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌于5月19日发布最新多模态AI模型Gemini Omni，这是Gemini家族的重大突破。该模型能同时处理文本、音频、图像和视频等多种信息形式，实现更流畅自然的跨模态交互体验，旨在提升用户与AI的交互效率。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">谷歌发布全新 Google Pics 应用，AI 助力图像设计与编辑</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上推出AI图像工具Google Pics，面向Workspace用户，用于制作邀请函、海报等视觉内容。该网页应用融合生成图片与编辑设计功能，用户输入文字即可创作，设计类似Canva，标志着谷歌图像处理领域的创新。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">索威发布全新 MiniMax3 Monitor 音箱：小身材大能量</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">音频品牌索威发布MiniMax3 Monitor专业监听音箱，单只售价2099元，专为个人音视频工作室及桌面近场监听设计。其核心特色为同轴三分频四单元架构，包含1英寸丝膜球顶高音与3英寸碳纤维单元，以紧凑设计提供高品质音效，引发音频爱好者关注。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">Mistral AI 收购物理人工智能初创公司 Emmi AI</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">法国AI公司Mistral AI收购维也纳物理AI初创公司Emmi AI，以增强面向欧洲工业客户的定制化服务。交易金额未披露，但Emmi AI在2025年曾完成奥地利最大融资，筹得1500万欧元。该公司专注于模拟气流、热传递和材料应力等复杂物理过程。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817185914520710?f=rss" target="_blank" rel="noopener">2026福布斯中国人工智能科技企业TOP 50发布，中关村科金入选</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，《2026福布斯中国人工智能科技企业TOP 50》正式揭晓，中关村科金成功入选，是榜单中唯一的“企业级AI平台及应用公司”。据IDC最新报告，中关村科金位列中国大模型平台私有化市场份额第四；在2026年一季度应用类大模型项目公开</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/_pu5YeWZeRyEEtJ34C89VQ" target="_blank" rel="noopener">谷歌I/O开发者大会推出AI全家桶</a></div><div class="meta"><span class="source">智东西</span><span>2026-05-17</span></div><div class="summary">谷歌I/O 2026大会重磅发布：全新旗舰模型Gemini 3.5 Flash速度达竞品4倍；全能模型Gemini Omni Flash亮相，支持自然语言对话改视频；谷歌搜索迎来25年来最大升级，AI Mode月活突破10亿；联合三星及Gentle Monster、Warby Parker推出...</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420531.html" target="_blank" rel="noopener">苏姿丰上海开讲：AI正在重新定义计算的每一层</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420561.html" target="_blank" rel="noopener">完成“由铁到钢”的生态蜕变 刘军携联想全场景AI终端点亮智能未来</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-19</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809376.html" target="_blank" rel="noopener">阿里平头哥发布新一代AI芯片真武M890 性能提升至3倍</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809365.html" target="_blank" rel="noopener">阿里通义千问3.7发布 跻身全球前十五 国产模型排名第一</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809359.html" target="_blank" rel="noopener">大涨5% 寒武纪A股市值首破8600亿元 创历史新高</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809333.html" target="_blank" rel="noopener">Google I/O 2026总结：Gemini 3.5、Android XR眼镜等</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817227254104968" target="_blank" rel="noopener">亚德诺宣布15亿美元收购AI电源管理创企</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420651.html" target="_blank" rel="noopener">趋境科技完成数亿元Pre-A轮融资，高品质AI Token生产基础设施</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419901.html" target="_blank" rel="noopener">20 明天见！拿好这份参会指南｜AIGC2026峰会</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-17</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/the-latest-ai-projects/" target="_blank" rel="noopener">ææ°AIé¡¹ç®</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-question-and-answer/" target="_blank" rel="noopener">AIé®ç­</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-encyclopedia/" target="_blank" rel="noopener">AIç¾ç§</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-hall-of-fame/" target="_blank" rel="noopener">AIåäººå </a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/about-us/" target="_blank" rel="noopener">å ³äºæä»¬</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-news/" target="_blank" rel="noopener">AIå¿«è®¯</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-bot-community/" target="_blank" rel="noopener">AIäº¤æµç¾¤</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/gemini-omni-flash/" target="_blank" rel="noopener">Gemini Omni Flash</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/sites/66843.html" target="_blank" rel="noopener">Antigravity</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/gemini-spark/" target="_blank" rel="noopener">Gemini Spark</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/qwen3-7-max/" target="_blank" rel="noopener">Qwen3.7-Max</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/qwen3-5-livetranslate/" target="_blank" rel="noopener">Qwen3.5-LiveTranslate</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808245.html" target="_blank" rel="noopener">AI大模型进入诸神乱战时代</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/composer-2-5/" target="_blank" rel="noopener">Composer 2.5</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419990.html" target="_blank" rel="noopener">Cursor新模型，你怎么还在套Kimi？马斯克你怎么还吆喝上了？？</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419913.html" target="_blank" rel="noopener">L2++「五冠王」文远知行：自动驾驶版的张雪机车，专治各种不服</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419597.html" target="_blank" rel="noopener">百度无人车新纪录：周订单破35万！李彦宏：开始单城盈利了</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419585.html" target="_blank" rel="noopener">重塑主流PC，第三代英特尔酷睿开启全民AI轻薄本时代</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419528.html" target="_blank" rel="noopener">AI水论文封一年，署名连坐！arXiv最严新规来了，陶哲轩附议</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419414.html" target="_blank" rel="noopener">华为“养”出半个具身智能创业圈</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419396.html" target="_blank" rel="noopener">上交x创智x瑞金联合发布CX-Mind：胸片诊断进入“可验证推理”时代</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419272.html" target="_blank" rel="noopener">LeCun炮轰Hinton：他认可LLM就是想摆烂退休了！</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808196.html" target="_blank" rel="noopener">华为小艺Claw接入DeepSeek V4 ...</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808163.html" target="_blank" rel="noopener">三星推进成熟4nm FinFET工艺争取AI订单</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808164.html" target="_blank" rel="noopener">腾讯元宝正式接入Hermes Agent</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808180.html" target="_blank" rel="noopener">豆包登顶AI原生App活跃用户规排行榜</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809285.html" target="_blank" rel="noopener">美国社会掀起新一轮AI争议 技术扩张引发多方担忧</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809288.html" target="_blank" rel="noopener">日媒：日本人形机器人大幅落后中国 但存在翻盘机会</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809251.html" target="_blank" rel="noopener">AMD CEO苏姿丰称中国市场极其重要：算力是业务关键</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809249.html" target="_blank" rel="noopener">谷歌与黑石组建全新AI云合资公司 后者投入50亿美元</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809195.html" target="_blank" rel="noopener">宝马工厂引入Figure人形机器人 实现24小时不间断工作</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809172.html" target="_blank" rel="noopener">外媒称中国AI视频生成模型领先美国 创作者称“更自由”</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809153.html" target="_blank" rel="noopener">OpenClaw创始人月烧130万美元token 覆盖6030亿代币</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809053.html" target="_blank" rel="noopener">GC绿十字获选韩国AI新药开发国家项目 资助金额达177亿韩元</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817318342214784?f=rss" target="_blank" rel="noopener">阶跃与金蝶达成战略合作</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，中国企业服务领域头部厂商金蝶与基础大模型公司阶跃星辰达成战略合作</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817307506426758?f=rss" target="_blank" rel="noopener">首批搭载Agent PC电脑将在天猫618首发</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，首批搭载阿里云自研AI Agent（JVS Claw）的PC电脑在天猫618独家首发</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/hiro-2" target="_blank" rel="noopener">Hiro</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Your agentic security team from first commit to SOC 2</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/supercut" target="_blank" rel="noopener">Supercut for Agents</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Permission-aware AI access to recordings and metadata</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/google" target="_blank" rel="noopener">Google Pics</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Boundless AI image generation meets precision editing</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/ghostsnap" target="_blank" rel="noopener">GhostSnap</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Take multiple screenshots that are auto compressed for AI</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/glia-2" target="_blank" rel="noopener">Glia</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Local-first AI memory bridge between browser chats and IDEs</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/runtime" target="_blank" rel="noopener">Runtime</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Sandboxed coding agents for everyone on your team</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/owlish" target="_blank" rel="noopener">Owlish</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Reduce support volume with AI agents trained on your docs</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3817325516555137?f=rss" target="_blank" rel="noopener">2026VENTURE50重磅来袭，多维度甄选高成长创新企业</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">2026年全球科技产业正经历结构性重构。具身智能从实验室走向工厂产线，大模型技术重塑千行百业的运营逻辑，商业航天、低空经济、量子信息等新赛道加速成型。与此同时，国内创投生态持续进化，耐心资本加速集聚，国资平台与市场化基金协同发力，产业端与资</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://xint.io/blog/copy-fail-pod-to-host" target="_blank" rel="noopener">CopyFail: From Pod to Host</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">5分 by tptacek | 0评论</div><div class="tag">🏭 产业应用</div></div>
   </div>
   <div class="category" id="cat-模型与技术">
-<div class="card">
-  <div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I've joined Anthropic</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">340分 by dmarcos | 120评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I’ve joined Anthropic</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">770分 by dmarcos | 296评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash: frontier intelligence with action</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">109分 by meetpateltech | 49评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://deepmind.google/models/gemini-omni/" target="_blank" rel="noopener">Gemini Omni</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">53分 by meetpateltech | 13评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814860909600261?f=rss" target="_blank" rel="noopener">鲸跃动力获星海图数千万元种子轮投资，用数据+模型+末端执行打造开箱即用的Robo Labor</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">文｜王欣逸 编辑｜邱晓芬</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">123分 by spectraldrift | 132评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.producthunt.com/products/monocle-clear-workspace-clear-mind" target="_blank" rel="noopener">Monocle 3.5 for macOS</a></div>
-  <div class="meta"><span class="source">📰 ProductHunt</span><span>2026-05-20</span></div>
-  <div class="summary">Noise-cancelling for your screen</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI Adopts Google's SynthID Watermark for AI Images with Verification Tool</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">34分 by anonymous | 0评</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://distill.pub/2020/growing-ca/" target="_blank" rel="noopener">Growing Neural Cellular Automata</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">23分 by pulkitsh1234 | 3评论</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28137" target="_blank" rel="noopener">5 hours ago.AIbaseVisual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-SourcedTencent&amp;#x27;s Hunyuan large model, in collaboration with the Palace Museum and other institutions, launched &amp;#x27;Chronicles-OCR,&amp;#x27; the industry&amp;#x27;s first ancient script perception benchmark covering the evolution trajectory of the &amp;#x27;seven script styles&amp;#x27; of Chinese characters. The dataset, cross-annotated by experts with 2,800 images, tests AI&amp;#x27;s ability to recognize ancient scripts like oracle bone inscriptions, advancing AI&amp;#x27;s understanding of Chinese charact....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28135" target="_blank" rel="noopener">5 hours ago.AIbaseOptical Module Becomes the Smart Glasses&amp;#x27; &amp;#x27;Invisible Game-Changer&amp;#x27;! South Korean Startup LetinAR Secures $18.5 Million in FundingImagine speeding at 160 km/h, with navigation arrows appearing on the road ahead, integrated into your helmet visor without needing a phone or looking down. This is not sci-fi but a smart glasses technology launching in Europe this year, just an early glimpse of the evolving wave.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28129" target="_blank" rel="noopener">7 hours ago.AIbaseAlexa+ Launches On-Demand Podcast Feature - What You Want to Listen to, You Can Just Click!Amazon Alexa+ launches &amp;#x27;Alexa Podcasts,&amp;#x27; enabling users to generate personalized podcasts via voice commands. Simply say &amp;#x27;Create a podcast about XX&amp;#x27; to get a custom episode in minutes without uploading materials or scripting. Available for US users starting today, it aims to quickly turn any topic into podcast content.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28127" target="_blank" rel="noopener">8 hours ago.AIbaseAI Glasses Enter Urban Service Scenarios, Ant GPASS Launches City Tour Guide FunctionAnt Group&amp;#x27;s self-developed GPASS technology framework has expanded its application boundaries, with the city companion feature now available in the latest version of Leqi AI glasses. In companion mode, users can access information while walking, as the system provides location-based explanations of nearby attractions, supports real-time Q&amp;amp;A, navigation, and first-person content recording and sharing.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28123" target="_blank" rel="noopener">9 hours ago.AIbaseMonthly AI Computing Power Bill! Major Telecommunications Operators All Enter the Market and Launch Token PlansDuring World Telecommunication Day, the three major telecom operators packaged AI large model tokens as monthly subscription products, supporting phone bill payment and cross-platform use. This allows ordinary users, developers, and SMEs to access computing resources as easily as buying data packages, breaking the exclusive billing barriers of internet giants and making large model basic energy accessible to the public.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28119" target="_blank" rel="noopener">11 hours ago.AIbaseGlobal AI Market: OpenAI and Anthropic Capture 89% of Annual Revenue ShareA survey shows that 34 major AI companies globally generated nearly $80 billion in annual revenue, a 112% increase in six months. OpenAI and Anthropic dominate with about 89% of revenue, highlighting a highly concentrated market.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28117" target="_blank" rel="noopener">11 hours ago.AIbaseAI Large Models Accelerate Deployment in Cultural and Tourism Scenarios, Doubao Launches Museum Guide ModeOn the 50th International Museum Day, ByteDance&amp;#x27;s AI app Doubao launched a museum guide mode using generative AI to enhance cultural heritage tours. It has partnered with over 20 leading institutions like the National Museum of China, Pudong Art Museum, and Gansu Provincial Museum, supporting online knowledge retrieval and offline exhibition experiences.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/iHlnN2YGafxWweVLCP2--g" target="_blank" rel="noopener">阶跃星辰推出新一代图像生成编辑模型&amp;nbsp;Step Image Edit 2</a></div>
-  <div class="meta"><span class="source">📰 阶跃星辰</span><span>2026-05-20</span></div>
-  <div class="summary">阶跃星辰正式推出新一代图像生成编辑模型 Step Image Edit 2 。模型仅3.5B参数，在实际表现中超越12B-20B级开源图像编辑大模型，单次生图只需0.5-2秒，在KRIS-Bench榜单轻量级图像编辑模型综合排名第一。模型支持图像生成与编辑、中英文渲染、局部编辑、视觉推理、风格迁移等功能，覆盖IP创作、海报设计、人像美颜等场景。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/FQPdUQjbxdEMZjgWk7Zukg" target="_blank" rel="noopener">腾讯WorkBuddy小程序上线，支持”云端+本机”双模式运行</a></div>
-  <div class="meta"><span class="source">📰 腾讯云</span><span>2026-05-20</span></div>
-  <div class="summary">腾讯 WorkBuddy 微信小程序正式上线，支持”云端+本机”双模式运行。用户可通过手机语音、拍照、传文件等方式派活，AI 在云端沙箱或本地电脑远程执行，生成文档、PPT、视频等产物可一键下载转发。小程序内置 GLM-5.0、Kimi-K2.5 等多模型，支持灵活切换和定时任务，实现”手机遥控，电脑/云端干活”的移动办公体验。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/T1hlZCX4JRtLmooiSLTIjg" target="_blank" rel="noopener">Skywork AI 正式发布多模态视频基础模型&amp;nbsp;SkyReels V4</a></div>
-  <div class="meta"><span class="source">📰 昆仑万维集团</span><span>2026-05-20</span></div>
-  <div class="summary">Skywork AI发布全新多模态视频基础模型 SkyReels V4 。模型采用创新的双流多模态扩散Transformer（MMDiT）架构，是全球首个能同时处理多模态输入、联合生成视频与音频、并统一完成视频生成、修复、编辑三大任务的模型。支持文本、图像、视频、音频、掩码等丰富输入，可输出1080p分辨率、32FPS、长达15秒的高质量音视频同步内容。</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816851360908423?f=rss" target="_blank" rel="noopener">OpenAI创始成员Karpathy表示他已加入Anthropic</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">OpenAI创始成员Karpathy表示他已加入Anthropic。（财联社）</div>
-  <span class="tag">🤖 模型与技术</span>
-</div>
-</div>
-  <div class="category" id="cat-商业与融资">
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3805660478184966?f=rss" target="_blank" rel="noopener">高瓮出手了一家AI体育科技公司，曾获李泽湘天使轮融资｜硬氪首发</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">作者｜黄楠 编辑｜袁斯来 硬氪获悉，AI体育科技公司SportVision近日已完成天使+轮融资，高瓮创投（GL Ventures）领投，谦恒资本担任独家财务顾问。本轮资金将重点用于核心技术研发、产品量产落地及市场的推广拓展。其新款AI网球</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814695536336387?f=rss" target="_blank" rel="noopener">氫星场报 ￥百度：一季度营收321亿元，AI业务收入136亿元；马斯克预计今年美国将广泛使用自动驾驶汽车；巨力索具旗下十余家企业已注销</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">大公司： 索晨科技：物理AI业务目前尚处于布局初期 36氪获悉，索晨科技公告，公司股票于2026年5月14日至5月18日连续三个交易日内收盘价格涨幅偏离累计达到30%，属于股票交易异常动波情形。公司近期实施的募投项目“物理合成数据核心技术</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3816109626138119?f=rss" target="_blank" rel="noopener">氪星晚报 ｜SpaceX即将成为马斯克旗下第二家上市公司；京东、洋河集团等在宿迁成立新动能股权投资基金，出资额10亿</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">大公司： 圆通速递：4月快递产品收入60.71亿元，同比增长5.49% 36氪获悉，圆通速递公告，4月快递产品收入60.71亿元，同比增长5.49%；业务完成量27.26亿票，同比增长1.22%；快递产品单票收入2.23元，同比增长4.21</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3815841756028425?f=rss" target="_blank" rel="noopener">影石：重新定义性价比</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">作者 | 张帆 坚持做后来者 近日，影石创新发布了登陆资本市场后的首份年报</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816218027983239?f=rss" target="_blank" rel="noopener">ST金鸿：松树资本产业导入上市公司等属不实言论</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">ST金鸿发布关于市场传闻的澄清及风险提示的公告</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816205974552962?f=rss" target="_blank" rel="noopener">隆扬电子：控股股东及其一致行动人拟减持不超2%公司股份</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">公司控股股东隆扬国际计划通过大宗交易的方式减持</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816197908726146?f=rss" target="_blank" rel="noopener">富祥股份：股东拟减持不超2.45%股份</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">富祥股份公告，股东拟减持</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816183071858184?f=rss" target="_blank" rel="noopener">奕帆传动：计划8400万元收购北京和利时电机技术有限公司40%股权</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">奕帆传动公告，计划使用自有或自筹资金8400万元收购</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai" target="_blank" rel="noopener">Mistral AI Acquires Emmi AI to Create the Leading AI Stack</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">22分 by doener | 1评</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28121" target="_blank" rel="noopener">9 hours ago.AIbaseThe AI Hardware Revolution Is Coming: How Giants Are Planning for the Future of Technology!Former Apple and Meta hardware lead Caitlin Kalinowski argues that AI will fundamentally reshape hardware design. She attributes consumer VR&amp;#x27;s failure not to technology but to poor market fit. Despite Meta Quest&amp;#x27;s technical lead, it missed core user needs. Future hardware must focus on practical applications.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816300637668483?f=rss" target="_blank" rel="noopener">微软计划年内启用印度最大数据中心，持续加大AI基础设施投入</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">微软印度及南非地区总裁普尼特·昌多克（Puneet Chandok）周二接受采访时表示，微软在印度建设的最大数据中心预计将于2026年中期正式启用。此举是这家科技巨头在印度市场大规模资本支出的核心举措，旨在加速布局全球最大的人工智能（AI）</div>
-  <span class="tag">💼 商业与融资</span>
-</div>
-</div>
-  <div class="category" id="cat-产业应用">
-<div class="card">
-  <div class="title"><a href="https://arstechnica.com/tech-policy/2026/05/iran-demands-big-tech-pay-fees-for-undersea-internet-cables-in-strait-of-hormuz/" target="_blank" rel="noopener">Iran demands Big Tech pay fees for undersea Internet cables in Strait of Hormuz</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">55分 by JeanKage | 38评论</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.wheresyoured.at/ai-is-too-expensive/" target="_blank" rel="noopener">AI is too expensive</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">61分 by unknown | 0评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://io.google/2026/" target="_blank" rel="noopener">Google I/O</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">47分 by thanhhaimai | 20评论</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://apnews.com/article/ai-college-commencement-anxiety-boo-35aec9bac660eaeb05c5b8d392db2cac" target="_blank" rel="noopener">Graduates are booing pep talks on AI at college commencements</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">42分 by 1vuio0pswjnm7 | 22评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.qbitai.com/2026/05/416762.html" target="_blank" rel="noopener">AI步入“自我进化”时代，李彦宏首提AI时代度量衡“DAA”｜Create2026百度AI开发者⼤会速览
-2026-05-13</a></div>
-  <div class="meta"><span class="source">📰 量子位</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3816036564147718?f=rss" target="_blank" rel="noopener">裸辞九个月，降薪跳槽，一个80后营销人如何上岸甲方？｜百万年薪系列013</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">图源：公众号「有三思 U Sense」） 2023年秋，杭州亚运会湖州赛区。于成龙手持亚运火炬跑过城市街巷</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/p/3814570248412677?f=rss" target="_blank" rel="noopener">科氪 | 性能极限与跨界尝试：红魔11S Pro系列深度体验</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">在智能手机行业普遍面临镜头模组日益凸出的背景下</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816215984570760?f=rss" target="_blank" rel="noopener">*ST阳光：公司股票自5月21日起撤销退市风险警示</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">公司股票自2026年5月20日开市起停牌1天</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816212978680200?f=rss" target="_blank" rel="noopener">热门中概股美股盘前涨跌互现，哔哩哔哩跌超4%</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">热门中概股美股盘前涨跌互现</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816210396250497?f=rss" target="_blank" rel="noopener">美股大型科技股盘前多数下跌，英特尔跌超1%</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">美股大型科技股盘前多数下跌</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816195083034373?f=rss" target="_blank" rel="noopener">中控技术决定上调部分自有产品价格</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">中控技术发布产品价格调整通知公告</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816191185673993?f=rss" target="_blank" rel="noopener">印尼计划收紧对大宗商品出口的管控</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">印尼计划加强对煤炭、棕榈油等大宗商品出口的管控</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://36kr.com/newsflashes/3816189625753346?f=rss" target="_blank" rel="noopener">ADP：截至5月2日四周美国私营部门就业人数平均每周增加42250人</a></div>
-  <div class="meta"><span class="source">📰 36kr</span><span>2026-05-20</span></div>
-  <div class="summary">ADP数据显示，截至5月2日的四周，美国私营部门就业人数平均每周增加42250人</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://virtualosmuseum.org/" target="_blank" rel="noopener">I've built a virtual museum with nearly every operating system you can think of</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">366分 by andreww591 | 79评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google changes its search box</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">35分 by berkeleyjunk | 158评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/" target="_blank" rel="noopener">Apple unveils new accessibility features</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">490分 by interpol_p | 259评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.natesilver.net/p/disney-erased-fivethirtyeight" target="_blank" rel="noopener">Disney erased FiveThirtyEight</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">35分 by 7777777phil | 1评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://thebowesmuseum.org.uk/collections/the-silver-swan/" target="_blank" rel="noopener">The Silver Swan</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">7分 by pseudolus | 0评</div>
-  <span class="tag">🏭 产业应用</span>
-</div>
-</div>
-  <div class="category" id="cat-工具与开源">
-<div class="card">
-  <div class="title"><a href="https://forum.cursor.com/t/cloud-agents-broken-ii/161036" target="_blank" rel="noopener">Cursor Cloud Agents Down</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">9分 by mopatches | 1评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://superspl.at/scene/84df8849" target="_blank" rel="noopener">Show HN: Gaussian Splat of a Strawberry</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">415分 by danybittel | 164评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://superlog.sh/" target="_blank" rel="noopener">Show HN: Superlog (YC P26) – Observability that installs itself and fixes bugs</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">33分 by Magnanten | 30评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://haystackeditor.com/" target="_blank" rel="noopener">Show HN: Haystack – Review the PRs that need human attention</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">14分 by akshaysg | 6评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.producthunt.com/products/autoshelf" target="_blank" rel="noopener">AutoShelf</a></div>
-  <div class="meta"><span class="source">📰 ProductHunt</span><span>2026-05-20</span></div>
-  <div class="summary">Auto-organize files on your Mac</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://github.com/antoinezambelli/forge" target="_blank" rel="noopener">Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">18分 by zambelli | 12评</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28132" target="_blank" rel="noopener">7 hours ago.AIbaseState-owned capital enters! The new $2 billion financing of Moonshot is nearing completionMajor changes in Kimi&amp;#x27;s shareholder list include new state-owned investors like Guozhitou, Beijing AI Fund, and China Mobile, marking critical integration of state-backed computing and capital support.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.aibase.com/news/28125" target="_blank" rel="noopener">8 hours ago.AIbaseDual Approach to Cloud and Local: Open-Source Tool Osaurus Turns Mac Computers into Versatile AI ServersTech startups are accelerating the development of large model-based applications. Osaurus, an open-source platform for the Apple ecosystem, allows users to switch between local and cloud models while keeping core files locally. Born from privacy and token cost concerns, its predecessor has gained significant attention.....</a></div>
-  <div class="meta"><span class="source">📰 AIbase</span><span>2026-05-20</span></div>
-  <div class="summary"></div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://ai-bot.cn/jvs-claw/" target="_blank" rel="noopener">阿里版OpenClaw更名”JVS Claw”，并开启内测</a></div>
-  <div class="meta"><span class="source">📰 AI工具集</span><span>2026-05-20</span></div>
-  <div class="summary">阿里云旗下AI Agent产品”无影JVS”正式更名为” JVS Claw “，目前已推出独立APP和网页版，处于邀请码内测阶段。产品以可定制的Clawbot为核心，搭配6核/12GB独立云端ClawSpace环境，支持实时查看AI操作链路。内置浏览器自动化、Office文档处理等预制技能，用户可通过”技能查找”安装ClawHub新技能，或用自然语言创建自定义技能。</div>
-  <span class="tag">🔧 工具与开源</span>
-</div>
-</div>
-  <div class="category" id="cat-学术与政策">
-<div class="card">
-  <div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Gentoo News: Copy Fail, Dirty Frag, and Fragnesia Kernel Vulnerabilities</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">13分 by akhuettel | 0评论</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Copy Fail, Dirty Frag, and Fragnesia kernel vulnerabilities</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">70分 by akhuettel | 17评</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" target="_blank" rel="noopener">CISA Admin Leaked AWS GovCloud Keys on GitHub</a></div>
-  <div class="meta"><span class="source">📰 HackerNews</span><span>2026-05-20</span></div>
-  <div class="summary">305分 by LelouBil | 141评</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-<div class="card">
-  <div class="title"><a href="https://mp.weixin.qq.com/s/S3CZBNf9Rks9twQzZ6m3Ow?scene=1&amp;click_id=90" target="_blank" rel="noopener">阿里在海外推出”企业级龙虾”Accio Work</a></div>
-  <div class="meta"><span class="source">📰 量子位</span><span>2026-05-20</span></div>
-  <div class="summary">阿里在海外上线企业级Agent产品 Accio Work ，定位”企业版龙虾”。用户只需提出想法，内置的AI Agent团队可7×24小时自动完成选品、采购、建站、运营等全流程，30分钟生成可运营的海外网店。产品支持单个Agent对话或Agent Team群聊模式，可自定义角色与技能，关键操作需用户授权保障安全。</div>
-  <span class="tag">📚 学术与政策</span>
-</div>
-</div>
-</div>
-<div class="footer">基于 AI 自动采集，仅供参考 · 5月20日</div>
+<div class="card"><div class="title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noopener">Gemini 3.5 Flash: frontier intelligence with action</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">109分 by meetpateltech | 49评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://deepmind.google/models/gemini-omni/" target="_blank" rel="noopener">Gemini Omni</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">53分 by meetpateltech | 13评论</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814860909600261?f=rss" target="_blank" rel="noopener">鲸跃动力获星海图数千万元种子轮投资，用数据+模型+末端执行打造开箱即用的Robo Labor</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">文｜王欣逸 编辑｜邱晓芬</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/monocle-clear-workspace-clear-mind" target="_blank" rel="noopener">Monocle 3.5 for macOS</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-20</span></div><div class="summary">Noise-cancelling for your screen</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.emmi.ai/news/mistral-ai-acquires-emmi-ai" target="_blank" rel="noopener">Mistral AI Acquires Emmi AI to Create the Leading AI Stack</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">22分 by doener | 1评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://github.com/antoinezambelli/forge" target="_blank" rel="noopener">Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">18分 by zambelli | 12评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28132" target="_blank" rel="noopener">7 hours ago.AIbaseState-owned capital enters! The new $2 billion financing of Moonshot is nearing completionMajor changes in Kimi&amp;#x27;s shareholder list include new state-owned investors like Guozhitou, Beijing AI Fund, and China Mobile, marking critical integration of state-backed computing and capital support.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28125" target="_blank" rel="noopener">8 hours ago.AIbaseDual Approach to Cloud and Local: Open-Source Tool Osaurus Turns Mac Computers into Versatile AI ServersTech startups are accelerating the development of large model-based applications. Osaurus, an open-source platform for the Apple ecosystem, allows users to switch between local and cloud models while keeping core files locally. Born from privacy and token cost concerns, its predecessor has gained significant attention.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28123" target="_blank" rel="noopener">9 hours ago.AIbaseMonthly AI Computing Power Bill! Major Telecommunications Operators All Enter the Market and Launch Token PlansDuring World Telecommunication Day, the three major telecom operators packaged AI large model tokens as monthly subscription products, supporting phone bill payment and cross-platform use. This allows ordinary users, developers, and SMEs to access computing resources as easily as buying data packages, breaking the exclusive billing barriers of internet giants and making large model basic energy accessible to the public.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28117" target="_blank" rel="noopener">11 hours ago.AIbaseAI Large Models Accelerate Deployment in Cultural and Tourism Scenarios, Doubao Launches Museum Guide ModeOn the 50th International Museum Day, ByteDance&amp;#x27;s AI app Doubao launched a museum guide mode using generative AI to enhance cultural heritage tours. It has partnered with over 20 leading institutions like the National Museum of China, Pudong Art Museum, and Gansu Provincial Museum, supporting online knowledge retrieval and offline exhibition experiences.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/iHlnN2YGafxWweVLCP2--g" target="_blank" rel="noopener">阶跃星辰推出新一代图像生成编辑模型&amp;nbsp;Step Image Edit 2</a></div><div class="meta"><span class="source">阶跃星辰</span><span>2026-04-29</span></div><div class="summary">阶跃星辰正式推出新一代图像生成编辑模型 Step Image Edit 2 。模型仅3.5B参数，在实际表现中超越12B-20B级开源图像编辑大模型，单次生图只需0.5-2秒，在KRIS-Bench榜单轻量级图像编辑模型综合排名第一。模型支持图像生成与编辑、中英文渲染、局部编辑、视觉推理、风格...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/FQPdUQjbxdEMZjgWk7Zukg" target="_blank" rel="noopener">腾讯WorkBuddy小程序上线，支持”云端+本机”双模式运行</a></div><div class="meta"><span class="source">腾讯云</span><span>2026-03-31</span></div><div class="summary">腾讯 WorkBuddy 微信小程序正式上线，支持”云端+本机”双模式运行。用户可通过手机语音、拍照、传文件等方式派活，AI 在云端沙箱或本地电脑远程执行，生成文档、PPT、视频等产物可一键下载转发。小程序内置 GLM-5.0、Kimi-K2.5 等多模型，支持灵活切换和定时任务，实现”手机遥...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/T1hlZCX4JRtLmooiSLTIjg" target="_blank" rel="noopener">Skywork AI 正式发布多模态视频基础模型&amp;nbsp;SkyReels V4</a></div><div class="meta"><span class="source">昆仑万维集团</span><span>2026-02-27</span></div><div class="summary">Skywork AI发布全新多模态视频基础模型 SkyReels V4 。模型采用创新的双流多模态扩散Transformer（MMDiT）架构，是全球首个能同时处理多模态输入、联合生成视频与音频、并统一完成视频生成、修复、编辑三大任务的模型。支持文本、图像、视频、音频、掩码等丰富输入，可输出1...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816848622306436?f=rss" target="_blank" rel="noopener">谷歌CEO：Gemini月活跃用户达9亿</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">谷歌CEO皮查伊在2026年I/O开发者大会上表示，Gemini AI应用的月活跃用户在过去一年中增长了一倍多，达到9亿人次</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816885092910212?f=rss" target="_blank" rel="noopener">8点1氪丨谷歌推出Gemini 3.5系列模型；DeepSeek回应用户“对话泄露”疑虑；全国存款十强城市出炉</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">今日热点导览 谷歌推出Gemini 3.5系列模型</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816947890471812?f=rss" target="_blank" rel="noopener">早期项目 | Chance AI获美图等数百万美元投资，用户数已达20万</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">作者丨欧雪 编辑丨袁斯来 硬氪获悉，Visual Agent（视觉智能体）创业公司Chance AI宣布完成数百万美元天使轮融资。本轮由美图领投，NYX Ventures、阿里系投资机构等跟投。融资将用于模型能力迭代、北美学生群体增长、以及</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28150" target="_blank" rel="noopener">Google Launches Gemini Omni Model, Opening a New Era of Multimodal Interaction!</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google released its latest multimodal AI model, Gemini Omni, on May 19th, marking a major breakthrough in the Gemini family. This model can process...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28148" target="_blank" rel="noopener">Soy MiniMax3 Monitor Speakers: Big Power in a Small Package</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Audio brand Soy launched the MiniMax3 Monitor professional studio monitor speakers, priced at 2099 yuan per unit, specifically designed for persona...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28138" target="_blank" rel="noopener">Reimagining the Web Gateway: Google Collaborates with DeepMind to Launch an Interactive Search Experience Powered by Gemini Flash 3.5</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google announced at I/O that search is undergoing its biggest change in 25 years, ending the era of &#39;10 blue links&#39; with an AI-powered inte...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28136" target="_blank" rel="noopener">Google AI Studio Mobile App Officially Launches on Google Play, Supports Pre-Registration</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Google launches AI Studio as a standalone mobile app, now available for pre-registration on Google Play, extending its Gemini-powered AI developmen...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28134" target="_blank" rel="noopener">Free Beta Test Countdown: Tencent Cloud&#39;s Two Major AI Models to Enter Official Commercial Use at the End of the Month</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Tencent Cloud announced that its two core large models, Hy3preview and DeepSeek-V4-Pro, on its agent development platform will end free public beta...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28130" target="_blank" rel="noopener">More Quantity, Same Price! The Two Main AI Tools of Anthropic&#39;s Claude Receive a Major Upgrade</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-19</span></div><div class="summary">Anthropic recently announced major performance upgrades to its AI toolchain, focusing on optimizing the visual creation tool Claude Design and code...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817018077447040?f=rss" target="_blank" rel="noopener">阿里发布基于新一代真武芯片的超节点服务器，可支持海量Agent并发推理</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，阿里发布基于平头哥新一代AI芯片真武M890的128卡超节点服务器</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817048257151876?f=rss" target="_blank" rel="noopener">联想全新发布的天禧AI 4.0</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">5月19日，&quot;联想天禧AI一体多端全场景新品超能之夜&quot;上，联想全新发布的天禧AI 4.0。据了解，天禧AI 4.0带来了多模态融合与仿生记忆。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817080294999168?f=rss" target="_blank" rel="noopener">平头哥AI芯片真武M890首次亮相，性能提升至3倍</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，平头哥新一代训推一体AI芯片真武M890首次亮相</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817070340342921?f=rss" target="_blank" rel="noopener">阿里发布新一代千问旗舰模型Qwen3.7-Max</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，阿里巴巴发布全新一代千问旗舰模型Qwen3.7-Max，在三方机构Arena全球大模型盲测总榜中，Qwen3.7-Max位列国产模型第一。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817085893788546?f=rss" target="_blank" rel="noopener">Seedance 2.1即将推出？接近字节跳动人士：不属实</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">日前有市场消息称，字节跳动准备推出其AI视频生成模型Seedance 2.0的升级版本Seedance 2.1，而新模型的生成质量预计提升约20%。5月20日，接近字节跳动人士表示，市场上关于Seedance2.1即将发布的传言不属实。今年</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817111570482304?f=rss" target="_blank" rel="noopener">平头哥真武系列GPU已累计出货超56万片</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，在2026阿里云峰会上，平头哥首次公布真武系列芯片的规划，未来两年将陆续推出算力更强的真武V900、真武J900两代芯片，以满足Agentic时代千行百业的AI算力需求。目前，真武系列芯片已累计出货56万片，服务了中</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener">Gemini CLI will stop working from June 18, 2026</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">104分 by primaprashant | 39评</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817109218575489?f=rss" target="_blank" rel="noopener">地瓜机器人与千寻智能达成战略合作</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，地瓜机器人与千寻智能宣布达成战略合作。双方已完成开源VLA模型Spirit v1.5与旭日S600旗舰大算力芯片的深度适配，联合打造高性能、可量产的软硬一体化解决方案。Spirit v1.5是国内首个综合性能超越国际</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817119265457027?f=rss" target="_blank" rel="noopener">新加坡加码人工智能布局，英伟达将落地本地研发中心</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">全球AI芯片巨头英伟达将在新加坡新设研发中心...</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">AI影视“军备竞赛”升级：Netflix组建动画工作室，爱奇艺财报揭示AI增效新路径</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">阿里发布“真武M890”128卡超节点服务器，百纳秒级时延助力Agentic时代</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">在2026阿里云峰会上，阿里巴巴发布基于平头哥“真武M890”AI芯片的128卡超节点服务器，搭载自研ICN Switch1.0互联芯片，实现百纳秒级超低通信时延。该服务器通过超节点架构将128张芯片融合为超级计算机，旨在应对智能体时代的极致算力挑战，未来重点服务海量AI Agent。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">Gemini免费时代落幕？谷歌悄然开启“限额模式”，AI行业迎来残酷“变现考”</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在I/O大会前夕调整AI使用规则，为Gemini大模型引入精细化计数器，告别“几乎不限量”的免费时代。新规则不再简单限制聊天条数，而是通过计数功能更精确管控用户使用量，预示着免费服务将面临更严格限制。此举旨在为即将发布的Gemini升级和新硬件布局做准备，但令用户意外。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">告别低头族！谷歌与时尚大牌联手，两款硬核AI智能眼镜惊艳亮相</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌与三星在2026年I/O大会上联合发布两款智能眼镜，携手Gentle Monster和Warby Parker打造。产品定位为手机延伸，深度集成Gemini AI，解放双手，用户无需频繁掏手机即可在通勤、散步、购物等场景中使用。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">谷歌Wear OS 7发布：续航涨10%，戴上手腕的Gemini能帮你点外卖了</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上发布Wear OS 7，重点解决手表电池续航和智能交互问题。续航方面，从Wear OS 6升级后最高可提升10%，缓解每日充电痛点。智能方面，引入Gemini Intelligence系统，增强手表AI能力。整体升级更注重实用性和日常体验。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"> 谷歌版“大龙虾”Gemini Spark发布：由3.5 Flash驱动并支持24/ 7 后台运行</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">2026年谷歌I/O大会发布“Gemini Spark”全时在线AI代理平台，由Gemini 3.5 Flash模型驱动，依托谷歌云虚拟机运行。该平台能在用户关闭设备后持续后台执行邮件撰写、学习指南生成、账单监控等任务，实现跨平台生态整合，重新定义智能助手标准。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">索威发布全新 MiniMax3 Monitor 音箱：小身材大能量</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">音频品牌索威发布MiniMax3 Monitor专业监听音箱，单只售价2099元，专为个人音视频工作室及桌面近场监听设计。其核心特色为同轴三分频四单元架构，包含1英寸丝膜球顶高音与3英寸碳纤维单元，以紧凑设计提供高品质音效，引发音频爱好者关注。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title">Mistral AI 收购物理人工智能初创公司 Emmi AI</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">法国AI公司Mistral AI收购维也纳物理AI初创公司Emmi AI，以增强面向欧洲工业客户的定制化服务。交易金额未披露，但Emmi AI在2025年曾完成奥地利最大融资，筹得1500万欧元。该公司专注于模拟气流、热传递和材料应力等复杂物理过程。</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817185914520710?f=rss" target="_blank" rel="noopener">2026福布斯中国人工智能科技企业TOP 50发布，中关村科金入选</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，《2026福布斯中国人工智能科技企业TOP 50》正式揭晓，中关村科金成功入选，是榜单中唯一的“企业级AI平台及应用公司”。据IDC最新报告，中关村科金位列中国大模型平台私有化市场份额第四；在2026年一季度应用类大模型项目公开</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809376.html" target="_blank" rel="noopener">阿里平头哥发布新一代AI芯片真武M890 性能提升至3倍</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809365.html" target="_blank" rel="noopener">阿里通义千问3.7发布 跻身全球前十五 国产模型排名第一</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809333.html" target="_blank" rel="noopener">Google I/O 2026总结：Gemini 3.5、Android XR眼镜等</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/gemini-omni-flash/" target="_blank" rel="noopener">Gemini Omni Flash</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/gemini-spark/" target="_blank" rel="noopener">Gemini Spark</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/qwen3-7-max/" target="_blank" rel="noopener">Qwen3.7-Max</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/qwen3-5-livetranslate/" target="_blank" rel="noopener">Qwen3.5-LiveTranslate</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808245.html" target="_blank" rel="noopener">AI大模型进入诸神乱战时代</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/composer-2-5/" target="_blank" rel="noopener">Composer 2.5</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419990.html" target="_blank" rel="noopener">Cursor新模型，你怎么还在套Kimi？马斯克你怎么还吆喝上了？？</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419396.html" target="_blank" rel="noopener">上交x创智x瑞金联合发布CX-Mind：胸片诊断进入“可验证推理”时代</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419272.html" target="_blank" rel="noopener">LeCun炮轰Hinton：他认可LLM就是想摆烂退休了！</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808196.html" target="_blank" rel="noopener">华为小艺Claw接入DeepSeek V4 ...</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809172.html" target="_blank" rel="noopener">外媒称中国AI视频生成模型领先美国 创作者称“更自由”</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817318342214784?f=rss" target="_blank" rel="noopener">阶跃与金蝶达成战略合作</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，中国企业服务领域头部厂商金蝶与基础大模型公司阶跃星辰达成战略合作</div><div class="tag">🤖 模型与技术</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3817325516555137?f=rss" target="_blank" rel="noopener">2026VENTURE50重磅来袭，多维度甄选高成长创新企业</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">2026年全球科技产业正经历结构性重构。具身智能从实验室走向工厂产线，大模型技术重塑千行百业的运营逻辑，商业航天、低空经济、量子信息等新赛道加速成型。与此同时，国内创投生态持续进化，耐心资本加速集聚，国资平台与市场化基金协同发力，产业端与资</div><div class="tag">🤖 模型与技术</div></div>
+</div>
+<div class="category" id="cat-商业与融资">
+<div class="card"><div class="title"><a href="https://36kr.com/p/3805660478184966?f=rss" target="_blank" rel="noopener">高瓮出手了一家AI体育科技公司，曾获李泽湘天使轮融资｜硬氪首发</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">作者｜黄楠 编辑｜袁斯来 硬氪获悉，AI体育科技公司SportVision近日已完成天使+轮融资，高瓮创投（GL Ventures）领投，谦恒资本担任独家财务顾问。本轮资金将重点用于核心技术研发、产品量产落地及市场的推广拓展。其新款AI网球</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814695536336387?f=rss" target="_blank" rel="noopener">氫星场报 ￥百度：一季度营收321亿元，AI业务收入136亿元；马斯克预计今年美国将广泛使用自动驾驶汽车；巨力索具旗下十余家企业已注销</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-18</span></div><div class="summary">大公司： 索晨科技：物理AI业务目前尚处于布局初期 36氪获悉，索晨科技公告，公司股票于2026年5月14日至5月18日连续三个交易日内收盘价格涨幅偏离累计达到30%，属于股票交易异常动波情形。公司近期实施的募投项目“物理合成数据核心技术</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816109626138119?f=rss" target="_blank" rel="noopener">氪星晚报 ｜SpaceX即将成为马斯克旗下第二家上市公司；京东、洋河集团等在宿迁成立新动能股权投资基金，出资额10亿</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">大公司： 圆通速递：4月快递产品收入60.71亿元，同比增长5.49% 36氪获悉，圆通速递公告，4月快递产品收入60.71亿元，同比增长5.49%；业务完成量27.26亿票，同比增长1.22%；快递产品单票收入2.23元，同比增长4.21</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816218027983239?f=rss" target="_blank" rel="noopener">ST金鸿：松树资本产业导入上市公司等属不实言论</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">ST金鸿发布关于市场传闻的澄清及风险提示的公告</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816205974552962?f=rss" target="_blank" rel="noopener">隆扬电子：控股股东及其一致行动人拟减持不超2%公司股份</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">公司控股股东隆扬国际计划通过大宗交易的方式减持</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816197908726146?f=rss" target="_blank" rel="noopener">富祥股份：股东拟减持不超2.45%股份</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">富祥股份公告，股东拟减持</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816183071858184?f=rss" target="_blank" rel="noopener">奕帆传动：计划8400万元收购北京和利时电机技术有限公司40%股权</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">奕帆传动公告，计划使用自有或自筹资金8400万元收购</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28135" target="_blank" rel="noopener">5 hours ago.AIbaseOptical Module Becomes the Smart Glasses&amp;#x27; &amp;#x27;Invisible Game-Changer&amp;#x27;! South Korean Startup LetinAR Secures $18.5 Million in FundingImagine speeding at 160 km/h, with navigation arrows appearing on the road ahead, integrated into your helmet visor without needing a phone or looking down. This is not sci-fi but a smart glasses technology launching in Europe this year, just an early glimpse of the evolving wave.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28119" target="_blank" rel="noopener">11 hours ago.AIbaseGlobal AI Market: OpenAI and Anthropic Capture 89% of Annual Revenue ShareA survey shows that 34 major AI companies globally generated nearly $80 billion in annual revenue, a 112% increase in six months. OpenAI and Anthropic dominate with about 89% of revenue, highlighting a highly concentrated market.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816847749153664?f=rss" target="_blank" rel="noopener">SpaceX据悉打算在美国IPO过后30天收购初创公司Cursor</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">据知情人士透露，SpaceX预计将在其正式挂牌上市（IPO）满30天后，推进对人工智能编程初创公司Cursor的收购案。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816884140589960?f=rss" target="_blank" rel="noopener">沙特AI公司Humain聘请高盛，为数据中心建设筹措超53亿美元融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">由沙特主权基金PIF支持的AI公司Humain已聘请高盛</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816909945029760?f=rss" target="_blank" rel="noopener">要做数字劳动力生产工厂，「未来式智能」完成Pre-A轮融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">文｜王欣逸 编辑｜邓咏仪 36氪获悉，未来式智能（AutoAgents.ai）近日完成Pre-A轮融资，新进投资方包括凡创资本、中关村资本、探元资本，老股东东证创新、麟阁创投跟投，本轮融资主要用于算力投入、团队扩张以及新产品的生态建设运营。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28140" target="_blank" rel="noopener">Young Genius Makes a Comeback! Former OpenAI Researcher Turns to Stock Trading, Fund Size Surges 52 Times!</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">After being fired for leaking information, former OpenAI researcher Leopold Aschenbrenner founded the investment fund Situational Awareness LP, foc...</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817050950665353?f=rss" target="_blank" rel="noopener">&quot;趋境科技&quot;完成数亿元Pre-A轮融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，近日，AI Token生产服务商&quot;趋境科技&quot;（Approaching.AI）宣布完成数亿元Pre-A轮融资。</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817084193866889?f=rss" target="_blank" rel="noopener">“贝塔无限”连续完成种子轮、种子+轮数亿元融资</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，近日，聚焦消费级通用具身智能的企业“贝塔无限 Beta Infinity”宣布，公司已先后完成种子轮、种子+轮数亿元融资。种子轮由洪泰基金、正景基金、银杏谷资本、水木清华校友种子基金、粤科金融等投资机构联合投资，种子+轮由世纪华</div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809359.html" target="_blank" rel="noopener">大涨5% 寒武纪A股市值首破8600亿元 创历史新高</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817227254104968" target="_blank" rel="noopener">亚德诺宣布15亿美元收购AI电源管理创企</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420651.html" target="_blank" rel="noopener">趋境科技完成数亿元Pre-A轮融资，高品质AI Token生产基础设施</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-17</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809249.html" target="_blank" rel="noopener">谷歌与黑石组建全新AI云合资公司 后者投入50亿美元</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809153.html" target="_blank" rel="noopener">OpenClaw创始人月烧130万美元token 覆盖6030亿代币</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809053.html" target="_blank" rel="noopener">GC绿十字获选韩国AI新药开发国家项目 资助金额达177亿韩元</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">💼 商业与融资</div></div>
+</div>
+<div class="category" id="cat-产业应用">
+<div class="card"><div class="title"><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank" rel="noopener">I&#39;ve joined Anthropic</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">340分 by dmarcos | 120评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://arstechnica.com/tech-policy/2026/05/iran-demands-big-tech-pay-fees-for-undersea-internet-cables-in-strait-of-hormuz/" target="_blank" rel="noopener">Iran demands Big Tech pay fees for undersea Internet cables in Strait of Hormuz</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">55分 by JeanKage | 38评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.wheresyoured.at/ai-is-too-expensive/" target="_blank" rel="noopener">AI is too expensive</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">61分 by unknown | 0评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://io.google/2026/" target="_blank" rel="noopener">Google I/O</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">47分 by thanhhaimai | 20评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://apnews.com/article/ai-college-commencement-anxiety-boo-35aec9bac660eaeb05c5b8d392db2cac" target="_blank" rel="noopener">Graduates are booing pep talks on AI at college commencements</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">42分 by 1vuio0pswjnm7 | 22评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://forum.cursor.com/t/cloud-agents-broken-ii/161036" target="_blank" rel="noopener">Cursor Cloud Agents Down</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">9分 by mopatches | 1评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/416762.html" target="_blank" rel="noopener">AI步入“自我进化”时代，李彦宏首提AI时代度量衡“DAA”｜Create2026百度AI开发者⼤会速览
+2026-05-13</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3816036564147718?f=rss" target="_blank" rel="noopener">裸辞九个月，降薪跳槽，一个80后营销人如何上岸甲方？｜百万年薪系列013</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">图源：公众号「有三思 U Sense」） 2023年秋，杭州亚运会湖州赛区。于成龙手持亚运火炬跑过城市街巷</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3815841756028425?f=rss" target="_blank" rel="noopener">影石：重新定义性价比</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">作者 | 张帆 坚持做后来者 近日，影石创新发布了登陆资本市场后的首份年报</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814570248412677?f=rss" target="_blank" rel="noopener">科氪 | 性能极限与跨界尝试：红魔11S Pro系列深度体验</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-18</span></div><div class="summary">在智能手机行业普遍面临镜头模组日益凸出的背景下</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816215984570760?f=rss" target="_blank" rel="noopener">*ST阳光：公司股票自5月21日起撤销退市风险警示</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">公司股票自2026年5月20日开市起停牌1天</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816212978680200?f=rss" target="_blank" rel="noopener">热门中概股美股盘前涨跌互现，哔哩哔哩跌超4%</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">热门中概股美股盘前涨跌互现</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816210396250497?f=rss" target="_blank" rel="noopener">美股大型科技股盘前多数下跌，英特尔跌超1%</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">美股大型科技股盘前多数下跌</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816195083034373?f=rss" target="_blank" rel="noopener">中控技术决定上调部分自有产品价格</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">中控技术发布产品价格调整通知公告</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816191185673993?f=rss" target="_blank" rel="noopener">印尼计划收紧对大宗商品出口的管控</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">印尼计划加强对煤炭、棕榈油等大宗商品出口的管控</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816189625753346?f=rss" target="_blank" rel="noopener">ADP：截至5月2日四周美国私营部门就业人数平均每周增加42250人</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-19</span></div><div class="summary">ADP数据显示，截至5月2日的四周，美国私营部门就业人数平均每周增加42250人</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://virtualosmuseum.org/" target="_blank" rel="noopener">I&#39;ve built a virtual museum with nearly every operating system you can think of</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">366分 by andreww591 | 79评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google changes its search box</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">35分 by berkeleyjunk | 158评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/" target="_blank" rel="noopener">Apple unveils new accessibility features</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">490分 by interpol_p | 259评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.natesilver.net/p/disney-erased-fivethirtyeight" target="_blank" rel="noopener">Disney erased FiveThirtyEight</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">35分 by 7777777phil | 1评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://thebowesmuseum.org.uk/collections/the-silver-swan/" target="_blank" rel="noopener">The Silver Swan</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">7分 by pseudolus | 0评</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/autoshelf" target="_blank" rel="noopener">AutoShelf</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-20</span></div><div class="summary">Auto-organize files on your Mac</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://distill.pub/2020/growing-ca/" target="_blank" rel="noopener">Growing Neural Cellular Automata</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">23分 by pulkitsh1234 | 3评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28129" target="_blank" rel="noopener">7 hours ago.AIbaseAlexa+ Launches On-Demand Podcast Feature - What You Want to Listen to, You Can Just Click!Amazon Alexa+ launches &amp;#x27;Alexa Podcasts,&amp;#x27; enabling users to generate personalized podcasts via voice commands. Simply say &amp;#x27;Create a podcast about XX&amp;#x27; to get a custom episode in minutes without uploading materials or scripting. Available for US users starting today, it aims to quickly turn any topic into podcast content.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28121" target="_blank" rel="noopener">9 hours ago.AIbaseThe AI Hardware Revolution Is Coming: How Giants Are Planning for the Future of Technology!Former Apple and Meta hardware lead Caitlin Kalinowski argues that AI will fundamentally reshape hardware design. She attributes consumer VR&amp;#x27;s failure not to technology but to poor market fit. Despite Meta Quest&amp;#x27;s technical lead, it missed core user needs. Future hardware must focus on practical applications.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/jvs-claw/" target="_blank" rel="noopener">阿里版OpenClaw更名”JVS Claw”，并开启内测</a></div><div class="meta"><span class="source">AI工具集</span><span>2026-03-10</span></div><div class="summary">阿里云旗下AI Agent产品”无影JVS”正式更名为” JVS Claw “，目前已推出独立APP和网页版，处于邀请码内测阶段。产品以可定制的Clawbot为核心，搭配6核/12GB独立云端ClawSpace环境，支持实时查看AI操作链路。内置浏览器自动化、Office文档处理等预制技能，用...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816851360908423?f=rss" target="_blank" rel="noopener">OpenAI创始成员Karpathy表示他已加入Anthropic</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">OpenAI创始成员Karpathy表示他已加入Anthropic。（财联社）</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816300637668483?f=rss" target="_blank" rel="noopener">微软计划年内启用印度最大数据中心，持续加大AI基础设施投入</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">微软印度及南非地区总裁普尼特·昌多克（Puneet Chandok）周二接受采访时表示，微软在印度建设的最大数据中心预计将于2026年中期正式启用。此举是这家科技巨头在印度市场大规模资本支出的核心举措，旨在加速布局全球最大的人工智能（AI）</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816865952301953?f=rss" target="_blank" rel="noopener">OpenAI推出&quot;保障容量&quot;服务：提供长期算力访问承诺</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">当地时间5月19日，OpenAI宣布推出一项名为&quot;保障容量&quot;的新服务，旨在为客户最重要的产品、智能体以及客户工作流提供长期的算力访问保障。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816856258151298?f=rss" target="_blank" rel="noopener">瑞穗押注AI需求外溢，大幅上调美光、意法及德州仪器目标价</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">瑞穗证券周二发布行业报告，基于人工智能基础设施建设带来的连锁效应，显著调高了对美光科技、意法半导体及德州仪器的目标股价</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816933425857670?f=rss" target="_blank" rel="noopener">江苏：实施提振消费专项行动，培育壮大智能穿戴设备、首发首店经济、AI流量消费等新增长点</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">5月19日</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816885492564871?f=rss" target="_blank" rel="noopener">中信证券：AI浪潮下，MLCC迎来新一轮上行周期</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://status.railway.com/?date=20260519" target="_blank" rel="noopener">Railway Blocked by Google Cloud</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">16分 by aarondf | 3评论</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28146" target="_blank" rel="noopener">Google Launches Its First AI Smart Glasses, Compatible with iPhone and Android Phones</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google announces its first smart glasses launching this fall, partnering with Samsung, Gentle Monster, and Warby Parker for AI audio glasses series...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28144" target="_blank" rel="noopener">OpenAI Launches &#39;Guaranteed Capacity&#39; Service: Enhanced Access to Computational Power</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">OpenAI launched the &#39;Guaranteed Capacity&#39; service on May 19th, aiming to provide customers with long-term commitments for access to computa...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28142" target="_blank" rel="noopener">Eliminate Complex Prompting: Google Launches Its First Native Interactive AI Design Tool, Pics</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="summary">Google introduced the AI design application Pics at the 2026 I/O conference, integrated into Google Workspace. Users can generate social media imag...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816998205801352?f=rss" target="_blank" rel="noopener">FSD入华信号增强？特斯拉九城急招智驾测试技师，官方客服：正积极推进审批</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">日前，特斯拉中国发布多个与智能驾驶测试相关的招聘岗位</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3816962733229191?f=rss" target="_blank" rel="noopener">扩博智能Sparrow刷新两项海上风电纪录</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，2026年5月，在丹麦北海的海上风电运维作业中，扩博智能Sparrow机器人刷新了两项行业纪录</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/p/3814411349581316?f=rss" target="_blank" rel="noopener">做出百万台割草机器人后，未岚大陆CEO决定让自己变得不重要｜硬氪专访</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">作者｜黄楠 编辑｜袁斯来 未岚大陆CEO任冠佼等了7年</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817110991799169?f=rss" target="_blank" rel="noopener">飞猪推出酒店商家智能助理</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，飞猪正式推出酒店商家智能助理，向平台上所有酒店免费开放。商家智能助理“上岗”后，一句话即可指挥AI批量调房态、改库存、录发票。它还能进行实时数据分析，向酒店提出科学的价格和库存管理策略参考；发现入住全流程中的服务关键</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817118508713092?f=rss" target="_blank" rel="noopener">圆周率智能发布 iMLite AI（悟境）端侧实时决策引擎</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，今日，圆周率智能正式发布 iMLite AI（悟境）端侧实时决策引擎...</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">DeepMind 首席执行官痛批“AI 裁员论”：用 AI 取代开发者是重大错误</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌I/O大会上，DeepMind CEO哈萨比斯反对“AI取代程序员”论调，认为这是缺乏想象力的表现。他强调，AI提升生产力不应成为裁员借口，技术进步应赋能人类而非替代岗位。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">谷歌推出 “Ask Play”：全新对式应用筛选体验</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上推出“Ask Play”功能，旨在优化Play商店的应用和游戏搜索体验。该功能通过自然连续问答替代传统翻找和试错，能理解用户上下文，允许在后续对话中逐步添加条件，提升搜索效率。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title">谷歌发布全新 Google Pics 应用，AI 助力图像设计与编辑</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在2026年I/O大会上推出AI图像工具Google Pics，面向Workspace用户，用于制作邀请函、海报等视觉内容。该网页应用融合生成图片与编辑设计功能，用户输入文字即可创作，设计类似Canva，标志着谷歌图像处理领域的创新。</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420531.html" target="_blank" rel="noopener">苏姿丰上海开讲：AI正在重新定义计算的每一层</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/420561.html" target="_blank" rel="noopener">完成“由铁到钢”的生态蜕变 刘军携联想全场景AI终端点亮智能未来</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-19</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419901.html" target="_blank" rel="noopener">20 明天见！拿好这份参会指南｜AIGC2026峰会</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-17</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/the-latest-ai-projects/" target="_blank" rel="noopener">ææ°AIé¡¹ç®</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-question-and-answer/" target="_blank" rel="noopener">AIé®ç­</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-encyclopedia/" target="_blank" rel="noopener">AIç¾ç§</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-hall-of-fame/" target="_blank" rel="noopener">AIåäººå </a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/about-us/" target="_blank" rel="noopener">å ³äºæä»¬</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-news/" target="_blank" rel="noopener">AIå¿«è®¯</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/ai-bot-community/" target="_blank" rel="noopener">AIäº¤æµç¾¤</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai-bot.cn/sites/66843.html" target="_blank" rel="noopener">Antigravity</a></div><div class="meta"><span class="source">ai-bot.cn</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419913.html" target="_blank" rel="noopener">L2++「五冠王」文远知行：自动驾驶版的张雪机车，专治各种不服</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419597.html" target="_blank" rel="noopener">百度无人车新纪录：周订单破35万！李彦宏：开始单城盈利了</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419585.html" target="_blank" rel="noopener">重塑主流PC，第三代英特尔酷睿开启全民AI轻薄本时代</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419414.html" target="_blank" rel="noopener">华为“养”出半个具身智能创业圈</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808163.html" target="_blank" rel="noopener">三星推进成熟4nm FinFET工艺争取AI订单</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808164.html" target="_blank" rel="noopener">腾讯元宝正式接入Hermes Agent</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/808180.html" target="_blank" rel="noopener">豆包登顶AI原生App活跃用户规排行榜</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809285.html" target="_blank" rel="noopener">美国社会掀起新一轮AI争议 技术扩张引发多方担忧</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809288.html" target="_blank" rel="noopener">日媒：日本人形机器人大幅落后中国 但存在翻盘机会</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809251.html" target="_blank" rel="noopener">AMD CEO苏姿丰称中国市场极其重要：算力是业务关键</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://ai.cnmo.com/news/809195.html" target="_blank" rel="noopener">宝马工厂引入Figure人形机器人 实现24小时不间断工作</a></div><div class="meta"><span class="source">CNMO</span><span>2026-05-20</span></div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://36kr.com/newsflashes/3817307506426758?f=rss" target="_blank" rel="noopener">首批搭载Agent PC电脑将在天猫618首发</a></div><div class="meta"><span class="source">36kr</span><span>2026-05-20</span></div><div class="summary">36氪获悉，5月20日，首批搭载阿里云自研AI Agent（JVS Claw）的PC电脑在天猫618独家首发</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/hiro-2" target="_blank" rel="noopener">Hiro</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Your agentic security team from first commit to SOC 2</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/supercut" target="_blank" rel="noopener">Supercut for Agents</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Permission-aware AI access to recordings and metadata</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/google" target="_blank" rel="noopener">Google Pics</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Boundless AI image generation meets precision editing</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/ghostsnap" target="_blank" rel="noopener">GhostSnap</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Take multiple screenshots that are auto compressed for AI</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/glia-2" target="_blank" rel="noopener">Glia</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Local-first AI memory bridge between browser chats and IDEs</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/runtime" target="_blank" rel="noopener">Runtime</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Sandboxed coding agents for everyone on your team</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://www.producthunt.com/products/owlish" target="_blank" rel="noopener">Owlish</a></div><div class="meta"><span class="source">ProductHunt</span><span>2026-05-17</span></div><div class="summary">Reduce support volume with AI agents trained on your docs</div><div class="tag">🏭 产业应用</div></div>
+<div class="card"><div class="title"><a href="https://xint.io/blog/copy-fail-pod-to-host" target="_blank" rel="noopener">CopyFail: From Pod to Host</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">5分 by tptacek | 0评论</div><div class="tag">🏭 产业应用</div></div>
+</div>
+<div class="category" id="cat-工具与开源">
+<div class="card"><div class="title"><a href="https://superspl.at/scene/84df8849" target="_blank" rel="noopener">Show HN: Gaussian Splat of a Strawberry</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">415分 by danybittel | 164评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://superlog.sh/" target="_blank" rel="noopener">Show HN: Superlog (YC P26) – Observability that installs itself and fixes bugs</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">33分 by Magnanten | 30评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://haystackeditor.com/" target="_blank" rel="noopener">Show HN: Haystack – Review the PRs that need human attention</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">14分 by akshaysg | 6评</div><div class="tag">🔧 工具与开源</div></div>
+<div class="card"><div class="title"><a href="https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/" target="_blank" rel="noopener">CISA Admin Leaked AWS GovCloud Keys on GitHub</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">305分 by LelouBil | 141评</div><div class="tag">🔧 工具与开源</div></div>
+</div>
+<div class="category" id="cat-学术政策">
+<div class="card"><div class="title"><a href="https://www.gentoo.org/news/2026/05/19/copy-fail-fragnesia-vulnerabilities.html" target="_blank" rel="noopener">Gentoo News: Copy Fail, Dirty Frag, and Fragnesia Kernel Vulnerabilities</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-19</span></div><div class="summary">13分 by akhuettel | 0评论</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://openai.com/index/advancing-content-provenance/" target="_blank" rel="noopener">OpenAI Adopts Google&#39;s SynthID Watermark for AI Images with Verification Tool</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div><div class="summary">34分 by anonymous | 0评</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28137" target="_blank" rel="noopener">5 hours ago.AIbaseVisual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-SourcedTencent&amp;#x27;s Hunyuan large model, in collaboration with the Palace Museum and other institutions, launched &amp;#x27;Chronicles-OCR,&amp;#x27; the industry&amp;#x27;s first ancient script perception benchmark covering the evolution trajectory of the &amp;#x27;seven script styles&amp;#x27; of Chinese characters. The dataset, cross-annotated by experts with 2,800 images, tests AI&amp;#x27;s ability to recognize ancient scripts like oracle bone inscriptions, advancing AI&amp;#x27;s understanding of Chinese charact....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.aibase.com/news/28127" target="_blank" rel="noopener">8 hours ago.AIbaseAI Glasses Enter Urban Service Scenarios, Ant GPASS Launches City Tour Guide FunctionAnt Group&amp;#x27;s self-developed GPASS technology framework has expanded its application boundaries, with the city companion feature now available in the latest version of Leqi AI glasses. In companion mode, users can access information while walking, as the system provides location-based explanations of nearby attractions, supports real-time Q&amp;amp;A, navigation, and first-person content recording and sharing.....</a></div><div class="meta"><span class="source">AIbase</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/S3CZBNf9Rks9twQzZ6m3Ow?scene=1&amp;amp;click_id=90" target="_blank" rel="noopener">阿里在海外推出”企业级龙虾”Accio Work</a></div><div class="meta"><span class="source">量子位</span><span>2026-03-25</span></div><div class="summary">阿里在海外上线企业级Agent产品 Accio Work ，定位”企业版龙虾”。用户只需提出想法，内置的AI Agent团队可7×24小时自动完成选品、采购、建站、运营等全流程，30分钟生成可运营的海外网店。产品支持单个Agent对话或Agent Team群聊模式，可自定义角色与技能，关键操作...</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://github.com/wiltodelta/remove-ai-watermarks" target="_blank" rel="noopener">Remove-AI-Watermarks - CLI and library for removing AI watermarks from images</a></div><div class="meta"><span class="source">HackerNews</span><span>2026-05-20</span></div><div class="summary">89分 by janalsncm | 61评论</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">AI办公新物种：出门问问CodeBanana斩获 36 氪年度大奖，重新定义“超级组织”</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">36氪公布「2026AI最佳场景渗透案例」评选结果，上海羽扇智信息科技旗下AI协作平台CodeBanana(CB)因在复杂企业协作场景中的出色表现，从数百案例中胜出入选。评选历时3个月，经多轮严格评审，CodeBanana代表AI技术产业渗透领先水平。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">记忆大模型赛道黑马：MemoraX AI完成种子+轮融资，累计吸金超亿元</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">深圳忆纪元科技（MemoraX AI）一个月内再获数千万人民币种子+轮融资，累计金额突破1亿元。公司专注“大模型记忆系统”垂直赛道，由光源资本担任财务顾问，凸显资本市场对其技术潜力的高度认可。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">正面迎战安索匹克！谷歌发布安全 AI 工具打响代码保卫战</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌在I/O开发者大会上宣布，邀请特定专家对旗下代码安全AI智能体CodeMender进行API测试。该工具由深度思维团队开发，自去年十月亮相后备受关注，此次推向外部市场旨在修复全球漏洞。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">通义实验室发布Qwen3.7-Max，以“正交解耦”技术斩获多项评测国内第一</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">通义实验室发布新一代AI Agent基座大模型Qwen3.7-Max，在多项评测中获国内第一，旨在解决智能体长链路运行中断、崩溃问题。在未知硬件ZW-M890L PPU的极限压力测试中，该模型无文档和先验数据，凭运行时反馈展现长程策略连贯性与泛化力，连续运行35小时、1158次工具调用零中断。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">估值破 200 亿美元！月之暗面“拆墙”赴港，AI独角兽开启资本新纪元</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">月之暗面完成约20亿美元融资，估值突破200亿美元后，宣布拆除红筹架构，正式启动赴港上市进程。此举旨在响应北京对境内企业境外上市的新监管规定，红筹架构作为科技企业常用模式，正面临调整。公司架构重整将为IPO铺路。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">OpenAI联合创始人Andrej Karpathy宣布加盟Anthropic，发力下一代LLM研发</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">OpenAI联合创始人兼前特斯拉自动驾驶负责人Andrej Karpathy加入Anthropic，加剧了AI人才向OpenAI主要竞争对手的流动。此前OpenAI已有多位核心骨干离职，Karpathy将专注于大型语言模型的底层架构与深层集成研究。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">中国企业零的突破！微信 AI 团队论文斩获信号处理国际大奖</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">微信AI团队在ICASSP 2026国际会议上，凭借一项创新学术成果荣获最佳工业论文奖，这是该奖项自2016年设立以来首次由中国企业团队获得，打破了海外科技巨头的垄断。获奖论文聚焦于创新模型赋能视障行走，展示了AI在无障碍技术领域的突破性应用。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">DeepSeek 回应模型异常回复：特殊字符引发幻觉并无安全隐患</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">近日，DeepSeek网页版因用户输入特殊字符后自动跳出无关文本，引发“对话隐私泄露”担忧。官方迅速排查并定性为模型幻觉，澄清非数据泄露问题，缓解了用户疑虑。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title">谷歌推出 Gemini Omni 模型，开启多模态交互新时代！</div><div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div><div class="summary">谷歌于5月19日发布最新多模态AI模型Gemini Omni，这是Gemini家族的重大突破。该模型能同时处理文本、音频、图像和视频等多种信息形式，实现更流畅自然的跨模态交互体验，旨在提升用户与AI的交互效率。</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://mp.weixin.qq.com/s/_pu5YeWZeRyEEtJ34C89VQ" target="_blank" rel="noopener">谷歌I/O开发者大会推出AI全家桶</a></div><div class="meta"><span class="source">智东西</span><span>2026-05-17</span></div><div class="summary">谷歌I/O 2026大会重磅发布：全新旗舰模型Gemini 3.5 Flash速度达竞品4倍；全能模型Gemini Omni Flash亮相，支持自然语言对话改视频；谷歌搜索迎来25年来最大升级，AI Mode月活突破10亿；联合三星及Gentle Monster、Warby Parker推出...</div><div class="tag">📚 学术与政策</div></div>
+<div class="card"><div class="title"><a href="https://www.qbitai.com/2026/05/419528.html" target="_blank" rel="noopener">AI水论文封一年，署名连坐！arXiv最严新规来了，陶哲轩附议</a></div><div class="meta"><span class="source">量子位</span><span>2026-05-20</span></div><div class="tag">📚 学术与政策</div></div>
+</div>
+
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-05-20</div>
 <script>
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
