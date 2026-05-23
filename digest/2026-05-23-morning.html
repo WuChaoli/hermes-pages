@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-05-23</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">2026年5月23日 · 开启一天的 AI 资讯</div>
+  <div class="stats">
+    <span>📊 73 条</span>
+    <span>📡 6 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">🏠 全部 (73)</div>
+<div class="tab" data-cat="model">🤖 模型与技术 (47)</div>
+<div class="tab" data-cat="business">💼 商业与融资 (4)</div>
+<div class="tab" data-cat="industry">🏭 产业应用 (14)</div>
+<div class="tab" data-cat="tool_opensource">🔧 工具与开源 (2)</div>
+<div class="tab" data-cat="academic_policy">📚 学术与政策 (6)</div>
+
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    <div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.joshwcomeau.com/email/wham-launch-005-elephant-2-p/" target="_blank">AI 对现有技术技能具有倍增效应</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">114 points by  | 0 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 AI has a multiplying effect on existing technical skills</div>
+            <div class="original-summary">114 points by  | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2601.00360" target="_blank">Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-01-01</span></div>
+        <div class="summary">Jamiu Idowu, Ahmed Almasoud, Ayman Alfahid</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2605.18747" target="_blank">Code as Agent Harness</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-18</span></div>
+        <div class="summary">近期的大型语言模型（LLMs）在理解和生成代码方面展现出强大能力，从竞技编程到仓库级软件工程。在新兴的 agentic 系统中，代码不再仅仅是目标输出，而是越来越多地作为操作基础设施来运作。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Code as Agent Harness</div>
+            <div class="original-summary">Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2402.11651" target="_blank">Learning From Failure: Integrating Negative Examples when Fine-tuning LLMs as Agents</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-02-18</span></div>
+        <div class="summary">Renxi Wang, Haonan Li, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2308.16149" target="_blank">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2023-08-30</span></div>
+        <div class="summary">Neha Sengupta, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank">PediatricsGPT: Large Language Models as Chinese Medical Assistants</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-05-29</span></div>
+        <div class="summary">Dingkang Yang, Jinjie Wei, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2023-12-09</span></div>
+        <div class="summary">Hongzhan Lin, Ziyang Luo, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2402.14679" target="_blank">Is Self-knowledge and Action Consistent or Not: Investigating LLM Personality</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-02-22</span></div>
+        <div class="summary">Yiming Ai, Zhiwei He, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2412.02527" target="_blank">The Multimodal Universe: Enabling Large-Scale ML with 100TB of Astronomical Data</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-12-03</span></div>
+        <div class="summary">The Multimodal Universe Collaboration, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.aibase.com//market.aibase.com" target="_blank">AI 全能力超市</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">中芯国际与嘉楠科技合作14nm矿机芯片，知情人士：能否量产要看行情</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">有消息称，中芯国际与嘉楠科技合作的14nm矿机芯片已完成测试，将在今年二季度量产出货。对此，知情人士称，双方合作始于2019年年底，但能否量产要看行情。据悉，中芯国际数次尝试进入矿机行业，但受行情拖累一直未有实质进展。（财联社）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">三大运营商年内推出5G消息</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">三大运营商计划在年内推出升级版短信服务5G消息。5G消息的特点：①打破传统短信长度限制，实现文、图、音视频、表情等融合；②支持在线支付、在线和离线消息；③不加好友就能随时发起群发、群聊。业内人士指出，5G消息可能按流量计费，价格有望比目前的短信和微信更优惠。（央视新闻）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">欧洲在线订餐服务Takeaway.com：外卖订单开始强劲复苏</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，随着闭门不出的消费者厌倦了在家里做饭或寻求改变他们的日常生活，更多的人开始将点外卖作为一种改变局面的方式。欧洲最大的在线订餐服务之一Takeaway.com称，外卖订单已开始强劲复苏。而分析师表示，这种复苏是“I型复苏”，而不是“V型复苏”。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">北京规模以上工业企业开复工率已达99.9%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据北京日报，截至4月10日，北京规模以上工业企业开复工率达到99.9%，而在2月16日企业开复工率仅为52.3%。（财联社）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">韩国：违反居家隔离措施者，需佩戴电子手环</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据央视新闻客户端消息，韩国国务总理丁世钧11日表示，由于近期韩国出现多起违反居家隔离措施的案例，为更好遏制新冠肺炎的传播，韩国将对这些违规者佩戴电子手环，以监测其是否遵守相关规定。据了解，电子手环将通过连接使用者手机，对隔离人员的行踪进行掌握。（央视新闻客户端）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">马布里官方旗舰店入驻拼多多，“发光篮球”将登陆百亿补贴</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，马布里官方旗舰店将入驻拼多多，“发光篮球”也将登陆百亿补贴。4月12日晚7点，马布里将在拼多多开启直播电商首秀。</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">好未来《熊猫博士》3D动画片登陆央视少儿频道</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，自4月9日起，中央电视台少儿频道携手好未来旗下教育品牌熊猫博士上线3D系列动画片《熊猫博士》。与此同时，《熊猫博士》3D动画片也在美国、加拿大、俄罗斯、意大利等多个国家、地区陆续发行，并登陆Discovery探索频道等多个世界知名节目。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">瑞德西韦同情用药的数据存在局限性，中国重症临床试验已中止</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，针对瑞德西韦的研究进展，吉利德科学董事长兼首席执行官Daniel O’Day发布了一封公开信。吉利德董事长表示，瑞德西韦同情用药的数据存在局限性，中国重症临床试验已中止。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">广东餐饮协会提议美团：取消独家条款，降佣5%及以上</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日， 广东省餐饮服务行业协会发文称，疫情期间，收到数百家餐饮企业针对美团外卖的投诉，故发函代表行业提出书面交涉意见：美团应直接减免整个疫情期间广东省内所有餐饮商户外卖服务佣金5%或以上；同时，美团应立即取消独家合作限制等其他垄断条款，以便餐企承接来自更多平台的外卖订单。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text">小鹏汽车一季度上险量2331台</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，根据中国汽车研究中心数据，2020年一季度小鹏G3总计上险量达到2331台，3月单月上险量达到1094台。</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">持续助力中小企业复苏，字节跳动抗疫支出超10亿元</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，字节跳动旗下的抖音、巨量引擎推出第二期“中小企业复苏计划”，在原计划的基础上，将补贴力度增加至2亿元，助力中小企业更快恢复经营。除中小企业复苏计划外，字节跳动已累计推出了12项针对各行各业的扶助措施，整体投入超4.3亿元。在之前，字节跳动在资助抗疫一线医护人员方面的投入已超3.8亿元。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">海航集团与中国旅游集团战略合作，推动海南自贸区消费升级</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">4月11日，中国旅游集团与海航集团在海口签署战略合作协议，双方将在航旅产业、免税业务、资产项目等多个领域开展合作，推动海南自贸区（港）建设与消费升级。（中国新闻网）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">拼多多百亿补贴开售全国首批SK-II限量版神仙水，1488套限量版上线后“秒光”</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日，拼多多“百亿补贴”正式上线SK-II春日娃娃神仙水，首发888件上线后“秒光”，百亿补贴团队紧急补货600件后，也被一抢而空。拼多多此前公布的2019年财报显示，2019年，平台销售补贴费用达271.7亿元，“百亿补贴”支出远超百亿。今年2月，拼多多将“百亿补贴”进一步升级为“百亿补贴节”，补贴力度从此前的20%最高增长至50%。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text">公募基金投资新三板的相关指引有望近日公布</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">一位接近监管层人士透露，公募基金投资新三板相关指引有望在近日择机公布，在新三板精选层的转层改革正式落地前，相关公募产品有望完成获批和募集。（证券时报）</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">新加坡暂停使用Zoom在线授课，直到安全问题解决</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据路透社报道，在为应对疫情采取封锁措施的首周，学校停课，学生在在家在线上课之后，新加坡决定暂停教师使用视频会议工具Zoom进行在线授课，原因是“发生了一些严重的事件”。疫情期间，全球公司和学校都在广泛使用Zoom Video Communications开发的会议应用，人们对这款应用的安全性和隐私问题的关注也日渐上升。（新浪科技）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">阿里巴巴和浙江德清签署“数字乡村建设合作协议”</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，阿里巴巴和浙江省德清县人民政府签署“数字乡村建设合作协议”，双方将在五方面展开合作：建设数字乡村数据库；扩大物联网、区块链、云计算、人工智能在乡村的应用；培育乡村新零售；培育乡村信息化人才；推进行业监管数字化。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">孙正义批评日本政府应对疫情不力：休假补贴太吝啬</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，软银集团创始人孙正义在Twitter上抨击日本政府应对新冠病毒疫情不力。孙正义用日语写道：“他们在休假补贴上很吝啬，这让人们无法将互动活动减少80%。”他还质疑，既然美国已经让医疗专业人士来负责抗疫，为什么日本要由经济部长来负责该国的疫情应对工作。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">特斯拉半数美国销售和交付人员将临时休假</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，三名在不同州为特斯拉工作的员工透露，特斯拉经理近日告诉员工们说，公司的休假将影响公司在美国的半数销售人员和交付人员。特斯拉发言人未回复评论请求。（新浪科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">第三方曝光罗永浩第二场直播数据：带货销售额下降近70%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">第三方小葫芦数据显示，4月10日晚上罗永浩的第二场直播（直播时长2小时38分钟），累计观看人数为1142.7万，相比上场下滑了76.2%。带货上，这场直播订单量为37万，相比商场下滑了59.4%，而销售额为3442.7万，相比上场下滑了69.5%。之前抖音官方公布的数据显示，罗永浩首场的直播支付交易总额超1.1亿元，累计观看人数超4800万人。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text">IMS（天下秀）A股上市首份年报：2019年营收19.8亿，同比增长63.5%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日晚间，红人新经济企业IMS（天下秀）公布2019年全年财报，系借壳ST慧球上市后首次披露年报。全年共实现营业收入19.77亿元，同比增长63.47%，公司实现归属于上市公司股东的净利润2.59亿元，同比增长63.79%，完成2019年度业绩承诺。</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22642v1" target="_blank">Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">电子表格系统（如 Microsoft Excel、Google Sheets）在现代以数据为中心的工作流中扮演着核心角色。随着 AI 代理越来越擅长自动化复杂任务，如控制计算机和生成演示文稿，构建 AI 驱动的电子表格代理已成为一个重要研究方向。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning</div>
+            <div class="original-summary">Spreadsheet systems (e.g., Microsoft Excel, Google Sheets) play a central role in modern data-centric workflows. As AI agents grow increasingly capable of automating complex tasks, such as controlling computers and generating presentations, building an AI-driven spreadsheet agent has emerged as a promising research direction. Most existing spreadsheet agents rely on specialized prompting over general-purpose LLMs; while this design has potentials on simple spreadsheet operations, it struggles to</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22634v1" target="_blank">Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Ting Liu</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22568v1" target="_blank">Measuring Security Without Fooling Ourselves: Why Benchmarking Agents Is Hard</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Sahar Abdelnabi, Chris Hicks, Konrad Rieck et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22300v1" target="_blank">Cross-domain benchmarks reveal when coordinated AI agents improve scientific inference from partial evidence</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Fiona Y. Wong, Markus J. Buehler</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21984v1" target="_blank">Echo: Learning from Experience Data via User-Driven Refinement</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Hande Dong, Xiaoyun Liang, Jiarui Yu et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21956v1" target="_blank">Detecting Offensive Cyber Agents: A Detection-in-Depth Approach</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Matt Mittelsteadt, Jam Kraprayoon, Robin Staes-Polet et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21818v1" target="_blank">Co-Ontogeny by Archetypal Scaffolding: The Humorphic Partnership</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-20</span></div>
+        <div class="summary">Hector Ouilhet Olmos</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22811v1" target="_blank">GS-QA: A Benchmark for Geospatial Question Answering</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Majid Saeedan, Muhammad Shihab Rashid, Ahmed Eldawy et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22779v1" target="_blank">FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Huanchi Wang, Zihang Huang, Yifang Tian et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22771v1" target="_blank">Reducing Political Manipulation with Consistency Training</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Long Phan, Devin Kim, Alexander Pan et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22769v1" target="_blank">Understanding Data Temporality Impact on Large Language Models Pre-training</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">大型语言模型（LLMs）通常在经过打乱处理的语料库上进行训练，得到的模型知识被冻结在训练时的状态，其时间锚定能力仍然 poorly understood。在本研究中，我们探讨了预训练动态对获取时间敏感的事实知识的影响。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Understanding Data Temporality Impact on Large Language Models Pre-training</div>
+            <div class="original-summary">Large language models (LLMs) are typically trained on shuffled corpora, yielding models whose knowledge is frozen at train time and whose temporal grounding remains poorly understood. In this work, we study the impact of pre-training dynamics on the acquisition of time-sensitive factual knowledge, focusing specifically on data ordering. Our main contributions are twofold. First, we introduce a comprehensive benchmark of over 7,000 temporally grounded questions and an evaluation protocol that ena</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22763v1" target="_blank">Advancing Mathematics Research with AI-Driven Formal Proof Search</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">George Tsoukalas, Anton Kovsharov, Sergey Shirobokov et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22732v1" target="_blank">Beyond Acoustic Emotion Recognition: Multimodal Pathos Analysis in Political Speech Using LLM-Based and Acoustic Emotion Models</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Juergen Dietrich</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22731v1" target="_blank">Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Dong Nie</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22714v1" target="_blank">AMEL: Accumulated Message Effects on LLM Judgments</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Sid-ali Temkit</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.18466v1" target="_blank">Speech-Guided Multimodal Learning for Vocal Tract Segmentation in Real-Time MRI</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-18</span></div>
+        <div class="summary">Daiqi Liu, Lukas Mulzer, Md Hasan et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.16806v1" target="_blank">Cross-modal Affinity-aligned Multimodal Learning Analytics for Predicting Student Collaboration Satisfaction in Game-Based Learning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-16</span></div>
+        <div class="summary">Wen-Hsin Tsai, Chia-Ming Lee, Yuk-Ying Tung</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://aiweekly.co/alerts/microsoft-drops-claude-code-after-budget-overrun" target="_blank">预算超支后微软放弃 Claude Code</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">42 points by robertkarl | 14 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Microsoft Drops Claude Code After Budget Overrun</div>
+            <div class="original-summary">42 points by robertkarl | 14 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.1940airterminal.org/news/liquidation-of-simulators" target="_blank">1940 航空航站楼博物馆开始清算</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">8 points by weaponeer | 2 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 1940 Air Terminal Museum Begins Liquidation</div>
+            <div class="original-summary">8 points by weaponeer | 2 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/809172.html" target="_blank">外媒称中国AI视频生成模型领先美国 创作者称&amp;ldquo;更自由&amp;rdquo;</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="tool_opensource">
+        <div class="title-row"><div class="title-text"><a href="https://www.kanbots.dev/" target="_blank">开源看板桌面应用：每张卡片运行并行代理</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">25 points by vitriapp | 8 comments</div>
+        <div class="tag">🔧 工具与开源</div>
+        <div class="original">
+            <div class="original-title">📝 Open source Kanban desktop app that runs parallel agents on every card</div>
+            <div class="original-summary">25 points by vitriapp | 8 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/" target="_blank">立法者要求答复，CISA 试图控制数据泄露</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">13 points by speckx | 1 comments</div>
+        <div class="tag">📚 学术与政策</div>
+        <div class="original">
+            <div class="original-title">📝 Lawmakers Demand Answers as CISA Tries to Contain Data Leak</div>
+            <div class="original-summary">13 points by speckx | 1 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.qbitai.com/2026/05/422032.html" target="_blank">菲尔茨奖得主都看懵了：OpenAI非数学模型首次自主突砀80年未解数学难题</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">量子位</span><span>2026-05-22</span></div>
+        <div class="summary">125页“令人恐惧”的推演</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" target="_blank">微软开始取消 Claude Code 许可证</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">https://archive.ph/WfCta</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Microsoft starts canceling Claude Code licenses</div>
+            <div class="original-summary">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;WfCta</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://annas-archive.gl/blog/llms-txt.html" target="_blank">如果你是个 LLM，请读这个</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">635 points by janandonly | 373 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 If you’re an LLM, please read this</div>
+            <div class="original-summary">635 points by janandonly | 373 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="tool_opensource">
+        <div class="title-row"><div class="title-text"><a href="https://github.com/anomalyco/models.dev" target="_blank">Models.dev：AI 模型规格、定价和能力的开源数据库</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">7 points by unknown | 0 comments</div>
+        <div class="tag">🔧 工具与开源</div>
+        <div class="original">
+            <div class="original-title">📝 Models.dev: open-source database of AI model specs, pricing, and capabilities</div>
+            <div class="original-summary">7 points by unknown | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2605.22001" target="_blank">多智能体 LLM 系统中域伪装注入攻击逃避检测</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">18 points by  | 0 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems</div>
+            <div class="original-summary">18 points by  | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="https://www.aibase.com/news/28260" target="_blank">马斯克与扎克伯格联合游说！特朗普紧急暂停美国 AI 监管的内幕秘密</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">📚 学术与政策</div>
+        <div class="original">
+            <div class="original-title">📝 Musk and Zuckerberg Jointly Lobbying! Inside Secrets of Trump&amp;#x27;s Emergency Suspension of US AI Regulation</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808463.html" target="_blank">火到欧美的&amp;ldquo;韩国棒球女神&amp;rdquo;被证实AI生成</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808986.html" target="_blank">华为在海外发布AI采矿解决方案 AI+5G破解&amp;ldquo;数据孤岛&amp;rdquo;</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808966.html" target="_blank">阿里企业级 Agent 平台&amp;ldquo;悟空&amp;rdquo;开始逐步规模化放量</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808941.html" target="_blank">Meta AI推出&amp;ldquo;隐身聊天&amp;rdquo;功能：退出聊天后对话记录将消失</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.cringely.com/2026/05/21/im-writing-again/" target="_blank">我又开始写作了</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">74 points by dan_hawkins | 21 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 I’m Writing Again</div>
+            <div class="original-summary">74 points by dan_hawkins | 21 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28137" target="_blank">视觉大模型遭遇挫折：首个中国古文字 OCR 评测基准开源</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Visual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-Sourced</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28106" target="_blank">通义千问重大升级：新旗舰 Qwen3.7 预览版全球首发</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Tongyi Qianwen Makes a Major Upgrade: the New Flagship Qwen3.7 Preview Version Debuts Globally</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28120" target="_blank">NVIDIA 推出 Vera CPU，开启 Agentic AI 时代新篇章</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 NVIDIA Launches Vera CPU, Marking a New Chapter in the Age of Agentic AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28107" target="_blank">降价出击！AI 编程工具 Cursor 推出 Composer 2.5，性能媲美 GPT-5.5</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        <div class="original">
+            <div class="original-title">📝 Cost Reduction Strike! AI Programming Tool Cursor Launches Composer 2.5, Performance Competes with GPT-5.5</div>
+        </div>
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28206" target="_blank">半年融资 39 亿美元！月之暗面计划拆除 VIE 架构赴港上市</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">💼 商业与融资</div>
+        <div class="original">
+            <div class="original-title">📝 Raised 3.9 Billion USD in Half a Year! Moonshot Plans to Remove VIE Structure and Pursue Hong Kong IPO</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28213" target="_blank">OpenAI 推理模型突破：AI 成功反驳 Erdős 单位距离猜想</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Breakthrough in OpenAI Inference Model: AI Successfully Refutes Erdős Unit Distance Conjecture</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28068" target="_blank">性能堪比 GPT-5.5？谷歌开发者大会预告：轻量级大模型和 AI 眼镜</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Performance on Par with GPT-5.5? Google Developer Conference Preview: Lightweight Large Models and AI Glasses</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28164" target="_blank">AI 办公新物种：出门问问 CodeBanana 荣获 36 氪年度大奖</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 New AI Office Species: CodeBanana by Mobvoi Wins 36 Kratos Annual Award</div>
+        </div>
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text"><a href="https://36kr.com/p/3816943010071427?f=rss" target="_blank">氪星晚报｜优步与印度JSW集团达成协议;英伟达、AMD、英特尔参投，AI初创公司Hark完成7亿美元融资</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-22</span></div>
+        <div class="summary">大公司：Jefferies预计7-Eleven日本业务营业利润将达2270亿日元</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://36kr.com/p/3820298219425924?f=rss" target="_blank">江行智能：从感知环境到改变世界：物理AI的机遇、路径与实践</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-22</span></div>
+        <div class="summary">中国工业物理AI的真正优势不在模型参数，而在全球12倍的工业机器人部署密度</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+
+  </div>
+  <div class="category" id="cat-model">
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.joshwcomeau.com/email/wham-launch-005-elephant-2-p/" target="_blank">AI 对现有技术技能具有倍增效应</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">114 points by  | 0 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 AI has a multiplying effect on existing technical skills</div>
+            <div class="original-summary">114 points by  | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2601.00360" target="_blank">Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-01-01</span></div>
+        <div class="summary">Jamiu Idowu, Ahmed Almasoud, Ayman Alfahid</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2605.18747" target="_blank">Code as Agent Harness</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-18</span></div>
+        <div class="summary">近期的大型语言模型（LLMs）在理解和生成代码方面展现出强大能力，从竞技编程到仓库级软件工程。在新兴的 agentic 系统中，代码不再仅仅是目标输出，而是越来越多地作为操作基础设施来运作。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Code as Agent Harness</div>
+            <div class="original-summary">Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agentic systems, code is no longer only a target output. It increasingly serves as an operational substrate for agent reasoning, acting, environment modeling, and execution-based verification. We frame this shift through the lens of agent harnesses and introduce code as agent harness: a unified view that</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2402.11651" target="_blank">Learning From Failure: Integrating Negative Examples when Fine-tuning LLMs as Agents</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-02-18</span></div>
+        <div class="summary">Renxi Wang, Haonan Li, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2308.16149" target="_blank">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2023-08-30</span></div>
+        <div class="summary">Neha Sengupta, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank">PediatricsGPT: Large Language Models as Chinese Medical Assistants</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-05-29</span></div>
+        <div class="summary">Dingkang Yang, Jinjie Wei, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2023-12-09</span></div>
+        <div class="summary">Hongzhan Lin, Ziyang Luo, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2402.14679" target="_blank">Is Self-knowledge and Action Consistent or Not: Investigating LLM Personality</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-02-22</span></div>
+        <div class="summary">Yiming Ai, Zhiwei He, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2412.02527" target="_blank">The Multimodal Universe: Enabling Large-Scale ML with 100TB of Astronomical Data</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2024-12-03</span></div>
+        <div class="summary">The Multimodal Universe Collaboration, et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.aibase.com//market.aibase.com" target="_blank">AI 全能力超市</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-17</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">三大运营商年内推出5G消息</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">三大运营商计划在年内推出升级版短信服务5G消息。5G消息的特点：①打破传统短信长度限制，实现文、图、音视频、表情等融合；②支持在线支付、在线和离线消息；③不加好友就能随时发起群发、群聊。业内人士指出，5G消息可能按流量计费，价格有望比目前的短信和微信更优惠。（央视新闻）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">欧洲在线订餐服务Takeaway.com：外卖订单开始强劲复苏</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，随着闭门不出的消费者厌倦了在家里做饭或寻求改变他们的日常生活，更多的人开始将点外卖作为一种改变局面的方式。欧洲最大的在线订餐服务之一Takeaway.com称，外卖订单已开始强劲复苏。而分析师表示，这种复苏是“I型复苏”，而不是“V型复苏”。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">韩国：违反居家隔离措施者，需佩戴电子手环</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据央视新闻客户端消息，韩国国务总理丁世钧11日表示，由于近期韩国出现多起违反居家隔离措施的案例，为更好遏制新冠肺炎的传播，韩国将对这些违规者佩戴电子手环，以监测其是否遵守相关规定。据了解，电子手环将通过连接使用者手机，对隔离人员的行踪进行掌握。（央视新闻客户端）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">马布里官方旗舰店入驻拼多多，“发光篮球”将登陆百亿补贴</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，马布里官方旗舰店将入驻拼多多，“发光篮球”也将登陆百亿补贴。4月12日晚7点，马布里将在拼多多开启直播电商首秀。</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">孙正义批评日本政府应对疫情不力：休假补贴太吝啬</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，软银集团创始人孙正义在Twitter上抨击日本政府应对新冠病毒疫情不力。孙正义用日语写道：“他们在休假补贴上很吝啬，这让人们无法将互动活动减少80%。”他还质疑，既然美国已经让医疗专业人士来负责抗疫，为什么日本要由经济部长来负责该国的疫情应对工作。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">特斯拉半数美国销售和交付人员将临时休假</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据外媒报道，三名在不同州为特斯拉工作的员工透露，特斯拉经理近日告诉员工们说，公司的休假将影响公司在美国的半数销售人员和交付人员。特斯拉发言人未回复评论请求。（新浪科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text">第三方曝光罗永浩第二场直播数据：带货销售额下降近70%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">第三方小葫芦数据显示，4月10日晚上罗永浩的第二场直播（直播时长2小时38分钟），累计观看人数为1142.7万，相比上场下滑了76.2%。带货上，这场直播订单量为37万，相比商场下滑了59.4%，而销售额为3442.7万，相比上场下滑了69.5%。之前抖音官方公布的数据显示，罗永浩首场的直播支付交易总额超1.1亿元，累计观看人数超4800万人。（腾讯科技）</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22642v1" target="_blank">Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">电子表格系统（如 Microsoft Excel、Google Sheets）在现代以数据为中心的工作流中扮演着核心角色。随着 AI 代理越来越擅长自动化复杂任务，如控制计算机和生成演示文稿，构建 AI 驱动的电子表格代理已成为一个重要研究方向。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning</div>
+            <div class="original-summary">Spreadsheet systems (e.g., Microsoft Excel, Google Sheets) play a central role in modern data-centric workflows. As AI agents grow increasingly capable of automating complex tasks, such as controlling computers and generating presentations, building an AI-driven spreadsheet agent has emerged as a promising research direction. Most existing spreadsheet agents rely on specialized prompting over general-purpose LLMs; while this design has potentials on simple spreadsheet operations, it struggles to</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22634v1" target="_blank">Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Ting Liu</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22568v1" target="_blank">Measuring Security Without Fooling Ourselves: Why Benchmarking Agents Is Hard</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Sahar Abdelnabi, Chris Hicks, Konrad Rieck et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22300v1" target="_blank">Cross-domain benchmarks reveal when coordinated AI agents improve scientific inference from partial evidence</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Fiona Y. Wong, Markus J. Buehler</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21984v1" target="_blank">Echo: Learning from Experience Data via User-Driven Refinement</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Hande Dong, Xiaoyun Liang, Jiarui Yu et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22811v1" target="_blank">GS-QA: A Benchmark for Geospatial Question Answering</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Majid Saeedan, Muhammad Shihab Rashid, Ahmed Eldawy et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22771v1" target="_blank">Reducing Political Manipulation with Consistency Training</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Long Phan, Devin Kim, Alexander Pan et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22769v1" target="_blank">Understanding Data Temporality Impact on Large Language Models Pre-training</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">大型语言模型（LLMs）通常在经过打乱处理的语料库上进行训练，得到的模型知识被冻结在训练时的状态，其时间锚定能力仍然 poorly understood。在本研究中，我们探讨了预训练动态对获取时间敏感的事实知识的影响。</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Understanding Data Temporality Impact on Large Language Models Pre-training</div>
+            <div class="original-summary">Large language models (LLMs) are typically trained on shuffled corpora, yielding models whose knowledge is frozen at train time and whose temporal grounding remains poorly understood. In this work, we study the impact of pre-training dynamics on the acquisition of time-sensitive factual knowledge, focusing specifically on data ordering. Our main contributions are twofold. First, we introduce a comprehensive benchmark of over 7,000 temporally grounded questions and an evaluation protocol that ena</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22732v1" target="_blank">Beyond Acoustic Emotion Recognition: Multimodal Pathos Analysis in Political Speech Using LLM-Based and Acoustic Emotion Models</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Juergen Dietrich</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22731v1" target="_blank">Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Dong Nie</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22714v1" target="_blank">AMEL: Accumulated Message Effects on LLM Judgments</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Sid-ali Temkit</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.18466v1" target="_blank">Speech-Guided Multimodal Learning for Vocal Tract Segmentation in Real-Time MRI</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-18</span></div>
+        <div class="summary">Daiqi Liu, Lukas Mulzer, Md Hasan et al.</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.16806v1" target="_blank">Cross-modal Affinity-aligned Multimodal Learning Analytics for Predicting Student Collaboration Satisfaction in Game-Based Learning</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-16</span></div>
+        <div class="summary">Wen-Hsin Tsai, Chia-Ming Lee, Yuk-Ying Tung</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://aiweekly.co/alerts/microsoft-drops-claude-code-after-budget-overrun" target="_blank">预算超支后微软放弃 Claude Code</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">42 points by robertkarl | 14 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Microsoft Drops Claude Code After Budget Overrun</div>
+            <div class="original-summary">42 points by robertkarl | 14 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.1940airterminal.org/news/liquidation-of-simulators" target="_blank">1940 航空航站楼博物馆开始清算</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">8 points by weaponeer | 2 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 1940 Air Terminal Museum Begins Liquidation</div>
+            <div class="original-summary">8 points by weaponeer | 2 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/809172.html" target="_blank">外媒称中国AI视频生成模型领先美国 创作者称&amp;ldquo;更自由&amp;rdquo;</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-17</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.qbitai.com/2026/05/422032.html" target="_blank">菲尔茨奖得主都看懵了：OpenAI非数学模型首次自主突砀80年未解数学难题</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">量子位</span><span>2026-05-22</span></div>
+        <div class="summary">125页“令人恐惧”的推演</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" target="_blank">微软开始取消 Claude Code 许可证</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">https://archive.ph/WfCta</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Microsoft starts canceling Claude Code licenses</div>
+            <div class="original-summary">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;WfCta</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://annas-archive.gl/blog/llms-txt.html" target="_blank">如果你是个 LLM，请读这个</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">635 points by janandonly | 373 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 If you’re an LLM, please read this</div>
+            <div class="original-summary">635 points by janandonly | 373 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://arxiv.org/abs/2605.22001" target="_blank">多智能体 LLM 系统中域伪装注入攻击逃避检测</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">18 points by  | 0 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems</div>
+            <div class="original-summary">18 points by  | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808463.html" target="_blank">火到欧美的&amp;ldquo;韩国棒球女神&amp;rdquo;被证实AI生成</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808941.html" target="_blank">Meta AI推出&amp;ldquo;隐身聊天&amp;rdquo;功能：退出聊天后对话记录将消失</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://www.cringely.com/2026/05/21/im-writing-again/" target="_blank">我又开始写作了</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">74 points by dan_hawkins | 21 comments</div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 I’m Writing Again</div>
+            <div class="original-summary">74 points by dan_hawkins | 21 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28137" target="_blank">视觉大模型遭遇挫折：首个中国古文字 OCR 评测基准开源</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Visual Large Models Encounter Setback: First Chinese Ancient Script OCR Evaluation Benchmark Open-Sourced</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28106" target="_blank">通义千问重大升级：新旗舰 Qwen3.7 预览版全球首发</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Tongyi Qianwen Makes a Major Upgrade: the New Flagship Qwen3.7 Preview Version Debuts Globally</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28120" target="_blank">NVIDIA 推出 Vera CPU，开启 Agentic AI 时代新篇章</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 NVIDIA Launches Vera CPU, Marking a New Chapter in the Age of Agentic AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28213" target="_blank">OpenAI 推理模型突破：AI 成功反驳 Erdős 单位距离猜想</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Breakthrough in OpenAI Inference Model: AI Successfully Refutes Erdős Unit Distance Conjecture</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28068" target="_blank">性能堪比 GPT-5.5？谷歌开发者大会预告：轻量级大模型和 AI 眼镜</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 Performance on Par with GPT-5.5? Google Developer Conference Preview: Lightweight Large Models and AI Glasses</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28164" target="_blank">AI 办公新物种：出门问问 CodeBanana 荣获 36 氪年度大奖</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🤖 模型与技术</div>
+        <div class="original">
+            <div class="original-title">📝 New AI Office Species: CodeBanana by Mobvoi Wins 36 Kratos Annual Award</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+        <div class="title-row"><div class="title-text"><a href="https://36kr.com/p/3820298219425924?f=rss" target="_blank">江行智能：从感知环境到改变世界：物理AI的机遇、路径与实践</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-22</span></div>
+        <div class="summary">中国工业物理AI的真正优势不在模型参数，而在全球12倍的工业机器人部署密度</div>
+        <div class="tag">🤖 模型与技术</div>
+        
+    </div>
+
+</div>
+<div class="category" id="cat-business">
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text">公募基金投资新三板的相关指引有望近日公布</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">一位接近监管层人士透露，公募基金投资新三板相关指引有望在近日择机公布，在新三板精选层的转层改革正式落地前，相关公募产品有望完成获批和募集。（证券时报）</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text">IMS（天下秀）A股上市首份年报：2019年营收19.8亿，同比增长63.5%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日晚间，红人新经济企业IMS（天下秀）公布2019年全年财报，系借壳ST慧球上市后首次披露年报。全年共实现营业收入19.77亿元，同比增长63.47%，公司实现归属于上市公司股东的净利润2.59亿元，同比增长63.79%，完成2019年度业绩承诺。</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28206" target="_blank">半年融资 39 亿美元！月之暗面计划拆除 VIE 架构赴港上市</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">💼 商业与融资</div>
+        <div class="original">
+            <div class="original-title">📝 Raised 3.9 Billion USD in Half a Year! Moonshot Plans to Remove VIE Structure and Pursue Hong Kong IPO</div>
+        </div>
+    </div>
+<div class="card" data-cat="business">
+        <div class="title-row"><div class="title-text"><a href="https://36kr.com/p/3816943010071427?f=rss" target="_blank">氪星晚报｜优步与印度JSW集团达成协议;英伟达、AMD、英特尔参投，AI初创公司Hark完成7亿美元融资</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-22</span></div>
+        <div class="summary">大公司：Jefferies预计7-Eleven日本业务营业利润将达2270亿日元</div>
+        <div class="tag">💼 商业与融资</div>
+        
+    </div>
+
+</div>
+<div class="category" id="cat-industry">
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">中芯国际与嘉楠科技合作14nm矿机芯片，知情人士：能否量产要看行情</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">有消息称，中芯国际与嘉楠科技合作的14nm矿机芯片已完成测试，将在今年二季度量产出货。对此，知情人士称，双方合作始于2019年年底，但能否量产要看行情。据悉，中芯国际数次尝试进入矿机行业，但受行情拖累一直未有实质进展。（财联社）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">北京规模以上工业企业开复工率已达99.9%</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据北京日报，截至4月10日，北京规模以上工业企业开复工率达到99.9%，而在2月16日企业开复工率仅为52.3%。（财联社）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">好未来《熊猫博士》3D动画片登陆央视少儿频道</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，自4月9日起，中央电视台少儿频道携手好未来旗下教育品牌熊猫博士上线3D系列动画片《熊猫博士》。与此同时，《熊猫博士》3D动画片也在美国、加拿大、俄罗斯、意大利等多个国家、地区陆续发行，并登陆Discovery探索频道等多个世界知名节目。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">瑞德西韦同情用药的数据存在局限性，中国重症临床试验已中止</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，针对瑞德西韦的研究进展，吉利德科学董事长兼首席执行官Daniel O’Day发布了一封公开信。吉利德董事长表示，瑞德西韦同情用药的数据存在局限性，中国重症临床试验已中止。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">广东餐饮协会提议美团：取消独家条款，降佣5%及以上</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日， 广东省餐饮服务行业协会发文称，疫情期间，收到数百家餐饮企业针对美团外卖的投诉，故发函代表行业提出书面交涉意见：美团应直接减免整个疫情期间广东省内所有餐饮商户外卖服务佣金5%或以上；同时，美团应立即取消独家合作限制等其他垄断条款，以便餐企承接来自更多平台的外卖订单。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">持续助力中小企业复苏，字节跳动抗疫支出超10亿元</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，字节跳动旗下的抖音、巨量引擎推出第二期“中小企业复苏计划”，在原计划的基础上，将补贴力度增加至2亿元，助力中小企业更快恢复经营。除中小企业复苏计划外，字节跳动已累计推出了12项针对各行各业的扶助措施，整体投入超4.3亿元。在之前，字节跳动在资助抗疫一线医护人员方面的投入已超3.8亿元。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">海航集团与中国旅游集团战略合作，推动海南自贸区消费升级</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">4月11日，中国旅游集团与海航集团在海口签署战略合作协议，双方将在航旅产业、免税业务、资产项目等多个领域开展合作，推动海南自贸区（港）建设与消费升级。（中国新闻网）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">拼多多百亿补贴开售全国首批SK-II限量版神仙水，1488套限量版上线后“秒光”</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月10日，拼多多“百亿补贴”正式上线SK-II春日娃娃神仙水，首发888件上线后“秒光”，百亿补贴团队紧急补货600件后，也被一抢而空。拼多多此前公布的2019年财报显示，2019年，平台销售补贴费用达271.7亿元，“百亿补贴”支出远超百亿。今年2月，拼多多将“百亿补贴”进一步升级为“百亿补贴节”，补贴力度从此前的20%最高增长至50%。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">新加坡暂停使用Zoom在线授课，直到安全问题解决</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">据路透社报道，在为应对疫情采取封锁措施的首周，学校停课，学生在在家在线上课之后，新加坡决定暂停教师使用视频会议工具Zoom进行在线授课，原因是“发生了一些严重的事件”。疫情期间，全球公司和学校都在广泛使用Zoom Video Communications开发的会议应用，人们对这款应用的安全性和隐私问题的关注也日渐上升。（新浪科技）</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text">阿里巴巴和浙江德清签署“数字乡村建设合作协议”</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，阿里巴巴和浙江省德清县人民政府签署“数字乡村建设合作协议”，双方将在五方面展开合作：建设数字乡村数据库；扩大物联网、区块链、云计算、人工智能在乡村的应用；培育乡村新零售；培育乡村信息化人才；推进行业监管数字化。</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21818v1" target="_blank">Co-Ontogeny by Archetypal Scaffolding: The Humorphic Partnership</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-20</span></div>
+        <div class="summary">Hector Ouilhet Olmos</div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808986.html" target="_blank">华为在海外发布AI采矿解决方案 AI+5G破解&amp;ldquo;数据孤岛&amp;rdquo;</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://ai.cnmo.com/news/808966.html" target="_blank">阿里企业级 Agent 平台&amp;ldquo;悟空&amp;rdquo;开始逐步规模化放量</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">CNMO</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        
+    </div>
+<div class="card" data-cat="industry">
+        <div class="title-row"><div class="title-text"><a href="https://news.aibase.com/news/28107" target="_blank">降价出击！AI 编程工具 Cursor 推出 Composer 2.5，性能媲美 GPT-5.5</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">🏭 产业应用</div>
+        <div class="original">
+            <div class="original-title">📝 Cost Reduction Strike! AI Programming Tool Cursor Launches Composer 2.5, Performance Competes with GPT-5.5</div>
+        </div>
+    </div>
+
+</div>
+<div class="category" id="cat-tool_opensource">
+<div class="card" data-cat="tool_opensource">
+        <div class="title-row"><div class="title-text"><a href="https://www.kanbots.dev/" target="_blank">开源看板桌面应用：每张卡片运行并行代理</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">25 points by vitriapp | 8 comments</div>
+        <div class="tag">🔧 工具与开源</div>
+        <div class="original">
+            <div class="original-title">📝 Open source Kanban desktop app that runs parallel agents on every card</div>
+            <div class="original-summary">25 points by vitriapp | 8 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="tool_opensource">
+        <div class="title-row"><div class="title-text"><a href="https://github.com/anomalyco/models.dev" target="_blank">Models.dev：AI 模型规格、定价和能力的开源数据库</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-23</span></div>
+        <div class="summary">7 points by unknown | 0 comments</div>
+        <div class="tag">🔧 工具与开源</div>
+        <div class="original">
+            <div class="original-title">📝 Models.dev: open-source database of AI model specs, pricing, and capabilities</div>
+            <div class="original-summary">7 points by unknown | 0 comments</div>
+        </div>
+    </div>
+
+</div>
+<div class="category" id="cat-academic_policy">
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text">小鹏汽车一季度上险量2331台</div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">36kr</span><span>2026-05-17</span></div>
+        <div class="summary">36氪获悉，4月11日，根据中国汽车研究中心数据，2020年一季度小鹏G3总计上险量达到2331台，3月单月上险量达到1094台。</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.21956v1" target="_blank">Detecting Offensive Cyber Agents: A Detection-in-Depth Approach</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Matt Mittelsteadt, Jam Kraprayoon, Robin Staes-Polet et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22779v1" target="_blank">FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">Huanchi Wang, Zihang Huang, Yifang Tian et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="http://arxiv.org/abs/2605.22763v1" target="_blank">Advancing Mathematics Research with AI-Driven Formal Proof Search</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">arXiv</span><span>2026-05-21</span></div>
+        <div class="summary">George Tsoukalas, Anton Kovsharov, Sergey Shirobokov et al.</div>
+        <div class="tag">📚 学术与政策</div>
+        
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/" target="_blank">立法者要求答复，CISA 试图控制数据泄露</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">HackerNews</span><span>2026-05-17</span></div>
+        <div class="summary">13 points by speckx | 1 comments</div>
+        <div class="tag">📚 学术与政策</div>
+        <div class="original">
+            <div class="original-title">📝 Lawmakers Demand Answers as CISA Tries to Contain Data Leak</div>
+            <div class="original-summary">13 points by speckx | 1 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic_policy">
+        <div class="title-row"><div class="title-text"><a href="https://www.aibase.com/news/28260" target="_blank">马斯克与扎克伯格联合游说！特朗普紧急暂停美国 AI 监管的内幕秘密</a></div><div class="expand-icon">▼</div></div>
+        <div class="meta"><span class="source">AIbase</span><span>2026-05-23</span></div>
+        <div class="summary"></div>
+        <div class="tag">📚 学术与政策</div>
+        <div class="original">
+            <div class="original-title">📝 Musk and Zuckerberg Jointly Lobbying! Inside Secrets of Trump&amp;#x27;s Emergency Suspension of US AI Regulation</div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-05-23</div>
+<script>
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
