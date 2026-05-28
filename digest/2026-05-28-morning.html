@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-05-28</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #ff6b6b11, #ee5a2411);
+  color: #333;
+  min-height: 100vh;
+  padding: 0 0 40px 0;
+}
+.header {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  padding: 40px 20px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.header h1 { font-size: 28px; margin-bottom: 6px; letter-spacing: 1px; position: relative; z-index: 1; }
+.header .subtitle { font-size: 14px; opacity: 0.9; position: relative; z-index: 1; }
+.header .stats { font-size: 13px; opacity: 0.8; margin-top: 10px; position: relative; z-index: 1; }
+.tab-bar {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 10px;
+}
+.tab {
+  flex-shrink: 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.tab.active {
+  color: #ee5a24;
+  border-bottom-color: #ee5a24;
+  font-weight: 600;
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.cat-section, #cat-all { display: none; }
+.cat-section.active, #cat-all.active { display: block; }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 16px 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.card-title {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-right: 12px;
+}
+.card-title a {
+  color: #ee5a24;
+  text-decoration: none;
+}
+.card-title a:hover { text-decoration: underline; }
+.expand-icon {
+  font-size: 12px;
+  color: #999;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 12px;
+  font-size: 12px;
+  color: #999;
+  border-bottom: 1px solid #f0f0f0;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  background: #ff6b6b22;
+  color: #ee5a24;
+}
+.source { color: #aaa; }
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 16px;
+}
+.card.expanded .card-body {
+  max-height: 1000px;
+  padding: 12px 16px 16px;
+}
+.card-summary {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  word-wrap: break-word;
+}
+.original {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #777;
+}
+.orig-title { margin-bottom: 4px; font-style: italic; }
+.orig-summary { line-height: 1.6; }
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  .header h1 { font-size: 22px; }
+  .tab { padding: 10px 12px; font-size: 12px; }
+  .card-title { font-size: 14px; }
+  .card-body { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="subtitle">开启一天的 AI 资讯 · 2026-05-28</div>
+  <div class="stats">共 38 篇 · 覆盖 6 个来源</div>
+</div>
+<div class="tab-bar" id="tabBar">
+  <div class="tab active" onclick="switchTab(this, '🏠 全部')">🏠 全部 (38)</div>
+<div class="tab" onclick="switchTab(this, '🤖 模型与技术')">🤖 模型与技术 (8)</div>
+<div class="tab" onclick="switchTab(this, '💼 商业与融资')">💼 商业与融资 (8)</div>
+<div class="tab" onclick="switchTab(this, '🏭 产业应用')">🏭 产业应用 (14)</div>
+<div class="tab" onclick="switchTab(this, '🔧 工具与开源')">🔧 工具与开源 (2)</div>
+<div class="tab" onclick="switchTab(this, '📚 学术与政策')">📚 学术与政策 (6)</div>
+
+</div>
+<div class="content">
+  <div id="cat-all" class="cat-section active">
+    <div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3826932509364869?f=rss" target="_blank" rel="noopener">前两天，在亦庄听到了AI最真实的声音｜2026 AI Partner大会金句实录</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">当大模型API调用成本一年内骤降超过80%，百万Token仅需几分钱时</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://webflow.com/blog/evolving-webflow-for-the-agentic-web" target="_blank" rel="noopener">Webflow 面向 Agent 网络进化升级</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">11 points by rocketpastsix | 4 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Evolving Webflow for the Agentic Web</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3827497128465287?f=rss" target="_blank" rel="noopener">氫星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">大公司： 程一笑：可灵AI 3月ARR近5亿美元，较同期增长4倍 36氪获悉，在2026年第一季度业绩电话会上，快手科技创始人兼首席执行官程一笑表示，2026年3月，可灵AI年化收入运行率（ARR）近5亿美元，较去年3月的1亿美元增长4</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.qbitai.com/2026/05/422032.html" target="_blank" rel="noopener">菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题
+2026-05-21</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 量子位 · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/808790.html" target="_blank" rel="noopener">谷歌地图CarPlay版将集成Gemini AI功能</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://posthog.com/blog/training-ai-models" target="_blank" rel="noopener">PostHog 将用你的数据训练 AI 模型（默认 opt-in）</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">33 points by tartieret | 21 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>PostHog will train AI models with your data (opt-in by default)</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/" target="_blank" rel="noopener">科技 CEO 们似乎正遭受 AI 臆想症困扰</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">30 points by IAmGraydon | 5 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Tech CEOs are apparently suffering from AI psychosis</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.27042v1" target="_blank" rel="noopener">Lessons from Penetration Tests on Large-Scale Agent Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">随着AI系统自主性和执行能力的提升，安全漏洞数量持续增长。然而，许多漏洞并非全新，而是反映了先前计算系统中长期存在的弱点类别。</p>
+    <div class="original"><div class="orig-summary">As AI systems gain increasing autonomy and execution capability, the number of discovered security vulnerabilities continues to rise. However, many of these vulnerabilities are not fundamentally novel, but instead reflect recurring classes of weaknesses long observed in prior computing systems. Execution-capable AI agents are effectively unbounded, self-modifying programs that interact extensively with multiple layers of the computing stack. This broad interaction surface imposes a significant s</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26870v1" target="_blank" rel="noopener">Persistent AI Agents in Academic Research: A Single-Investigator Implementation Case Study</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">本文介绍了一位独立研究人员在学术研究中实现持久化AI Agent的案例研究。</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26691v1" target="_blank" rel="noopener">Mind the Tool Failures: Achieving Synergistic Tool Gains for Medical Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">🔧 工具与开源</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">医疗AI Agent越来越多地使用外部工具进行诊断和治疗建议，但现有方法假设工具在其范围内可靠。本文研究工具故障并实现协同增益。</p>
+    <div class="original"><div class="orig-summary">Medical AI agents increasingly use external tools for diagnosis, treatment recommendation, and evidence retrieval, yet most existing approaches assume that task-appropriate tools are reliable within their intended scope. This assumption is fragile in real clinical settings, where even relevant tools may fail on challenging instances and lead to unsafe downstream decisions. To address this issue, we study medical tool use under imperfect-tool settings to correct failure instances missed by indivi</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26508v1" target="_blank" rel="noopener">Foundations of a Time-Consistent Counterfactual Actuarial Runtime for Autonomous AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">为自主AI Agent建立时间一致的反事实精算运行时理论基础。</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26329v1" target="_blank" rel="noopener">JobBench: Aligning Agent Work With Human Will</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">现有职业AI Agent基准主要基于经济价值，讲述替代故事。本文提出JobBench，评估AI Agent在专家认为应优先委托的工作流上的表现，根据人类需求赋权而非替代。</p>
+    <div class="original"><div class="orig-summary">Current benchmarks for occupational AI agents are scoped primarily by economic values, telling a replacement story. We introduce JobBench, which evaluates AI agents on the workflows that experts identify as high-priority for delegation, empowering humans based on their needs instead of replacing them with GDP value. JobBench covers 130 agentic tasks across 35 occupations. Each task is packaged as a workspace of heterogeneous reference files, requiring the agent to reason through the cluttered in</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26321v1" target="_blank" rel="noopener">Anchor: Mitigating Artifact Drift in Agent Benchmark Generation</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">AI Agent开始完成长周期商业运营任务，但企业工作的训练和评估环境仍难以平衡真实性、可验证性和规模。环境创建常受「工件漂移」问题困扰。</p>
+    <div class="original"><div class="orig-summary">AI agents are beginning to complete valuable, long-horizon business operations tasks, but training and evaluation environments for enterprise work still struggle to balance realism, verifiability, and scale. Environment and task creation frequently suffers from a failure mode we call artifact drift: when instructions, environments, oracles, and verifiers are created by loosely coupled processes, they frequently disagree on what a task requires, producing environments that are unsolvable, reward-</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26302v1" target="_blank" rel="noopener">Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">长期运行的AI Agent越来越多地部署为持久化操作系统的组成部分，但它们仍像刚初始化的模型一样被评估。本文探讨Agent部署后的可靠性老化问题。</p>
+    <div class="original"><div class="orig-summary">Long-lived AI agents are increasingly deployed as persistent operational systems, yet they are still evaluated like freshly initialized models. Day-one benchmarks miss a basic systems question: how long does an agent remain reliable after deployment? Even when model weights are frozen, an agent&#39;s effective state keeps changing as it compresses interaction history, retrieves from a growing memory store, revises facts after updates, and undergoes routine maintenance. Reliability therefore becomes </div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26298v1" target="_blank" rel="noopener">Sandlock: Confining AI Agent Code with Unprivileged Linux Primitives</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">使用非特权 Linux 原语隔离 AI Agent 代码。</p>
+    <div class="original"><div class="orig-summary">Cong Wang, Yusheng Zheng</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26252v1" target="_blank" rel="noopener">Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">长期运行的AI Agent需要持久记忆。当前系统将记忆视为存储，本文重新思考AI Agent记忆的数据基础。</p>
+    <div class="original"><div class="orig-summary">Long-running AI agents need persistent memory. Memory supports learning across sessions, reduces repeated context injection, and enables auditing of past decisions. Current agent memory systems and database paradigms treat memory as storage. They localize correctness at records, embeddings, or edges. Each supplies only some of the capabilities that long-term memory requires. The result is four recurring failure modes: unregulated growth, missing semantic revision, capacity-driven forgetting, and</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.pcgamer.com/hardware/duckduckgos-ai-free-search-saw-nearly-28-percent-more-visits-in-the-week-following-googles-insistence-that-people-love-ai-mode/" target="_blank" rel="noopener">Google 称用户喜欢 AI 模式后，DuckDuckGo 访问量增长 28%</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">75 points by HelloUsername | 23 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>DuckDuckGo search saw 28% more visits after Google said people love AI mode</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">Anthropic 和 OpenAI 已找到产品-市场契合点</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">8 points by simonw | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>I think Anthropic and OpenAI have found product-market fit</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809854.html" target="_blank" rel="noopener">豆包、元宝等AI平台回应&quot;高考期间AI工具将禁用&quot;</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">🔧 工具与开源</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2605.21779" target="_blank" rel="noopener">多 Agent LLM 系统实现自动化漏洞发现与复现</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">3 points by root-parent | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Multi-Agent LLM System for Automated Vulnerability Discovery and Reproduction</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ochagavia.nl/blog/fully-in-browser-container-builds/" target="_blank" rel="noopener">浏览器内实现容器构建</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">15 points by wofo | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>In-Browser Container Builds</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.theverge.com/games/938340/valve-steam-deck-price-increase" target="_blank" rel="noopener">Valve 将 Steam Deck 价格上调超 200 美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">35 points by droidjj | 14 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Valve raises Steam Deck prices by more than $200</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://variety.com/2026/digital/news/youtube-ai-video-labels-automatic-detection-1236758865/" target="_blank" rel="noopener">YouTube 将自动标记 AI 生成视频</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-17</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">https:&amp;#x2F;&amp;#x2F;variety.com&amp;#x2F;2026&amp;#x2F;digital&amp;#x2F;news&amp;#x2F;youtube-ai-video-label...</p>
+    <div class="original"><div class="orig-title">📝 <em>YouTube to automatically label AI-generated videos</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2023-08-30</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">本文介绍以阿拉伯语为中心的基础模型和指令微调开源生成式LLM。</p>
+    <div class="original"><div class="orig-summary">Neha Sengupta, Sunil Kumar Sahu, Bokang Jia</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2402.14679" target="_blank" rel="noopener">Is Self-knowledge and Action Consistent or Not: Investigating LLM&#39;s Personality</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2024-02-22</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">研究LLM的自我认知与行为是否一致，探索其人格特征。</p>
+    <div class="original"><div class="orig-summary">Yiming Ai, Zhiwei He, Ziyin Zhang</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.qbitai.com/2026/05/425881.html" target="_blank" rel="noopener">1400亿Agent入场，&quot;流量&quot;这条护城河要塌了</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 量子位 · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3826779946930822?f=rss" target="_blank" rel="noopener">8点1氪｜商品标签陷性暗示争议，盒马致歉并下架整改；段永平谈王宁：商业理解能力比乔布斯还强；海底捞全国门店谢绝顾客携带宠物进店用餐</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">今日热点导览 三体公司原CEO许垤被执行死刑，投毒致使其老板林奇中毒身亡 算力租赁，遭突发传闻，上市公司回应 胖东来成立文化娱乐公司 双汇子公司猪肉被曝抗生素超标37倍，公司回应超标原因 知情人士：字节跳动本月向Seed员工开放“豆包股”认</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809911.html" target="_blank" rel="noopener">蚂蚁CEO韩欣毅：在Agent时代 信任的逻辑会崛起</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809815.html" target="_blank" rel="noopener">突砃3亿笔！全球首个大规模商用AI原生支付基建诞生</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28384" target="_blank" rel="noopener">Google 将 SynthID 技术集成至搜索和 Chrome：一键验证 AI 生成内容</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Google Integrates SynthID Technology into Search and Chrome: One-Click Verification of AI-Generated Content</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28382" target="_blank" rel="noopener">Colin Fleming 正式加入 OpenAI 担任首席营销官</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Colin Fleming Officially Joins OpenAI as Chief Marketing Officer</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28380" target="_blank" rel="noopener">环球音乐与 TikTok 续签多年授权协议，AI 监管成合作核心</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Universal Music and TikTok Renew Multi-Year Licensing Agreement, AI Regulation Becomes Core of Cooperation</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28379" target="_blank" rel="noopener">通义千问升级图片健康问诊：可圈画区域并理解推理逻辑，获顶级医院医生认可</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Tongyi Qianwen Upgrades Photo-based Health Inquiry: Can Highlight Areas and Understand Reasoning - Recognized by Top Hospital Doctors</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3827658881323649?f=rss" target="_blank" rel="noopener">腾讯游戏的One More Thing，是AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">文丨贝果树 编辑丨刘士武 5月27日，2026年腾讯游戏发布会于晚上八点举办。在发布会上，腾讯从制作、发行、投资三个板块带来了42款游戏的新动态，其中包含15款新品，新品的数量相较于2025年发布会的24款有所减少。 来源：2026腾讯游戏</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828152540681096?f=rss" target="_blank" rel="noopener">Meta将推出AI聊天机器人订阅服务，月费最低7.99美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">据报道，Meta首次开始向消费者销售MetaAI聊天机器人订阅服务，或将有助于部分抵消其在AI领域的巨额支出。新推出的订阅服务分为两档。公司发言人表示，基础档名为Meta One Plus，月费7.99美元，面向频繁使用Meta AI生成图</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828168762151558?f=rss" target="_blank" rel="noopener">扎克伯格称Meta考虑进军云计算市场</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">Meta首席执行官马克·扎克伯格表示，如果他的公司在数据中心方面支出过高，导致算力过剩，则可能会进军云计算市场。&quot;这绝对在考虑范围内，&quot;扎克伯格当地时间周三在Meta年度股东大会上回答有关公司是否会在云计算领域与亚马逊和微软展开竞争的问题时</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828171962061440?f=rss" target="_blank" rel="noopener">Meta拟成立新部门，为企业客户定制AI服务</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">Meta高管Naomi Gleit称，Meta计划成立一个新部门，为企业客户定制人工智能服务。新组织将被命名为Enterprise Solutions，由产品经理和工程师组成。上周发布的备忘录并未说明该团队将推广的具体产品和服务。Meta发</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3827704117891717?f=rss" target="_blank" rel="noopener">IREN豪掷16亿美元采购戴尔AI服务器，剑指44亿美元年收入目标</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">数据中心运营商IREN宣布与戴尔科技签署价值约16亿美元的硬件采购协议，将大规模采购英伟达Blackwell系统以加速AI算力基础设施布局。根据协议，IREN将购买英伟达风冷式Blackwell系统，包括GPU、服务器、存储、网络设备、辅助</p>
+    
+  </div>
+</div>
+
+  </div>
+  <div class="cat-section" data-cat="🤖 模型与技术"><div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3826932509364869?f=rss" target="_blank" rel="noopener">前两天，在亦庄听到了AI最真实的声音｜2026 AI Partner大会金句实录</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">当大模型API调用成本一年内骤降超过80%，百万Token仅需几分钱时</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.qbitai.com/2026/05/422032.html" target="_blank" rel="noopener">菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题
+2026-05-21</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 量子位 · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://posthog.com/blog/training-ai-models" target="_blank" rel="noopener">PostHog 将用你的数据训练 AI 模型（默认 opt-in）</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">33 points by tartieret | 21 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>PostHog will train AI models with your data (opt-in by default)</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26321v1" target="_blank" rel="noopener">Anchor: Mitigating Artifact Drift in Agent Benchmark Generation</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">AI Agent开始完成长周期商业运营任务，但企业工作的训练和评估环境仍难以平衡真实性、可验证性和规模。环境创建常受「工件漂移」问题困扰。</p>
+    <div class="original"><div class="orig-summary">AI agents are beginning to complete valuable, long-horizon business operations tasks, but training and evaluation environments for enterprise work still struggle to balance realism, verifiability, and scale. Environment and task creation frequently suffers from a failure mode we call artifact drift: when instructions, environments, oracles, and verifiers are created by loosely coupled processes, they frequently disagree on what a task requires, producing environments that are unsolvable, reward-</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2605.21779" target="_blank" rel="noopener">多 Agent LLM 系统实现自动化漏洞发现与复现</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">3 points by root-parent | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Multi-Agent LLM System for Automated Vulnerability Discovery and Reproduction</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2023-08-30</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">本文介绍以阿拉伯语为中心的基础模型和指令微调开源生成式LLM。</p>
+    <div class="original"><div class="orig-summary">Neha Sengupta, Sunil Kumar Sahu, Bokang Jia</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://arxiv.org/abs/2402.14679" target="_blank" rel="noopener">Is Self-knowledge and Action Consistent or Not: Investigating LLM&#39;s Personality</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2024-02-22</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">研究LLM的自我认知与行为是否一致，探索其人格特征。</p>
+    <div class="original"><div class="orig-summary">Yiming Ai, Zhiwei He, Ziyin Zhang</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3827704117891717?f=rss" target="_blank" rel="noopener">IREN豪掷16亿美元采购戴尔AI服务器，剑指44亿美元年收入目标</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🤖 模型与技术</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">数据中心运营商IREN宣布与戴尔科技签署价值约16亿美元的硬件采购协议，将大规模采购英伟达Blackwell系统以加速AI算力基础设施布局。根据协议，IREN将购买英伟达风冷式Blackwell系统，包括GPU、服务器、存储、网络设备、辅助</p>
+    
+  </div>
+</div>
+</div>
+<div class="cat-section" data-cat="💼 商业与融资"><div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3827497128465287?f=rss" target="_blank" rel="noopener">氫星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">大公司： 程一笑：可灵AI 3月ARR近5亿美元，较同期增长4倍 36氪获悉，在2026年第一季度业绩电话会上，快手科技创始人兼首席执行官程一笑表示，2026年3月，可灵AI年化收入运行率（ARR）近5亿美元，较去年3月的1亿美元增长4</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/" target="_blank" rel="noopener">科技 CEO 们似乎正遭受 AI 臆想症困扰</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">30 points by IAmGraydon | 5 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Tech CEOs are apparently suffering from AI psychosis</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">Anthropic 和 OpenAI 已找到产品-市场契合点</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">8 points by simonw | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>I think Anthropic and OpenAI have found product-market fit</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3826779946930822?f=rss" target="_blank" rel="noopener">8点1氪｜商品标签陷性暗示争议，盒马致歉并下架整改；段永平谈王宁：商业理解能力比乔布斯还强；海底捞全国门店谢绝顾客携带宠物进店用餐</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-27</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">今日热点导览 三体公司原CEO许垤被执行死刑，投毒致使其老板林奇中毒身亡 算力租赁，遭突发传闻，上市公司回应 胖东来成立文化娱乐公司 双汇子公司猪肉被曝抗生素超标37倍，公司回应超标原因 知情人士：字节跳动本月向Seed员工开放“豆包股”认</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809911.html" target="_blank" rel="noopener">蚂蚁CEO韩欣毅：在Agent时代 信任的逻辑会崛起</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28382" target="_blank" rel="noopener">Colin Fleming 正式加入 OpenAI 担任首席营销官</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Colin Fleming Officially Joins OpenAI as Chief Marketing Officer</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/p/3827658881323649?f=rss" target="_blank" rel="noopener">腾讯游戏的One More Thing，是AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">文丨贝果树 编辑丨刘士武 5月27日，2026年腾讯游戏发布会于晚上八点举办。在发布会上，腾讯从制作、发行、投资三个板块带来了42款游戏的新动态，其中包含15款新品，新品的数量相较于2025年发布会的24款有所减少。 来源：2026腾讯游戏</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828152540681096?f=rss" target="_blank" rel="noopener">Meta将推出AI聊天机器人订阅服务，月费最低7.99美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">💼 商业与融资</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">据报道，Meta首次开始向消费者销售MetaAI聊天机器人订阅服务，或将有助于部分抵消其在AI领域的巨额支出。新推出的订阅服务分为两档。公司发言人表示，基础档名为Meta One Plus，月费7.99美元，面向频繁使用Meta AI生成图</p>
+    
+  </div>
+</div>
+</div>
+<div class="cat-section" data-cat="🏭 产业应用"><div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://webflow.com/blog/evolving-webflow-for-the-agentic-web" target="_blank" rel="noopener">Webflow 面向 Agent 网络进化升级</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">11 points by rocketpastsix | 4 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Evolving Webflow for the Agentic Web</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/808790.html" target="_blank" rel="noopener">谷歌地图CarPlay版将集成Gemini AI功能</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26870v1" target="_blank" rel="noopener">Persistent AI Agents in Academic Research: A Single-Investigator Implementation Case Study</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">本文介绍了一位独立研究人员在学术研究中实现持久化AI Agent的案例研究。</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26298v1" target="_blank" rel="noopener">Sandlock: Confining AI Agent Code with Unprivileged Linux Primitives</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">使用非特权 Linux 原语隔离 AI Agent 代码。</p>
+    <div class="original"><div class="orig-summary">Cong Wang, Yusheng Zheng</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.pcgamer.com/hardware/duckduckgos-ai-free-search-saw-nearly-28-percent-more-visits-in-the-week-following-googles-insistence-that-people-love-ai-mode/" target="_blank" rel="noopener">Google 称用户喜欢 AI 模式后，DuckDuckGo 访问量增长 28%</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">75 points by HelloUsername | 23 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>DuckDuckGo search saw 28% more visits after Google said people love AI mode</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ochagavia.nl/blog/fully-in-browser-container-builds/" target="_blank" rel="noopener">浏览器内实现容器构建</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">15 points by wofo | 0 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>In-Browser Container Builds</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.theverge.com/games/938340/valve-steam-deck-price-increase" target="_blank" rel="noopener">Valve 将 Steam Deck 价格上调超 200 美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">35 points by droidjj | 14 comments</p>
+    <div class="original"><div class="orig-title">📝 <em>Valve raises Steam Deck prices by more than $200</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://variety.com/2026/digital/news/youtube-ai-video-labels-automatic-detection-1236758865/" target="_blank" rel="noopener">YouTube 将自动标记 AI 生成视频</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 HackerNews · 2026-05-17</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">https:&amp;#x2F;&amp;#x2F;variety.com&amp;#x2F;2026&amp;#x2F;digital&amp;#x2F;news&amp;#x2F;youtube-ai-video-label...</p>
+    <div class="original"><div class="orig-title">📝 <em>YouTube to automatically label AI-generated videos</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://www.qbitai.com/2026/05/425881.html" target="_blank" rel="noopener">1400亿Agent入场，&quot;流量&quot;这条护城河要塌了</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 量子位 · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809815.html" target="_blank" rel="noopener">突砃3亿笔！全球首个大规模商用AI原生支付基建诞生</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28384" target="_blank" rel="noopener">Google 将 SynthID 技术集成至搜索和 Chrome：一键验证 AI 生成内容</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Google Integrates SynthID Technology into Search and Chrome: One-Click Verification of AI-Generated Content</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28379" target="_blank" rel="noopener">通义千问升级图片健康问诊：可圈画区域并理解推理逻辑，获顶级医院医生认可</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Tongyi Qianwen Upgrades Photo-based Health Inquiry: Can Highlight Areas and Understand Reasoning - Recognized by Top Hospital Doctors</em></div></div>
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828168762151558?f=rss" target="_blank" rel="noopener">扎克伯格称Meta考虑进军云计算市场</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">Meta首席执行官马克·扎克伯格表示，如果他的公司在数据中心方面支出过高，导致算力过剩，则可能会进军云计算市场。&quot;这绝对在考虑范围内，&quot;扎克伯格当地时间周三在Meta年度股东大会上回答有关公司是否会在云计算领域与亚马逊和微软展开竞争的问题时</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://36kr.com/newsflashes/3828171962061440?f=rss" target="_blank" rel="noopener">Meta拟成立新部门，为企业客户定制AI服务</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 36kr · 2026-05-28</span>
+    <span class="tag">🏭 产业应用</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">Meta高管Naomi Gleit称，Meta计划成立一个新部门，为企业客户定制人工智能服务。新组织将被命名为Enterprise Solutions，由产品经理和工程师组成。上周发布的备忘录并未说明该团队将推广的具体产品和服务。Meta发</p>
+    
+  </div>
+</div>
+</div>
+<div class="cat-section" data-cat="🔧 工具与开源"><div class="card" data-cat="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26691v1" target="_blank" rel="noopener">Mind the Tool Failures: Achieving Synergistic Tool Gains for Medical Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">🔧 工具与开源</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">医疗AI Agent越来越多地使用外部工具进行诊断和治疗建议，但现有方法假设工具在其范围内可靠。本文研究工具故障并实现协同增益。</p>
+    <div class="original"><div class="orig-summary">Medical AI agents increasingly use external tools for diagnosis, treatment recommendation, and evidence retrieval, yet most existing approaches assume that task-appropriate tools are reliable within their intended scope. This assumption is fragile in real clinical settings, where even relevant tools may fail on challenging instances and lead to unsafe downstream decisions. To address this issue, we study medical tool use under imperfect-tool settings to correct failure instances missed by indivi</div></div>
+  </div>
+</div>
+<div class="card" data-cat="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://ai.cnmo.com/news/809854.html" target="_blank" rel="noopener">豆包、元宝等AI平台回应&quot;高考期间AI工具将禁用&quot;</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 CNMO · 2026-05-17</span>
+    <span class="tag">🔧 工具与开源</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    
+  </div>
+</div>
+</div>
+<div class="cat-section" data-cat="📚 学术与政策"><div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.27042v1" target="_blank" rel="noopener">Lessons from Penetration Tests on Large-Scale Agent Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">随着AI系统自主性和执行能力的提升，安全漏洞数量持续增长。然而，许多漏洞并非全新，而是反映了先前计算系统中长期存在的弱点类别。</p>
+    <div class="original"><div class="orig-summary">As AI systems gain increasing autonomy and execution capability, the number of discovered security vulnerabilities continues to rise. However, many of these vulnerabilities are not fundamentally novel, but instead reflect recurring classes of weaknesses long observed in prior computing systems. Execution-capable AI agents are effectively unbounded, self-modifying programs that interact extensively with multiple layers of the computing stack. This broad interaction surface imposes a significant s</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26508v1" target="_blank" rel="noopener">Foundations of a Time-Consistent Counterfactual Actuarial Runtime for Autonomous AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-26</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">为自主AI Agent建立时间一致的反事实精算运行时理论基础。</p>
+    
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26329v1" target="_blank" rel="noopener">JobBench: Aligning Agent Work With Human Will</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">现有职业AI Agent基准主要基于经济价值，讲述替代故事。本文提出JobBench，评估AI Agent在专家认为应优先委托的工作流上的表现，根据人类需求赋权而非替代。</p>
+    <div class="original"><div class="orig-summary">Current benchmarks for occupational AI agents are scoped primarily by economic values, telling a replacement story. We introduce JobBench, which evaluates AI agents on the workflows that experts identify as high-priority for delegation, empowering humans based on their needs instead of replacing them with GDP value. JobBench covers 130 agentic tasks across 35 occupations. Each task is packaged as a workspace of heterogeneous reference files, requiring the agent to reason through the cluttered in</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26302v1" target="_blank" rel="noopener">Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">长期运行的AI Agent越来越多地部署为持久化操作系统的组成部分，但它们仍像刚初始化的模型一样被评估。本文探讨Agent部署后的可靠性老化问题。</p>
+    <div class="original"><div class="orig-summary">Long-lived AI agents are increasingly deployed as persistent operational systems, yet they are still evaluated like freshly initialized models. Day-one benchmarks miss a basic systems question: how long does an agent remain reliable after deployment? Even when model weights are frozen, an agent&#39;s effective state keeps changing as it compresses interaction history, retrieves from a growing memory store, revises facts after updates, and undergoes routine maintenance. Reliability therefore becomes </div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="http://arxiv.org/abs/2605.26252v1" target="_blank" rel="noopener">Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 arXiv · 2026-05-25</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary">长期运行的AI Agent需要持久记忆。当前系统将记忆视为存储，本文重新思考AI Agent记忆的数据基础。</p>
+    <div class="original"><div class="orig-summary">Long-running AI agents need persistent memory. Memory supports learning across sessions, reduces repeated context injection, and enables auditing of past decisions. Current agent memory systems and database paradigms treat memory as storage. They localize correctness at records, embeddings, or edges. Each supplies only some of the capabilities that long-term memory requires. The result is four recurring failure modes: unregulated growth, missing semantic revision, capacity-driven forgetting, and</div></div>
+  </div>
+</div>
+<div class="card" data-cat="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title"><a href="https://news.aibase.com/news/28380" target="_blank" rel="noopener">环球音乐与 TikTok 续签多年授权协议，AI 监管成合作核心</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="card-meta">
+    <span class="source">📰 AIbase · 2026-05-28</span>
+    <span class="tag">📚 学术与政策</span>
+  </div>
+  <div class="card-body">
+    <p class="card-summary"></p>
+    <div class="original"><div class="orig-title">📝 <em>Universal Music and TikTok Renew Multi-Year Licensing Agreement, AI Regulation Becomes Core of Cooperation</em></div></div>
+  </div>
+</div>
+</div>
+
+</div>
+<script>
+var expandedCard = null;
+function toggleCard(header) {
+  var card = header.parentElement;
+  if (expandedCard && expandedCard !== card) {
+    expandedCard.classList.remove('expanded');
+  }
+  card.classList.toggle('expanded');
+  expandedCard = card.classList.contains('expanded') ? card : null;
+}
+function switchTab(el, cat) {
+  document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+  el.classList.add('active');
+  document.querySelectorAll('.cat-section').forEach(function(s) { s.classList.remove('active'); });
+  if (cat === '🏠 全部') {
+    document.getElementById('cat-all').classList.add('active');
+  } else {
+    var target = document.querySelector('.cat-section[data-cat="' + cat + '"]');
+    if (target) target.classList.add('active');
+  }
+  // Collapse expanded card on tab switch
+  if (expandedCard) { expandedCard.classList.remove('expanded'); expandedCard = null; }
+}
+</script>
+</body>
+</html>
