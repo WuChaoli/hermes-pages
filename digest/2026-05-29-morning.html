@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">开启一天的 AI 资讯 · 2026-05-29</div>
+  <div class="stats">
+    <span>📊 71 条</span>
+    <span>📡 5 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">🏠 全部 (71)</div>
+  <div class="tab" data-cat="模型与技术">🤖 模型与技术 (16)</div>
+  <div class="tab" data-cat="商业与融资">💰 商业与融资 (13)</div>
+  <div class="tab" data-cat="产业应用">🏭 产业应用 (38)</div>
+  <div class="tab" data-cat="工具与开源">🔧 工具与开源 (2)</div>
+  <div class="tab" data-cat="学术与政策">📚 学术与政策 (2)</div>
+  
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28792v1" target="_blank" rel="noopener">CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Abhilash Durgam, Nyle Siddiqui, Jeffrey A. Chan-Santiago et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28791v1" target="_blank" rel="noopener">Skill-Conditioned Gated Self-Distillation for LLM Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Jiazhen Huang, Xiao Chen, Xiao Luo et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28763v1" target="_blank" rel="noopener">CubePart: An Open-Vocabulary Part-Controllable 3D Generator</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Yiheng Zhu, Kangle Deng, Jean-Philippe Fauconnier et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28751v1" target="_blank" rel="noopener">Extrapolative Weight Averaging Reveals Correctness-Efficiency Frontiers in Code RL</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Kunhao Zheng, Pierre Chambon, Juliette Decugis et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28746v1" target="_blank" rel="noopener">Preference-Shaped Expected Hypervolume and R2 Improvement: Exact Computation and Monotonicity</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">This paper studies preference-shaped expected improvement criteria for Bayesian multiobjective optimization. We consider two indicator families which are often used for similar algorithmic purposes, but which are geometrically different. The hypervolume indicator is based on a dystopian reference po</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28742v1" target="_blank" rel="noopener">CORE: Contrastive Reflection Enables Rapid Improvements in Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Linas Nasvytis, Simon Jerome Han, Ben Prystawski et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28739v1" target="_blank" rel="noopener">BIRDNet: Mining and Encoding Boolean Implication Knowledge Graphs as Interpretable Deep Neural Networks</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Tirtharaj Dash</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://llmgame.scalex.dev" target="_blank" rel="noopener">Show HN: Continue? Y/N: A 60-second game about AI agent permission fatigue</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">19 points by Wirbelwind | 14 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808941.html" target="_blank" rel="noopener">Meta AI推出“隐身聊天”功能 不保存对...</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28733v1" target="_blank" rel="noopener">Utility-Aware Multimodal Contrastive Learning for Product Image Generation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Xiaohang Feng, Yiling Xie</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28730v1" target="_blank" rel="noopener">AlphaTransit: Learning to Design City-scale Transit Routes</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Bibek Poudel, Sai Swaminathan, Weizi Li</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28722v1" target="_blank" rel="noopener">Multi-Adapter Representation Interventions via Energy Calibration</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Manjiang Yu, Hongji Li, Junwei Chen et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28721v1" target="_blank" rel="noopener">LiveBrowseComp: Are Search Agents Searching, or Just Verifying What They Already Know?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">HuiMing Fan, Xiao Wang, Zheng Chu et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425870.html" target="_blank" rel="noopener">5秒完成3D场景编辑，北大&amp;港中文&amp;上海AI Lab搞出VGGT-Edit，120倍加速太炸了</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425857.html" target="_blank" rel="noopener">OpenAI挖来了个F1级别车手搞公关</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425810.html" target="_blank" rel="noopener">Codex自我蒸馏玩法火了！OpenAI员工亲授：复制粘贴就能让AI消灭重复劳动</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808911.html" target="_blank" rel="noopener">百度智能云AI云以Agent为本</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809926.html" target="_blank" rel="noopener">微软MAI-Image-2.5模型发布并进入文生图排行榜前三</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809924.html" target="_blank" rel="noopener">房地产行业首个垂类大模型DeepLink RE-LLM发布</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809922.html" target="_blank" rel="noopener">SK崔泰源下周将前往中国台湾 强化台积电英伟达AI联盟</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809911.html" target="_blank" rel="noopener">蚂蚁CEO韩歆毅：在Agent时代 信任的逻辑会崛起</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Claude Opus 4.8</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">247 points by craigmart | 124 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://claude.com/blog/introducing-dynamic-workflows-in-claude-code" target="_blank" rel="noopener">Dynamic Workflows in Claude Code</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">15 points by mil22 | 1 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.nytimes.com/2026/05/27/theater/thornton-wilder-emporium-last-play.html" target="_blank" rel="noopener">Thornton Wilder's Last Play Vanished into Thin Air. Or Did It?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;0g4Eu</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://github.com/Kaelio/ktx" target="_blank" rel="noopener">Show HN: Ktx – Open-source executable context layer for data agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Hi HN, we’re open-sourcing ktx. It’s an executable context layer that makes agents reliable on your data stack.We built it after going through the experience of building production-grade data agents for dozens of companies. If you’ve also tried building them, or simply tried using Claude Code or Cod</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="工具与开源">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.elodin.systems/post/elodin-ai-grand-prix-race-sim-harness" target="_blank" rel="noopener">Show HN: Open-Source AI Racing Harness</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Hi I&amp;#x27;m Dan from Elodin, making an open source real-time capable flight software simulation.For AI Grand Prix contestants, the wait for the Round 1 virtual qualifier simulation has been grueling.If you’re competing, check out our simulation harness to tide you over, built to match the publis</div>
+      <div class="tag">🔧 工具与开源</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808966.html" target="_blank" rel="noopener">阿里企业Agent平台悟空放量</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809891.html" target="_blank" rel="noopener">华为申请TokEnergy商标 或布局AI时代算力能效体系</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://github.com/highpost/tailscale-macos-vm" target="_blank" rel="noopener">Using Tailscale with an OrbStack VM on macOS</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Here&amp;#x27;s an example of how to build an Ubuntu VM using OrbStack on macOS and then connect to the VM through Tailscale SSH using an auth key stored in Apple Keychain.For example, I can create a VM on my Mac mini at home that hosts a git repo or even a Forgejo server. A colleague in my Tailnet </div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic raises $65B in Series H funding at $965B post-money valuation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">33 points by meetpateltech | 22 comments</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://kristoff.it/blog/llms-at-zig-days/" target="_blank" rel="noopener">About LLMs at Zig Days</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">33 points by kristoff_it | 0 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://caio-jobs.com/" target="_blank" rel="noopener">Caio, a cleaner search engine for 500k+ tech jobs</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">6 points by danicuki | 0 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/" target="_blank" rel="noopener">Sam Altman and Dario Amodei are both walking back AI jobs apocalypse predictions</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">48 points by ianrahman | 37 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://shvbsle.in/various-llm-smells/" target="_blank" rel="noopener">Various LLM Smells</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">49 points by speckx | 23 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828874222555782?f=rss" target="_blank" rel="noopener">氪星晚报 | 微博：第一季度总营收4.213亿美元，同比增长6%；科大讯飞发布讯飞AI眼镜；日本太空企业AstroX计划从气球上发射火箭</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">大公司： 格林生物创业板IPO过会 36氪获悉，深交所上市审核委员会召开2026年第27次上市审核委员会审议会议，审议结果显示，格林生物科技股份有限公司首发符合发行条件、上市条件和信息披露要求。 晨光股份：拟以5亿元至10亿元回购股份用于股</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3820713545846917?f=rss" target="_blank" rel="noopener">前逸动员工创立消费级智能船艇公司，半年内再获新融资|硬氪首发</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">作者|黄楠 编辑|袁斯来 硬氪获悉，安澜动力科技（深圳）有限公司日前完成数千万天使++轮融资，本轮由南山战新投独家投资。这是公司成立不足一年内完成的第三轮融资。资金将主要用于补充核心研发与量产团队人才，同步启动海外品牌</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3827585618154118?f=rss" target="_blank" rel="noopener">AI内容共创平台FunloomAI再获数千万Pre-A轮融资，让创作回归创意本身 | 36氪首发</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">文|刘士武 封面来源 | Funloom 官网 36氪获悉， AI内容共创平台公司北京库兰织梦科技有限公司，已于近日完成数千万元人民币Pre-A融资。 本轮融资由晴澜家族办公室领投，上海天使会跟投，此前投资人包括奇绩</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828191630348934?f=rss" target="_blank" rel="noopener">8点1氪|高考期间AI工具将禁用？豆包等回应；亚朵门店回应酒店免费提供隐藏摄像头检测仪；三星工会同意新薪酬方案</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">今日热点导览 阿里员工十三薪将并入年终奖 曝小红书获世界杯转播权，成为除央视、咪咕外唯一持权方 微信小游戏月活跃用户超过5亿 聚焦直播带货、外卖等，市场监管总局部署整治内卷式竞争 SpaceX上市消息引燃太空相关股票</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI: a comprehensive survey</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.21825" target="_blank" rel="noopener">Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-20</span>
+      </div>
+      <div class="summary">Haichao Miao, Zhimin Li, Kuangshi Ai et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">Hongzhan Lin, Ziyang Luo, Jing Ma, Long Chen</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828856781099910?f=rss" target="_blank" rel="noopener">科氪 | 一天连签10所高校！京东养车构建产教融合型技师培育体系</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">5月28日，2026京东养车合作伙伴大会在北京举行，全国各地超2000名加盟商合作伙伴及产业链合作伙伴齐聚一堂</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3828953371600257?f=rss" target="_blank" rel="noopener">北京科锐澄清：与特斯拉采购协议仅为意向性约定</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">36氪获悉，北京科锐公告，公司针对网络传闻澄清，与特斯拉（上海）有限公司签署的协议仅为意向性约定</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3828923890246537?f=rss" target="_blank" rel="noopener">*ST雅博：控股股东拟变更为枣庄财金</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">36氪获悉，*ST雅博公告，公司控股股东泉兴科技与枣庄财金签订股份无偿划转协议</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829537025254529?f=rss" target="_blank" rel="noopener">美国高盛集团测算显示全球原油库存逼近百日警戒线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">近日有消息披露，美国高盛集团测算显示，全球原油库存最早可能于5月底跌破相当于全球100天需求量的水平</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="学术与政策">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829103810077827?f=rss" target="_blank" rel="noopener">美国监管机构对近11.5万辆Rivian汽车展开调查</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">美国国家公路交通安全管理局（NHTSA）5月28日表示，已针对近11.5万辆Rivian汽车启动初步调查</div>
+      <div class="tag">📚 学术与政策</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829102060348802?f=rss" target="_blank" rel="noopener">上海仙工智能科技股份有限公司递表港交所</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，港交所文件显示，上海仙工智能科技股份有限公司向港交所提交上市申请书</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829100995126401?f=rss" target="_blank" rel="noopener">江苏零一汽车科技股份有限公司递表港交所</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，港交所文件显示，江苏零一汽车科技股份有限公司向港交所提交上市申请书</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829095524672645?f=rss" target="_blank" rel="noopener">美国一季度经济增速下修至1.6%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">当地时间5月28日，美国商务部经济分析局公布的修正数据显示，美国2026年第一季度实际GDP二次预估值按年率计算增长1.6%</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829542557623424?f=rss" target="_blank" rel="noopener">美股三大股指集体收涨，热门中概股多数下跌</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">5月28日收盘，美股三大股指集体上涨，道琼斯指数涨0.05%，标普500指数涨0.58%，纳斯达克综合指数涨0.91%</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="学术与政策">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829583996659072?f=rss" target="_blank" rel="noopener">澳大利亚竞争监管机构就儿童书包安全问题起诉亚马逊澳大利亚分公司</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">澳大利亚竞争监管机构周五向联邦法院提起诉讼，起诉亚马逊旗下澳大利亚公司，指控其在旗下在线市场销售的儿童背包上，未按规定贴有纽扣电池的强制性警示标签。（新浪财经）</div>
+      <div class="tag">📚 学术与政策</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829582607918208?f=rss" target="_blank" rel="noopener">美联储6月维持利率不变的概率为99.4%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据CME“美联储观察”：美联储到6月维持利率不变的概率为99.4%，累计加息25个基点的概率为0.6%。美联储到7月维持利率不变的概率为93%，累计加息25个基点的概率6.9%。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829582000350595?f=rss" target="_blank" rel="noopener">开市客三季度总营收705.3亿美元，高于市场预期</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">开市客（Costco）5月28日公布三季度总营收705.3亿美元，同比增长12%，预估696.2亿美元；每股收益4.93美元，同比增长15.2%，预估4.91美元。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="工具与开源">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829110880232577?f=rss" target="_blank" rel="noopener">IBM与红帽宣布投入50亿美元，推出人工智能驱动的开源安全计划</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">IBM与红帽公司承诺投入50亿美元，打造全新开源软件模式，助力企业保障软件供应链安全。两家企业于周四公布，该项目命名为Project Lightwell。项目将集结全球两万名工程师，并依托先进人工智能技术，搭建可信企业信息交换中心。该中心将</div>
+      <div class="tag">🔧 工具与开源</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829598342816901?f=rss" target="_blank" rel="noopener">比亚迪发布中国首款4nm制程智驾芯片</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，5月28日，比亚迪召开“敢为”智能化战略发布会，发布中国首款4nm制程智驾芯片——璇玑A3，已开启规模化量产，支持L3、L4自动驾驶，通过三颗芯片的高效协同，实现超2100TOPS的总算力，同时兼顾功耗控制与算力利用率。</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829578443302016?f=rss" target="_blank" rel="noopener">信托通道业务费率悄然上涨：头部公司主动缩量，中小机构跑步补位</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">“刚在一家理财公司遇上两拨同业，大家都在积极争取理财公司的委外业务准入资质，抢抓头部信托压降通道规模后腾出的业务空间。”近日，一位中小信托公司人士向记者坦言。当前信托通道业务调整进入新阶段，以头部机构为主导的“主动缩量”正成为行业主旋律——</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829577934120327?f=rss" target="_blank" rel="noopener">海外光芯片供给持续紧缺，国内厂商正实现群体性突破</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">算力需求持续井喷，推动数据中心光模块不断向更高速率演进。光通信行业独立研究机构LightCounting于5月28日发布的2025年全球光模块供应商TOP10榜单显示，共有7家中国厂商入围。与制造封装环节的高份额相比，上游核心物料之一的高速</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829577159812231?f=rss" target="_blank" rel="noopener">伦敦金失守4400美元，银行积存金限制未“松绑”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">黄金走势进入下行通道。截至5月28日17时20分，伦敦金报4395.26美元/盎司，跌1.36%，盘中创两个月以来新低。此前，伦敦现货黄金已连续两周周线收跌。同时，多家银行近期动态调整积存金业务风险等级，但并未实质性“松绑”。（上证报）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829111982122375?f=rss" target="_blank" rel="noopener">报道：两家无人机企业Quantum和Destinus正物色投行，筹备2027年IPO</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据知情人士透露，无人机制造商Quantum Systems和Destinus正与相关方面展开洽谈，以物色潜在最快于2027年初进行首次公开募股（IPO）的顾问团队。目前，这两家公司正致力于满足对无人防御资产日益飙升的市场需求。Quantum</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829576203396224?f=rss" target="_blank" rel="noopener">苹果Siri迎来近十五年最大改版，更多人工智能功能将推出</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">苹果公司备受期待的Siri重大升级将成为下一代iPhone、iPad和Mac软件更新的核心亮点。彭博制作的示意图展示了重新设计后的Siri界面、一款全新的聊天机器人应用，以及苹果计划在6月8日全球开发者大会（WWDC）上公布的其他iOS 2</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/426314.html" target="_blank" rel="noopener">Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809854.html" target="_blank" rel="noopener">豆包、元宝等AI平台回应“高考期间AI工具将禁用”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829605497529475?f=rss" target="_blank" rel="noopener">全球资本加速拥抱中国，增配A股进入黄金窗口期</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">5月28日，由深交所主办的2026全球投资者大会在深圳举行。今年恰逢“十五五”开局之年，清晰的发展蓝图不仅为中国经济的高质量发展锚定了航向，也为全球投资者提供了稳定、可预期的投资坐标。与会嘉宾普遍认为，无论是前沿科技与新质生产力催生的创新成</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610855228808?f=rss" target="_blank" rel="noopener">Anthropic称本月初年化收入突破470亿美元</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">Anthropic当地时间5月28日表示，自今年2月完成G轮融资以来，Claude在全球企业客户中的应用持续增长，本月初该公司的年化收入突破470亿美元。（界面）</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829603108382085?f=rss" target="_blank" rel="noopener">中信建投：资本市场改革深化下，券商“科创属性”价值重估</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，中信建投证券研报称，2025年以来科创板“1+6”改革、创业板深化改革相继落地，两大板块错位发展格局形成，成为A股科创企业融资核心阵地。券商科创属性主要来自投行保荐承销、双创IPO跟投及直投、私募业务，截至2026年5月26日，</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829605920499073?f=rss" target="_blank" rel="noopener">美财长会晤美联储主席，称相信沃什将平衡通胀与增长</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据报道，美国财长贝森特5月28日表示，他当日与美联储主席凯文·沃什共进早餐，并称“我相信他会做正确的事以平衡通胀与增长”。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610487047554?f=rss" target="_blank" rel="noopener">中信建投家电2026年中期投资策略：白电板块当前股息率处于历史高位，配置价值凸显</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，中信建投证券家电2026年中期投资策略指出，国补政策带来的景气错期正为白电投资提供“击球区”，白电板块当前股息率处于历史高位，配置价值显著凸显。短期行业景气受国补退坡、高基数效应、海外需求结构分化等因素阶段性压制，但上述扰动均非</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610007504263?f=rss" target="_blank" rel="noopener">多家A股公司布局固态变压器赛道</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">在AI算力和电力需求的催化下，SST（固态变压器）技术正悄然成为电力设备领域的新风口。记者注意到，近期，已有多家上市公司宣布入局SST赛道。 SST作为一种中高压直挂的电力电子设备，区别于传统工频变压器“铁芯+绕组”的电磁感应路径，其利用功</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829617306739847?f=rss" target="_blank" rel="noopener">霸王茶姬：第一季度总GMV达79.18亿元，拟未来12个月回购最高1.5亿美元ADS</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，5月29日，霸王茶姬公布2026年第一季度（截至2026年3月31日）财务及经营业绩。财报期内，霸王茶姬实现总营收35.46亿元，同比增长4.5%；总GMV达79.18亿元，环比增长8.1%；经调整净利润5.07亿元。截至202</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829607911056521?f=rss" target="_blank" rel="noopener">Waymo新款Ojai自动驾驶出租车向部分乘客开放，公司力求降低车队扩张成本</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">Waymo 正式向部分用户开放Ojai新款自动驾驶出租车服务。这款新车更适配多雪环境，且制造成本低于公司以往车型。Waymo 在周四发布声明称，目前旧金山、洛杉矶、凤凰城的部分普通民众可体验该车型；今年夏季，服务还将拓展至圣地亚哥、拉斯维加</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://sfstandard.com/2026/05/28/sf-startup-secretly-testing-robots-airbnbs-trashing-lawsuit-claims/" target="_blank" rel="noopener">Bot Company allegedly trashing Airbnb rentals with their prototype robots</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">17 points by drewda | 0 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+  </div>
+  <div class="category" id="cat-模型与技术">
+    
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28792v1" target="_blank" rel="noopener">CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Abhilash Durgam, Nyle Siddiqui, Jeffrey A. Chan-Santiago et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28791v1" target="_blank" rel="noopener">Skill-Conditioned Gated Self-Distillation for LLM Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Jiazhen Huang, Xiao Chen, Xiao Luo et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28751v1" target="_blank" rel="noopener">Extrapolative Weight Averaging Reveals Correctness-Efficiency Frontiers in Code RL</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Kunhao Zheng, Pierre Chambon, Juliette Decugis et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28742v1" target="_blank" rel="noopener">CORE: Contrastive Reflection Enables Rapid Improvements in Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Linas Nasvytis, Simon Jerome Han, Ben Prystawski et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28739v1" target="_blank" rel="noopener">BIRDNet: Mining and Encoding Boolean Implication Knowledge Graphs as Interpretable Deep Neural Networks</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Tirtharaj Dash</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28733v1" target="_blank" rel="noopener">Utility-Aware Multimodal Contrastive Learning for Product Image Generation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Xiaohang Feng, Yiling Xie</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28722v1" target="_blank" rel="noopener">Multi-Adapter Representation Interventions via Energy Calibration</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Manjiang Yu, Hongji Li, Junwei Chen et al.</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809926.html" target="_blank" rel="noopener">微软MAI-Image-2.5模型发布并进入文生图排行榜前三</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809924.html" target="_blank" rel="noopener">房地产行业首个垂类大模型DeepLink RE-LLM发布</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Claude Opus 4.8</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">247 points by craigmart | 124 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://claude.com/blog/introducing-dynamic-workflows-in-claude-code" target="_blank" rel="noopener">Dynamic Workflows in Claude Code</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">15 points by mil22 | 1 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://kristoff.it/blog/llms-at-zig-days/" target="_blank" rel="noopener">About LLMs at Zig Days</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">33 points by kristoff_it | 0 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://shvbsle.in/various-llm-smells/" target="_blank" rel="noopener">Various LLM Smells</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">49 points by speckx | 23 comments</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">Hongzhan Lin, Ziyang Luo, Jing Ma, Long Chen</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/426314.html" target="_blank" rel="noopener">Claude 4.8炸场！部分能力超过Mythos，支持数百子智能体并行</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🤖 模型与技术</div></div>
+    <div class="card" data-cat="模型与技术">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610855228808?f=rss" target="_blank" rel="noopener">Anthropic称本月初年化收入突破470亿美元</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">Anthropic当地时间5月28日表示，自今年2月完成G轮融资以来，Claude在全球企业客户中的应用持续增长，本月初该公司的年化收入突破470亿美元。（界面）</div>
+      <div class="tag">🤖 模型与技术</div></div>
+  </div>
+  <div class="category" id="cat-商业与融资">
+    
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic raises $65B in Series H funding at $965B post-money valuation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">33 points by meetpateltech | 22 comments</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828874222555782?f=rss" target="_blank" rel="noopener">氪星晚报 | 微博：第一季度总营收4.213亿美元，同比增长6%；科大讯飞发布讯飞AI眼镜；日本太空企业AstroX计划从气球上发射火箭</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">大公司： 格林生物创业板IPO过会 36氪获悉，深交所上市审核委员会召开2026年第27次上市审核委员会审议会议，审议结果显示，格林生物科技股份有限公司首发符合发行条件、上市条件和信息披露要求。 晨光股份：拟以5亿元至10亿元回购股份用于股</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3820713545846917?f=rss" target="_blank" rel="noopener">前逸动员工创立消费级智能船艇公司，半年内再获新融资|硬氪首发</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">作者|黄楠 编辑|袁斯来 硬氪获悉，安澜动力科技（深圳）有限公司日前完成数千万天使++轮融资，本轮由南山战新投独家投资。这是公司成立不足一年内完成的第三轮融资。资金将主要用于补充核心研发与量产团队人才，同步启动海外品牌</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3827585618154118?f=rss" target="_blank" rel="noopener">AI内容共创平台FunloomAI再获数千万Pre-A轮融资，让创作回归创意本身 | 36氪首发</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">文|刘士武 封面来源 | Funloom 官网 36氪获悉， AI内容共创平台公司北京库兰织梦科技有限公司，已于近日完成数千万元人民币Pre-A融资。 本轮融资由晴澜家族办公室领投，上海天使会跟投，此前投资人包括奇绩</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828191630348934?f=rss" target="_blank" rel="noopener">8点1氪|高考期间AI工具将禁用？豆包等回应；亚朵门店回应酒店免费提供隐藏摄像头检测仪；三星工会同意新薪酬方案</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">今日热点导览 阿里员工十三薪将并入年终奖 曝小红书获世界杯转播权，成为除央视、咪咕外唯一持权方 微信小游戏月活跃用户超过5亿 聚焦直播带货、外卖等，市场监管总局部署整治内卷式竞争 SpaceX上市消息引燃太空相关股票</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829102060348802?f=rss" target="_blank" rel="noopener">上海仙工智能科技股份有限公司递表港交所</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，港交所文件显示，上海仙工智能科技股份有限公司向港交所提交上市申请书</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829100995126401?f=rss" target="_blank" rel="noopener">江苏零一汽车科技股份有限公司递表港交所</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，港交所文件显示，江苏零一汽车科技股份有限公司向港交所提交上市申请书</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829111982122375?f=rss" target="_blank" rel="noopener">报道：两家无人机企业Quantum和Destinus正物色投行，筹备2027年IPO</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据知情人士透露，无人机制造商Quantum Systems和Destinus正与相关方面展开洽谈，以物色潜在最快于2027年初进行首次公开募股（IPO）的顾问团队。目前，这两家公司正致力于满足对无人防御资产日益飙升的市场需求。Quantum</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829605497529475?f=rss" target="_blank" rel="noopener">全球资本加速拥抱中国，增配A股进入黄金窗口期</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">5月28日，由深交所主办的2026全球投资者大会在深圳举行。今年恰逢“十五五”开局之年，清晰的发展蓝图不仅为中国经济的高质量发展锚定了航向，也为全球投资者提供了稳定、可预期的投资坐标。与会嘉宾普遍认为，无论是前沿科技与新质生产力催生的创新成</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829603108382085?f=rss" target="_blank" rel="noopener">中信建投：资本市场改革深化下，券商“科创属性”价值重估</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，中信建投证券研报称，2025年以来科创板“1+6”改革、创业板深化改革相继落地，两大板块错位发展格局形成，成为A股科创企业融资核心阵地。券商科创属性主要来自投行保荐承销、双创IPO跟投及直投、私募业务，截至2026年5月26日，</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610487047554?f=rss" target="_blank" rel="noopener">中信建投家电2026年中期投资策略：白电板块当前股息率处于历史高位，配置价值凸显</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，中信建投证券家电2026年中期投资策略指出，国补政策带来的景气错期正为白电投资提供“击球区”，白电板块当前股息率处于历史高位，配置价值显著凸显。短期行业景气受国补退坡、高基数效应、海外需求结构分化等因素阶段性压制，但上述扰动均非</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829610007504263?f=rss" target="_blank" rel="noopener">多家A股公司布局固态变压器赛道</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">在AI算力和电力需求的催化下，SST（固态变压器）技术正悄然成为电力设备领域的新风口。记者注意到，近期，已有多家上市公司宣布入局SST赛道。 SST作为一种中高压直挂的电力电子设备，区别于传统工频变压器“铁芯+绕组”的电磁感应路径，其利用功</div>
+      <div class="tag">💰 商业与融资</div></div>
+    <div class="card" data-cat="商业与融资">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829617306739847?f=rss" target="_blank" rel="noopener">霸王茶姬：第一季度总GMV达79.18亿元，拟未来12个月回购最高1.5亿美元ADS</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，5月29日，霸王茶姬公布2026年第一季度（截至2026年3月31日）财务及经营业绩。财报期内，霸王茶姬实现总营收35.46亿元，同比增长4.5%；总GMV达79.18亿元，环比增长8.1%；经调整净利润5.07亿元。截至202</div>
+      <div class="tag">💰 商业与融资</div></div>
+  </div>
+  <div class="category" id="cat-产业应用">
+    
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28763v1" target="_blank" rel="noopener">CubePart: An Open-Vocabulary Part-Controllable 3D Generator</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Yiheng Zhu, Kangle Deng, Jean-Philippe Fauconnier et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28746v1" target="_blank" rel="noopener">Preference-Shaped Expected Hypervolume and R2 Improvement: Exact Computation and Monotonicity</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">This paper studies preference-shaped expected improvement criteria for Bayesian multiobjective optimization. We consider two indicator families which are often used for similar algorithmic purposes, but which are geometrically different. The hypervolume indicator is based on a dystopian reference po</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://llmgame.scalex.dev" target="_blank" rel="noopener">Show HN: Continue? Y/N: A 60-second game about AI agent permission fatigue</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">19 points by Wirbelwind | 14 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808941.html" target="_blank" rel="noopener">Meta AI推出“隐身聊天”功能 不保存对...</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28730v1" target="_blank" rel="noopener">AlphaTransit: Learning to Design City-scale Transit Routes</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">Bibek Poudel, Sai Swaminathan, Weizi Li</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.28721v1" target="_blank" rel="noopener">LiveBrowseComp: Are Search Agents Searching, or Just Verifying What They Already Know?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-27</span>
+      </div>
+      <div class="summary">HuiMing Fan, Xiao Wang, Zheng Chu et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425870.html" target="_blank" rel="noopener">5秒完成3D场景编辑，北大&amp;港中文&amp;上海AI Lab搞出VGGT-Edit，120倍加速太炸了</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425857.html" target="_blank" rel="noopener">OpenAI挖来了个F1级别车手搞公关</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425810.html" target="_blank" rel="noopener">Codex自我蒸馏玩法火了！OpenAI员工亲授：复制粘贴就能让AI消灭重复劳动</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808911.html" target="_blank" rel="noopener">百度智能云AI云以Agent为本</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809922.html" target="_blank" rel="noopener">SK崔泰源下周将前往中国台湾 强化台积电英伟达AI联盟</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809911.html" target="_blank" rel="noopener">蚂蚁CEO韩歆毅：在Agent时代 信任的逻辑会崛起</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.nytimes.com/2026/05/27/theater/thornton-wilder-emporium-last-play.html" target="_blank" rel="noopener">Thornton Wilder's Last Play Vanished into Thin Air. Or Did It?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">https:&amp;#x2F;&amp;#x2F;archive.ph&amp;#x2F;0g4Eu</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://github.com/Kaelio/ktx" target="_blank" rel="noopener">Show HN: Ktx – Open-source executable context layer for data agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Hi HN, we’re open-sourcing ktx. It’s an executable context layer that makes agents reliable on your data stack.We built it after going through the experience of building production-grade data agents for dozens of companies. If you’ve also tried building them, or simply tried using Claude Code or Cod</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/808966.html" target="_blank" rel="noopener">阿里企业Agent平台悟空放量</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809891.html" target="_blank" rel="noopener">华为申请TokEnergy商标 或布局AI时代算力能效体系</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://github.com/highpost/tailscale-macos-vm" target="_blank" rel="noopener">Using Tailscale with an OrbStack VM on macOS</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Here&amp;#x27;s an example of how to build an Ubuntu VM using OrbStack on macOS and then connect to the VM through Tailscale SSH using an auth key stored in Apple Keychain.For example, I can create a VM on my Mac mini at home that hosts a git repo or even a Forgejo server. A colleague in my Tailnet </div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://caio-jobs.com/" target="_blank" rel="noopener">Caio, a cleaner search engine for 500k+ tech jobs</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">6 points by danicuki | 0 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://fortune.com/2026/05/26/sam-altman-dario-amodei-walking-back-ai-jobs-apocalypse-prophecies-ipo/" target="_blank" rel="noopener">Sam Altman and Dario Amodei are both walking back AI jobs apocalypse predictions</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">48 points by ianrahman | 37 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI: a comprehensive survey</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.21825" target="_blank" rel="noopener">Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-20</span>
+      </div>
+      <div class="summary">Haichao Miao, Zhimin Li, Kuangshi Ai et al.</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3828856781099910?f=rss" target="_blank" rel="noopener">科氪 | 一天连签10所高校！京东养车构建产教融合型技师培育体系</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">5月28日，2026京东养车合作伙伴大会在北京举行，全国各地超2000名加盟商合作伙伴及产业链合作伙伴齐聚一堂</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3828953371600257?f=rss" target="_blank" rel="noopener">北京科锐澄清：与特斯拉采购协议仅为意向性约定</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">36氪获悉，北京科锐公告，公司针对网络传闻澄清，与特斯拉（上海）有限公司签署的协议仅为意向性约定</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3828923890246537?f=rss" target="_blank" rel="noopener">*ST雅博：控股股东拟变更为枣庄财金</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-28</span>
+      </div>
+      <div class="summary">36氪获悉，*ST雅博公告，公司控股股东泉兴科技与枣庄财金签订股份无偿划转协议</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829537025254529?f=rss" target="_blank" rel="noopener">美国高盛集团测算显示全球原油库存逼近百日警戒线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">近日有消息披露，美国高盛集团测算显示，全球原油库存最早可能于5月底跌破相当于全球100天需求量的水平</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829095524672645?f=rss" target="_blank" rel="noopener">美国一季度经济增速下修至1.6%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">当地时间5月28日，美国商务部经济分析局公布的修正数据显示，美国2026年第一季度实际GDP二次预估值按年率计算增长1.6%</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829542557623424?f=rss" target="_blank" rel="noopener">美股三大股指集体收涨，热门中概股多数下跌</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">5月28日收盘，美股三大股指集体上涨，道琼斯指数涨0.05%，标普500指数涨0.58%，纳斯达克综合指数涨0.91%</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829582607918208?f=rss" target="_blank" rel="noopener">美联储6月维持利率不变的概率为99.4%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据CME“美联储观察”：美联储到6月维持利率不变的概率为99.4%，累计加息25个基点的概率为0.6%。美联储到7月维持利率不变的概率为93%，累计加息25个基点的概率6.9%。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829582000350595?f=rss" target="_blank" rel="noopener">开市客三季度总营收705.3亿美元，高于市场预期</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">开市客（Costco）5月28日公布三季度总营收705.3亿美元，同比增长12%，预估696.2亿美元；每股收益4.93美元，同比增长15.2%，预估4.91美元。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829598342816901?f=rss" target="_blank" rel="noopener">比亚迪发布中国首款4nm制程智驾芯片</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">36氪获悉，5月28日，比亚迪召开“敢为”智能化战略发布会，发布中国首款4nm制程智驾芯片——璇玑A3，已开启规模化量产，支持L3、L4自动驾驶，通过三颗芯片的高效协同，实现超2100TOPS的总算力，同时兼顾功耗控制与算力利用率。</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829578443302016?f=rss" target="_blank" rel="noopener">信托通道业务费率悄然上涨：头部公司主动缩量，中小机构跑步补位</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">“刚在一家理财公司遇上两拨同业，大家都在积极争取理财公司的委外业务准入资质，抢抓头部信托压降通道规模后腾出的业务空间。”近日，一位中小信托公司人士向记者坦言。当前信托通道业务调整进入新阶段，以头部机构为主导的“主动缩量”正成为行业主旋律——</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829577934120327?f=rss" target="_blank" rel="noopener">海外光芯片供给持续紧缺，国内厂商正实现群体性突破</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">算力需求持续井喷，推动数据中心光模块不断向更高速率演进。光通信行业独立研究机构LightCounting于5月28日发布的2025年全球光模块供应商TOP10榜单显示，共有7家中国厂商入围。与制造封装环节的高份额相比，上游核心物料之一的高速</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829577159812231?f=rss" target="_blank" rel="noopener">伦敦金失守4400美元，银行积存金限制未“松绑”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">黄金走势进入下行通道。截至5月28日17时20分，伦敦金报4395.26美元/盎司，跌1.36%，盘中创两个月以来新低。此前，伦敦现货黄金已连续两周周线收跌。同时，多家银行近期动态调整积存金业务风险等级，但并未实质性“松绑”。（上证报）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829576203396224?f=rss" target="_blank" rel="noopener">苹果Siri迎来近十五年最大改版，更多人工智能功能将推出</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">苹果公司备受期待的Siri重大升级将成为下一代iPhone、iPad和Mac软件更新的核心亮点。彭博制作的示意图展示了重新设计后的Siri界面、一款全新的聊天机器人应用，以及苹果计划在6月8日全球开发者大会（WWDC）上公布的其他iOS 2</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://ai.cnmo.com/news/809854.html" target="_blank" rel="noopener">豆包、元宝等AI平台回应“高考期间AI工具将禁用”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">暂无摘要</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829605920499073?f=rss" target="_blank" rel="noopener">美财长会晤美联储主席，称相信沃什将平衡通胀与增长</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">据报道，美国财长贝森特5月28日表示，他当日与美联储主席凯文·沃什共进早餐，并称“我相信他会做正确的事以平衡通胀与增长”。（界面）</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829607911056521?f=rss" target="_blank" rel="noopener">Waymo新款Ojai自动驾驶出租车向部分乘客开放，公司力求降低车队扩张成本</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">Waymo 正式向部分用户开放Ojai新款自动驾驶出租车服务。这款新车更适配多雪环境，且制造成本低于公司以往车型。Waymo 在周四发布声明称，目前旧金山、洛杉矶、凤凰城的部分普通民众可体验该车型；今年夏季，服务还将拓展至圣地亚哥、拉斯维加</div>
+      <div class="tag">🏭 产业应用</div></div>
+    <div class="card" data-cat="产业应用">
+      <div class="title-row">
+        <div class="title-text"><a href="https://sfstandard.com/2026/05/28/sf-startup-secretly-testing-robots-airbnbs-trashing-lawsuit-claims/" target="_blank" rel="noopener">Bot Company allegedly trashing Airbnb rentals with their prototype robots</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">17 points by drewda | 0 comments</div>
+      <div class="tag">🏭 产业应用</div></div>
+  </div>
+  <div class="category" id="cat-工具与开源">
+    
+    <div class="card" data-cat="工具与开源">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.elodin.systems/post/elodin-ai-grand-prix-race-sim-harness" target="_blank" rel="noopener">Show HN: Open-Source AI Racing Harness</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Hi I&amp;#x27;m Dan from Elodin, making an open source real-time capable flight software simulation.For AI Grand Prix contestants, the wait for the Round 1 virtual qualifier simulation has been grueling.If you’re competing, check out our simulation harness to tide you over, built to match the publis</div>
+      <div class="tag">🔧 工具与开源</div></div>
+    <div class="card" data-cat="工具与开源">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829110880232577?f=rss" target="_blank" rel="noopener">IBM与红帽宣布投入50亿美元，推出人工智能驱动的开源安全计划</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">IBM与红帽公司承诺投入50亿美元，打造全新开源软件模式，助力企业保障软件供应链安全。两家企业于周四公布，该项目命名为Project Lightwell。项目将集结全球两万名工程师，并依托先进人工智能技术，搭建可信企业信息交换中心。该中心将</div>
+      <div class="tag">🔧 工具与开源</div></div>
+  </div>
+  <div class="category" id="cat-学术与政策">
+    
+    <div class="card" data-cat="学术与政策">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829103810077827?f=rss" target="_blank" rel="noopener">美国监管机构对近11.5万辆Rivian汽车展开调查</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">美国国家公路交通安全管理局（NHTSA）5月28日表示，已针对近11.5万辆Rivian汽车启动初步调查</div>
+      <div class="tag">📚 学术与政策</div></div>
+    <div class="card" data-cat="学术与政策">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3829583996659072?f=rss" target="_blank" rel="noopener">澳大利亚竞争监管机构就儿童书包安全问题起诉亚马逊澳大利亚分公司</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-05-29</span>
+      </div>
+      <div class="summary">澳大利亚竞争监管机构周五向联邦法院提起诉讼，起诉亚马逊旗下澳大利亚公司，指控其在旗下在线市场销售的儿童背包上，未按规定贴有纽扣电池的强制性警示标签。（新浪财经）</div>
+      <div class="tag">📚 学术与政策</div></div>
+  </div>
+  
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-05-29</div>
+<script>
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+
+// Accordion: click title to expand/collapse card
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    // Don't toggle if clicking a link
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    // Close all cards in the same category
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    // Toggle this one
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
