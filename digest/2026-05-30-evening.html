@@ -1,0 +1,2400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>🌙 AI 晚报 · 5月30日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #764ba2; }
+.tab.active { color: #764ba2; border-bottom-color: #764ba2; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #764ba2; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #764ba215; color: #764ba2; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; line-height: 1.5; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🌙 AI 晚报 · 5月30日</h1>
+  <div class="sub">今日 AI 大事回顾 · 2026年5月30日</div>
+  <div class="stats">
+    <span>📊 91 条</span>
+    <span>📡 7 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+<div class="tab active" data-cat="all">🏠 全部 (91)</div>
+<div class="tab" data-cat="model">🤖 模型与技术 (25)</div>
+<div class="tab" data-cat="business">💼 商业与融资 (10)</div>
+<div class="tab" data-cat="industry">🏭 产业应用 (25)</div>
+<div class="tab" data-cat="tools">🔧 工具与开源 (16)</div>
+<div class="tab" data-cat="policy">📚 学术与政策 (15)</div>
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">预测未来！谷歌DeepMind CEO称AGI或将在三年内到来</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">谷歌DeepMind CEO Hassabis预测，通用人工智能（AGI）最早可能在2029-2030年出现，关键突破有望在未来三年内实现。他指出</div>
+      <div class="original">
+        <div class="original-title">Predicting the Future! Google DeepMind CEO Says AGI Could Arrive Within Three Years</div>
+        <div class="original-summary">Google DeepMind CEO Hassabis predicts that Artificial General Intelligence (AGI) could appear as early as 2029-2030, with key breakthroughs potentially achieved within the next three years. He points </div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">机器人告别逐帧学习！全球首个事件级具身智能世界模型发布</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">Variable Robot团队发布了全球首个基于事件级预测的具身智能世界模型WALL-WM，打破了传统逐帧学习的限制。它显著提升了</div>
+      <div class="original">
+        <div class="original-title">Robots Say Goodbye to Frame-by-Frame Learning! Global First Event-Level Embodied Intelligence World Model Released</div>
+        <div class="original-summary">The Variable Robot team released the world&#x27;s first embodied intelligence world model based on event-level prediction, WALL-WM, breaking the limitations of traditional time-frame-based learning. It shi</div>
+      </div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">三倍增长！企业AI搜索独角兽Glean年收入突破3亿美元</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">企业AI搜索初创公司Glean宣布其年化收入超过3亿美元，在短短15个月内从1亿美元增长了两倍。此前在&quot;企业谷歌&quot;领域几乎无人能敌</div>
+      <div class="original">
+        <div class="original-title">Triples! Enterprise AI Search Unicorn Glean Surpasses $300 Million in Annual Revenue</div>
+        <div class="original-summary">Enterprise AI search startup Glean announced its annualized revenue exceeded $300 million, tripling from $100 million just 15 months ago. Previously nearly unchallenged in the &#x27;enterprise Google&#x27; spac</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">Oculus创始人新作！对话式AI新星Sesame上线iOS应用，主打边想边说</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">由Oculus创始人及前VR核心成员创立的AI公司Sesame于5月28日推出了其对话式AI代理的iOS公测版。它打破了传统的&quot;提问-回答&quot;模式</div>
+      <div class="original">
+        <div class="original-title">Oculus Founder&#x27;s New Venture! Conversational AI Star Sesame Launches iOS App, Focused on Thinking and Speaking Simultaneously</div>
+        <div class="original-summary">Sesame, an AI company founded by the creator of Oculus and former VR core members, launched the iOS public beta version of its conversational AI agent on May 28th. It breaks the traditional &#x27;question-</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">携手OpenAI！三菱UFJ金融集团全面推进AI转型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">三菱UFJ金融集团（MUFG）宣布已为其约35,000名员工全面部署ChatGPT Enterprise，开启向&quot;AI原生&quot;公司的深度转型之路。</div>
+      <div class="original">
+        <div class="original-title">Partnering with OpenAI! Mitsubishi UFJ Financial Group Promotes Full AI Transformation</div>
+        <div class="original-summary">Mitsubishi UFJ Financial Group (MUFG) announced that it has fully deployed ChatGPT Enterprise for its approximately 35,000 employees, embarking on a deep transformation toward an &#x27;AI-native&#x27; company. </div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">阿里云百炼全面CLI化并开源：一条命令即可启用AI Agent编排全栈能力</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">阿里云百炼于2026年5月29日宣布全面CLI化并开源其CLI项目。这一举措推动了AI Agent接入与开发的全栈集成转型</div>
+      <div class="original">
+        <div class="original-title">Alibaba Cloud BaiLian Fully CLI-Enabled and Open-Sourced: A Single Command to Enable Full Stack Capabilities of AI Agent Orchestration</div>
+        <div class="original-summary">Alibaba Cloud BaiLian announced on May 29, 2026, that it is fully CLI-enabled and open-sources its CLI project. This move drives a full-stack integration transformation for AI Agent access and develop</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">边缘侧大模型突破！Liquid AI开源混合专家模型LFM2.5</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">人工智能初创公司Liquid AI发布并开源了边缘侧大模型LFM2.5-8B-A1B，专为消费级硬件设计，优化了工具调用和安装体验</div>
+      <div class="original">
+        <div class="original-title">Breakthrough in Edge-side Large Models! Liquid AI Opens Source Hybrid Expert Model LFM2.5</div>
+        <div class="original-summary">Artificial intelligence startup Liquid AI has released and open-sourced the edge-side large model LFM2.5-8B-A1B, specifically designed for consumer-grade hardware, with optimized tool calling and inst</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">科技圈大洗牌：MiniMax企业客户超百万，长鑫3D叩开港股大门</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">科技行业两大趋势：AI应用公司MiniMax表现强劲，全球企业和开发者客户超100万，半年增长5倍；</div>
+      <div class="original">
+        <div class="original-title">The Tech World is Changing: MiniMax&#x27;s Business Customers Exceed 1 Million, Changxiang 3D Opens the Door to the Hong Kong Stock Market</div>
+        <div class="original-summary">Two major trends in the tech industry: AI application company MiniMax has shown strong performance, with global enterprise and developer customers exceeding 1 million, growing 5 times in half a year, </div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">鹰眼2.0来了！NBA将引入AI系统取代人工界外判定</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">NBA宣布引入AI技术来自动化界外判定。利用球场周围的高清摄像头与AI协作，将即时提供准确判定</div>
+      <div class="original">
+        <div class="original-title">Hawk Eye 2.0 Is Here! NBA Will Introduce an AI System to Replace Manual Out-of-Bounds Calls</div>
+        <div class="original-summary">The NBA announced the introduction of AI technology to automate out-of-bounds calls. Utilizing high-definition cameras around the court and AI collaboration, it will instantly provide accurate calls, </div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">提前布局！Mistral AI CEO表示自研芯片是必然趋势</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">欧洲最大AI初创公司Mistral AI的CEO表示，开发定制AI芯片是长期趋势。随着大模型对算力需求的激增，科技巨头和独角兽企业</div>
+      <div class="original">
+        <div class="original-title">Preparation in Advance! The CEO of Mistral AI Says Developing Their Own Chips Is Inevitable</div>
+        <div class="original-summary">The CEO of Europe&#x27;s largest AI startup, Mistral AI, stated that developing custom AI chips is a trend in the long term. With the surge in computing power demand for large models, tech giants and unico</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">争议！美国最强模型Opus 4.8被指蒸馏中国开源大模型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">美国大模型公司Anthropic发布的Claude Opus 4.8在多项排名中表现优异，但被曝存在认知混淆问题。网友通过API测试发现</div>
+      <div class="original">
+        <div class="original-title">Controversial! The US&#x27;s Strongest Model Opus 4.8 Is Accused of Being a Distilled Version of a Chinese Open-Source Large Model</div>
+        <div class="original-summary">The US large model company Anthropic released Claude Opus 4.8, which performed well in multiple rankings, but was exposed to have cognitive confusion issues. Internet users found through API testing t</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">小米宣布MiMo-V2-Pro/Omni将于2026年6月停服，全面切换至V2.5系列</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">小米宣布旧版MiMo-V2-Pro/Omni模型将于2026年6月30日停服，升级至MiMo V2.5系列。MiMo-V2-Pro将迁移至V2.5-Pro，MiMo-V2-Omni将迁移</div>
+      <div class="original">
+        <div class="original-title">Xiaomi announced that MiMo-V2-Pro/Omni will be discontinued in June 2026, and will fully switch to the V2.5 series</div>
+        <div class="original-summary">Xiaomi announced that the old version of MiMo-V2-Pro/Omni model will be discontinued on June 30, 2026, and upgraded to the MiMo V2.5 series. The MiMo-V2-Pro will be migrated to V2.5-Pro, and MiMo-V2-O</div>
+      </div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text">Grok Build 0.2.7重大更新：/usage和/login上线，多子代理共享终端+图像理解大幅增强</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">xAI的AI编码工具Grok Build发布0.2.7版本，重点优化用户管理和多代理协作体验，提升图像处理能力和跨平台可用性</div>
+      <div class="original">
+        <div class="original-title">Grok Build 0.2.7 Major Update: /usage and /login Now Available, Multi-Sub-Proxy Shared Terminal + Significant Enhancement in Image Understanding</div>
+        <div class="original-summary">xAI&#x27;s AI coding tool Grok Build releases version 0.2.7, focusing on optimizing user management and multi-proxy collaboration experience, improving image processing capabilities and cross-platform usab</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">Step 3.7 Flash发布：Agent效率新时代真正来临</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">今天，开源模型Step 3.7 Flash正式发布，采用Apache 2.0许可开源权重，直接解决Agent时代效率、可靠性等核心痛点</div>
+      <div class="original">
+        <div class="original-title">Step 3.7 Flash Launches: The New Era of Agent Efficiency Has Truly Arrived</div>
+        <div class="original-summary">Today, the open-source model Step 3.7 Flash was officially released, offering weights under the Apache 2.0 license, directly addressing core pain points in the Agent era such as efficiency, reliabilit</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">微软将在下周Build大会上推出多款自研代码及多场景AI模型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">微软计划在下周旧金山Build大会上推出多款自研AI模型，重点推出一款高性价比的代码专用模型，以应对竞争</div>
+      <div class="original">
+        <div class="original-title">Microsoft to Launch New Self-Developed Code and Multi-Scenario AI Models at Next Week&#x27;s Build Conference</div>
+        <div class="original-summary">Microsoft plans to launch multiple self-developed AI models at next week&#x27;s Build conference in San Francisco, with a focus on introducing a high-cost-performance code-specific model to counter the ero</div>
+      </div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30338v1" target="_blank" rel="noopener">REST3D: Reconstructing Physically Stable 3D Scenes from a Single Image</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Xiaoxuan Ma, Jiashun Wang, Nicolas Ugrinovic — 从单张图像重建物理稳定的3D场景。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30335v1" target="_blank" rel="noopener">Locally Coherent, Globally Incoherent: Bounding Compositional Incoherence in Multi-Component LLM Agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Anany Kotawala — 研究多组件LLM Agent中的组合不一致性问题。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30329v1" target="_blank" rel="noopener">SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Sy-Tuyen Ho, Minghui Liu, Huy Nghiem — 评估AI科学家能否区分好的与不好的研究想法。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30326v1" target="_blank" rel="noopener">RoboWits: Unexpected Challenges for Robotic Creative Problem Solving</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Chunru Lin, Hongxin Zhang, Fenghao Yu — 机器人创造性问题解决中的意外挑战。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30323v1" target="_blank" rel="noopener">In-Context Reward Adaptation for Robust Preference Modeling</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Zhenyu Sun, Zheng Xu, Ermin Wei — 基于上下文奖励自适应的稳健偏好建模。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30322v1" target="_blank" rel="noopener">Gram: Assessing sabotage propensities via automated alignment auditing</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">David Lindner, Victoria Krakovna, Sebastian Farquhar — 通过自动化对齐审计评估破坏倾向。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30314v1" target="_blank" rel="noopener">SpecBench: Evaluating Specification-Level Reasoning for Software Engineering LLM Agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Grant Hamblin, Kevin Song, Zhanda Zhu — 评估软件工程LLM Agent的规范级推理能力。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30303v1" target="_blank" rel="noopener">Generalizing a Highly Configurable Analytics Pipeline to Replicate and Support Educational Research Across Multiple Domains</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Yallen Bai, Ploy Thajchayapong, Ashok Goel — 将高度可配置的分析管道泛化以跨领域复现和支持教育研究。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30339v1" target="_blank" rel="noopener">Benchmarking Single-Factor Physical Video-to-Audio Generation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Tingle Li, Siddharth Gururani, Kevin J. Shih — 单因素物理视频到音频生成的基准测试。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30337v1" target="_blank" rel="noopener">Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Alaa Khamis, Alaa Maalouf — 通过凸重建和梯度缓存实现高效的LLM测试时微调。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30336v1" target="_blank" rel="noopener">Fairness-Aware Federated Learning with Trajectory Shapley Value</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Daniel Kuznetsov, Ziqi Wang — 基于轨迹Shapley值的公平感知联邦学习。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30330v1" target="_blank" rel="noopener">When, why, and how do diffusion posterior samplers fail? A finite-sample lens</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Benjamin A. Burns, Sara Fridovich-Keil — 扩散后验采样器何时、为何以及如何失败？有限样本视角。</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.deadcarl.com/p/the-kaiser-and-a-mediocre-man-theory" target="_blank" rel="noopener">凯撒与&quot;平庸之人&quot;历史理论</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">8 points by baud147258 | 1 comments</div>
+      <div class="original">
+        <div class="original-title">The Kaiser and a &quot;Mediocre Man&quot; Theory of History</div>
+        <div class="original-summary">8 points by baud147258 | 1 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/" target="_blank" rel="noopener">代数效应入门：面向普通开发者</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">57 points by satvikpendem | 32 comments</div>
+      <div class="original">
+        <div class="original-title">Algebraic Effects for the Rest of Us</div>
+        <div class="original-summary">57 points by satvikpendem | 32 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://koenvangilst.nl/lab/mistral-ai-now-summit" target="_blank" rel="noopener">Mistral AI Now峰会笔记</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">377 points by vnglst | 155 comments</div>
+      <div class="original">
+        <div class="original-title">Notes from the Mistral AI Now Summit</div>
+        <div class="original-summary">377 points by vnglst | 155 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning" target="_blank" rel="noopener">Shift将免费清洁房屋以训练未来机器人</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">142 points by evilsimon | 190 comments — 一家初创公司提供免费家政清洁服务，以此收集训练数据来训练家用机器人。</div>
+      <div class="original">
+        <div class="original-title">Shift will clean homes for free to train future robots</div>
+        <div class="original-summary">142 points by evilsimon | 190 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">总投资10亿元，锦瑞汽车智能装备制造总部基地项目落地合肥</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">36氪获悉，5月30日，广汽资本宣布，已完成对领伟创新智能系统（浙江）有限公司（下称领伟创新）的投资。据介绍，领伟创新已进入广汽集团核心供应链，为广汽埃安、广汽昊铂核心车型配套非晶定子铁芯。原文链接</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">天津发布2025年度人工智能十大应用标杆场景，总投资超6亿元</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">集采百元一盒药，药店竟卖3960元，央视调查“高价药”疑云</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">4大顶尖模型被扔进虚拟小镇求生，GPT全员饿死，Grok四天灭世</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元；滴滴回应“乘客车内排泄”</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">上海大模型龙头，启动A股上市</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">实测 Claude Opus 4.8：活干得更漂亮了，话说得更难听了</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">本站由 阿里云 提供计算与安全服务 违法和不良信息、未成年人保护举报电话：010-89650707 举报邮箱：jubao@36kr.com 网上有害信息举报</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">© 2011~2026 北京多氪信息科技有限公司 | 京ICP备12031756号-6 | 京ICP证150143号 | 京公网安备11010502057322号</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">清华有了新老师：黄仁勋</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">1400亿Agent入场，“流量”这条护城河要塌了</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">4nm！比亚迪自研AI芯片来了：制程对齐英伟达，算力拉爆特斯拉</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">PPIO入选非凡产研「2026 Global AI 100」，以AI实力领跑出海新浪潮</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">梦瑶 昨天 15:02</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">清华系团队给大模型织了一张“智能算力电网”</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">ChatGPT移动端支持Codex远程控制功...</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">DeepSeek资本枷锁如何破解</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">轻信豆包亏600元 AI幻觉已成生活隐形隐患</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">宇树具身智能体验馆亚洲首店上海开业 汇聚多款机型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.aibase.com/news/28475" target="_blank" rel="noopener">Oculus创始人新作！对话式AI新星Sesame上线iOS应用，主打边想边说</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.aibase.com/news/28473" target="_blank" rel="noopener">科技圈大洗牌：MiniMax企业客户超百万，长鑫3D叩开港股大门</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831348302358408?f=rss" target="_blank" rel="noopener">当美妆品牌走进运动场：欧莱雅把校园公益做成了一场“运动实验”｜最前线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月29日，欧莱雅中国在复旦大学启动2026年度“有意思青年”高校公益计划，并首次以校园运动会形式开启新一年的项目活动。活动现场，乒乓球运动员马龙、篮球运动员杨力维、足球运动员赵丽娜等体育界人士与高校学生展开互动，欧莱雅同时宣布向中国青少年</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831135917107075?f=rss" target="_blank" rel="noopener">36氪首发 | 服务富士康，半年营收超两千万的机器人解决方案商完成天使轮融资</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">作者 | 乔钰杰 编辑 | 袁斯来 硬氪获悉，乘物机器人（深圳）有限公司（以下简称“乘物机器人”）近日完成天使轮融资，由中国台湾工业自动化与智能机器人解决方案领域龙头企业和椿科技战略投资，华君资本担任独家财务顾问。 乘物机器人成立于2025</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831073348855433?f=rss" target="_blank" rel="noopener">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元；滴滴回应“乘客车内排泄”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">今日热点导览 黄仁勋披露“赶飞机”细节，特朗普要出发时来电话 国内航线燃油附加费6月5日起首次下调 铁路将实施新规：违规乘车拒不补票将被限制购票 iPhone 17系列中国销量破3000万台，Pro Max版占近一半 SpaceX据悉将IP</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831071878358659?f=rss" target="_blank" rel="noopener">最前线｜中科创星第十二期“好望角科学沙龙”聚焦“太空智驾”，卫星将从被动响应走向自主决策</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">“太空智驾时代将到来，卫星和星座会如同L4级自动驾驶汽车一样，在太空具备自主环境感知、任务规划和机动决策能力。” 5月28日，在上海举行的“好望角科学沙龙”上，中国科学院西安光学精密机械研究所（简称“西安光机所”）副所长邵晓鹏在演讲中提出了</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3830580716365449?f=rss" target="_blank" rel="noopener">千里科技再添筹码，或将整合吉利辅助驾驶团队｜36氪独家</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">为助力千里科技成为“第二个华为”，吉利决定为它增添新的技术筹码。 36氪从多位产业人士处了解到，吉利中央研究院数百人的辅助驾驶团队，将在近期被整合入千里科技。目前，吉利研究院辅助驾驶团队，已有人收到了转移合同的通知。 有接近吉利的知情人士告</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3830545234552452?f=rss" target="_blank" rel="noopener">连续15年披露ESG报告，自然堂开始把“可持续”做成一门生意｜最前线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">在中国美妆行业增长放缓、价格竞争加剧的背景下，越来越多品牌开始重新审视“可持续发展”这件事的商业意义。 5月26日，自然堂集团发布《2025年度可持续发展报告》，这是其连续第15年披露ESG相关内容。相比早期以公益、环保为主的企业社会责任叙</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831673401190273?f=rss" target="_blank" rel="noopener">6.24亿日元，乐奇AI眼镜创日本Makuake平台众筹新纪录</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">北京时间5月30日，乐奇AI眼镜在日本第一的众筹平台Makuake创下了全新纪录，截至目前，该项目已累计斩获超6.24亿日元的销售额，成为同品类历史最高众筹额，刷新了该平台成立13年以来的全品类最高销售纪录。据了解，Rokid的此次众筹将于</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831607848363912?f=rss" target="_blank" rel="noopener">新包装矿泉水停止销售，胖东来：系设计方面重大失误，正重新设计</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">5月29日晚，许昌市胖东来超市有限公司发文表示：胖东来新包装DL饮用天然矿泉水，在上市前发现与市面上现有同品类产品的瓶型外观有视觉近似的可能，我们立即暂停上市并主动与相关品牌生产商进行沟通，经双方沟通后于5月10日上市。此次出现的情况是我们</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831601284982660?f=rss" target="_blank" rel="noopener">央企科技成果产业化联合体成立</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">中央企业科技成果产业化联合体（下称“联合体”）5月30日在北京成立。该联合体由国务院国资委指导、国家能源集团牵头组建、全体中央企业参与共建，并广泛吸纳科研院所、高校、产业链上下游骨干企业、创新型民营企业等多元主体，聚焦国家战略部署，推动科技</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831572328785796?f=rss" target="_blank" rel="noopener">中国汽车流通协会奔驰、宝马、保时捷三大品牌经销商分会正式成立</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">2026年5月27日，在“2026中国汽车经销商大会”召开期间，中国汽车流通协会宣布成立奔驰经销商分会、宝马经销商分会、保时捷经销商分会，并分别召开了成立大会。（证券时报）</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831568959989637?f=rss" target="_blank" rel="noopener">乘联分会崔东树：2026年1-4月中国占世界汽车份额31%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月30日，乘联分会秘书长崔东树发文表示，2025年全球汽车销量9689万台，同比增长6%。2026年4月的世界汽车销量达到799万台，同比增4%。2026年1-4月世界汽车销量达到3096万台，同比增1%。随着美国、中国车市的年初相对负增</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831494431532931?f=rss" target="_blank" rel="noopener">6月5日起国内航线燃油附加费将下调</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">记者从多家航空公司了解到，自2026年6月5日起销售的国内航线客票燃油附加费将下调。调整标准为成人旅客：800公里以上航线每位旅客收取150元燃油附加费，800公里（含）以下航线每位旅客收取80元燃油附加费。相较于调整前降低了20元和10元</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831493084063367?f=rss" target="_blank" rel="noopener">宁德时代：巧克力换电累计落站1650座 2026年预计超3000座</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">据宁德时代消息，截至2026年5月，巧克力换电站在全国范围内落1650座，覆盖127城。不到半年，新增落站超600站、覆盖82城。高速网络建设方面，计划2027年将形成“11纵9横”高速换电网络。根据规划，2026年底巧克力换电站将突破30</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831456281110145?f=rss" target="_blank" rel="noopener">广汽资本完成对领伟创新投资</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">36氪获悉，5月30日，广汽资本宣布，已完成对领伟创新智能系统（浙江）有限公司（下称领伟创新）的投资。据介绍，领伟创新已进入广汽集团核心供应链，为广汽埃安、广汽昊铂核心车型配套非晶定子铁芯。</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831448811169414?f=rss" target="_blank" rel="noopener">深圳楼市新政满月，一二手房成交同比增33%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">深圳楼市新政满月。4月29日，深圳发布楼市优化新政，核心措施包括分区松绑限购、提高公积金贷款额度等。在业内人士看来，3月、4月楼市“小阳春”后，5月市场交易通常会惯性回落，但深圳楼市今年的情况有所不同。据深圳贝壳研究院监测，截至5月27日，</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/step-3-5-flash" target="_blank" rel="noopener">MoDev</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-30</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">为手机打造的AI开发环境</div>
+      <div class="original">
+        <div class="original-title">Step 3.7 Flash</div>
+        <div class="original-summary">Flash-speed agents model that can see and act</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425511.html" target="_blank" rel="noopener">刚刚，国产AI自己造了AI，全球首例！
+2026-05-26</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28478" target="_blank" rel="noopener">SpotsNow</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">追踪谁在播客上做广告及广告活动洞察</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28473" target="_blank" rel="noopener">Revolte</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">面向软件工程的AI</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28470" target="_blank" rel="noopener">Pitch Agent</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">秒级生成品牌一致的演示文稿</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831444816684681?f=rss" target="_blank" rel="noopener">苏州：1—4月规模以上工业增加值同比增长9.8%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">苏州市统计局发布数据，1—4月，苏州市规模以上工业增加值同比增长9.8%。规模以上工业总产值16126.5亿元，同比增长7.3%。34个工业行业大类中，有27个行业产值同比增长，行业增长面达79.4%，其中16个行业产值增速超8%。制造业高端化持续推进。规模以上高新技术产业产值9164.6亿元，同比增长11.7%，其中航空航天制造业、电子及通讯设备制造业、医药制造业、仪器仪表制造业产值分别增长23</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831338125076103?f=rss" target="_blank" rel="noopener">哈总统：欧亚经济联盟内贸易额今年将破千亿美元</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">哈萨克斯坦总统托卡耶夫29日说，欧亚经济联盟保持良好发展势头，今年联盟内部贸易额预计同比增长6%，将突破1000亿美元。欧亚经济委员会最高理事会会议29日在阿斯塔纳举行，托卡耶夫主持并致辞。他说，为增强联盟内部稳定性，深化经济一体化并提高竞争力，欧亚经济联盟将把加强数字基础一体化、打造数字欧亚交通走廊、实现工农业数字化转型以及大力发展人工智能当作优先发展方向。俄罗斯总统普京说，紧密的欧亚一体化能为</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831334882912134?f=rss" target="_blank" rel="noopener">龙行天下IPO申请获受理</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">上交所官网显示，5月29日，广东龙行天下科技股份有限公司（简称“龙行天下”）申报沪市主板IPO申请获受理，保荐机构为招商证券。资料显示，公司主营业务为运动鞋履的开发设计、生产与销售。2025年，公司实现营业收入58.34亿元，扣非后归母净利润为2.44亿元。（新浪财经）</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831333621933705?f=rss" target="_blank" rel="noopener">深圳网约车市场已饱和 官方发布风险提示</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">近日，深圳市交通运输局发布，2026年4月份深圳市网约车行业运营动态与风险提示，当前市场总体已饱和，4月全市网约车日均单车完成订单量约为13.01单。 官方郑重提醒，拟从业者应充分调研，理性决策，并警惕六大风险：一是部分平台采用“上班/保底模式”代收流水，公司经营不善将导致司机受损； 二是未获授权的中间商易引发纠纷；三是警惕“月入过万”等虚假广告，避免退车违约；四是认清“无证不罚”骗局，无证营运将</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831356538529409?f=rss" target="_blank" rel="noopener">海光信息完成阶跃星辰Step 3.7 Flash适配</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">36氪获悉，5月29日，阶跃星辰发布Step 3.7 Flash，海光团队依托DTK异构计算平台与全栈软件栈，于发布当天即完成全流程适配与深度调优，实现“发布即适配、适配即高效”。即日起，开发者即可在海光平台上高效运行该模型，快速搭建多模态Agent、智能代码助手和复杂工作流应用，大幅降低接入与编排成本。</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831275074348672?f=rss" target="_blank" rel="noopener">神州数码63岁董事长天价离婚案有了新进展</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月29日，神州数码披露了关于公司控股股东、实际控制人涉及诉讼的进展公告。根据公告内容，近日公司收到控股股东、实际控制人郭为通知，北京市第一中级人民法院已就上诉人郭郑俐不服北京市海淀区人民法院一审判决提起的上诉事宜作出《民事判决书》（（2026）京01民终446号），判决如下：驳回上诉，维持原判。本判决为终审判决。（澎湃新闻）</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831271278569089?f=rss" target="_blank" rel="noopener">国务院正式批复同意 粤港澳游艇自由行要来了</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">5月29日，国务院批复同意自即日起在粤港澳大湾区内地九市暂时调整实施《中华人民共和国海关事务担保条例》《中华人民共和国船舶登记条例》的有关规定，对经粤港澳大湾区内地九市指定口岸暂时入出内地且仅限在粤港澳大湾区内地九市自由行的港澳游艇，实行免担保和临时船舶国籍登记政策。（央视新闻）</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831212862137990?f=rss" target="_blank" rel="noopener">国家能源局：2026年4月，核发绿证2.37亿个</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">2026年4月，国家能源局核发绿证2.37亿个，涉及可再生能源发电项目181.48万个，其中可交易绿证1.77亿个，占比74.85%。本期核发2026年3月可再生能源电量对应绿证1.71亿个，占比72.16%。2026年4月，全国交易绿证7110万个，其中绿色电力交易绿证2972万个。2026年4月，全国单独交易绿证4138万个，其中电量生产年为2024年的绿证交易422万个，平均价格1.12元/</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/wingbits-ai" target="_blank" rel="noopener">Wingbits AI</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-11</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI agents for real-time aircraft monitoring and alerts
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/openstatus-2" target="_blank" rel="noopener">Openstatus MCP Health Checker</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-28</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Test MCP servers like a real AI client, not just a ping
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/wandesk-ai" target="_blank" rel="noopener">Wandesk</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2025-12-05</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Build Your Own AI Desktop 
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/ava-studio" target="_blank" rel="noopener">Ava Studio</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-19</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Your AI creative team for video ads
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/artisan-3" target="_blank" rel="noopener">Ava 2.0</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-27</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Your AI BDR that runs outbound sales autonomously
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/firecoach" target="_blank" rel="noopener">Firecoach AI</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-25</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI roleplays that turn reps into top performers
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/mcp-bridge-by-appfactor" target="_blank" rel="noopener">MCP Bridge by Appfactor</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-04-01</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Connect any API to any AI agent
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/hyper-11" target="_blank" rel="noopener">Hyper: Self-driving Company Brain</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-27</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Turn your AI agents from interns to veterans
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/modev" target="_blank" rel="noopener">MoDev</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-13</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">The AI dev environment built for your phone.
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/drafted-4" target="_blank" rel="noopener">Drafted</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-28</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Design a home instantly with AI
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/spotsnow" target="_blank" rel="noopener">SpotsNow</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-13</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Track who&#x27;s advertising across podcasts w/ campaign insights
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/revolte" target="_blank" rel="noopener">Revolte</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-12</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI for Software Engineering
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/pitch" target="_blank" rel="noopener">Pitch Agent</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-25</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">On-brand presentations, generated in seconds
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/memori-labs" target="_blank" rel="noopener">Memori</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-07</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Persistent memory from agent trace, not just conversation
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+  </div>
+  <div class="category" id="cat-model">
+        <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">预测未来！谷歌DeepMind CEO称AGI或将在三年内到来</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">谷歌DeepMind CEO Hassabis预测，通用人工智能（AGI）最早可能在2029-2030年出现，关键突破有望在未来三年内实现。他指出</div>
+      <div class="original">
+        <div class="original-title">Predicting the Future! Google DeepMind CEO Says AGI Could Arrive Within Three Years</div>
+        <div class="original-summary">Google DeepMind CEO Hassabis predicts that Artificial General Intelligence (AGI) could appear as early as 2029-2030, with key breakthroughs potentially achieved within the next three years. He points </div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">机器人告别逐帧学习！全球首个事件级具身智能世界模型发布</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">Variable Robot团队发布了全球首个基于事件级预测的具身智能世界模型WALL-WM，打破了传统逐帧学习的限制。它显著提升了</div>
+      <div class="original">
+        <div class="original-title">Robots Say Goodbye to Frame-by-Frame Learning! Global First Event-Level Embodied Intelligence World Model Released</div>
+        <div class="original-summary">The Variable Robot team released the world&#x27;s first embodied intelligence world model based on event-level prediction, WALL-WM, breaking the limitations of traditional time-frame-based learning. It shi</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">Oculus创始人新作！对话式AI新星Sesame上线iOS应用，主打边想边说</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">由Oculus创始人及前VR核心成员创立的AI公司Sesame于5月28日推出了其对话式AI代理的iOS公测版。它打破了传统的&quot;提问-回答&quot;模式</div>
+      <div class="original">
+        <div class="original-title">Oculus Founder&#x27;s New Venture! Conversational AI Star Sesame Launches iOS App, Focused on Thinking and Speaking Simultaneously</div>
+        <div class="original-summary">Sesame, an AI company founded by the creator of Oculus and former VR core members, launched the iOS public beta version of its conversational AI agent on May 28th. It breaks the traditional &#x27;question-</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">阿里云百炼全面CLI化并开源：一条命令即可启用AI Agent编排全栈能力</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">阿里云百炼于2026年5月29日宣布全面CLI化并开源其CLI项目。这一举措推动了AI Agent接入与开发的全栈集成转型</div>
+      <div class="original">
+        <div class="original-title">Alibaba Cloud BaiLian Fully CLI-Enabled and Open-Sourced: A Single Command to Enable Full Stack Capabilities of AI Agent Orchestration</div>
+        <div class="original-summary">Alibaba Cloud BaiLian announced on May 29, 2026, that it is fully CLI-enabled and open-sources its CLI project. This move drives a full-stack integration transformation for AI Agent access and develop</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">边缘侧大模型突破！Liquid AI开源混合专家模型LFM2.5</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">人工智能初创公司Liquid AI发布并开源了边缘侧大模型LFM2.5-8B-A1B，专为消费级硬件设计，优化了工具调用和安装体验</div>
+      <div class="original">
+        <div class="original-title">Breakthrough in Edge-side Large Models! Liquid AI Opens Source Hybrid Expert Model LFM2.5</div>
+        <div class="original-summary">Artificial intelligence startup Liquid AI has released and open-sourced the edge-side large model LFM2.5-8B-A1B, specifically designed for consumer-grade hardware, with optimized tool calling and inst</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">提前布局！Mistral AI CEO表示自研芯片是必然趋势</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">欧洲最大AI初创公司Mistral AI的CEO表示，开发定制AI芯片是长期趋势。随着大模型对算力需求的激增，科技巨头和独角兽企业</div>
+      <div class="original">
+        <div class="original-title">Preparation in Advance! The CEO of Mistral AI Says Developing Their Own Chips Is Inevitable</div>
+        <div class="original-summary">The CEO of Europe&#x27;s largest AI startup, Mistral AI, stated that developing custom AI chips is a trend in the long term. With the surge in computing power demand for large models, tech giants and unico</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">争议！美国最强模型Opus 4.8被指蒸馏中国开源大模型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">美国大模型公司Anthropic发布的Claude Opus 4.8在多项排名中表现优异，但被曝存在认知混淆问题。网友通过API测试发现</div>
+      <div class="original">
+        <div class="original-title">Controversial! The US&#x27;s Strongest Model Opus 4.8 Is Accused of Being a Distilled Version of a Chinese Open-Source Large Model</div>
+        <div class="original-summary">The US large model company Anthropic released Claude Opus 4.8, which performed well in multiple rankings, but was exposed to have cognitive confusion issues. Internet users found through API testing t</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">小米宣布MiMo-V2-Pro/Omni将于2026年6月停服，全面切换至V2.5系列</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">小米宣布旧版MiMo-V2-Pro/Omni模型将于2026年6月30日停服，升级至MiMo V2.5系列。MiMo-V2-Pro将迁移至V2.5-Pro，MiMo-V2-Omni将迁移</div>
+      <div class="original">
+        <div class="original-title">Xiaomi announced that MiMo-V2-Pro/Omni will be discontinued in June 2026, and will fully switch to the V2.5 series</div>
+        <div class="original-summary">Xiaomi announced that the old version of MiMo-V2-Pro/Omni model will be discontinued on June 30, 2026, and upgraded to the MiMo V2.5 series. The MiMo-V2-Pro will be migrated to V2.5-Pro, and MiMo-V2-O</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">Step 3.7 Flash发布：Agent效率新时代真正来临</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">今天，开源模型Step 3.7 Flash正式发布，采用Apache 2.0许可开源权重，直接解决Agent时代效率、可靠性等核心痛点</div>
+      <div class="original">
+        <div class="original-title">Step 3.7 Flash Launches: The New Era of Agent Efficiency Has Truly Arrived</div>
+        <div class="original-summary">Today, the open-source model Step 3.7 Flash was officially released, offering weights under the Apache 2.0 license, directly addressing core pain points in the Agent era such as efficiency, reliabilit</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">微软将在下周Build大会上推出多款自研代码及多场景AI模型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">微软计划在下周旧金山Build大会上推出多款自研AI模型，重点推出一款高性价比的代码专用模型，以应对竞争</div>
+      <div class="original">
+        <div class="original-title">Microsoft to Launch New Self-Developed Code and Multi-Scenario AI Models at Next Week&#x27;s Build Conference</div>
+        <div class="original-summary">Microsoft plans to launch multiple self-developed AI models at next week&#x27;s Build conference in San Francisco, with a focus on introducing a high-cost-performance code-specific model to counter the ero</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://koenvangilst.nl/lab/mistral-ai-now-summit" target="_blank" rel="noopener">Mistral AI Now峰会笔记</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">377 points by vnglst | 155 comments</div>
+      <div class="original">
+        <div class="original-title">Notes from the Mistral AI Now Summit</div>
+        <div class="original-summary">377 points by vnglst | 155 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">4大顶尖模型被扔进虚拟小镇求生，GPT全员饿死，Grok四天灭世</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元；滴滴回应“乘客车内排泄”</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">上海大模型龙头，启动A股上市</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">实测 Claude Opus 4.8：活干得更漂亮了，话说得更难听了</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">清华有了新老师：黄仁勋</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">1400亿Agent入场，“流量”这条护城河要塌了</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">4nm！比亚迪自研AI芯片来了：制程对齐英伟达，算力拉爆特斯拉</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">梦瑶 昨天 15:02</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">清华系团队给大模型织了一张“智能算力电网”</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text">ChatGPT移动端支持Codex远程控制功...</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831073348855433?f=rss" target="_blank" rel="noopener">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元；滴滴回应“乘客车内排泄”</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">今日热点导览 黄仁勋披露“赶飞机”细节，特朗普要出发时来电话 国内航线燃油附加费6月5日起首次下调 铁路将实施新规：违规乘车拒不补票将被限制购票 iPhone 17系列中国销量破3000万台，Pro Max版占近一半 SpaceX据悉将IP</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3830545234552452?f=rss" target="_blank" rel="noopener">连续15年披露ESG报告，自然堂开始把“可持续”做成一门生意｜最前线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">在中国美妆行业增长放缓、价格竞争加剧的背景下，越来越多品牌开始重新审视“可持续发展”这件事的商业意义。 5月26日，自然堂集团发布《2025年度可持续发展报告》，这是其连续第15年披露ESG相关内容。相比早期以公益、环保为主的企业社会责任叙</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831448811169414?f=rss" target="_blank" rel="noopener">深圳楼市新政满月，一二手房成交同比增33%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">深圳楼市新政满月。4月29日，深圳发布楼市优化新政，核心措施包括分区松绑限购、提高公积金贷款额度等。在业内人士看来，3月、4月楼市“小阳春”后，5月市场交易通常会惯性回落，但深圳楼市今年的情况有所不同。据深圳贝壳研究院监测，截至5月27日，</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28470" target="_blank" rel="noopener">Pitch Agent</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">秒级生成品牌一致的演示文稿</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831444816684681?f=rss" target="_blank" rel="noopener">苏州：1—4月规模以上工业增加值同比增长9.8%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">苏州市统计局发布数据，1—4月，苏州市规模以上工业增加值同比增长9.8%。规模以上工业总产值16126.5亿元，同比增长7.3%。34个工业行业大类中，有27个行业产值同比增长，行业增长面达79.4%，其中16个行业产值增速超8%。制造业高端化持续推进。规模以上高新技术产业产值9164.6亿元，同比增长11.7%，其中航空航天制造业、电子及通讯设备制造业、医药制造业、仪器仪表制造业产值分别增长23</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831333621933705?f=rss" target="_blank" rel="noopener">深圳网约车市场已饱和 官方发布风险提示</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">近日，深圳市交通运输局发布，2026年4月份深圳市网约车行业运营动态与风险提示，当前市场总体已饱和，4月全市网约车日均单车完成订单量约为13.01单。 官方郑重提醒，拟从业者应充分调研，理性决策，并警惕六大风险：一是部分平台采用“上班/保底模式”代收流水，公司经营不善将导致司机受损； 二是未获授权的中间商易引发纠纷；三是警惕“月入过万”等虚假广告，避免退车违约；四是认清“无证不罚”骗局，无证营运将</div>
+    </div>
+    <div class="card" data-cat="model">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831356538529409?f=rss" target="_blank" rel="noopener">海光信息完成阶跃星辰Step 3.7 Flash适配</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🤖 模型与技术</span>
+      </div>
+      <div class="summary">36氪获悉，5月29日，阶跃星辰发布Step 3.7 Flash，海光团队依托DTK异构计算平台与全栈软件栈，于发布当天即完成全流程适配与深度调优，实现“发布即适配、适配即高效”。即日起，开发者即可在海光平台上高效运行该模型，快速搭建多模态Agent、智能代码助手和复杂工作流应用，大幅降低接入与编排成本。</div>
+    </div>
+  </div>
+  <div class="category" id="cat-business">
+        <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">三倍增长！企业AI搜索独角兽Glean年收入突破3亿美元</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">企业AI搜索初创公司Glean宣布其年化收入超过3亿美元，在短短15个月内从1亿美元增长了两倍。此前在&quot;企业谷歌&quot;领域几乎无人能敌</div>
+      <div class="original">
+        <div class="original-title">Triples! Enterprise AI Search Unicorn Glean Surpasses $300 Million in Annual Revenue</div>
+        <div class="original-summary">Enterprise AI search startup Glean announced its annualized revenue exceeded $300 million, tripling from $100 million just 15 months ago. Previously nearly unchallenged in the &#x27;enterprise Google&#x27; spac</div>
+      </div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">总投资10亿元，锦瑞汽车智能装备制造总部基地项目落地合肥</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text">36氪获悉，5月30日，广汽资本宣布，已完成对领伟创新智能系统（浙江）有限公司（下称领伟创新）的投资。据介绍，领伟创新已进入广汽集团核心供应链，为广汽埃安、广汽昊铂核心车型配套非晶定子铁芯。原文链接</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.aibase.com/news/28475" target="_blank" rel="noopener">Oculus创始人新作！对话式AI新星Sesame上线iOS应用，主打边想边说</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.aibase.com/news/28473" target="_blank" rel="noopener">科技圈大洗牌：MiniMax企业客户超百万，长鑫3D叩开港股大门</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831135917107075?f=rss" target="_blank" rel="noopener">36氪首发 | 服务富士康，半年营收超两千万的机器人解决方案商完成天使轮融资</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">作者 | 乔钰杰 编辑 | 袁斯来 硬氪获悉，乘物机器人（深圳）有限公司（以下简称“乘物机器人”）近日完成天使轮融资，由中国台湾工业自动化与智能机器人解决方案领域龙头企业和椿科技战略投资，华君资本担任独家财务顾问。 乘物机器人成立于2025</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831607848363912?f=rss" target="_blank" rel="noopener">新包装矿泉水停止销售，胖东来：系设计方面重大失误，正重新设计</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">5月29日晚，许昌市胖东来超市有限公司发文表示：胖东来新包装DL饮用天然矿泉水，在上市前发现与市面上现有同品类产品的瓶型外观有视觉近似的可能，我们立即暂停上市并主动与相关品牌生产商进行沟通，经双方沟通后于5月10日上市。此次出现的情况是我们</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831456281110145?f=rss" target="_blank" rel="noopener">广汽资本完成对领伟创新投资</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">36氪获悉，5月30日，广汽资本宣布，已完成对领伟创新智能系统（浙江）有限公司（下称领伟创新）的投资。据介绍，领伟创新已进入广汽集团核心供应链，为广汽埃安、广汽昊铂核心车型配套非晶定子铁芯。</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28473" target="_blank" rel="noopener">Revolte</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">面向软件工程的AI</div>
+    </div>
+    <div class="card" data-cat="business">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831334882912134?f=rss" target="_blank" rel="noopener">龙行天下IPO申请获受理</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">💼 商业与融资</span>
+      </div>
+      <div class="summary">上交所官网显示，5月29日，广东龙行天下科技股份有限公司（简称“龙行天下”）申报沪市主板IPO申请获受理，保荐机构为招商证券。资料显示，公司主营业务为运动鞋履的开发设计、生产与销售。2025年，公司实现营业收入58.34亿元，扣非后归母净利润为2.44亿元。（新浪财经）</div>
+    </div>
+  </div>
+  <div class="category" id="cat-industry">
+        <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">携手OpenAI！三菱UFJ金融集团全面推进AI转型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">三菱UFJ金融集团（MUFG）宣布已为其约35,000名员工全面部署ChatGPT Enterprise，开启向&quot;AI原生&quot;公司的深度转型之路。</div>
+      <div class="original">
+        <div class="original-title">Partnering with OpenAI! Mitsubishi UFJ Financial Group Promotes Full AI Transformation</div>
+        <div class="original-summary">Mitsubishi UFJ Financial Group (MUFG) announced that it has fully deployed ChatGPT Enterprise for its approximately 35,000 employees, embarking on a deep transformation toward an &#x27;AI-native&#x27; company. </div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">科技圈大洗牌：MiniMax企业客户超百万，长鑫3D叩开港股大门</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">科技行业两大趋势：AI应用公司MiniMax表现强劲，全球企业和开发者客户超100万，半年增长5倍；</div>
+      <div class="original">
+        <div class="original-title">The Tech World is Changing: MiniMax&#x27;s Business Customers Exceed 1 Million, Changxiang 3D Opens the Door to the Hong Kong Stock Market</div>
+        <div class="original-summary">Two major trends in the tech industry: AI application company MiniMax has shown strong performance, with global enterprise and developer customers exceeding 1 million, growing 5 times in half a year, </div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">鹰眼2.0来了！NBA将引入AI系统取代人工界外判定</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">NBA宣布引入AI技术来自动化界外判定。利用球场周围的高清摄像头与AI协作，将即时提供准确判定</div>
+      <div class="original">
+        <div class="original-title">Hawk Eye 2.0 Is Here! NBA Will Introduce an AI System to Replace Manual Out-of-Bounds Calls</div>
+        <div class="original-summary">The NBA announced the introduction of AI technology to automate out-of-bounds calls. Utilizing high-definition cameras around the court and AI collaboration, it will instantly provide accurate calls, </div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.deadcarl.com/p/the-kaiser-and-a-mediocre-man-theory" target="_blank" rel="noopener">凯撒与&quot;平庸之人&quot;历史理论</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">8 points by baud147258 | 1 comments</div>
+      <div class="original">
+        <div class="original-title">The Kaiser and a &quot;Mediocre Man&quot; Theory of History</div>
+        <div class="original-summary">8 points by baud147258 | 1 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/" target="_blank" rel="noopener">代数效应入门：面向普通开发者</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">57 points by satvikpendem | 32 comments</div>
+      <div class="original">
+        <div class="original-title">Algebraic Effects for the Rest of Us</div>
+        <div class="original-summary">57 points by satvikpendem | 32 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning" target="_blank" rel="noopener">Shift将免费清洁房屋以训练未来机器人</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">142 points by evilsimon | 190 comments — 一家初创公司提供免费家政清洁服务，以此收集训练数据来训练家用机器人。</div>
+      <div class="original">
+        <div class="original-title">Shift will clean homes for free to train future robots</div>
+        <div class="original-summary">142 points by evilsimon | 190 comments</div>
+      </div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">天津发布2025年度人工智能十大应用标杆场景，总投资超6亿元</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">集采百元一盒药，药店竟卖3960元，央视调查“高价药”疑云</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">本站由 阿里云 提供计算与安全服务 违法和不良信息、未成年人保护举报电话：010-89650707 举报邮箱：jubao@36kr.com 网上有害信息举报</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">© 2011~2026 北京多氪信息科技有限公司 | 京ICP备12031756号-6 | 京ICP证150143号 | 京公网安备11010502057322号</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">PPIO入选非凡产研「2026 Global AI 100」，以AI实力领跑出海新浪潮</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">DeepSeek资本枷锁如何破解</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">轻信豆包亏600元 AI幻觉已成生活隐形隐患</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text">宇树具身智能体验馆亚洲首店上海开业 汇聚多款机型</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">CNMO · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831348302358408?f=rss" target="_blank" rel="noopener">当美妆品牌走进运动场：欧莱雅把校园公益做成了一场“运动实验”｜最前线</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月29日，欧莱雅中国在复旦大学启动2026年度“有意思青年”高校公益计划，并首次以校园运动会形式开启新一年的项目活动。活动现场，乒乓球运动员马龙、篮球运动员杨力维、足球运动员赵丽娜等体育界人士与高校学生展开互动，欧莱雅同时宣布向中国青少年</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831673401190273?f=rss" target="_blank" rel="noopener">6.24亿日元，乐奇AI眼镜创日本Makuake平台众筹新纪录</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">北京时间5月30日，乐奇AI眼镜在日本第一的众筹平台Makuake创下了全新纪录，截至目前，该项目已累计斩获超6.24亿日元的销售额，成为同品类历史最高众筹额，刷新了该平台成立13年以来的全品类最高销售纪录。据了解，Rokid的此次众筹将于</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831601284982660?f=rss" target="_blank" rel="noopener">央企科技成果产业化联合体成立</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">中央企业科技成果产业化联合体（下称“联合体”）5月30日在北京成立。该联合体由国务院国资委指导、国家能源集团牵头组建、全体中央企业参与共建，并广泛吸纳科研院所、高校、产业链上下游骨干企业、创新型民营企业等多元主体，聚焦国家战略部署，推动科技</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831572328785796?f=rss" target="_blank" rel="noopener">中国汽车流通协会奔驰、宝马、保时捷三大品牌经销商分会正式成立</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">2026年5月27日，在“2026中国汽车经销商大会”召开期间，中国汽车流通协会宣布成立奔驰经销商分会、宝马经销商分会、保时捷经销商分会，并分别召开了成立大会。（证券时报）</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831568959989637?f=rss" target="_blank" rel="noopener">乘联分会崔东树：2026年1-4月中国占世界汽车份额31%</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月30日，乘联分会秘书长崔东树发文表示，2025年全球汽车销量9689万台，同比增长6%。2026年4月的世界汽车销量达到799万台，同比增4%。2026年1-4月世界汽车销量达到3096万台，同比增1%。随着美国、中国车市的年初相对负增</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831494431532931?f=rss" target="_blank" rel="noopener">6月5日起国内航线燃油附加费将下调</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">记者从多家航空公司了解到，自2026年6月5日起销售的国内航线客票燃油附加费将下调。调整标准为成人旅客：800公里以上航线每位旅客收取150元燃油附加费，800公里（含）以下航线每位旅客收取80元燃油附加费。相较于调整前降低了20元和10元</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831493084063367?f=rss" target="_blank" rel="noopener">宁德时代：巧克力换电累计落站1650座 2026年预计超3000座</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">据宁德时代消息，截至2026年5月，巧克力换电站在全国范围内落1650座，覆盖127城。不到半年，新增落站超600站、覆盖82城。高速网络建设方面，计划2027年将形成“11纵9横”高速换电网络。根据规划，2026年底巧克力换电站将突破30</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.qbitai.com/2026/05/425511.html" target="_blank" rel="noopener">刚刚，国产AI自己造了AI，全球首例！
+2026-05-26</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">量子位 · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary"></div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.aibase.com/news/28478" target="_blank" rel="noopener">SpotsNow</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">追踪谁在播客上做广告及广告活动洞察</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831338125076103?f=rss" target="_blank" rel="noopener">哈总统：欧亚经济联盟内贸易额今年将破千亿美元</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">哈萨克斯坦总统托卡耶夫29日说，欧亚经济联盟保持良好发展势头，今年联盟内部贸易额预计同比增长6%，将突破1000亿美元。欧亚经济委员会最高理事会会议29日在阿斯塔纳举行，托卡耶夫主持并致辞。他说，为增强联盟内部稳定性，深化经济一体化并提高竞争力，欧亚经济联盟将把加强数字基础一体化、打造数字欧亚交通走廊、实现工农业数字化转型以及大力发展人工智能当作优先发展方向。俄罗斯总统普京说，紧密的欧亚一体化能为</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831275074348672?f=rss" target="_blank" rel="noopener">神州数码63岁董事长天价离婚案有了新进展</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">5月29日，神州数码披露了关于公司控股股东、实际控制人涉及诉讼的进展公告。根据公告内容，近日公司收到控股股东、实际控制人郭为通知，北京市第一中级人民法院已就上诉人郭郑俐不服北京市海淀区人民法院一审判决提起的上诉事宜作出《民事判决书》（（2026）京01民终446号），判决如下：驳回上诉，维持原判。本判决为终审判决。（澎湃新闻）</div>
+    </div>
+    <div class="card" data-cat="industry">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831212862137990?f=rss" target="_blank" rel="noopener">国家能源局：2026年4月，核发绿证2.37亿个</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">🏭 产业应用</span>
+      </div>
+      <div class="summary">2026年4月，国家能源局核发绿证2.37亿个，涉及可再生能源发电项目181.48万个，其中可交易绿证1.77亿个，占比74.85%。本期核发2026年3月可再生能源电量对应绿证1.71亿个，占比72.16%。2026年4月，全国交易绿证7110万个，其中绿色电力交易绿证2972万个。2026年4月，全国单独交易绿证4138万个，其中电量生产年为2024年的绿证交易422万个，平均价格1.12元/</div>
+    </div>
+  </div>
+  <div class="category" id="cat-tools">
+        <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text">Grok Build 0.2.7重大更新：/usage和/login上线，多子代理共享终端+图像理解大幅增强</div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">AIbase · 2026-05-30</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">xAI的AI编码工具Grok Build发布0.2.7版本，重点优化用户管理和多代理协作体验，提升图像处理能力和跨平台可用性</div>
+      <div class="original">
+        <div class="original-title">Grok Build 0.2.7 Major Update: /usage and /login Now Available, Multi-Sub-Proxy Shared Terminal + Significant Enhancement in Image Understanding</div>
+        <div class="original-summary">xAI&#x27;s AI coding tool Grok Build releases version 0.2.7, focusing on optimizing user management and multi-proxy collaboration experience, improving image processing capabilities and cross-platform usab</div>
+      </div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/step-3-5-flash" target="_blank" rel="noopener">MoDev</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-30</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">为手机打造的AI开发环境</div>
+      <div class="original">
+        <div class="original-title">Step 3.7 Flash</div>
+        <div class="original-summary">Flash-speed agents model that can see and act</div>
+      </div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/wingbits-ai" target="_blank" rel="noopener">Wingbits AI</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-11</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI agents for real-time aircraft monitoring and alerts
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/openstatus-2" target="_blank" rel="noopener">Openstatus MCP Health Checker</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-28</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Test MCP servers like a real AI client, not just a ping
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/wandesk-ai" target="_blank" rel="noopener">Wandesk</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2025-12-05</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Build Your Own AI Desktop 
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/ava-studio" target="_blank" rel="noopener">Ava Studio</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-19</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Your AI creative team for video ads
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/artisan-3" target="_blank" rel="noopener">Ava 2.0</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-27</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Your AI BDR that runs outbound sales autonomously
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/firecoach" target="_blank" rel="noopener">Firecoach AI</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-25</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI roleplays that turn reps into top performers
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/mcp-bridge-by-appfactor" target="_blank" rel="noopener">MCP Bridge by Appfactor</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-04-01</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Connect any API to any AI agent
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/hyper-11" target="_blank" rel="noopener">Hyper: Self-driving Company Brain</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-27</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Turn your AI agents from interns to veterans
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/modev" target="_blank" rel="noopener">MoDev</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-13</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">The AI dev environment built for your phone.
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/drafted-4" target="_blank" rel="noopener">Drafted</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-28</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Design a home instantly with AI
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/spotsnow" target="_blank" rel="noopener">SpotsNow</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-13</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Track who&#x27;s advertising across podcasts w/ campaign insights
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/revolte" target="_blank" rel="noopener">Revolte</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-12</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">AI for Software Engineering
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/pitch" target="_blank" rel="noopener">Pitch Agent</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-25</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">On-brand presentations, generated in seconds
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+    <div class="card" data-cat="tools">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.producthunt.com/products/memori-labs" target="_blank" rel="noopener">Memori</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">ProductHunt · 2026-05-07</span>
+        <span class="tag">🔧 工具与开源</span>
+      </div>
+      <div class="summary">Persistent memory from agent trace, not just conversation
+          
+          
+            Discussion
+            |
+            Link</div>
+    </div>
+  </div>
+  <div class="category" id="cat-policy">
+        <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30338v1" target="_blank" rel="noopener">REST3D: Reconstructing Physically Stable 3D Scenes from a Single Image</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Xiaoxuan Ma, Jiashun Wang, Nicolas Ugrinovic — 从单张图像重建物理稳定的3D场景。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30335v1" target="_blank" rel="noopener">Locally Coherent, Globally Incoherent: Bounding Compositional Incoherence in Multi-Component LLM Agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Anany Kotawala — 研究多组件LLM Agent中的组合不一致性问题。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30329v1" target="_blank" rel="noopener">SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Sy-Tuyen Ho, Minghui Liu, Huy Nghiem — 评估AI科学家能否区分好的与不好的研究想法。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30326v1" target="_blank" rel="noopener">RoboWits: Unexpected Challenges for Robotic Creative Problem Solving</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Chunru Lin, Hongxin Zhang, Fenghao Yu — 机器人创造性问题解决中的意外挑战。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30323v1" target="_blank" rel="noopener">In-Context Reward Adaptation for Robust Preference Modeling</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Zhenyu Sun, Zheng Xu, Ermin Wei — 基于上下文奖励自适应的稳健偏好建模。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30322v1" target="_blank" rel="noopener">Gram: Assessing sabotage propensities via automated alignment auditing</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">David Lindner, Victoria Krakovna, Sebastian Farquhar — 通过自动化对齐审计评估破坏倾向。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30314v1" target="_blank" rel="noopener">SpecBench: Evaluating Specification-Level Reasoning for Software Engineering LLM Agents</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Grant Hamblin, Kevin Song, Zhanda Zhu — 评估软件工程LLM Agent的规范级推理能力。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30303v1" target="_blank" rel="noopener">Generalizing a Highly Configurable Analytics Pipeline to Replicate and Support Educational Research Across Multiple Domains</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Yallen Bai, Ploy Thajchayapong, Ashok Goel — 将高度可配置的分析管道泛化以跨领域复现和支持教育研究。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30339v1" target="_blank" rel="noopener">Benchmarking Single-Factor Physical Video-to-Audio Generation</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Tingle Li, Siddharth Gururani, Kevin J. Shih — 单因素物理视频到音频生成的基准测试。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30337v1" target="_blank" rel="noopener">Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Alaa Khamis, Alaa Maalouf — 通过凸重建和梯度缓存实现高效的LLM测试时微调。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30336v1" target="_blank" rel="noopener">Fairness-Aware Federated Learning with Trajectory Shapley Value</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Daniel Kuznetsov, Ziqi Wang — 基于轨迹Shapley值的公平感知联邦学习。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="http://arxiv.org/abs/2605.30330v1" target="_blank" rel="noopener">When, why, and how do diffusion posterior samplers fail? A finite-sample lens</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv · 2026-05-28</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">Benjamin A. Burns, Sara Fridovich-Keil — 扩散后验采样器何时、为何以及如何失败？有限样本视角。</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3831071878358659?f=rss" target="_blank" rel="noopener">最前线｜中科创星第十二期“好望角科学沙龙”聚焦“太空智驾”，卫星将从被动响应走向自主决策</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">“太空智驾时代将到来，卫星和星座会如同L4级自动驾驶汽车一样，在太空具备自主环境感知、任务规划和机动决策能力。” 5月28日，在上海举行的“好望角科学沙龙”上，中国科学院西安光学精密机械研究所（简称“西安光机所”）副所长邵晓鹏在演讲中提出了</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3830580716365449?f=rss" target="_blank" rel="noopener">千里科技再添筹码，或将整合吉利辅助驾驶团队｜36氪独家</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">为助力千里科技成为“第二个华为”，吉利决定为它增添新的技术筹码。 36氪从多位产业人士处了解到，吉利中央研究院数百人的辅助驾驶团队，将在近期被整合入千里科技。目前，吉利研究院辅助驾驶团队，已有人收到了转移合同的通知。 有接近吉利的知情人士告</div>
+    </div>
+    <div class="card" data-cat="policy">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3831271278569089?f=rss" target="_blank" rel="noopener">国务院正式批复同意 粤港澳游艇自由行要来了</a></div>
+        <div class="expand-icon">▼</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr · 2026-05-30</span>
+        <span class="tag">📚 学术与政策</span>
+      </div>
+      <div class="summary">5月29日，国务院批复同意自即日起在粤港澳大湾区内地九市暂时调整实施《中华人民共和国海关事务担保条例》《中华人民共和国船舶登记条例》的有关规定，对经粤港澳大湾区内地九市指定口岸暂时入出内地且仅限在粤港澳大湾区内地九市自由行的港澳游艇，实行免担保和临时船舶国籍登记政策。（央视新闻）</div>
+    </div>
+  </div>
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-05-30</div>
+<script>
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
