@@ -1,0 +1,3480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>🌙 AI 晚报 · 5月31日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 32px 20px 24px;
+  border-radius: 0 0 24px 24px;
+  margin: 0 -16px 20px;
+  text-align: center;
+}
+.header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.header .subtitle { font-size: 14px; opacity: 0.9; }
+.header .stats { font-size: 13px; opacity: 0.8; margin-top: 8px; }
+.tab-bar {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 6px;
+  padding: 8px 0 12px;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 0 0 auto;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+  font-weight: 500;
+}
+.tab-btn:hover { border-color: #667eea; color: #667eea; }
+.tab-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+  font-weight: 600;
+}
+.tab-count { font-size: 11px; opacity: 0.8; margin-left: 3px; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.news-card {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.news-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.card-header {
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.card-title-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.card-title-text {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
+.card-toggle {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #999;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s;
+  margin-top: 1px;
+}
+.card-header.expanded .card-toggle {
+  transform: rotate(45deg);
+  background: #667eea;
+  color: white;
+}
+.card-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #999;
+  flex-wrap: wrap;
+}
+.card-source {
+  background: #f0f2ff;
+  color: #667eea;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.card-time { color: #aaa; }
+.card-cat-tag {
+  font-size: 11px;
+  color: #764ba2;
+  background: #f3eeff;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 16px;
+}
+.card-body.open {
+  max-height: 2000px;
+  padding: 0 16px 16px;
+}
+.card-summary {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+.card-summary p { margin-bottom: 8px; }
+.hn-body {
+  background: #f8f9ff;
+  border-left: 3px solid #667eea;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: #555;
+}
+.authors {
+  font-size: 12px;
+  color: #888;
+  margin: 6px 0;
+}
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+.card-link:hover { text-decoration: underline; }
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+.footer a { color: #667eea; text-decoration: none; }
+@media (max-width: 480px) {
+  .header { padding: 24px 16px 20px; }
+  .header h1 { font-size: 20px; }
+  .card-title-text { font-size: 14px; }
+  .tab-btn { padding: 6px 12px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🌙 AI 晚报</h1>
+  <div class="subtitle">2026-05-31 · 今日 AI 大事回顾</div>
+  <div class="stats">共 87 条新闻 · 覆盖 7 个来源</div>
+</div>
+
+<div class="container">
+
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab(0)">🏠 全部 <span class="tab-count">(87)</span></button>
+  <button class="tab-btn" onclick="switchTab(1)">🤖 🤖 模型与技术 <span class="tab-count">(24)</span></button>
+  <button class="tab-btn" onclick="switchTab(2)">💼 💼 商业与融资 <span class="tab-count">(5)</span></button>
+  <button class="tab-btn" onclick="switchTab(3)">🏭 🏭 产业应用 <span class="tab-count">(23)</span></button>
+  <button class="tab-btn" onclick="switchTab(4)">🔧 🔧 工具与开源 <span class="tab-count">(6)</span></button>
+  <button class="tab-btn" onclick="switchTab(5)">📚 📚 学术与政策 <span class="tab-count">(29)</span></button>
+</div>
+<div class="tab-content active" id="tab0">
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">To have a moral stance on AI is to be an outcast, and it sucks</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>64 points by unknown | 0 comments</p>
+      <a href="https://musings.martyn.berlin/to-have-a-moral-stance-on-ai-is-to-be-an-outcast-and-it-sucks" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小米宣布 MiMo-V2-Pro/Omni 将于2026年6月下线，全面切换 V2.5系列</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28469" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Grok Build 0.2.7 重磅更新：/usage、/login 上线，多子代理共享终端 + 图像理解大提升</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28468" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AI卷向电商治理！拼多多上半年出台 40 余项举措，高科技作弊成打击重点</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28458" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小红书 PC 端上线 AI 搜索助手点点：基于海量真实笔记支持多轮对话与收藏导入</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28453" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">速度翻倍！阶跃星辰开源 Step 3.7 Flash 大模型</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28449" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">吊打GPT-5.5！Claude Opus 4.8 上线 价格暴降三分之二</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28444" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">记忆密度升45%、Token省35%!!腾讯混元发布最强记忆插件 Hy-Memory</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28443" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">当美妆品牌走进运动场：欧莱雅把校园公益做成了一场运动实验</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5月29日，欧莱雅中国在复旦大学启动2026年度有意思青年高校公益计划，并首次以校园运动会形式开启新一年的项目活动。</p>
+      <a href="https://36kr.com/p/3831348302358408?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">最前线｜中科创星第十二期&quot;好望角科学沙龙&quot;聚焦&quot;太空智驾&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>&quot;太空智驾时代将到来，卫星和星座会如同L4级自动驾驶汽车一样，在太空具备自主环境感知、任务规划和机动决策能力。&quot;</p>
+      <a href="https://36kr.com/p/3831071878358659?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">千里科技再添筹码，或将整合吉利辅助驾驶团队｜36汚独家</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>为助力千里科技成为“第二个华为”，吉利决定为它增添新的技术筹码</p>
+      <a href="https://36kr.com/p/3830580716365449?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">36氪首发｜“穿越者”载人航天公司完成新一轮亿元融资，某头部互联网战投领投，探路者等跟投</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，北京穿越者载人航天科技有限公司（以下简称“穿越者”）近日完成Pre-A轮亿元融资</p>
+      <a href="https://36kr.com/p/3830254963517318?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">汚星晚报 ｜联想创投等入股诺仕机器人；苹果悉将在WWDC重点展示端侧AI能力；国家外汇管理局：4月中国外汇市场总计成交25.3万亿元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>大公司新闻汇总</p>
+      <a href="https://36kr.com/p/3830194503526277?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>黄仁勋披露“赶飞机”细节；国内航线燃油附加费6月5日起首次下调；iPhone 17系列中国销量破3000万台。</p>
+      <a href="https://36kr.com/p/3831073348855433?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Automating Low-Risk Code Review at Meta: RADAR</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Chris Adams et al.</div>
+      <a href="https://arxiv.org/abs/2605.30208" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">GPIC: A Giant Permissive Image Corpus for Visual Generation</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Keshigeyan Chandrasegaran et al.</div>
+      <a href="https://arxiv.org/abs/2605.30341" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Demystifying Data Organization for Enhanced LLM Training</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Yalun Dai et al.</div>
+      <a href="https://arxiv.org/abs/2605.30334" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">When, why, and how do diffusion posterior samplers fail?</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Benjamin A. Burns et al.</div>
+      <a href="https://arxiv.org/abs/2605.30330" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Leqi Zhu et al.</div>
+      <a href="https://arxiv.org/abs/2605.30062" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Sample-Efficient Diffusion-based Reinforcement Learning with Critic Guidance</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Shutong Ding et al.</div>
+      <a href="https://arxiv.org/abs/2605.30056" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">KairosAgent: Agentic Time Series Forecasting with Fused Semantic Reasoning</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Kun Feng et al.</div>
+      <a href="https://arxiv.org/abs/2605.30002" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">MuPHI: Learning Implicit Multimodal Harm Reasoning via Semantically Grounded Reward Optimization</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Anisha Saha et al.</div>
+      <a href="https://arxiv.org/abs/2605.29951" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Does The Way You Plan Matter? An Empirical Study of Planning Representations for LLM Web Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Alejandra Zambrano et al.</div>
+      <a href="https://arxiv.org/abs/2605.29927" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Supercharging Thermal Gaussian Splatting with Depth Estimation</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Manoj Biswanath et al.</div>
+      <a href="https://arxiv.org/abs/2605.30328" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Show HN: Helios - what plug-in solar could generate for any address in Britain</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>78 points by ruaraidh | 22 comments</p>
+      <a href="https://helios.southlondonscientific.com/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">1400亿Agent入场，流量这条护城河要塌了</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5亿Tokens白送！全球首个商用AI主机发布，终于能放开烧Token了</p>
+      <a href="https://www.qbitai.com/2026/05/425881.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">ChatGPT移动端支持Codex远程控制功能</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/809024.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">宇树具身智能体验馆亚洲首店上海开业</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810163.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">OpenRouter raises $113M Series B</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>22 points by freeCandy | 0 comments</p>
+      <a href="https://openrouter.ai/announcements/series-b" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Hormuz crisis side effect: a sharp rise in container shipping rates</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>29 points by mooreds | 15 comments</p>
+      <a href="https://www.lloydslist.com/LL1157327/Hormuz-crisis-side-effect-a-sharp-rise-in-container-shipping-rates" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">帮Gemini拿下IMO金牌的关键先生，差点成了职业钢琴家</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>（可能是）大模型圈里最会弹钢琴的人</p>
+      <a href="https://www.qbitai.com/2026/05/426706.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">英伟达清华团队提出Gamma-World：世界模型从「一个人玩」到「多人共处」</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>让世界模型迈向多智能体交互仿真</p>
+      <a href="https://www.qbitai.com/2026/05/426662.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">光帆科技与腾讯出行服务达成战略合作 开启新一轮预售
+                    
+                    
+                    	
+                         量子位
+
+
+                        
+                                            	前天 19:27
+                    	
+                    		                    	
+                    
+                
+			
+			                    	
+                
+				
+                    PPIO入选非凡产研「2026 Global AI 100」，以AI实力领跑出海新浪潮
+                    
+                    
+                    	
+                         量子位
+
+
+                        
+                                            	前天 19:24
+                    	
+                    		                    	
+                    
+                
+			
+			                    	
+                
+				
+                    面壁智能「开源周」：一场定义端侧 AI 终局的系统性「亮剑」</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>端侧 AI 是一个系统性工程</p>
+      <a href="https://www.qbitai.com/2026/05/426552.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">IXI’s autofocusing lenses are almost ready to replace multifocal glasses</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>120 points by amichail | 49 comments</p>
+      <a href="https://www.engadget.com/wearables/ixis-autofocusing-lenses-multifocal-glasses-ces-2026-212608427.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">新包装矿泉水停止销售，胖东来称设计失误正重新设计</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>胖东来新包装DL饮用天然矿泉水发现与市面上现有同品类产品的瓶型外观有视觉近似的可能。</p>
+      <a href="https://36kr.com/newsflashes/3831607848363912?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Domain expertise has always been the real moat</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>14 points by aaronbrethorst | 0 comments</p>
+      <a href="https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">清华系团队给大模型织了一张&quot;智能算力电网&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426353.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">7B打败o3、GPT-5！医学AI智能体让模型学会&quot;看哪里、怎么看&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426150.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>18 points by aidangarske | 0 comments</p>
+      <a href="https://github.com/wolfSSL/wolfCOSE" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Show HN: Open Envelope – an open schema for defining AI agent teams</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>7 points by ashconway | 0 comments</p>
+      <a href="https://openenvelope.org/docs/schema/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">服务富士康，半年营收超两千万的机器人解决方案商完成天使轮融资</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>乘物机器人（深圳）有限公司近日完成天使轮融资，由中国台湾工业自动化与智能机器人解决方案领域龙头企业和椿科技战略投资。</p>
+      <a href="https://36kr.com/p/3831135917107075?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">科汚 | OPPO Reno16系列发布，“3D悬浮星球+实况随心贴”引领潮流手机新风向</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>2026年5月25日，OPPO举办“Reno Land 奇幻夜”新品发布会</p>
+      <a href="https://36kr.com/p/3830038913558147?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">我国成功发射卫星互联网技术试验卫星</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>我国在西昌卫星发射中心使用长征二号丁运载火箭，成功将卫星互联网技术试验卫星发射升空。</p>
+      <a href="https://36kr.com/newsflashes/3832495203657606?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">乐奇AI眼镜创日本Makuake平台众筹新纪录</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>乐奇AI眼镜在日本第一的众筹平台Makuake创下了全新纪录，累计斩获超6.24亿日元的销售额。</p>
+      <a href="https://36kr.com/newsflashes/3831673401190273?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">从Token无上限到全员Agent：MiniMax的AI Native组织进化实践</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426793.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Racket v9.2 is now available</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>17 points by spdegabrielle | 1 comments</p>
+      <a href="https://blog.racket-lang.org/2026/05/racket-v9-2.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">天猫618：多品牌手机集体降价，iPhone降2500元，华为降3500元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5月31日，天猫618继续加码。新发88VIP消费券，官方立减叠券7.3折；各地政府在天猫发放政府消费券，最高打8折，全国消费者可领，美妆也能用；百亿补贴超50000个爆款商品限时3倍补贴。各品类补贴全面加码，大牌手机集体降价，iPhone</p>
+      <a href="https://36kr.com/newsflashes/3832582092252808?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">智元机器人合伙人姚卯青：今年上半年智元海外收入占比已近20%</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>在BEYOND Expo 2026上，智元机器人合伙人、具身业务部总裁姚卯青采访中透露，未来海外收入将成为公司业绩的很大一块。去年全年海外收入贡献占比不到10%。今年上半年的话，这个数字已经接近20%。其中，北美、欧洲、日韩是公司计划未来进</p>
+      <a href="https://36kr.com/newsflashes/3832506045818500?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">欧洲央行管委佩雷拉：必须尽早应对通胀</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>欧洲央行管理委员会成员、葡萄牙央行行长阿尔瓦罗・桑托斯・佩雷拉周六接受采访时表示，欧洲央行应当尽早出手应对通胀问题。佩雷拉称：“当前我们的首要关切是通胀，必须密切关注各项数据。结合过往经验来看，我们需要尽早采取行动，避免通胀产生更严重的二次</p>
+      <a href="https://36kr.com/newsflashes/3832504586577798?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小米技术：MiMo-V2.5实现五大核心突破，降价后仍能实现收支平衡</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，小米MiMo大模型团队在官方技术博客发布文章，首次完整公开MiMo-V2.5系列大模型API永久降价背后的技术路径。文章称，MiMO-V2.5实现了KVCache双池+SWA-aware前缀树、GCache分布式缓存、KVCac</p>
+      <a href="https://36kr.com/newsflashes/3832525007284097?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Latest News</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/news/28481" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Selective QA over Conflicting Multi-Source Personal Memory: A Diagnostic Testbed and Method Comparison</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Tiancheng Yang, Matthias Schonlau, Ilia Sucholutsky</p>
+      <a href="http://arxiv.org/abs/2605.30087v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Discovering Cooperative Pipelines: Autoresearch for Sequential Social Dilemmas</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Víctor Gallego</p>
+      <a href="http://arxiv.org/abs/2605.30003v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Leena Mathur, Jenny T. Liang, Vasudha Varadarajan</p>
+      <a href="http://arxiv.org/abs/2605.29938v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Dongrui Liu, Yu Li, Zhonghao Yang</p>
+      <a href="http://arxiv.org/abs/2605.29801v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Improving Collaborative Storytelling with a Multi-Agent Framework Based on Large Language Models</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Arturo Valdivia, Paolo Burelli</p>
+      <a href="http://arxiv.org/abs/2605.29625v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Aditya Nawal, Manit Baser, Mohan Gurusamy</p>
+      <a href="http://arxiv.org/abs/2605.29224v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-27</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Tyler Akidau, Tyler Rockwood, Johannes Brüderl</p>
+      <a href="http://arxiv.org/abs/2605.29082v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Beyond Recall: Behavioral Specification as an Interpretive Layer for AI Personalization</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-27</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Aarik Gulaya</p>
+      <a href="http://arxiv.org/abs/2605.28969v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">MedCase-Structured: A Text-to-FHIR Dataset for Benchmarking Diagnostic Reasoning in Clinically Realistic EHR Settings</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Valentina Bui Muti, Eugénie Dulout, Ziquan Fu</p>
+      <a href="http://arxiv.org/abs/2605.30295v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Statistical Embeddings for Similarity, Retrieval, and Interpretable Alignment of Numeric Tabular Datasets</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>M. Ross Kunz, John Merickel, Keith Wilson</p>
+      <a href="http://arxiv.org/abs/2605.30289v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>A. J. Lew, Y. Cao, M. J. Buehler</p>
+      <a href="http://arxiv.org/abs/2605.30284v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Yutong Wang, Xuebo Liu, Derek F. Wong</p>
+      <a href="http://arxiv.org/abs/2605.30274v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Re-M3Dr: Rebalanced MultiModal Mean Deviation Regression</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-26</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Haojie Yin, Chengcheng Feng, Tianyi Liu</p>
+      <a href="http://arxiv.org/abs/2605.26513v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">From Affect to Complex Behavior: Advancing Multimodal Human-Centered AI at the 10th ABAW Workshop &amp; Competition</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-24</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Dimitrios Kollias, Panagiotis Tzirakis, Alan Cowen</p>
+      <a href="http://arxiv.org/abs/2605.27451v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Synheart Capacity: A Theory-Driven Physiological Representation of Cognitive Capacity Dynamics from Wearable Signals</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-23</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Yisak Debele, Henok Ademtew, Israel Goytom</p>
+      <a href="http://arxiv.org/abs/2605.24416v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AvAtar: Learning to Align via Active Optimal Transport</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-23</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Qi Yu, Ruizhong Qiu, Zhichen Zeng</p>
+      <a href="http://arxiv.org/abs/2605.24395v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Balancing Multimodal Learning through Label Space Reshaping</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-22</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Xiaoyu Ma, Weijie Zhang, Yuanhao Gao</p>
+      <a href="http://arxiv.org/abs/2605.28869v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-22</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Liangwei Nathan Zheng, Wei Emma Zhang, Olaf Maennel</p>
+      <a href="http://arxiv.org/abs/2605.27431v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Modular Multimodal Classification Without Fine-Tuning: A Simple Compositional Approach</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-20</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Herman Bergström, Aditya Mehrotra, Rahul G. Krishnan</p>
+      <a href="http://arxiv.org/abs/2605.20674v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Speech-Guided Multimodal Learning for Vocal Tract Segmentation in Real-Time MRI</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-18</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Daiqi Liu, Lukas Mulzer, Md Hasan</p>
+      <a href="http://arxiv.org/abs/2605.18466v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Cross-modal Affinity-aligned Multimodal Learning Analytics for Predicting Student Collaboration Satisfaction in Game-Based Learning</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-16</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Wen-Hsin Tsai, Chia-Ming Lee, Yuk-Ying Tung</p>
+      <a href="http://arxiv.org/abs/2605.16806v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Multimodal Learning for MIMO Beam Prediction Based on Variational Inference</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-14</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Zijian Zheng, Wenqiang Yi, Hyundong Shin</p>
+      <a href="http://arxiv.org/abs/2605.14650v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">研究人员让Grok AI模拟掌管世界 4天共犯183项罪行</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810171.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">软银承诺斥资750亿欧元在法国建设人工智能设施</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>软银承诺最高投入750亿欧元，在法国打造大型人工智能计算集群网络，该项目将成为欧洲规模最大的数据中心工程。这也是软银在美国以外完成的单笔最大规模人工智能投资。知情人士称，今年4月初法国总统马克龙与孙正义在东京共进晚餐后，双方迅速敲定了此项合</p>
+      <a href="https://36kr.com/newsflashes/3832585694193541?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">前4个月我国软件业务收入46686亿元，同比增长10.9%</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，据工信部数据，前4个月，我国软件业务收入46686亿元，同比增长10.9%。软件业利润总额5304亿元，同比增长2.2%。软件业务出口206.5亿美元，同比增长13.0%。</p>
+      <a href="https://36kr.com/newsflashes/3832525421635200?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">银轮股份：为数据中心用大马力发电机组配套大型冷却模块已量产</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36汚获悉，银轮股份在互动平台表示</p>
+      <a href="https://36kr.com/newsflashes/3832661750572930?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">美团披露公益数据：6.2亿用户助力建成超5000座乡村儿童操场</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>美团披露乡村儿童操场公益计划最新数据</p>
+      <a href="https://36kr.com/newsflashes/3832739990972038?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">我国儿童新药连续五年增长，2025年批准138个</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>国家药监局发布最新数据</p>
+      <a href="https://36kr.com/newsflashes/3832730058565512?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426819.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">刚刚，国产AI自己造了AI，全球首例！ 2026-05-26</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/425511.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Marqly 5.0</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">ProductHunt</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Your AI-Powered Bookmark Manager</p>
+      <a href="https://www.producthunt.com/products/marqly" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">浙大网新：ZH12数据中心第3个模块签署服务合同，预计总收入4.48亿元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>浙大网新公告，公司全资子公司与阿里巴巴合作建设的ZH12数据中心项目已全部完工并投入运营。</p>
+      <a href="https://36kr.com/newsflashes/3832894774011777?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">风华高科：不涉及英伟达认证及暂停接单传闻不实</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，风华高公告，经核查，公司关注到近期有媒体提及公司“针对代理商0402、0603芯片电阻、MLCC全线暂停接单”，经核查，以上信息不属实，为做好部分数字系统升级及产品结构调整，公司执行部分产品暂缓接单，截至公告日，公司已恢复接单。</p>
+      <a href="https://36kr.com/newsflashes/3832892582553221?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Token贵只因你喂给模型的垃圾太多了丨@亚马逊王晓野AIGC2026</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426970.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">GC绿十字获选韩国AI新药开发国家项目</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/809053.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">OpenAI官宣将下线o3与GPT-4.5 最快今年6月27日停用</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810177.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-content" id="tab1">
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">速度翻倍！阶跃星辰开源 Step 3.7 Flash 大模型</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28449" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">吊打GPT-5.5！Claude Opus 4.8 上线 价格暴降三分之二</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28444" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">记忆密度升45%、Token省35%!!腾讯混元发布最强记忆插件 Hy-Memory</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28443" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Demystifying Data Organization for Enhanced LLM Training</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Yalun Dai et al.</div>
+      <a href="https://arxiv.org/abs/2605.30334" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Does The Way You Plan Matter? An Empirical Study of Planning Representations for LLM Web Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Alejandra Zambrano et al.</div>
+      <a href="https://arxiv.org/abs/2605.29927" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">1400亿Agent入场，流量这条护城河要塌了</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5亿Tokens白送！全球首个商用AI主机发布，终于能放开烧Token了</p>
+      <a href="https://www.qbitai.com/2026/05/425881.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">ChatGPT移动端支持Codex远程控制功能</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/809024.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">宇树具身智能体验馆亚洲首店上海开业</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810163.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">帮Gemini拿下IMO金牌的关键先生，差点成了职业钢琴家</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>（可能是）大模型圈里最会弹钢琴的人</p>
+      <a href="https://www.qbitai.com/2026/05/426706.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">英伟达清华团队提出Gamma-World：世界模型从「一个人玩」到「多人共处」</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>让世界模型迈向多智能体交互仿真</p>
+      <a href="https://www.qbitai.com/2026/05/426662.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">清华系团队给大模型织了一张&quot;智能算力电网&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426353.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">7B打败o3、GPT-5！医学AI智能体让模型学会&quot;看哪里、怎么看&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426150.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Show HN: Open Envelope – an open schema for defining AI agent teams</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>7 points by ashconway | 0 comments</p>
+      <a href="https://openenvelope.org/docs/schema/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">从Token无上限到全员Agent：MiniMax的AI Native组织进化实践</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426793.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小米技术：MiMo-V2.5实现五大核心突破，降价后仍能实现收支平衡</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，小米MiMo大模型团队在官方技术博客发布文章，首次完整公开MiMo-V2.5系列大模型API永久降价背后的技术路径。文章称，MiMO-V2.5实现了KVCache双池+SWA-aware前缀树、GCache分布式缓存、KVCac</p>
+      <a href="https://36kr.com/newsflashes/3832525007284097?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Improving Collaborative Storytelling with a Multi-Agent Framework Based on Large Language Models</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Arturo Valdivia, Paolo Burelli</p>
+      <a href="http://arxiv.org/abs/2605.29625v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Aditya Nawal, Manit Baser, Mohan Gurusamy</p>
+      <a href="http://arxiv.org/abs/2605.29224v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>A. J. Lew, Y. Cao, M. J. Buehler</p>
+      <a href="http://arxiv.org/abs/2605.30284v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Multimodal Learning for MIMO Beam Prediction Based on Variational Inference</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-14</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Zijian Zheng, Wenqiang Yi, Hyundong Shin</p>
+      <a href="http://arxiv.org/abs/2605.14650v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">研究人员让Grok AI模拟掌管世界 4天共犯183项罪行</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810171.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">我国儿童新药连续五年增长，2025年批准138个</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>国家药监局发布最新数据</p>
+      <a href="https://36kr.com/newsflashes/3832730058565512?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AI原生时代下，让世界适应Agent，而非教AI做人 | 港大黄超@AIGC2026</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426819.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Token贵只因你喂给模型的垃圾太多了丨@亚马逊王晓野AIGC2026</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/426970.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🤖 模型与技术">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">OpenAI官宣将下线o3与GPT-4.5 最快今年6月27日停用</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🤖 模型与技术</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/810177.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-content" id="tab2">
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">36氪首发｜“穿越者”载人航天公司完成新一轮亿元融资，某头部互联网战投领投，探路者等跟投</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，北京穿越者载人航天科技有限公司（以下简称“穿越者”）近日完成Pre-A轮亿元融资</p>
+      <a href="https://36kr.com/p/3830254963517318?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">OpenRouter raises $113M Series B</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>22 points by freeCandy | 0 comments</p>
+      <a href="https://openrouter.ai/announcements/series-b" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">服务富士康，半年营收超两千万的机器人解决方案商完成天使轮融资</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>乘物机器人（深圳）有限公司近日完成天使轮融资，由中国台湾工业自动化与智能机器人解决方案领域龙头企业和椿科技战略投资。</p>
+      <a href="https://36kr.com/p/3831135917107075?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">软银承诺斥资750亿欧元在法国建设人工智能设施</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>软银承诺最高投入750亿欧元，在法国打造大型人工智能计算集群网络，该项目将成为欧洲规模最大的数据中心工程。这也是软银在美国以外完成的单笔最大规模人工智能投资。知情人士称，今年4月初法国总统马克龙与孙正义在东京共进晚餐后，双方迅速敲定了此项合</p>
+      <a href="https://36kr.com/newsflashes/3832585694193541?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="💼 商业与融资">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">前4个月我国软件业务收入46686亿元，同比增长10.9%</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">💼 商业与融资</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，据工信部数据，前4个月，我国软件业务收入46686亿元，同比增长10.9%。软件业利润总额5304亿元，同比增长2.2%。软件业务出口206.5亿美元，同比增长13.0%。</p>
+      <a href="https://36kr.com/newsflashes/3832525421635200?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-content" id="tab3">
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">To have a moral stance on AI is to be an outcast, and it sucks</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>64 points by unknown | 0 comments</p>
+      <a href="https://musings.martyn.berlin/to-have-a-moral-stance-on-ai-is-to-be-an-outcast-and-it-sucks" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小米宣布 MiMo-V2-Pro/Omni 将于2026年6月下线，全面切换 V2.5系列</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28469" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AI卷向电商治理！拼多多上半年出台 40 余项举措，高科技作弊成打击重点</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28458" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">小红书 PC 端上线 AI 搜索助手点点：基于海量真实笔记支持多轮对话与收藏导入</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28453" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">最前线｜中科创星第十二期&quot;好望角科学沙龙&quot;聚焦&quot;太空智驾&quot;</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>&quot;太空智驾时代将到来，卫星和星座会如同L4级自动驾驶汽车一样，在太空具备自主环境感知、任务规划和机动决策能力。&quot;</p>
+      <a href="https://36kr.com/p/3831071878358659?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">千里科技再添筹码，或将整合吉利辅助驾驶团队｜36汚独家</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>为助力千里科技成为“第二个华为”，吉利决定为它增添新的技术筹码</p>
+      <a href="https://36kr.com/p/3830580716365449?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">汚星晚报 ｜联想创投等入股诺仕机器人；苹果悉将在WWDC重点展示端侧AI能力；国家外汇管理局：4月中国外汇市场总计成交25.3万亿元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>大公司新闻汇总</p>
+      <a href="https://36kr.com/p/3830194503526277?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">9点1氪｜泡泡玛特大涨，段永平日赚10亿；诺基亚发布首款微聊手机，售价199元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>黄仁勋披露“赶飞机”细节；国内航线燃油附加费6月5日起首次下调；iPhone 17系列中国销量破3000万台。</p>
+      <a href="https://36kr.com/p/3831073348855433?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Show HN: Helios - what plug-in solar could generate for any address in Britain</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>78 points by ruaraidh | 22 comments</p>
+      <a href="https://helios.southlondonscientific.com/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Hormuz crisis side effect: a sharp rise in container shipping rates</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>29 points by mooreds | 15 comments</p>
+      <a href="https://www.lloydslist.com/LL1157327/Hormuz-crisis-side-effect-a-sharp-rise-in-container-shipping-rates" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">光帆科技与腾讯出行服务达成战略合作 开启新一轮预售
+                    
+                    
+                    	
+                         量子位
+
+
+                        
+                                            	前天 19:27
+                    	
+                    		                    	
+                    
+                
+			
+			                    	
+                
+				
+                    PPIO入选非凡产研「2026 Global AI 100」，以AI实力领跑出海新浪潮
+                    
+                    
+                    	
+                         量子位
+
+
+                        
+                                            	前天 19:24
+                    	
+                    		                    	
+                    
+                
+			
+			                    	
+                
+				
+                    面壁智能「开源周」：一场定义端侧 AI 终局的系统性「亮剑」</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>端侧 AI 是一个系统性工程</p>
+      <a href="https://www.qbitai.com/2026/05/426552.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">IXI’s autofocusing lenses are almost ready to replace multifocal glasses</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-17</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>120 points by amichail | 49 comments</p>
+      <a href="https://www.engadget.com/wearables/ixis-autofocusing-lenses-multifocal-glasses-ces-2026-212608427.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Domain expertise has always been the real moat</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>14 points by aaronbrethorst | 0 comments</p>
+      <a href="https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">科汚 | OPPO Reno16系列发布，“3D悬浮星球+实况随心贴”引领潮流手机新风向</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-29</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>2026年5月25日，OPPO举办“Reno Land 奇幻夜”新品发布会</p>
+      <a href="https://36kr.com/p/3830038913558147?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">我国成功发射卫星互联网技术试验卫星</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>我国在西昌卫星发射中心使用长征二号丁运载火箭，成功将卫星互联网技术试验卫星发射升空。</p>
+      <a href="https://36kr.com/newsflashes/3832495203657606?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">天猫618：多品牌手机集体降价，iPhone降2500元，华为降3500元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5月31日，天猫618继续加码。新发88VIP消费券，官方立减叠券7.3折；各地政府在天猫发放政府消费券，最高打8折，全国消费者可领，美妆也能用；百亿补贴超50000个爆款商品限时3倍补贴。各品类补贴全面加码，大牌手机集体降价，iPhone</p>
+      <a href="https://36kr.com/newsflashes/3832582092252808?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">智元机器人合伙人姚卯青：今年上半年智元海外收入占比已近20%</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>在BEYOND Expo 2026上，智元机器人合伙人、具身业务部总裁姚卯青采访中透露，未来海外收入将成为公司业绩的很大一块。去年全年海外收入贡献占比不到10%。今年上半年的话，这个数字已经接近20%。其中，北美、欧洲、日韩是公司计划未来进</p>
+      <a href="https://36kr.com/newsflashes/3832506045818500?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">欧洲央行管委佩雷拉：必须尽早应对通胀</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>欧洲央行管理委员会成员、葡萄牙央行行长阿尔瓦罗・桑托斯・佩雷拉周六接受采访时表示，欧洲央行应当尽早出手应对通胀问题。佩雷拉称：“当前我们的首要关切是通胀，必须密切关注各项数据。结合过往经验来看，我们需要尽早采取行动，避免通胀产生更严重的二次</p>
+      <a href="https://36kr.com/newsflashes/3832504586577798?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Latest News</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/news/28481" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">美团披露公益数据：6.2亿用户助力建成超5000座乡村儿童操场</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>美团披露乡村儿童操场公益计划最新数据</p>
+      <a href="https://36kr.com/newsflashes/3832739990972038?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">刚刚，国产AI自己造了AI，全球首例！ 2026-05-26</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">量子位</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.qbitai.com/2026/05/425511.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">浙大网新：ZH12数据中心第3个模块签署服务合同，预计总收入4.48亿元</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>浙大网新公告，公司全资子公司与阿里巴巴合作建设的ZH12数据中心项目已全部完工并投入运营。</p>
+      <a href="https://36kr.com/newsflashes/3832894774011777?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🏭 产业应用">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">风华高科：不涉及英伟达认证及暂停接单传闻不实</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36氪获悉，风华高公告，经核查，公司关注到近期有媒体提及公司“针对代理商0402、0603芯片电阻、MLCC全线暂停接单”，经核查，以上信息不属实，为做好部分数字系统升级及产品结构调整，公司执行部分产品暂缓接单，截至公告日，公司已恢复接单。</p>
+      <a href="https://36kr.com/newsflashes/3832892582553221?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-content" id="tab4">
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Grok Build 0.2.7 重磅更新：/usage、/login 上线，多子代理共享终端 + 图像理解大提升</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">AIbase</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://www.aibase.com/zh/news/28468" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">wolfSSL releases a new product; wolfCOSE a zero alloc C embbedded COSE stack</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>18 points by aidangarske | 0 comments</p>
+      <a href="https://github.com/wolfSSL/wolfCOSE" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">乐奇AI眼镜创日本Makuake平台众筹新纪录</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>乐奇AI眼镜在日本第一的众筹平台Makuake创下了全新纪录，累计斩获超6.24亿日元的销售额。</p>
+      <a href="https://36kr.com/newsflashes/3831673401190273?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Racket v9.2 is now available</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">HackerNews</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>17 points by spdegabrielle | 1 comments</p>
+      <a href="https://blog.racket-lang.org/2026/05/racket-v9-2.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">银轮股份：为数据中心用大马力发电机组配套大型冷却模块已量产</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>36汚获悉，银轮股份在互动平台表示</p>
+      <a href="https://36kr.com/newsflashes/3832661750572930?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="🔧 工具与开源">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Marqly 5.0</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">ProductHunt</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">🔧 工具与开源</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Your AI-Powered Bookmark Manager</p>
+      <a href="https://www.producthunt.com/products/marqly" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-content" id="tab5">
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">当美妆品牌走进运动场：欧莱雅把校园公益做成了一场运动实验</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>5月29日，欧莱雅中国在复旦大学启动2026年度有意思青年高校公益计划，并首次以校园运动会形式开启新一年的项目活动。</p>
+      <a href="https://36kr.com/p/3831348302358408?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Automating Low-Risk Code Review at Meta: RADAR</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Chris Adams et al.</div>
+      <a href="https://arxiv.org/abs/2605.30208" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">GPIC: A Giant Permissive Image Corpus for Visual Generation</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Keshigeyan Chandrasegaran et al.</div>
+      <a href="https://arxiv.org/abs/2605.30341" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">When, why, and how do diffusion posterior samplers fail?</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Benjamin A. Burns et al.</div>
+      <a href="https://arxiv.org/abs/2605.30330" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Leqi Zhu et al.</div>
+      <a href="https://arxiv.org/abs/2605.30062" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Sample-Efficient Diffusion-based Reinforcement Learning with Critic Guidance</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Shutong Ding et al.</div>
+      <a href="https://arxiv.org/abs/2605.30056" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">KairosAgent: Agentic Time Series Forecasting with Fused Semantic Reasoning</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Kun Feng et al.</div>
+      <a href="https://arxiv.org/abs/2605.30002" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">MuPHI: Learning Implicit Multimodal Harm Reasoning via Semantically Grounded Reward Optimization</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Anisha Saha et al.</div>
+      <a href="https://arxiv.org/abs/2605.29951" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Supercharging Thermal Gaussian Splatting with Depth Estimation</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><div class="authors"><strong>作者：</strong>Manoj Biswanath et al.</div>
+      <a href="https://arxiv.org/abs/2605.30328" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">新包装矿泉水停止销售，胖东来称设计失误正重新设计</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">36kr</span>
+      <span class="card-time">2026-05-30</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>胖东来新包装DL饮用天然矿泉水发现与市面上现有同品类产品的瓶型外观有视觉近似的可能。</p>
+      <a href="https://36kr.com/newsflashes/3831607848363912?f=rss" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Selective QA over Conflicting Multi-Source Personal Memory: A Diagnostic Testbed and Method Comparison</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Tiancheng Yang, Matthias Schonlau, Ilia Sucholutsky</p>
+      <a href="http://arxiv.org/abs/2605.30087v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Discovering Cooperative Pipelines: Autoresearch for Sequential Social Dilemmas</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Víctor Gallego</p>
+      <a href="http://arxiv.org/abs/2605.30003v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">When Should AI Read the Room? Public Perceptions of Social Intelligence in AI Agents</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Leena Mathur, Jenny T. Liang, Vasudha Varadarajan</p>
+      <a href="http://arxiv.org/abs/2605.29938v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Dongrui Liu, Yu Li, Zhonghao Yang</p>
+      <a href="http://arxiv.org/abs/2605.29801v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-27</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Tyler Akidau, Tyler Rockwood, Johannes Brüderl</p>
+      <a href="http://arxiv.org/abs/2605.29082v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Beyond Recall: Behavioral Specification as an Interpretive Layer for AI Personalization</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-27</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Aarik Gulaya</p>
+      <a href="http://arxiv.org/abs/2605.28969v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">MedCase-Structured: A Text-to-FHIR Dataset for Benchmarking Diagnostic Reasoning in Clinically Realistic EHR Settings</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Valentina Bui Muti, Eugénie Dulout, Ziquan Fu</p>
+      <a href="http://arxiv.org/abs/2605.30295v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Statistical Embeddings for Similarity, Retrieval, and Interpretable Alignment of Numeric Tabular Datasets</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>M. Ross Kunz, John Merickel, Keith Wilson</p>
+      <a href="http://arxiv.org/abs/2605.30289v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Loong: A Human-Like Long Document Translation Agent with Observe-and-Act Adaptive Context Selection</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-28</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Yutong Wang, Xuebo Liu, Derek F. Wong</p>
+      <a href="http://arxiv.org/abs/2605.30274v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Re-M3Dr: Rebalanced MultiModal Mean Deviation Regression</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-26</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Haojie Yin, Chengcheng Feng, Tianyi Liu</p>
+      <a href="http://arxiv.org/abs/2605.26513v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">From Affect to Complex Behavior: Advancing Multimodal Human-Centered AI at the 10th ABAW Workshop &amp; Competition</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-24</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Dimitrios Kollias, Panagiotis Tzirakis, Alan Cowen</p>
+      <a href="http://arxiv.org/abs/2605.27451v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Synheart Capacity: A Theory-Driven Physiological Representation of Cognitive Capacity Dynamics from Wearable Signals</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-23</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Yisak Debele, Henok Ademtew, Israel Goytom</p>
+      <a href="http://arxiv.org/abs/2605.24416v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">AvAtar: Learning to Align via Active Optimal Transport</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-23</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Qi Yu, Ruizhong Qiu, Zhichen Zeng</p>
+      <a href="http://arxiv.org/abs/2605.24395v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Balancing Multimodal Learning through Label Space Reshaping</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-22</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Xiaoyu Ma, Weijie Zhang, Yuanhao Gao</p>
+      <a href="http://arxiv.org/abs/2605.28869v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-22</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Liangwei Nathan Zheng, Wei Emma Zhang, Olaf Maennel</p>
+      <a href="http://arxiv.org/abs/2605.27431v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Modular Multimodal Classification Without Fine-Tuning: A Simple Compositional Approach</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-20</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Herman Bergström, Aditya Mehrotra, Rahul G. Krishnan</p>
+      <a href="http://arxiv.org/abs/2605.20674v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Speech-Guided Multimodal Learning for Vocal Tract Segmentation in Real-Time MRI</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-18</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Daiqi Liu, Lukas Mulzer, Md Hasan</p>
+      <a href="http://arxiv.org/abs/2605.18466v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">Cross-modal Affinity-aligned Multimodal Learning Analytics for Predicting Student Collaboration Satisfaction in Game-Based Learning</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">arXiv</span>
+      <span class="card-time">2026-05-16</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary"><p>Wen-Hsin Tsai, Chia-Ming Lee, Yuk-Ying Tung</p>
+      <a href="http://arxiv.org/abs/2605.16806v1" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+<div class="news-card" data-category="📚 学术与政策">
+  <div class="card-header" onclick="toggleCard(this)">
+    <div class="card-title-line">
+      <span class="card-title-text">GC绿十字获选韩国AI新药开发国家项目</span>
+      <span class="card-toggle">+</span>
+    </div>
+    <div class="card-meta">
+      <span class="card-source">CNMO</span>
+      <span class="card-time">2026-05-31</span>
+      <span class="card-cat-tag">📚 学术与政策</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="card-summary">
+      <a href="https://ai.cnmo.com/news/809053.html" target="_blank" class="card-link" onclick="event.stopPropagation();">🔗 阅读原文 →</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+  <p>🤖 由 Hermes AI 自动生成 · 数据来源：AIbase / arXiv / HackerNews / 36氪 / 量子位 / CNMO / ProductHunt</p>
+  <p><a href="https://github.com/wuchaoli/hermes-pages">GitHub</a></p>
+</div>
+
+<script>
+let currentTab = 0;
+let expandedCard = null;
+
+function switchTab(idx) {
+  // Update tabs
+  document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.tab-content').forEach((panel, i) => {
+    panel.classList.toggle('active', i === idx);
+  });
+  currentTab = idx;
+  // Close any expanded card
+  if (expandedCard) {
+    expandedCard.classList.remove('expanded');
+    const body = expandedCard.nextElementSibling;
+    if (body && body.classList.contains('card-body')) {
+      body.classList.remove('open');
+    }
+    expandedCard = null;
+  }
+}
+
+function toggleCard(header) {
+  const body = header.nextElementSibling;
+  if (!body || !body.classList.contains('card-body')) return;
+  
+  // If this card is already expanded, collapse it
+  if (header.classList.contains('expanded')) {
+    header.classList.remove('expanded');
+    body.classList.remove('open');
+    expandedCard = null;
+    return;
+  }
+  
+  // Collapse any previously expanded card
+  if (expandedCard) {
+    expandedCard.classList.remove('expanded');
+    const prevBody = expandedCard.nextElementSibling;
+    if (prevBody && prevBody.classList.contains('card-body')) {
+      prevBody.classList.remove('open');
+    }
+  }
+  
+  // Expand this card
+  header.classList.add('expanded');
+  body.classList.add('open');
+  expandedCard = header;
+}
+</script>
+
+</body>
+</html>
