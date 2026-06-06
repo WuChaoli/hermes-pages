@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-06-06</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f8f9fa; color: #333; line-height: 1.6;
+}
+.header {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff; padding: 32px 16px 24px; text-align: center;
+}
+.header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 14px; opacity: 0.9; }
+.header .stats { font-size: 13px; opacity: 0.8; margin-top: 8px; }
+.tab-bar {
+  display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: #fff; border-bottom: 1px solid #e8e8e8;
+  position: sticky; top: 0; z-index: 10;
+  scrollbar-width: none;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 0 0 auto; padding: 12px 16px; font-size: 14px;
+  white-space: nowrap; cursor: pointer; border: none;
+  background: transparent; color: #666; font-weight: 500;
+  border-bottom: 3px solid transparent; transition: all 0.2s;
+}
+.tab-btn.active { color: #ee5a24; border-bottom-color: #ee5a24; }
+.tab-btn:active { opacity: 0.7; }
+.content { max-width: 720px; margin: 0 auto; padding: 12px 12px 80px; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.card {
+  background: #fff; border-radius: 10px; margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.card:active { box-shadow: 0 1px 5px rgba(0,0,0,0.1); }
+.card-header {
+  display: flex; align-items: flex-start; padding: 14px 16px;
+  cursor: pointer; -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.card-header .source-tag {
+  flex: 0 0 auto; font-size: 11px; padding: 2px 7px;
+  border-radius: 4px; margin-right: 10px; margin-top: 2px;
+  font-weight: 600; color: #fff;
+}
+.tag-hackernews { background: #ff6600; }
+.tag-devto { background: #0a0a23; }
+.tag-arxiv { background: #b31b1b; }
+.tag-36kr { background: #007aff; }
+.tag-default { background: #666; }
+.card-header .card-title {
+  flex: 1; font-size: 15px; font-weight: 600; line-height: 1.5;
+  color: #1a1a1a;
+}
+.card-header .expand-icon {
+  flex: 0 0 20px; text-align: center; font-size: 14px;
+  color: #bbb; transition: transform 0.25s; margin-left: 8px;
+}
+.card-header .expand-icon.open { transform: rotate(180deg); }
+.card-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease; padding: 0 16px;
+}
+.card-body.open { max-height: 600px; padding: 0 16px 14px; }
+.card-body .meta {
+  font-size: 12px; color: #999; margin-bottom: 8px;
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+}
+.card-body .meta .cat-tag {
+  font-size: 11px; padding: 1px 6px; border-radius: 3px;
+  background: #f0f0f0; color: #666;
+}
+.card-body .summary {
+  font-size: 14px; color: #555; line-height: 1.7;
+  word-break: break-word;
+}
+.card-body .summary a { color: #ee5a24; text-decoration: none; }
+.card-body .summary a:active { text-decoration: underline; }
+.card-body .read-more {
+  margin-top: 8px;
+}
+.card-body .read-more a {
+  font-size: 13px; color: #ee5a24; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.footer {
+  text-align: center; font-size: 12px; color: #ccc;
+  padding: 24px 16px 32px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">2026 · 06 · 06</div>
+  <div class="stats">共 67 条 · 45 条来自 DevTo、8 条来自 HackerNews、6 条来自 arXiv、8 条来自 36kr</div>
+</div>
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" data-tab="all">🏠 全部</button>
+  <button class="tab-btn" data-tab="model">🤖 模型与技术</button>
+  <button class="tab-btn" data-tab="business">💼 商业与融资</button>
+  <button class="tab-btn" data-tab="industry">🏭 产业应用</button>
+  <button class="tab-btn" data-tab="tools">🔧 工具与开源</button>
+  <button class="tab-btn" data-tab="academic">📚 学术与政策</button>
+</div>
+<div class="content">
+<div class="tab-content active" id="tab-all">
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Leak Reveals Microsoft Wants Its AI to Be &amp;#x27;Addictive&amp;#x27;</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">24 points by  | 0 comments</div>
+      <div class="read-more"><a href="https://kotaku.com/microsoft-ai-scout-addictive-satya-nadella-404-media-copilot-2000702924" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Benchmarked 3 Local LLMs on My Laptop — Here&amp;#x27;s What the Numbers Actually Show</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/vijaya_bollu/i-benchmarked-3-local-llms-on-my-laptop-heres-what-the-numbers-actually-show-4a00" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI didn&amp;#x27;t kill coding. It killed &amp;quot;easy coding&amp;quot; - my 200 hour tutorial hell story</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/partha_roy_6353468a1f75c7/ai-didnt-kill-coding-it-killed-easy-coding-my-200-hour-tutorial-hell-story-4c3i" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Your Copilot Just Got a Local Brain</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/oneinfer/your-copilot-just-got-a-local-brain-2i2j" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Won&amp;#x27;t Replace Humans — It&amp;#x27;ll Just Make Us Pickier</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/ai-wont-replace-humans-itll-just-make-us-pickier-2iij" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">MAI-Thinking-1: Microsoft&amp;#x27;s New Reasoning Model and What It Means for Developers</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/arshtechpro/mai-thinking-1-microsofts-new-reasoning-model-and-what-it-means-for-developers-2fma" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Stop Writing MR/PR Descriptions Manually — Let AI Do It From Your Git Diff</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/solehudin5699/stop-writing-mrpr-descriptions-manually-let-ai-do-it-from-your-git-diff-4ap9" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why Enterprise AI Pilots Fail: From PoC to Production</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/why-enterprise-ai-pilots-fail-from-poc-to-production-4ipl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Detect AI Agent Hallucinations: Zero-Shot Methods</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/aws/detect-ai-agent-hallucinations-zero-shot-methods-5g81" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I built a complete AI-coding handbook in Bangla - words, tools, a story, and a 30-day path</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/dhrupo/i-built-a-complete-ai-coding-handbook-in-bangla-words-tools-a-story-and-a-30-day-path-879" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Gemma 4 makes on-device multimodal AI good enough to ship</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mjmirza/gemma-4-makes-on-device-multimodal-ai-good-enough-to-ship-12h2" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Multi-Agent Systems: Powerful Idea, Easy To Overcomplicate</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/nazar_boyko/multi-agent-systems-powerful-idea-easy-to-overcomplicate-c7k" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Hermes Agent and the Shift From Chatbots to Personal AI Runtimes</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/agntable/hermes-agent-and-the-shift-from-chatbots-to-personal-ai-runtimes-3kcg" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How I Built a Multi-Product AI API Business on Railway — FastAPI + Stripe + x402 + MCP in One Stack</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/thebrierfox/how-i-built-a-multi-product-ai-api-business-on-railway-fastapi-stripe-x402-mcp-in-one-stack-271e" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Vendor Risk Assessment: Why We Shut It Down</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/ai-vendor-risk-assessment-why-we-shut-it-down-3kc8" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why AI Models Fail in Enterprise: The 89% Problem</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/why-ai-models-fail-in-enterprise-the-89-problem-3g32" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Astronauts told to return to ISS after sheltering over air leak repairs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">252 points by janpot | 164 comments</div>
+      <div class="read-more"><a href="https://www.bbc.com/news/live/c4g44ew3g1kt" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">My Agent Skill for Test-Driven Development</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">11 points by laxmena | 0 comments</div>
+      <div class="read-more"><a href="https://www.saturnci.com/my-agent-skill-for-test-driven-development.html" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Did Claude increase bugs in rsync?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">96 points by logicprog | 91 comments</div>
+      <div class="read-more"><a href="https://alexispurslane.github.io/rsync-analysis/" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Transformers Are Inherently Succinct</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">This paper is being published at ICLR 2026 (top AI conference), and was selected as one of three outstanding papers.</div>
+      <div class="read-more"><a href="https://openreview.net/pdf?id=Yxz92UuPLQ" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I shipped a 2-line Claude Code plugin that makes it shut up</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/oler/i-shipped-a-2-line-claude-code-plugin-that-makes-it-shut-up-1hel" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Spent $200 in Two Hours Watching a Coding Agent Guess</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/muggleai/i-spent-200-in-two-hours-watching-a-coding-agent-guess-285o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">From Excel to AI: We Were Always Programmers</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/brixmavu/from-excel-to-ai-we-were-always-programmers-1b6o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Memory Freshness Is Going Mainstream. Authority Freshness Is the Next Layer. *Self-Correcting Systems — convergence signal, June 2026*</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/zep1997/memory-freshness-is-going-mainstream-authority-freshness-is-the-next-layer-self-correcting-31jj" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">NVIDIA’s new model on SageMaker, a CLI for AI pipelines, UK AI rules, and a worm threat</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/anikalp1/nvidias-new-model-on-sagemaker-a-cli-for-ai-pipelines-uk-ai-rules-and-a-worm-threat-d0m" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How LLMs Actually Work: A Developer&amp;#x27;s Mental Model</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/how-llms-actually-work-a-developers-mental-model-50nd" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">The Self-Evolving Agent: How to Build Closed-Loop AI Systems That Write and Optimize Their Own Code</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/programmingcentral/the-self-evolving-agent-how-to-build-closed-loop-ai-systems-that-write-and-optimize-their-own-code-58cc" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">From Forgotten Repo to Production: Rebuilding AdeptAI for the GitHub Finish-Up-A-Thon</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/gurudev007/from-forgotten-repo-to-production-rebuilding-adeptai-for-the-github-finish-up-a-thon-150o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I stopped fighting broken parsers — here&amp;#x27;s how I use LLMs to extract web data reliably</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-stopped-fighting-broken-parsers-heres-how-i-use-llms-to-extract-web-data-reliably-1j2h" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I spent 3 days scraping a site until I tried LLMs for data extraction</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-spent-3-days-scraping-a-site-until-i-tried-llms-for-data-extraction-41cl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">EnvArmor: AI-Aware Env Secrets Security Platform</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alimahmood/envarmor-ai-aware-env-secrets-security-platform-4ho5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why Most AI Agent Projects Fail in Production</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/devmint_0809f9c45727fefc1/why-most-ai-agent-projects-fail-in-production-69b" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">When regex fails: extracting structured data from messy text with LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-regex-fails-extracting-structured-data-from-messy-text-with-llms-4dh1" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Will junior developers disappear because of AI?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/justino_contingo/will-junior-developers-disappear-because-of-ai-50of" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How I stopped writing regex and let AI parse my messy data</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/how-i-stopped-writing-regex-and-let-ai-parse-my-messy-data-97k" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Hacker News, Sans AI</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">10 points by chilipepperhott | 0 comments</div>
+      <div class="read-more"><a href="https://elijahpotter.dev/articles/hacker-news-sans-AI" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Autonomous Operations Fail for the Same Reason Distributed Systems Fail</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/ntctech/autonomous-operations-fail-for-the-same-reason-distributed-systems-fail-139a" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I built an AI resume builder as a side project. Here is the stack and what broke.</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mateyw/i-built-an-ai-resume-builder-as-a-side-project-here-is-the-stack-and-what-broke-21bl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Give Claude Desktop Persistent Memory in 3 Minutes</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/krish2792/give-claude-desktop-persistent-memory-in-3-minutes-5a0j" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">氪星晚报 ｜日本或通过抛售美债</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">英诺科创三期基金聚焦早期科技投资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3840267945969929?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">Token大战中，华为云选择了第三条路</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">华为云在乎国产化算力系统生产的Tokens健康度</div>
+      <div class="read-more"><a href="https://36kr.com/p/3840016255126016?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">微信AI对手机厂商打开一道窄门</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">腾讯客服回应称微信与华为小米等合作推出A2A助手能力</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839575253993985?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">硬氪独家 唐文斌原力灵机并购物流机器人公司</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">具身智能企业原力灵机获智谱商汤阶跃等投资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3838835333253385?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">国家队下场做AI虚拟细胞 百曜科技完成融资</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">AI虚拟细胞平台公司百曜科技完成数千万元融资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3835460873385348?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">8点1氪 分析师曝苹果Vision Pro产品线被移除</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">微信正与手机厂商合作推出Agent-to-Agent助手能力</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839505332161026?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">可灵AI两周年 全球用户突破1亿</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">可灵AI全球用户突破1亿覆盖224个国家和地区</div>
+      <div class="read-more"><a href="https://36kr.com/newsflashes/3840249278793985?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Is Self-knowledge and Action Consistent or Not: Investigating LLM Personality</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-02-22</span>
+      </div>
+      <div class="summary">In this study, we delve into the validity of conventional personality questionnaires in capturing the human-like personality traits of Large Language Models (LLMs). Our objective is to assess the congruence between the personality traits LLMs claim to possess and their demonstrated tendencies in real-world scenarios. By conducting an extensive examination of LLM outputs against observed human response patterns, we aim to understand the disjunction between self-knowledge and action in LLMs.</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2402.14679" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Data</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2024-12-03</span>
+      </div>
+      <div class="summary">We present the MULTIMODAL UNIVERSE, a large-scale multimodal dataset of scientific astronomical data, compiled specifically to facilitate machine learning research. Overall, the MULTIMODAL UNIVERSE contains hundreds of millions of astronomical observations, constituting 100\,TB of multi-channel and hyper-spectral images, spectra, multivariate time series, as well as a wide variety of associated scientific measurements and &amp;quot;metadata&amp;quot;. In addition, we include a range of benchmark tasks representat</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2412.02527" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Ask HN: What was your oh shit moment with GenAI?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">Most of us were amused when DALL-E and its peers went mainstream, and we were quick to point out the obvious flaws.Then ChatGPT hit the scene and again, many of us dismissed it as a parlor trick that would never amount to much.Using LLMs for coding initially was a only small step up from basic code completion, and a welcome farewell to Stack Overflow.I am curious: what was the specific moment that you went from those quaint, dismissive observations to a slightly panicked,
+&amp;amp;quot;Uh Oh&amp;amp;quot; reali</div>
+      <div class="read-more"><a href="https://news.ycombinator.com/item?id=48406174" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">TypeScript compiler 10x faster, Alibaba agent code review</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/devsignal/typescript-compiler-10x-faster-alibaba-agent-code-review-3956" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">State of AI Code Review | May 2026 Roundup</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/lewiska/state-of-ai-code-review-may-2026-roundup-5o7" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Building an AI Short Video Generator: Workflow Needs Skills</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alexshev/building-an-ai-short-video-generator-why-the-workflow-needs-skills-not-just-prompts-36km" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Howdy. I built budget controls for AI agents</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mightbesaad/howdy-i-built-budget-controls-for-ai-agents-does-this-solve-a-problem-you-actually-have-16dj" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Dropbox Nova for AI Coding Agents, OpenAI Codex Sandbox, Puppeteer MCP</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/dropbox-nova-for-ai-coding-agents-openais-codex-sandbox-puppeteer-mcp-server-3ff5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Adoption Is Not Just a Content Factory</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alexander_iwizard/ai-adoption-is-not-just-a-content-factory-3hp" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Catching the shortcuts AI coding agents take to look done</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/moonrunnerkc/catching-the-shortcuts-ai-coding-agents-take-to-look-done-45mm" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Claude Code Quality, OpenAI Sandbox, &amp;amp; Dropbox AI Agent Platform</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/claude-code-quality-openai-sandbox-dropbox-ai-agent-platform-271b" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">OpenClaw Windows Node, MemPalace &amp;amp; NVIDIA Cosmos Boost Local AI &amp;amp; Open Models</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/openclaw-windows-node-mempalace-nvidia-cosmos-boost-local-ai-open-models-43bd" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Learning From Failure: Integrating Negative Examples when Fine-tuning LLMs as Agents</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-02-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2402.11651" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2023-08-30</span>
+      </div>
+      <div class="summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only architecture and are pretrained on a mixture of Arabic and English texts, including source code in various programming languages. With 13 billion parameters, they demonstrate better knowledge and reasoning capabilities in Arabic than any existing open Arabic and multilingual models by a sizable margin, b</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Microsoft wants users to be addicted to Scout, their AI personal assistant</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">5 points by berlianta | 1 comments</div>
+      <div class="read-more"><a href="https://disassociated.com/microsoft-users-addicted-ai-personal-assistant/" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">前华为员工创业线控底盘，毫秒智控获数千万元天使+轮融资</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">线控底盘核心零部件供应商毫秒智控已于近期完成数千万元天使+轮融资。</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839600052898054?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">PediatricsGPT: LLMs as Chinese Medical Assistants for Pediatric Applications</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-05-29</span>
+      </div>
+      <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advances in Large Language Models (LLMs) for Chinese medicine, their performance is sub-optimal in pediatric applications due to inadequate instruction data and vulnerable training procedures. To address the above issues, this paper builds PedCorpus, a high-quality dataset of over 300,000 multi-task instru</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2405.19266" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the </div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Claude Code PushNotification tool: what it does and how to use it</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/gtapps/claude-code-pushnotification-tool-what-it-does-and-how-to-use-it-29p6" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Built a Self-Improving Health Platform: Five AI Agents That Learn Every Week</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/holistis/i-built-a-self-improving-health-platform-five-ai-agents-that-learn-every-week-1ci5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">The Limits of AI Models: What LLMs Still Can&amp;#x27;t Do (And Why)</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/the-limits-of-ai-models-what-llms-still-cant-do-and-why-186c" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-model">
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Benchmarked 3 Local LLMs on My Laptop — Here&amp;#x27;s What the Numbers Actually Show</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/vijaya_bollu/i-benchmarked-3-local-llms-on-my-laptop-heres-what-the-numbers-actually-show-4a00" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">MAI-Thinking-1: Microsoft&amp;#x27;s New Reasoning Model and What It Means for Developers</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/arshtechpro/mai-thinking-1-microsofts-new-reasoning-model-and-what-it-means-for-developers-2fma" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Gemma 4 makes on-device multimodal AI good enough to ship</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mjmirza/gemma-4-makes-on-device-multimodal-ai-good-enough-to-ship-12h2" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Multi-Agent Systems: Powerful Idea, Easy To Overcomplicate</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/nazar_boyko/multi-agent-systems-powerful-idea-easy-to-overcomplicate-c7k" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why AI Models Fail in Enterprise: The 89% Problem</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/why-ai-models-fail-in-enterprise-the-89-problem-3g32" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Did Claude increase bugs in rsync?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">96 points by logicprog | 91 comments</div>
+      <div class="read-more"><a href="https://alexispurslane.github.io/rsync-analysis/" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Transformers Are Inherently Succinct</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">This paper is being published at ICLR 2026 (top AI conference), and was selected as one of three outstanding papers.</div>
+      <div class="read-more"><a href="https://openreview.net/pdf?id=Yxz92UuPLQ" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I shipped a 2-line Claude Code plugin that makes it shut up</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/oler/i-shipped-a-2-line-claude-code-plugin-that-makes-it-shut-up-1hel" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">NVIDIA’s new model on SageMaker, a CLI for AI pipelines, UK AI rules, and a worm threat</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/anikalp1/nvidias-new-model-on-sagemaker-a-cli-for-ai-pipelines-uk-ai-rules-and-a-worm-threat-d0m" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How LLMs Actually Work: A Developer&amp;#x27;s Mental Model</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/how-llms-actually-work-a-developers-mental-model-50nd" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I stopped fighting broken parsers — here&amp;#x27;s how I use LLMs to extract web data reliably</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-stopped-fighting-broken-parsers-heres-how-i-use-llms-to-extract-web-data-reliably-1j2h" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I spent 3 days scraping a site until I tried LLMs for data extraction</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-spent-3-days-scraping-a-site-until-i-tried-llms-for-data-extraction-41cl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why Most AI Agent Projects Fail in Production</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/devmint_0809f9c45727fefc1/why-most-ai-agent-projects-fail-in-production-69b" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">When regex fails: extracting structured data from messy text with LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-regex-fails-extracting-structured-data-from-messy-text-with-llms-4dh1" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Give Claude Desktop Persistent Memory in 3 Minutes</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/krish2792/give-claude-desktop-persistent-memory-in-3-minutes-5a0j" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">Token大战中，华为云选择了第三条路</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">华为云在乎国产化算力系统生产的Tokens健康度</div>
+      <div class="read-more"><a href="https://36kr.com/p/3840016255126016?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Is Self-knowledge and Action Consistent or Not: Investigating LLM Personality</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-02-22</span>
+      </div>
+      <div class="summary">In this study, we delve into the validity of conventional personality questionnaires in capturing the human-like personality traits of Large Language Models (LLMs). Our objective is to assess the congruence between the personality traits LLMs claim to possess and their demonstrated tendencies in real-world scenarios. By conducting an extensive examination of LLM outputs against observed human response patterns, we aim to understand the disjunction between self-knowledge and action in LLMs.</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2402.14679" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Dropbox Nova for AI Coding Agents, OpenAI Codex Sandbox, Puppeteer MCP</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/dropbox-nova-for-ai-coding-agents-openais-codex-sandbox-puppeteer-mcp-server-3ff5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Claude Code Quality, OpenAI Sandbox, &amp;amp; Dropbox AI Agent Platform</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/claude-code-quality-openai-sandbox-dropbox-ai-agent-platform-271b" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">OpenClaw Windows Node, MemPalace &amp;amp; NVIDIA Cosmos Boost Local AI &amp;amp; Open Models</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/soytuber/openclaw-windows-node-mempalace-nvidia-cosmos-boost-local-ai-open-models-43bd" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Learning From Failure: Integrating Negative Examples when Fine-tuning LLMs as Agents</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-02-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2402.11651" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2023-08-30</span>
+      </div>
+      <div class="summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only architecture and are pretrained on a mixture of Arabic and English texts, including source code in various programming languages. With 13 billion parameters, they demonstrate better knowledge and reasoning capabilities in Arabic than any existing open Arabic and multilingual models by a sizable margin, b</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">PediatricsGPT: LLMs as Chinese Medical Assistants for Pediatric Applications</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2024-05-29</span>
+      </div>
+      <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advances in Large Language Models (LLMs) for Chinese medicine, their performance is sub-optimal in pediatric applications due to inadequate instruction data and vulnerable training procedures. To address the above issues, this paper builds PedCorpus, a high-quality dataset of over 300,000 multi-task instru</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2405.19266" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from LLMs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the </div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Claude Code PushNotification tool: what it does and how to use it</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/gtapps/claude-code-pushnotification-tool-what-it-does-and-how-to-use-it-29p6" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🤖 模型与技术">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">The Limits of AI Models: What LLMs Still Can&amp;#x27;t Do (And Why)</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🤖 模型与技术</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/the-limits-of-ai-models-what-llms-still-cant-do-and-why-186c" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-business">
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">氪星晚报 ｜日本或通过抛售美债</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">英诺科创三期基金聚焦早期科技投资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3840267945969929?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">硬氪独家 唐文斌原力灵机并购物流机器人公司</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">具身智能企业原力灵机获智谱商汤阶跃等投资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3838835333253385?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">国家队下场做AI虚拟细胞 百曜科技完成融资</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">AI虚拟细胞平台公司百曜科技完成数千万元融资</div>
+      <div class="read-more"><a href="https://36kr.com/p/3835460873385348?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="💼 商业与融资">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">前华为员工创业线控底盘，毫秒智控获数千万元天使+轮融资</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">💼 商业与融资</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">线控底盘核心零部件供应商毫秒智控已于近期完成数千万元天使+轮融资。</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839600052898054?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-industry">
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Leak Reveals Microsoft Wants Its AI to Be &amp;#x27;Addictive&amp;#x27;</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">24 points by  | 0 comments</div>
+      <div class="read-more"><a href="https://kotaku.com/microsoft-ai-scout-addictive-satya-nadella-404-media-copilot-2000702924" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI didn&amp;#x27;t kill coding. It killed &amp;quot;easy coding&amp;quot; - my 200 hour tutorial hell story</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/partha_roy_6353468a1f75c7/ai-didnt-kill-coding-it-killed-easy-coding-my-200-hour-tutorial-hell-story-4c3i" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Won&amp;#x27;t Replace Humans — It&amp;#x27;ll Just Make Us Pickier</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/markofrei919/ai-wont-replace-humans-itll-just-make-us-pickier-2iij" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Why Enterprise AI Pilots Fail: From PoC to Production</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/why-enterprise-ai-pilots-fail-from-poc-to-production-4ipl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Vendor Risk Assessment: Why We Shut It Down</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/davidohnstad/ai-vendor-risk-assessment-why-we-shut-it-down-3kc8" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Astronauts told to return to ISS after sheltering over air leak repairs</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">252 points by janpot | 164 comments</div>
+      <div class="read-more"><a href="https://www.bbc.com/news/live/c4g44ew3g1kt" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">From Excel to AI: We Were Always Programmers</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/brixmavu/from-excel-to-ai-we-were-always-programmers-1b6o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">From Forgotten Repo to Production: Rebuilding AdeptAI for the GitHub Finish-Up-A-Thon</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/gurudev007/from-forgotten-repo-to-production-rebuilding-adeptai-for-the-github-finish-up-a-thon-150o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Will junior developers disappear because of AI?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/justino_contingo/will-junior-developers-disappear-because-of-ai-50of" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How I stopped writing regex and let AI parse my messy data</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/how-i-stopped-writing-regex-and-let-ai-parse-my-messy-data-97k" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Hacker News, Sans AI</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">10 points by chilipepperhott | 0 comments</div>
+      <div class="read-more"><a href="https://elijahpotter.dev/articles/hacker-news-sans-AI" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Autonomous Operations Fail for the Same Reason Distributed Systems Fail</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/ntctech/autonomous-operations-fail-for-the-same-reason-distributed-systems-fail-139a" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I built an AI resume builder as a side project. Here is the stack and what broke.</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mateyw/i-built-an-ai-resume-builder-as-a-side-project-here-is-the-stack-and-what-broke-21bl" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">微信AI对手机厂商打开一道窄门</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">腾讯客服回应称微信与华为小米等合作推出A2A助手能力</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839575253993985?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">可灵AI两周年 全球用户突破1亿</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">可灵AI全球用户突破1亿覆盖224个国家和地区</div>
+      <div class="read-more"><a href="https://36kr.com/newsflashes/3840249278793985?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-arxiv">arXiv</span>
+      <span class="card-title">The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Data</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2024-12-03</span>
+      </div>
+      <div class="summary">We present the MULTIMODAL UNIVERSE, a large-scale multimodal dataset of scientific astronomical data, compiled specifically to facilitate machine learning research. Overall, the MULTIMODAL UNIVERSE contains hundreds of millions of astronomical observations, constituting 100\,TB of multi-channel and hyper-spectral images, spectra, multivariate time series, as well as a wide variety of associated scientific measurements and &quot;metadata&quot;. In addition, we include a range of benchmark tasks representat</div>
+      <div class="read-more"><a href="https://arxiv.org/abs/2412.02527" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Ask HN: What was your oh shit moment with GenAI?</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">Most of us were amused when DALL-E and its peers went mainstream, and we were quick to point out the obvious flaws.Then ChatGPT hit the scene and again, many of us dismissed it as a parlor trick that would never amount to much.Using LLMs for coding initially was a only small step up from basic code completion, and a welcome farewell to Stack Overflow.I am curious: what was the specific moment that you went from those quaint, dismissive observations to a slightly panicked,
+&amp;quot;Uh Oh&amp;quot; reali</div>
+      <div class="read-more"><a href="https://news.ycombinator.com/item?id=48406174" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">AI Adoption Is Not Just a Content Factory</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alexander_iwizard/ai-adoption-is-not-just-a-content-factory-3hp" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🏭 产业应用">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">Microsoft wants users to be addicted to Scout, their AI personal assistant</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🏭 产业应用</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">5 points by berlianta | 1 comments</div>
+      <div class="read-more"><a href="https://disassociated.com/microsoft-users-addicted-ai-personal-assistant/" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-tools">
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Your Copilot Just Got a Local Brain</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/oneinfer/your-copilot-just-got-a-local-brain-2i2j" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Stop Writing MR/PR Descriptions Manually — Let AI Do It From Your Git Diff</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/solehudin5699/stop-writing-mrpr-descriptions-manually-let-ai-do-it-from-your-git-diff-4ap9" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Detect AI Agent Hallucinations: Zero-Shot Methods</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/aws/detect-ai-agent-hallucinations-zero-shot-methods-5g81" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I built a complete AI-coding handbook in Bangla - words, tools, a story, and a 30-day path</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/dhrupo/i-built-a-complete-ai-coding-handbook-in-bangla-words-tools-a-story-and-a-30-day-path-879" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Hermes Agent and the Shift From Chatbots to Personal AI Runtimes</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/agntable/hermes-agent-and-the-shift-from-chatbots-to-personal-ai-runtimes-3kcg" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">How I Built a Multi-Product AI API Business on Railway — FastAPI + Stripe + x402 + MCP in One Stack</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/thebrierfox/how-i-built-a-multi-product-ai-api-business-on-railway-fastapi-stripe-x402-mcp-in-one-stack-271e" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-hackernews">HackerNews</span>
+      <span class="card-title">My Agent Skill for Test-Driven Development</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">11 points by laxmena | 0 comments</div>
+      <div class="read-more"><a href="https://www.saturnci.com/my-agent-skill-for-test-driven-development.html" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Spent $200 in Two Hours Watching a Coding Agent Guess</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/muggleai/i-spent-200-in-two-hours-watching-a-coding-agent-guess-285o" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Memory Freshness Is Going Mainstream. Authority Freshness Is the Next Layer. *Self-Correcting Systems — convergence signal, June 2026*</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/zep1997/memory-freshness-is-going-mainstream-authority-freshness-is-the-next-layer-self-correcting-31jj" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">The Self-Evolving Agent: How to Build Closed-Loop AI Systems That Write and Optimize Their Own Code</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/programmingcentral/the-self-evolving-agent-how-to-build-closed-loop-ai-systems-that-write-and-optimize-their-own-code-58cc" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">EnvArmor: AI-Aware Env Secrets Security Platform</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alimahmood/envarmor-ai-aware-env-secrets-security-platform-4ho5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-36kr">36kr</span>
+      <span class="card-title">8点1氪 分析师曝苹果Vision Pro产品线被移除</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">微信正与手机厂商合作推出Agent-to-Agent助手能力</div>
+      <div class="read-more"><a href="https://36kr.com/p/3839505332161026?f=rss" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">TypeScript compiler 10x faster, Alibaba agent code review</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/devsignal/typescript-compiler-10x-faster-alibaba-agent-code-review-3956" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">State of AI Code Review | May 2026 Roundup</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/lewiska/state-of-ai-code-review-may-2026-roundup-5o7" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Building an AI Short Video Generator: Workflow Needs Skills</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/alexshev/building-an-ai-short-video-generator-why-the-workflow-needs-skills-not-just-prompts-36km" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Howdy. I built budget controls for AI agents</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/mightbesaad/howdy-i-built-budget-controls-for-ai-agents-does-this-solve-a-problem-you-actually-have-16dj" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">Catching the shortcuts AI coding agents take to look done</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/moonrunnerkc/catching-the-shortcuts-ai-coding-agents-take-to-look-done-45mm" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+  <div class="card" data-category="🔧 工具与开源">
+    <div class="card-header" onclick="toggleCard(this)">
+      <span class="source-tag tag-devto">DevTo</span>
+      <span class="card-title">I Built a Self-Improving Health Platform: Five AI Agents That Learn Every Week</span>
+      <span class="expand-icon">▼</span>
+    </div>
+    <div class="card-body">
+      <div class="meta">
+        <span class="cat-tag">🔧 工具与开源</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary"></div>
+      <div class="read-more"><a href="https://dev.to/holistis/i-built-a-self-improving-health-platform-five-ai-agents-that-learn-every-week-1ci5" target="_blank" rel="noopener noreferrer">查看原文 ↗</a></div>
+    </div>
+  </div>
+</div>
+<div class="tab-content" id="tab-academic">
+</div>
+
+</div>
+<div class="footer">AI News Digest · 2026-06-06</div>
+<script>
+function toggleCard(header) {
+  var body = header.nextElementSibling;
+  var icon = header.querySelector('.expand-icon');
+  var isOpen = body.classList.contains('open');
+  
+  // Close all other cards
+  var allBodies = document.querySelectorAll('.card-body.open');
+  var allIcons = document.querySelectorAll('.expand-icon.open');
+  for (var i = 0; i < allBodies.length; i++) {
+    if (allBodies[i] !== body) {
+      allBodies[i].classList.remove('open');
+    }
+  }
+  for (var i = 0; i < allIcons.length; i++) {
+    if (allIcons[i] !== icon) {
+      allIcons[i].classList.remove('open');
+    }
+  }
+  
+  // Toggle this card
+  if (isOpen) {
+    body.classList.remove('open');
+    icon.classList.remove('open');
+  } else {
+    body.classList.add('open');
+    icon.classList.add('open');
+  }
+}
+
+// Tab switching
+var tabs = document.querySelectorAll('.tab-btn');
+for (var i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener('click', function() {
+    var tabId = this.getAttribute('data-tab');
+    
+    // Update button states
+    var allBtns = document.querySelectorAll('.tab-btn');
+    for (var j = 0; j < allBtns.length; j++) {
+      allBtns[j].classList.remove('active');
+    }
+    this.classList.add('active');
+    
+    // Update content visibility
+    var allContents = document.querySelectorAll('.tab-content');
+    for (var j = 0; j < allContents.length; j++) {
+      allContents[j].classList.remove('active');
+    }
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Close all expanded cards when switching tabs
+    var openBodies = document.querySelectorAll('.card-body.open');
+    var openIcons = document.querySelectorAll('.expand-icon.open');
+    for (var j = 0; j < openBodies.length; j++) {
+      openBodies[j].classList.remove('open');
+    }
+    for (var j = 0; j < openIcons.length; j++) {
+      openIcons[j].classList.remove('open');
+    }
+  });
+}
+</script>
+</body>
+</html>
