@@ -1,0 +1,3314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-06-09</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">开启一天的 AI 资讯 · 2026-06-09</div>
+  <div class="stats">
+    <span>📊 101 条</span>
+    <span>📡 4 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">🏠 全部 (101)</div><div class="tab" data-cat="model">🤖 模型与技术 (17)</div><div class="tab" data-cat="business">💼 商业与融资 (14)</div><div class="tab" data-cat="industry">🏭 产业应用 (27)</div><div class="tab" data-cat="tools">🔧 工具与开源 (14)</div><div class="tab" data-cat="academic">📚 学术与政策 (29)</div>
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/how-i-cut-my-ai-api-costs-by-70-without-sacrificing-quality-1hao" target="_blank" rel="noopener">How I Cut My AI API Costs by 70% Without Sacrificing Quality</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 How I Cut My AI API Costs by 70% Without Sacrificing Quality</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-gave-up-on-css-selectors-using-llms-for-web-scraping-kd6" target="_blank" rel="noopener">I Gave Up on CSS Selectors: Using LLMs for Web Scraping</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I Gave Up on CSS Selectors: Using LLMs for Web Scraping</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/harshal_sant_be921c5039f2/contextlens-py-spypprof-but-for-whats-inside-your-llm-prompt-59l7" target="_blank" rel="noopener">ContextLens — py-spy/pprof but for what&#39;s inside your LLM prompt</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 ContextLens — py-spy/pprof but for what&#39;s inside your LLM prompt</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kaidanov/track-what-your-ai-coding-tools-actually-cost-link-at-the-bottom-1pb8" target="_blank" rel="noopener">Track what your AI coding tools actually cost - link at the bottom</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Track what your AI coding tools actually cost - link at the bottom</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kaidanov/zero-stall-ai-building-a-self-managing-tdd-pipeline-with-autonomous-agents-4ifh" target="_blank" rel="noopener">Zero-Stall AI: Building a Self-Managing TDD Pipeline with Autonomous Agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Zero-Stall AI: Building a Self-Managing TDD Pipeline with Autonomous Agents</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844185422400008?f=rss" target="_blank" rel="noopener">世界杯官方比赛用球再度&quot;中国制造&quot;：全球产业链迁移下，广东工厂为何仍留在赛场中央？｜最前线</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">2026年美加墨世界杯进入倒计时...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 世界杯官方比赛用球再度&quot;中国制造&quot;：全球产业链迁移下，广东工厂为何仍留在赛场中央？｜最前线</div>
+        <div class="original-summary">2026年美加墨世界杯进入倒计时...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2603.28944" target="_blank" rel="noopener">AI prediction leads people to forgo guaranteed rewards</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-03-30</span>
+      </div>
+      <div class="summary">Artificial intelligence (AI) is understood to affect the content of people&#39;s decisions. Here, using a behavioral implementation of the classic Newcomb&#39;s paradox in 1,305 participants, we show </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI prediction leads people to forgo guaranteed rewards</div>
+        <div class="original-summary">Artificial intelligence (AI) is understood to affect the content of people&#39;s decisions. Here, using a behavioral implementation of the classic Newcomb&#39;s paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guara</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2501.02842" target="_blank" rel="noopener">Foundations of GenIR</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-01-06</span>
+      </div>
+      <div class="summary">The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of g</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Foundations of GenIR</div>
+        <div class="original-summary">The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation a</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2601.16513" target="_blank" rel="noopener">Competing Visions of Ethical AI: A Case Study of OpenAI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-01-23</span>
+      </div>
+      <div class="summary">Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has Ope</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Competing Visions of Ethical AI: A Case Study of OpenAI</div>
+        <div class="original-summary">Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI&#39;s public discourse leveraged &#39;ethics&#39;, &#39;safety&#39;, &#39;alignment&#39; and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2503.12687" target="_blank" rel="noopener">AI Agents: Evolution, Architecture, and Real-World Applications</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-03-16</span>
+      </div>
+      <div class="summary">This paper examines the evolution, architecture, and practical applications of AI agents from their early, rule-based incarnations to modern sophisticated systems that integrate large language models </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI Agents: Evolution, Architecture, and Real-World Applications</div>
+        <div class="original-summary">This paper examines the evolution, architecture, and practical applications of AI agents from their early, rule-based incarnations to modern sophisticated systems that integrate large language models with dedicated modules for perception, planning, and tool use. Emphasizing both theoretical foundations and real-world deployments, the paper reviews key agent paradigms, discusses limitations of current evaluation benchmarks, and proposes a holistic evaluation framework that balances task effective</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2601.00360" target="_blank" rel="noopener">Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-01-01</span>
+      </div>
+      <div class="summary">As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains hav</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</div>
+        <div class="original-summary">As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains have accumulated centuries of anti-collusion mechanisms, it remains unclear how these can be adapted to AI settings. This paper addresses that gap by (i) developing a taxonomy of human anti-collusion mechanisms, including sanctions, leniency &amp; whistleblowing, monitoring &amp; auditing, market desig</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI: a comprehensive survey of safety, robustness, privacy, and system security</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interactions -- can execute complex tasks autonomously, but their multi-step trajectories</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Towards trustworthy agentic AI: a comprehensive survey of safety, robustness, privacy, and system security</div>
+        <div class="original-summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interactions -- can execute complex tasks autonomously, but their multi-step trajectories introduce new failure modes that challenge trustworthiness. This survey provides a focused examination of trustworthy agentic AI through two core dimensions that are critical for high-risk deployments: Safety and Robustness, and Privacy and System Security. For each dimension, we clarify key concep</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.21825" target="_blank" rel="noopener">Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness for Solving Complex Data Visualization Tasks</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-20</span>
+      </div>
+      <div class="summary">The ability to inspect, interpret, and communicate complex data is crucial for virtually any scientific endeavor, but often requires significant expertise outside the core domain ranging from data man</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness for Solving Complex Data Visualization Tasks</div>
+        <div class="original-summary">The ability to inspect, interpret, and communicate complex data is crucial for virtually any scientific endeavor, but often requires significant expertise outside the core domain ranging from data management and analysis to visualization design and implementation. We present an end-to-end agentic harness that, based on only the data and a high level description of the tasks, independently designs custom visual analysis applications (VIS apps). This represents an important step towards a general </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2112.01298" target="_blank" rel="noopener">Meaningful human control: actionable properties for AI system development</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2021-11-25</span>
+      </div>
+      <div class="summary">How can humans remain in control of artificial intelligence (AI)-based systems designed to perform tasks autonomously? Such systems are increasingly ubiquitous, creating benefits - but also undesirabl</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Meaningful human control: actionable properties for AI system development</div>
+        <div class="original-summary">How can humans remain in control of artificial intelligence (AI)-based systems designed to perform tasks autonomously? Such systems are increasingly ubiquitous, creating benefits - but also undesirable situations where moral responsibility for their actions cannot be properly attributed to any particular person or group. The concept of meaningful human control has been proposed to address responsibility gaps and mitigate them by establishing conditions that enable a proper attribution of respons</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2508.08544" target="_blank" rel="noopener">AI Agents and the Law</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-08-12</span>
+      </div>
+      <div class="summary">As AI becomes more &quot;agentic,&quot; it faces technical and socio-legal issues it must address if it is to fulfill its promise of increased economic productivity and efficiency. This paper uses tec</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI Agents and the Law</div>
+        <div class="original-summary">As AI becomes more &quot;agentic,&quot; it faces technical and socio-legal issues it must address if it is to fulfill its promise of increased economic productivity and efficiency. This paper uses technical and legal perspectives to explain how things change when AI systems start being able to directly execute tasks on behalf of a user. We show how technical conceptions of agents track some, but not all, socio-legal conceptions of agency. That is, both computer science and the law recognize the </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2402.11651" target="_blank" rel="noopener">Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-02-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation inste</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents</div>
+        <div class="original-summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.10793" target="_blank" rel="noopener">Demystifying Instruction Mixing for Fine-tuning Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-17</span>
+      </div>
+      <div class="summary">Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tun</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Demystifying Instruction Mixing for Fine-tuning Large Language Models</div>
+        <div class="original-summary">Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tuning is still poorly understood. This study categorizes instructions into three primary types: NLP downstream tasks, coding, and general chat. We explore the effects of instruction tuning on different combinations of datasets on LLM performance, and find that certain instruction types are more advant</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2304.12244" target="_blank" rel="noopener">WizardLM: Empowering large pre-trained language models to follow complex instructions</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-04-24</span>
+      </div>
+      <div class="summary">Training large language models (LLMs) with open-domain instruction following data brings colossal success. However, manually creating such instruction data is very time-consuming and labor-intensive. </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 WizardLM: Empowering large pre-trained language models to follow complex instructions</div>
+        <div class="original-summary">Training large language models (LLMs) with open-domain instruction following data brings colossal success. However, manually creating such instruction data is very time-consuming and labor-intensive. Moreover, humans may struggle to produce high-complexity instructions. In this paper, we show an avenue for creating large amounts of instruction data with varying levels of complexity using LLM instead of humans. Starting with an initial set of instructions, we use our proposed Evol-Instruct to rew</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2310.00034" target="_blank" rel="noopener">PB-LLM: Partially Binarized Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-09-29</span>
+      </div>
+      <div class="summary">This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binariza</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 PB-LLM: Partially Binarized Large Language Models</div>
+        <div class="original-summary">This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binarization methods collapsing LLMs, we propose a novel approach, Partially-Binarized LLM (PB-LLM), which can achieve extreme low-bit quantization while maintaining the linguistic reasoning capacity of quantized LLMs. Specifically, our exploration first uncovers the ineffectiveness of naive applications of</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2503.21676" target="_blank" rel="noopener">How do language models learn facts? Dynamics, curricula and hallucinations</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-03-27</span>
+      </div>
+      <div class="summary">Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language mode</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 How do language models learn facts? Dynamics, curricula and hallucinations</div>
+        <div class="original-summary">Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-08-30</span>
+      </div>
+      <div class="summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only archi</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models</div>
+        <div class="original-summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only architecture and are pretrained on a mixture of Arabic and English texts, including source code in various programming languages. With 13 billion parameters, they demonstrate better knowledge and reasoning capabilities in Arabic than any existing open Arabic and multilingual models by a sizable margin, b</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank" rel="noopener">PediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-05-29</span>
+      </div>
+      <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advance</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 PediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications</div>
+        <div class="original-summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advances in Large Language Models (LLMs) for Chinese medicine, their performance is sub-optimal in pediatric applications due to inadequate instruction data and vulnerable training procedures. To address the above issues, this paper builds PedCorpus, a high-quality dataset of over 300,000 multi-task instru</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2405.11357" target="_blank" rel="noopener">Large Language Models Lack Understanding of Character Composition of Words</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-05-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs&#39; successes have been largely restricted to tasks concerning words, sente</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Large Language Models Lack Understanding of Character Composition of Words</div>
+        <div class="original-summary">Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs&#39; successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simp</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface tex</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models</div>
+        <div class="original-summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2206.09242" target="_blank" rel="noopener">GaLeNet: Multimodal Learning for Disaster Prediction, Management and Relief</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2022-06-18</span>
+      </div>
+      <div class="summary">After a natural disaster, such as a hurricane, millions are left in need of emergency assistance. To allocate resources optimally, human planners need to accurately analyze data that can flow in large</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 GaLeNet: Multimodal Learning for Disaster Prediction, Management and Relief</div>
+        <div class="original-summary">After a natural disaster, such as a hurricane, millions are left in need of emergency assistance. To allocate resources optimally, human planners need to accurately analyze data that can flow in large volumes from several sources. This motivates the development of multimodal machine learning frameworks that can integrate multiple data sources and leverage them efficiently. To date, the research community has mainly focused on unimodal reasoning to provide granular assessments of the damage. More</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2403.06024" target="_blank" rel="noopener">Semi-Supervised Multimodal Multi-Instance Learning for Aortic Stenosis Diagnosis</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-03-09</span>
+      </div>
+      <div class="summary">Automated interpretation of ultrasound imaging of the heart (echocardiograms) could improve the detection and treatment of aortic stenosis (AS), a deadly heart disease. However, existing deep learning</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Semi-Supervised Multimodal Multi-Instance Learning for Aortic Stenosis Diagnosis</div>
+        <div class="original-summary">Automated interpretation of ultrasound imaging of the heart (echocardiograms) could improve the detection and treatment of aortic stenosis (AS), a deadly heart disease. However, existing deep learning pipelines for assessing AS from echocardiograms have two key limitations. First, most methods rely on limited 2D cineloops, thereby ignoring widely available Doppler imaging that contains important complementary information about pressure gradients and blood flow abnormalities associated with AS. S</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2008.13369" target="_blank" rel="noopener">Introducing Representations of Facial Affect in Automated Multimodal Deception Detection</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2020-08-31</span>
+      </div>
+      <div class="summary">Automated deception detection systems can enhance health, justice, and security in society by helping humans detect deceivers in high-stakes situations across medical and legal domains, among others. </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Introducing Representations of Facial Affect in Automated Multimodal Deception Detection</div>
+        <div class="original-summary">Automated deception detection systems can enhance health, justice, and security in society by helping humans detect deceivers in high-stakes situations across medical and legal domains, among others. This paper presents a novel analysis of the discriminative power of dimensional representations of facial affect for automated deception detection, along with interpretable features from visual, vocal, and verbal modalities. We used a video dataset of people communicating truthfully or deceptively i</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2412.02527" target="_blank" rel="noopener">The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-12-03</span>
+      </div>
+      <div class="summary">The Multimodal Universe Collaboration...</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data</div>
+        <div class="original-summary">The Multimodal Universe Collaboration...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1605.05212" target="_blank" rel="noopener">Multimodal Sparse Coding for Event Detection</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2016-05-17</span>
+      </div>
+      <div class="summary">Youngjune Gwon, William Campbell, Kevin Brady, Douglas Sturim, Miriam Cha, H. T. Kung</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Multimodal Sparse Coding for Event Detection</div>
+        <div class="original-summary">Youngjune Gwon, William Campbell, Kevin Brady, Douglas Sturim, Miriam Cha, H. T. Kung</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2210.02884" target="_blank" rel="noopener">Vision+X: A Survey on Multimodal Learning in the Light of Data</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2022-10-05</span>
+      </div>
+      <div class="summary">Ye Zhu, Yu Wu, Nicu Sebe, Yan Yan</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Vision+X: A Survey on Multimodal Learning in the Light of Data</div>
+        <div class="original-summary">Ye Zhu, Yu Wu, Nicu Sebe, Yan Yan</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1705.00470" target="_blank" rel="noopener">Learning Multimodal Transition Dynamics for Model-Based Reinforcement Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2017-05-01</span>
+      </div>
+      <div class="summary">Thomas M. Moerland, Joost Broekens, Catholijn M. Jonker</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Learning Multimodal Transition Dynamics for Model-Based Reinforcement Learning</div>
+        <div class="original-summary">Thomas M. Moerland, Joost Broekens, Catholijn M. Jonker</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2302.08893" target="_blank" rel="noopener">Active learning for data streams: a survey</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-02-17</span>
+      </div>
+      <div class="summary">Davide Cacciarelli, Murat Kulahci</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Active learning for data streams: a survey</div>
+        <div class="original-summary">Davide Cacciarelli, Murat Kulahci</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2506.09781" target="_blank" rel="noopener">On the Similarities of Embeddings in Contrastive Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-06-11</span>
+      </div>
+      <div class="summary">Chungpa Lee, Sehee Lim, Kibok Lee, Jy-yong Sohn</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 On the Similarities of Embeddings in Contrastive Learning</div>
+        <div class="original-summary">Chungpa Lee, Sehee Lim, Kibok Lee, Jy-yong Sohn</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1905.07435" target="_blank" rel="noopener">Alpha MAML: Adaptive Model-Agnostic Meta-Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2019-05-17</span>
+      </div>
+      <div class="summary">Harkirat Singh Behl, Atılım Güneş Baydin, Philip H. S. Torr</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Alpha MAML: Adaptive Model-Agnostic Meta-Learning</div>
+        <div class="original-summary">Harkirat Singh Behl, Atılım Güneş Baydin, Philip H. S. Torr</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/nithiin7/i-got-tired-of-reading-strangers-codebases-so-i-built-an-ai-that-reads-them-for-me-3l3d" target="_blank" rel="noopener">I Got Tired of Reading Strangers&#39; Codebases, So I Built an AI That Reads Them For Me</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 I Got Tired of Reading Strangers&#39; Codebases, So I Built an AI That Reads Them For Me</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ahmad_khokhar/ai-doesnt-write-buggy-code-your-workflow-does-397o" target="_blank" rel="noopener">AI Doesn&#39;t Write Buggy Code — Your Workflow Does</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI Doesn&#39;t Write Buggy Code — Your Workflow Does</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ahmetozel/designing-a-config-driven-agentic-rag-platform-for-customer-support-abo" target="_blank" rel="noopener">Designing a config-driven agentic RAG platform for customer support</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Designing a config-driven agentic RAG platform for customer support</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mickyarun/i-replaced-scrum-jira-and-our-wiki-with-12-ai-agents-on-a-mac-mini-o7o" target="_blank" rel="noopener">I Replaced Scrum, Jira, and Our Wiki With 12 AI Agents on a Mac Mini</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 I Replaced Scrum, Jira, and Our Wiki With 12 AI Agents on a Mac Mini</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mspro3210/the-agentic-maturity-model-is-missing-an-axis-who-validated-the-claim-284i" target="_blank" rel="noopener">The Agentic Maturity Model Is Missing an Axis: Who Validated the Claim</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 The Agentic Maturity Model Is Missing an Axis: Who Validated the Claim</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3843764238174729?f=rss" target="_blank" rel="noopener">8点1氪｜八家上市公司集中公告“补税”；ChatGPT将迎来史上最大幅度升级；高考新增AI监考员，自动截取异常录像</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">AI等机器网络请求量首超人类</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 8点1氪｜八家上市公司集中公告“补税”；ChatGPT将迎来史上最大幅度升级；高考新增AI监考员，自动截取异常录像</div>
+        <div class="original-summary">AI等机器网络请求量首超人类</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://intunedhq.com" target="_blank" rel="noopener">Launch HN: Intuned (YC S22) - Build and run reliable browser automations as code</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">Hey HN, we&amp;#x27;re Faisal and Ahmad from Intuned (https:&amp;#x2F;&amp;#x2F;intunedhq.com). We’re building a platform for building, deploying, and maintaining browser automations.Customers primari</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Launch HN: Intuned (YC S22) - Build and run reliable browser automations as code</div>
+        <div class="original-summary">Hey HN, we&amp;#x27;re Faisal and Ahmad from Intuned (https:&amp;#x2F;&amp;#x2F;intunedhq.com). We’re building a platform for building, deploying, and maintaining browser automations.Customers primarily use the Intuned AI agent to automate websites that don&amp;#x27;t expose APIs. Common use-cases include scraping data, pulling reports, and submitting forms. As the website changes, our agent also helps automatically heal the automation.On Intuned, browser automations are created by an AI agent a</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://cs-syd.eu/posts/2026-06-03-mutation-testing-in-haskell" target="_blank" rel="noopener">Mutation Testing in Haskell</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">8 points by Norfair | 0 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Mutation Testing in Haskell</div>
+        <div class="original-summary">8 points by Norfair | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/pachicodes/agente-local-ou-agente-na-nuvem-qual-faz-sentido-para-voce-5co0" target="_blank" rel="noopener">Agente local ou agente na nuvem: qual faz sentido para voce?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Agente local ou agente na nuvem: qual faz sentido para voce?</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/shuo_wu_00d47f641aed077d6/flat-chat-threads-suck-for-reading-books-so-i-built-a-local-first-ai-tree-companion-3oai" target="_blank" rel="noopener">Flat Chat Threads Suck for Reading Books. So I Built a Local-First AI Tree Companion.</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Flat Chat Threads Suck for Reading Books. So I Built a Local-First AI Tree Companion.</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/samhartley_dev/run-your-own-ai-server-for-0month-with-ollama-5ecg" target="_blank" rel="noopener">Run Your Own AI Server for $0/month with Ollama</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Run Your Own AI Server for $0/month with Ollama</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ozforce_1998/i-renamed-my-ai-agent-safety-tool-and-added-a-team-dashboard-heres-what-drove-those-decisions-bi1" target="_blank" rel="noopener">I renamed my AI agent safety tool and added a team dashboard - here&#39;s what drove those decisions</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I renamed my AI agent safety tool and added a team dashboard - here&#39;s what drove those decisions</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sumayea104/building-my-first-ai-agent-api-with-fastapi-and-mistral-ai-3ign" target="_blank" rel="noopener">Building My First AI Agent API with FastAPI and Mistral AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Building My First AI Agent API with FastAPI and Mistral AI</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844559758936582?f=rss" target="_blank" rel="noopener">氪星晚报追觅质押嘉美包装247亿股向兴业银行贷款提供担保黄仁勋SK海力士到2030年将晶圆产能翻倍的计划还不够</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">大公司：热门中概股美股盘前多数上涨...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 氪星晚报追觅质押嘉美包装247亿股向兴业银行贷款提供担保黄仁勋SK海力士到2030年将晶圆产能翻倍的计划还不够</div>
+        <div class="original-summary">大公司：热门中概股美股盘前多数上涨...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844018911889924?f=rss" target="_blank" rel="noopener">腾讯汤道生评价姚顺雨混元3和元宝</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">文王毓婵编辑张雨忻6月5日...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 腾讯汤道生评价姚顺雨混元3和元宝</div>
+        <div class="original-summary">文王毓婵编辑张雨忻6月5日...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844199957236227?f=rss" target="_blank" rel="noopener">改变全球速度的AI付款却卡在上一个时代</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">2026年全球平均每小时就有一家新的AI公司诞生...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 改变全球速度的AI付款却卡在上一个时代</div>
+        <div class="original-summary">2026年全球平均每小时就有一家新的AI公司诞生...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844006775360002?f=rss" target="_blank" rel="noopener">产品观察小米创始员工范典创业AI硬件做了台无摩擦的睡眠床头灯</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">作者邱晓芬编辑袁斯来...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 产品观察小米创始员工范典创业AI硬件做了台无摩擦的睡眠床头灯</div>
+        <div class="original-summary">作者邱晓芬编辑袁斯来...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3841459663030532?f=rss" target="_blank" rel="noopener">华超神控获亿元天使系列融资加速打造新一代AI超声脑机接口平台36氪首发</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">文胡香赟编辑海若镜...</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 华超神控获亿元天使系列融资加速打造新一代AI超声脑机接口平台36氪首发</div>
+        <div class="original-summary">文胡香赟编辑海若镜...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840996342073604?f=rss" target="_blank" rel="noopener">9点1氪豆包推出付费后月活减少610万Anthropic呼吁全球放缓AI开发警告AI自我改进风险罗永浩卸任锤子软件公司执行董事</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">今日热点导览...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 9点1氪豆包推出付费后月活减少610万Anthropic呼吁全球放缓AI开发警告AI自我改进风险罗永浩卸任锤子软件公司执行董事</div>
+        <div class="original-summary">今日热点导览...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840267945969929?f=rss" target="_blank" rel="noopener">氪星晚报日本或通过抛售美债为创纪录规模的日元汇市干预筹资俞浩内部发文未来将继续心无旁骛做实业</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">大公司：首关15亿元...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 氪星晚报日本或通过抛售美债为创纪录规模的日元汇市干预筹资俞浩内部发文未来将继续心无旁骛做实业</div>
+        <div class="original-summary">大公司：首关15亿元...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840016255126016?f=rss" target="_blank" rel="noopener">Token大战中华为云选择了第三条路最前线</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">作者邓咏仪编辑张雨忻...</div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Token大战中华为云选择了第三条路最前线</div>
+        <div class="original-summary">作者邓咏仪编辑张雨忻...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844514407336201?f=rss" target="_blank" rel="noopener">同程旅行将接入微信AI智能体机票酒店将实现AI一键预订</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">36氪获悉6月8日...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 同程旅行将接入微信AI智能体机票酒店将实现AI一键预订</div>
+        <div class="original-summary">36氪获悉6月8日...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844524510382599?f=rss" target="_blank" rel="noopener">天娱数科目前无物理AI业务未形成相关业务收入</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">天娱数科公告...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 天娱数科目前无物理AI业务未形成相关业务收入</div>
+        <div class="original-summary">天娱数科公告...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844521049065737?f=rss" target="_blank" rel="noopener">金安国纪公司覆铜板主要客户为PCB厂商未发现在AI服务器及算力领域的应用</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">金安国纪公告...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 金安国纪公司覆铜板主要客户为PCB厂商未发现在AI服务器及算力领域的应用</div>
+        <div class="original-summary">金安国纪公告...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://martinalderson.com/posts/xais-new-rental-business/" target="_blank" rel="noopener">xAI is looking more like a datacentre REIT than a frontier lab</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">27 points by martinald | 9 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 xAI is looking more like a datacentre REIT than a frontier lab</div>
+        <div class="original-summary">27 points by martinald | 9 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/xulingfeng/my-company-packaged-12-years-of-my-experience-into-an-ai-skill-then-laid-me-off-when-it-crashed-4b3e" target="_blank" rel="noopener">My company packaged 12 years of my experience into an AI Skill, then laid me off.</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 My company packaged 12 years of my experience into an AI Skill, then laid me off.</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/solooperator/how-to-structure-claudemd-for-long-running-projects-2jli" target="_blank" rel="noopener">How to structure CLAUDE.md for long-running projects</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 How to structure CLAUDE.md for long-running projects</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/yaro_dev/why-your-gpu-reports-75degc-while-your-vram-is-cooking-at-105degc-the-telemetry-gap-that-kills-llm-30m7" target="_blank" rel="noopener">Why your GPU reports 75C while your VRAM is cooking at 105C the telemetry gap that kills LLM inference</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Why your GPU reports 75C while your VRAM is cooking at 105C the telemetry gap that kills LLM inference</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.apple.com/apple-intelligence/" target="_blank" rel="noopener">Siri AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">12 points by 0xedb | 3 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Siri AI</div>
+        <div class="original-summary">12 points by 0xedb | 3 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.wheresyoured.at/ai-is-slowing-down/" target="_blank" rel="noopener">AI Is Slowing Down</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">102 points by crescit_eundo | 117 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI Is Slowing Down</div>
+        <div class="original-summary">102 points by crescit_eundo | 117 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/arthurgermano/programadores-nao-vao-mais-programar-nem-contar-pontos-de-funcao-j26" target="_blank" rel="noopener">Programadores Não Vão Mais Programar — Nem Contar Pontos de Função</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Programadores Não Vão Mais Programar — Nem Contar Pontos de Função</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/" target="_blank" rel="noopener">Apple reveals new AI architecture built around Google Gemini models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">250 points by anonymous | 0 comments</div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Apple reveals new AI architecture built around Google Gemini models</div>
+        <div class="original-summary">250 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://gitdot.io/" target="_blank" rel="noopener">Show HN: Gitdot – a better GitHub. Open-source, anti-AI, and written in Rust</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">What works now: user signups, org creations, private&amp;#x2F;public repos, and importing GitHub repositories (both as read-only mirrors and full migrations). So basically, you can create, push and pu</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Show HN: Gitdot – a better GitHub. Open-source, anti-AI, and written in Rust</div>
+        <div class="original-summary">What works now: user signups, org creations, private&amp;#x2F;public repos, and importing GitHub repositories (both as read-only mirrors and full migrations). So basically, you can create, push and pull to a repo, but we don&amp;#x27;t have many features quite yet (issues, PRs, CI).What is a bit unique is: 1) we built it in Rust and 2) the website is a little odd. Its design is inspired by CLIs (e.g., fzf, broot, vim) instead of web apps, and as such, lacks some affordances that you might typica</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://developer.apple.com/documentation/coreai/" target="_blank" rel="noopener">Apple Core AI Framework</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">63 points by anonymous | 0 comments</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Apple Core AI Framework</div>
+        <div class="original-summary">63 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.ycombinator.com/item?id=48449187" target="_blank" rel="noopener">Ask HN: What are tools you have made for yourself since the advent of AI?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">64 points by anonymous | 0 comments</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Ask HN: What are tools you have made for yourself since the advent of AI?</div>
+        <div class="original-summary">64 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/vivek_shetye/build-a-fully-local-ai-agent-with-hermes-agent-ollama-qwen-35-and-searxng-100-private-0-568d" target="_blank" rel="noopener">🚀 Build a Fully Local AI Agent with Hermes Agent, Ollama, Qwen 3.5, and SearXNG (100% Private &amp; $0 Cost)</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 🚀 Build a Fully Local AI Agent with Hermes Agent, Ollama, Qwen 3.5, and SearXNG (100% Private &amp; $0 Cost)</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/thepatwalls/can-you-build-a-successful-business-in-a-claude-code-loop-154h" target="_blank" rel="noopener">Can you build a successful business in a Claude Code loop?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Can you build a successful business in a Claude Code loop?</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/heckno/i-tested-9-serverless-gpu-providers-for-ai-inference-in-2026-heres-what-id-actually-use-4cf4" target="_blank" rel="noopener">I Tested 9 Serverless GPU Providers for AI Inference in 2026. Here&#39;s What I&#39;d Actually Use</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I Tested 9 Serverless GPU Providers for AI Inference in 2026. Here&#39;s What I&#39;d Actually Use</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/prashar32/benchmarking-a-kill-switch-for-runaway-ai-agents-and-why-the-real-number-is-a-ceiling-not-a--4832" target="_blank" rel="noopener">Benchmarking a kill switch for runaway AI agents -- and why the real number is a ceiling, not a %</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Benchmarking a kill switch for runaway AI agents -- and why the real number is a ceiling, not a %</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/devopsaitoolkit/how-devops-engineers-can-use-ai-to-triage-production-incidents-faster-3jb6" target="_blank" rel="noopener">How DevOps Engineers Can Use AI to Triage Production Incidents Faster</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 How DevOps Engineers Can Use AI to Triage Production Incidents Faster</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/harrisonsec/agent-retrieval-above-the-crossover-a-first-principles-read-of-codegraph-1gd7" target="_blank" rel="noopener">Agent Retrieval Above the Crossover: A First-Principles Read of CodeGraph</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Agent Retrieval Above the Crossover: A First-Principles Read of CodeGraph</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aplomb2/what-apples-wwdc-just-taught-us-about-ai-model-routing-22p6" target="_blank" rel="noopener">What Apple&#39;s WWDC Just Taught Us About AI Model Routing</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 What Apple&#39;s WWDC Just Taught Us About AI Model Routing</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alexocallaghan/measuring-before-tooling-where-ai-investment-in-engineering-should-go-2290" target="_blank" rel="noopener">Measuring before tooling: where AI investment in engineering should go</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Measuring before tooling: where AI investment in engineering should go</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/orbitpickle307/ai-assisted-qa-does-not-reduce-testing-work-it-changes-where-the-work-lives-4dfh" target="_blank" rel="noopener">AI-Assisted QA Does Not Reduce Testing Work, It Changes Where the Work Lives</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI-Assisted QA Does Not Reduce Testing Work, It Changes Where the Work Lives</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/_suleyman/why-you-underestimate-haiku-5gik" target="_blank" rel="noopener">Why You Underestimate Haiku</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Why You Underestimate Haiku</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/soytuber/benchmarking-ai-agents-gemma-4-on-device-workflows-ai-system-security-25po" target="_blank" rel="noopener">Benchmarking AI Agents, Gemma 4 On-Device Workflows &amp; AI System Security</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Benchmarking AI Agents, Gemma 4 On-Device Workflows &amp; AI System Security</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/abhi_chatterjee_979801/securing-ai-systems-red-teaming-prompt-injection-and-adversarial-testing-3gb6" target="_blank" rel="noopener">Securing AI Systems: Red Teaming, Prompt Injection, and Adversarial Testing</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Securing AI Systems: Red Teaming, Prompt Injection, and Adversarial Testing</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://openai.com/index/openai-submits-confidential-s-1/" target="_blank" rel="noopener">OpenAI Submits S-1 Draft to SEC</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">106 points by hackerBanana | 44 comments</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 OpenAI Submits S-1 Draft to SEC</div>
+        <div class="original-summary">106 points by hackerBanana | 44 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://burrito.bio/essays/what-limits-a-cells-size" target="_blank" rel="noopener">Why are cells small?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">87 points by mailyk | 38 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Why are cells small?</div>
+        <div class="original-summary">87 points by mailyk | 38 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/akdevcraft/telegram-integration-0-personal-agentic-ai-assistant-part-5-4m2n" target="_blank" rel="noopener">Telegram Integration - $0 Personal Agentic AI Assistant - Part 5</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Telegram Integration - $0 Personal Agentic AI Assistant - Part 5</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/soytuber/local-llm-benchmarking-agent-tools-for-self-hosted-ai-2j1h" target="_blank" rel="noopener">Local LLM Benchmarking &amp; Agent Tools for Self-Hosted AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Local LLM Benchmarking &amp; Agent Tools for Self-Hosted AI</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aigovernorapp/-how-we-built-a-tamper-evident-worm-audit-log-for-ai-agents-using-sha-256-hash-chains-and-g6a" target="_blank" rel="noopener"># How we built a tamper-evident WORM audit log for AI agents using SHA-256 hash chains and PostgreSQL</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 # How we built a tamper-evident WORM audit log for AI agents using SHA-256 hash chains and PostgreSQL</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845139602721027?f=rss" target="_blank" rel="noopener">赣州和美药业股份有限公司-B递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 赣州和美药业股份有限公司-B递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138836867337?f=rss" target="_blank" rel="noopener">广东真健康医疗科技递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 广东真健康医疗科技递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138437736707?f=rss" target="_blank" rel="noopener">谷歌母公司Alphabet委托英特尔生产300万颗自研芯片</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">谷歌已向英特尔下单，要求其在2028年生产超过300万个TPU。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 谷歌母公司Alphabet委托英特尔生产300万颗自研芯片</div>
+        <div class="original-summary">谷歌已向英特尔下单，要求其在2028年生产超过300万个TPU。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138025842946?f=rss" target="_blank" rel="noopener">苹果发布macOS新版本“Golden Gate”</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">苹果在全球开发者大会上公布全新macOS版本。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 苹果发布macOS新版本“Golden Gate”</div>
+        <div class="original-summary">苹果在全球开发者大会上公布全新macOS版本。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845137627744514?f=rss" target="_blank" rel="noopener">杭州高光制药股份有限公司-B递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 杭州高光制药股份有限公司-B递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845136538650882?f=rss" target="_blank" rel="noopener">AMD五年内将向英国AI领域投资最高20亿英镑</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">AMD宣布计划未来五年内向英国投资最高20亿英镑，以加速AI创新。</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 AMD五年内将向英国AI领域投资最高20亿英镑</div>
+        <div class="original-summary">AMD宣布计划未来五年内向英国投资最高20亿英镑，以加速AI创新。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845135933458950?f=rss" target="_blank" rel="noopener">潮州三环递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 潮州三环递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845134624295175?f=rss" target="_blank" rel="noopener">西捷航空计划于2027年初投入首架波音737 MAX 10客机</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">加拿大西捷航空预计将于2027年第一季度投入首架波音737 MAX 10客机运营。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 西捷航空计划于2027年初投入首架波音737 MAX 10客机</div>
+        <div class="original-summary">加拿大西捷航空预计将于2027年第一季度投入首架波音737 MAX 10客机运营。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845132771461638?f=rss" target="_blank" rel="noopener">摩根士丹利：美元涨势能否持续取决于美联储利率路径</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">摩根士丹利策略师表示美联储前景将决定美元下一阶段走势。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 摩根士丹利：美元涨势能否持续取决于美联储利率路径</div>
+        <div class="original-summary">摩根士丹利策略师表示美联储前景将决定美元下一阶段走势。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845131703699720?f=rss" target="_blank" rel="noopener">高盛、摩根大通探索全新工具管控人工智能信贷风险</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">高盛集团与摩根大通正研究围绕算力成本开展交易。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 高盛、摩根大通探索全新工具管控人工智能信贷风险</div>
+        <div class="original-summary">高盛集团与摩根大通正研究围绕算力成本开展交易。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/morinaga/why-im-betting-on-ai-curated-directories-when-google-ai-overviews-answer-the-same-queries-3o31" target="_blank" rel="noopener">Why I&#39;m betting on AI-curated directories when Google AI Overviews answer the same queries</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Why I&#39;m betting on AI-curated directories when Google AI Overviews answer the same queries</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alessandro_pignati/are-you-talking-to-a-bot-why-ai-identity-is-harder-than-you-think-28lp" target="_blank" rel="noopener">Are You Talking to a Bot? Why AI Identity is Harder Than You Think</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Are You Talking to a Bot? Why AI Identity is Harder Than You Think</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845149412018434?f=rss" target="_blank" rel="noopener">主观策略股票私募加快引入AI，打破AI只适配量化投资固有观念</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">主观策略私募加快引入AI技术</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 主观策略股票私募加快引入AI，打破AI只适配量化投资固有观念</div>
+        <div class="original-summary">主观策略私募加快引入AI技术</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/billionaire664/how-i-added-hard-spending-limits-to-ai-agents-and-why-logging-isnt-enough-4jle" target="_blank" rel="noopener">How I added hard spending limits to AI agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 How I added hard spending limits to AI agents</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/rlabs/two-pillars-protocol-a-maturity-model-for-ai-era-software-engineering-4bkj" target="_blank" rel="noopener">Two Pillars Protocol - A maturity model for AI-era software engineering</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Two Pillars Protocol - A maturity model for AI-era software engineering</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+  </div>
+  <div class="category" id="cat-model">
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/i-gave-up-on-css-selectors-using-llms-for-web-scraping-kd6" target="_blank" rel="noopener">I Gave Up on CSS Selectors: Using LLMs for Web Scraping</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I Gave Up on CSS Selectors: Using LLMs for Web Scraping</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/harshal_sant_be921c5039f2/contextlens-py-spypprof-but-for-whats-inside-your-llm-prompt-59l7" target="_blank" rel="noopener">ContextLens — py-spy/pprof but for what&#39;s inside your LLM prompt</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 ContextLens — py-spy/pprof but for what&#39;s inside your LLM prompt</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/samhartley_dev/run-your-own-ai-server-for-0month-with-ollama-5ecg" target="_blank" rel="noopener">Run Your Own AI Server for $0/month with Ollama</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Run Your Own AI Server for $0/month with Ollama</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ozforce_1998/i-renamed-my-ai-agent-safety-tool-and-added-a-team-dashboard-heres-what-drove-those-decisions-bi1" target="_blank" rel="noopener">I renamed my AI agent safety tool and added a team dashboard - here&#39;s what drove those decisions</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I renamed my AI agent safety tool and added a team dashboard - here&#39;s what drove those decisions</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840016255126016?f=rss" target="_blank" rel="noopener">Token大战中华为云选择了第三条路最前线</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">作者邓咏仪编辑张雨忻...</div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Token大战中华为云选择了第三条路最前线</div>
+        <div class="original-summary">作者邓咏仪编辑张雨忻...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/solooperator/how-to-structure-claudemd-for-long-running-projects-2jli" target="_blank" rel="noopener">How to structure CLAUDE.md for long-running projects</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 How to structure CLAUDE.md for long-running projects</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/yaro_dev/why-your-gpu-reports-75degc-while-your-vram-is-cooking-at-105degc-the-telemetry-gap-that-kills-llm-30m7" target="_blank" rel="noopener">Why your GPU reports 75C while your VRAM is cooking at 105C the telemetry gap that kills LLM inference</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Why your GPU reports 75C while your VRAM is cooking at 105C the telemetry gap that kills LLM inference</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/" target="_blank" rel="noopener">Apple reveals new AI architecture built around Google Gemini models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">250 points by anonymous | 0 comments</div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Apple reveals new AI architecture built around Google Gemini models</div>
+        <div class="original-summary">250 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/vivek_shetye/build-a-fully-local-ai-agent-with-hermes-agent-ollama-qwen-35-and-searxng-100-private-0-568d" target="_blank" rel="noopener">🚀 Build a Fully Local AI Agent with Hermes Agent, Ollama, Qwen 3.5, and SearXNG (100% Private &amp; $0 Cost)</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 🚀 Build a Fully Local AI Agent with Hermes Agent, Ollama, Qwen 3.5, and SearXNG (100% Private &amp; $0 Cost)</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/thepatwalls/can-you-build-a-successful-business-in-a-claude-code-loop-154h" target="_blank" rel="noopener">Can you build a successful business in a Claude Code loop?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Can you build a successful business in a Claude Code loop?</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/heckno/i-tested-9-serverless-gpu-providers-for-ai-inference-in-2026-heres-what-id-actually-use-4cf4" target="_blank" rel="noopener">I Tested 9 Serverless GPU Providers for AI Inference in 2026. Here&#39;s What I&#39;d Actually Use</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 I Tested 9 Serverless GPU Providers for AI Inference in 2026. Here&#39;s What I&#39;d Actually Use</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/prashar32/benchmarking-a-kill-switch-for-runaway-ai-agents-and-why-the-real-number-is-a-ceiling-not-a--4832" target="_blank" rel="noopener">Benchmarking a kill switch for runaway AI agents -- and why the real number is a ceiling, not a %</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Benchmarking a kill switch for runaway AI agents -- and why the real number is a ceiling, not a %</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/harrisonsec/agent-retrieval-above-the-crossover-a-first-principles-read-of-codegraph-1gd7" target="_blank" rel="noopener">Agent Retrieval Above the Crossover: A First-Principles Read of CodeGraph</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Agent Retrieval Above the Crossover: A First-Principles Read of CodeGraph</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aplomb2/what-apples-wwdc-just-taught-us-about-ai-model-routing-22p6" target="_blank" rel="noopener">What Apple&#39;s WWDC Just Taught Us About AI Model Routing</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 What Apple&#39;s WWDC Just Taught Us About AI Model Routing</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/_suleyman/why-you-underestimate-haiku-5gik" target="_blank" rel="noopener">Why You Underestimate Haiku</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Why You Underestimate Haiku</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/soytuber/local-llm-benchmarking-agent-tools-for-self-hosted-ai-2j1h" target="_blank" rel="noopener">Local LLM Benchmarking &amp; Agent Tools for Self-Hosted AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Local LLM Benchmarking &amp; Agent Tools for Self-Hosted AI</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/rlabs/two-pillars-protocol-a-maturity-model-for-ai-era-software-engineering-4bkj" target="_blank" rel="noopener">Two Pillars Protocol - A maturity model for AI-era software engineering</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span>
+      <div class="original">
+        <div class="original-title">📖 Two Pillars Protocol - A maturity model for AI-era software engineering</div>
+        <div class="original-summary"></div>
+      </div>
+    </div></div><div class="category" id="cat-business">
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mspro3210/the-agentic-maturity-model-is-missing-an-axis-who-validated-the-claim-284i" target="_blank" rel="noopener">The Agentic Maturity Model Is Missing an Axis: Who Validated the Claim</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 The Agentic Maturity Model Is Missing an Axis: Who Validated the Claim</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3843764238174729?f=rss" target="_blank" rel="noopener">8点1氪｜八家上市公司集中公告“补税”；ChatGPT将迎来史上最大幅度升级；高考新增AI监考员，自动截取异常录像</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">AI等机器网络请求量首超人类</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 8点1氪｜八家上市公司集中公告“补税”；ChatGPT将迎来史上最大幅度升级；高考新增AI监考员，自动截取异常录像</div>
+        <div class="original-summary">AI等机器网络请求量首超人类</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3841459663030532?f=rss" target="_blank" rel="noopener">华超神控获亿元天使系列融资加速打造新一代AI超声脑机接口平台36氪首发</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">文胡香赟编辑海若镜...</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 华超神控获亿元天使系列融资加速打造新一代AI超声脑机接口平台36氪首发</div>
+        <div class="original-summary">文胡香赟编辑海若镜...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alexocallaghan/measuring-before-tooling-where-ai-investment-in-engineering-should-go-2290" target="_blank" rel="noopener">Measuring before tooling: where AI investment in engineering should go</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Measuring before tooling: where AI investment in engineering should go</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/soytuber/benchmarking-ai-agents-gemma-4-on-device-workflows-ai-system-security-25po" target="_blank" rel="noopener">Benchmarking AI Agents, Gemma 4 On-Device Workflows &amp; AI System Security</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Benchmarking AI Agents, Gemma 4 On-Device Workflows &amp; AI System Security</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/abhi_chatterjee_979801/securing-ai-systems-red-teaming-prompt-injection-and-adversarial-testing-3gb6" target="_blank" rel="noopener">Securing AI Systems: Red Teaming, Prompt Injection, and Adversarial Testing</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Securing AI Systems: Red Teaming, Prompt Injection, and Adversarial Testing</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://openai.com/index/openai-submits-confidential-s-1/" target="_blank" rel="noopener">OpenAI Submits S-1 Draft to SEC</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">106 points by hackerBanana | 44 comments</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 OpenAI Submits S-1 Draft to SEC</div>
+        <div class="original-summary">106 points by hackerBanana | 44 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aigovernorapp/-how-we-built-a-tamper-evident-worm-audit-log-for-ai-agents-using-sha-256-hash-chains-and-g6a" target="_blank" rel="noopener"># How we built a tamper-evident WORM audit log for AI agents using SHA-256 hash chains and PostgreSQL</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 # How we built a tamper-evident WORM audit log for AI agents using SHA-256 hash chains and PostgreSQL</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845139602721027?f=rss" target="_blank" rel="noopener">赣州和美药业股份有限公司-B递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 赣州和美药业股份有限公司-B递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138836867337?f=rss" target="_blank" rel="noopener">广东真健康医疗科技递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 广东真健康医疗科技递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845137627744514?f=rss" target="_blank" rel="noopener">杭州高光制药股份有限公司-B递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 杭州高光制药股份有限公司-B递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845136538650882?f=rss" target="_blank" rel="noopener">AMD五年内将向英国AI领域投资最高20亿英镑</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">AMD宣布计划未来五年内向英国投资最高20亿英镑，以加速AI创新。</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 AMD五年内将向英国AI领域投资最高20亿英镑</div>
+        <div class="original-summary">AMD宣布计划未来五年内向英国投资最高20亿英镑，以加速AI创新。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845135933458950?f=rss" target="_blank" rel="noopener">潮州三环递表港交所</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">港交所文件</div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 潮州三环递表港交所</div>
+        <div class="original-summary">港交所文件</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alessandro_pignati/are-you-talking-to-a-bot-why-ai-identity-is-harder-than-you-think-28lp" target="_blank" rel="noopener">Are You Talking to a Bot? Why AI Identity is Harder Than You Think</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">💼 商业与融资</span>
+      <div class="original">
+        <div class="original-title">📖 Are You Talking to a Bot? Why AI Identity is Harder Than You Think</div>
+        <div class="original-summary"></div>
+      </div>
+    </div></div><div class="category" id="cat-industry">
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844185422400008?f=rss" target="_blank" rel="noopener">世界杯官方比赛用球再度&quot;中国制造&quot;：全球产业链迁移下，广东工厂为何仍留在赛场中央？｜最前线</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">2026年美加墨世界杯进入倒计时...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 世界杯官方比赛用球再度&quot;中国制造&quot;：全球产业链迁移下，广东工厂为何仍留在赛场中央？｜最前线</div>
+        <div class="original-summary">2026年美加墨世界杯进入倒计时...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ahmad_khokhar/ai-doesnt-write-buggy-code-your-workflow-does-397o" target="_blank" rel="noopener">AI Doesn&#39;t Write Buggy Code — Your Workflow Does</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI Doesn&#39;t Write Buggy Code — Your Workflow Does</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://cs-syd.eu/posts/2026-06-03-mutation-testing-in-haskell" target="_blank" rel="noopener">Mutation Testing in Haskell</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">8 points by Norfair | 0 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Mutation Testing in Haskell</div>
+        <div class="original-summary">8 points by Norfair | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844559758936582?f=rss" target="_blank" rel="noopener">氪星晚报追觅质押嘉美包装247亿股向兴业银行贷款提供担保黄仁勋SK海力士到2030年将晶圆产能翻倍的计划还不够</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">大公司：热门中概股美股盘前多数上涨...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 氪星晚报追觅质押嘉美包装247亿股向兴业银行贷款提供担保黄仁勋SK海力士到2030年将晶圆产能翻倍的计划还不够</div>
+        <div class="original-summary">大公司：热门中概股美股盘前多数上涨...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844018911889924?f=rss" target="_blank" rel="noopener">腾讯汤道生评价姚顺雨混元3和元宝</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">文王毓婵编辑张雨忻6月5日...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 腾讯汤道生评价姚顺雨混元3和元宝</div>
+        <div class="original-summary">文王毓婵编辑张雨忻6月5日...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844199957236227?f=rss" target="_blank" rel="noopener">改变全球速度的AI付款却卡在上一个时代</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">2026年全球平均每小时就有一家新的AI公司诞生...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 改变全球速度的AI付款却卡在上一个时代</div>
+        <div class="original-summary">2026年全球平均每小时就有一家新的AI公司诞生...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3844006775360002?f=rss" target="_blank" rel="noopener">产品观察小米创始员工范典创业AI硬件做了台无摩擦的睡眠床头灯</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">作者邱晓芬编辑袁斯来...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 产品观察小米创始员工范典创业AI硬件做了台无摩擦的睡眠床头灯</div>
+        <div class="original-summary">作者邱晓芬编辑袁斯来...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840996342073604?f=rss" target="_blank" rel="noopener">9点1氪豆包推出付费后月活减少610万Anthropic呼吁全球放缓AI开发警告AI自我改进风险罗永浩卸任锤子软件公司执行董事</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-06</span>
+      </div>
+      <div class="summary">今日热点导览...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 9点1氪豆包推出付费后月活减少610万Anthropic呼吁全球放缓AI开发警告AI自我改进风险罗永浩卸任锤子软件公司执行董事</div>
+        <div class="original-summary">今日热点导览...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3840267945969929?f=rss" target="_blank" rel="noopener">氪星晚报日本或通过抛售美债为创纪录规模的日元汇市干预筹资俞浩内部发文未来将继续心无旁骛做实业</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-05</span>
+      </div>
+      <div class="summary">大公司：首关15亿元...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 氪星晚报日本或通过抛售美债为创纪录规模的日元汇市干预筹资俞浩内部发文未来将继续心无旁骛做实业</div>
+        <div class="original-summary">大公司：首关15亿元...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844514407336201?f=rss" target="_blank" rel="noopener">同程旅行将接入微信AI智能体机票酒店将实现AI一键预订</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">36氪获悉6月8日...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 同程旅行将接入微信AI智能体机票酒店将实现AI一键预订</div>
+        <div class="original-summary">36氪获悉6月8日...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844524510382599?f=rss" target="_blank" rel="noopener">天娱数科目前无物理AI业务未形成相关业务收入</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">天娱数科公告...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 天娱数科目前无物理AI业务未形成相关业务收入</div>
+        <div class="original-summary">天娱数科公告...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3844521049065737?f=rss" target="_blank" rel="noopener">金安国纪公司覆铜板主要客户为PCB厂商未发现在AI服务器及算力领域的应用</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary">金安国纪公告...</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 金安国纪公司覆铜板主要客户为PCB厂商未发现在AI服务器及算力领域的应用</div>
+        <div class="original-summary">金安国纪公告...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://martinalderson.com/posts/xais-new-rental-business/" target="_blank" rel="noopener">xAI is looking more like a datacentre REIT than a frontier lab</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">27 points by martinald | 9 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 xAI is looking more like a datacentre REIT than a frontier lab</div>
+        <div class="original-summary">27 points by martinald | 9 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/xulingfeng/my-company-packaged-12-years-of-my-experience-into-an-ai-skill-then-laid-me-off-when-it-crashed-4b3e" target="_blank" rel="noopener">My company packaged 12 years of my experience into an AI Skill, then laid me off.</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 My company packaged 12 years of my experience into an AI Skill, then laid me off.</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.apple.com/apple-intelligence/" target="_blank" rel="noopener">Siri AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">12 points by 0xedb | 3 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Siri AI</div>
+        <div class="original-summary">12 points by 0xedb | 3 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.wheresyoured.at/ai-is-slowing-down/" target="_blank" rel="noopener">AI Is Slowing Down</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">102 points by crescit_eundo | 117 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI Is Slowing Down</div>
+        <div class="original-summary">102 points by crescit_eundo | 117 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/arthurgermano/programadores-nao-vao-mais-programar-nem-contar-pontos-de-funcao-j26" target="_blank" rel="noopener">Programadores Não Vão Mais Programar — Nem Contar Pontos de Função</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Programadores Não Vão Mais Programar — Nem Contar Pontos de Função</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/devopsaitoolkit/how-devops-engineers-can-use-ai-to-triage-production-incidents-faster-3jb6" target="_blank" rel="noopener">How DevOps Engineers Can Use AI to Triage Production Incidents Faster</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 How DevOps Engineers Can Use AI to Triage Production Incidents Faster</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/orbitpickle307/ai-assisted-qa-does-not-reduce-testing-work-it-changes-where-the-work-lives-4dfh" target="_blank" rel="noopener">AI-Assisted QA Does Not Reduce Testing Work, It Changes Where the Work Lives</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 AI-Assisted QA Does Not Reduce Testing Work, It Changes Where the Work Lives</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://burrito.bio/essays/what-limits-a-cells-size" target="_blank" rel="noopener">Why are cells small?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">87 points by mailyk | 38 comments</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Why are cells small?</div>
+        <div class="original-summary">87 points by mailyk | 38 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138437736707?f=rss" target="_blank" rel="noopener">谷歌母公司Alphabet委托英特尔生产300万颗自研芯片</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">谷歌已向英特尔下单，要求其在2028年生产超过300万个TPU。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 谷歌母公司Alphabet委托英特尔生产300万颗自研芯片</div>
+        <div class="original-summary">谷歌已向英特尔下单，要求其在2028年生产超过300万个TPU。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845138025842946?f=rss" target="_blank" rel="noopener">苹果发布macOS新版本“Golden Gate”</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">苹果在全球开发者大会上公布全新macOS版本。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 苹果发布macOS新版本“Golden Gate”</div>
+        <div class="original-summary">苹果在全球开发者大会上公布全新macOS版本。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845134624295175?f=rss" target="_blank" rel="noopener">西捷航空计划于2027年初投入首架波音737 MAX 10客机</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">加拿大西捷航空预计将于2027年第一季度投入首架波音737 MAX 10客机运营。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 西捷航空计划于2027年初投入首架波音737 MAX 10客机</div>
+        <div class="original-summary">加拿大西捷航空预计将于2027年第一季度投入首架波音737 MAX 10客机运营。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845132771461638?f=rss" target="_blank" rel="noopener">摩根士丹利：美元涨势能否持续取决于美联储利率路径</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">摩根士丹利策略师表示美联储前景将决定美元下一阶段走势。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 摩根士丹利：美元涨势能否持续取决于美联储利率路径</div>
+        <div class="original-summary">摩根士丹利策略师表示美联储前景将决定美元下一阶段走势。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845131703699720?f=rss" target="_blank" rel="noopener">高盛、摩根大通探索全新工具管控人工智能信贷风险</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">高盛集团与摩根大通正研究围绕算力成本开展交易。</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 高盛、摩根大通探索全新工具管控人工智能信贷风险</div>
+        <div class="original-summary">高盛集团与摩根大通正研究围绕算力成本开展交易。</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/morinaga/why-im-betting-on-ai-curated-directories-when-google-ai-overviews-answer-the-same-queries-3o31" target="_blank" rel="noopener">Why I&#39;m betting on AI-curated directories when Google AI Overviews answer the same queries</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 Why I&#39;m betting on AI-curated directories when Google AI Overviews answer the same queries</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3845149412018434?f=rss" target="_blank" rel="noopener">主观策略股票私募加快引入AI，打破AI只适配量化投资固有观念</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">36kr</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">主观策略私募加快引入AI技术</div>
+      <span class="tag">🏭 产业应用</span>
+      <div class="original">
+        <div class="original-title">📖 主观策略股票私募加快引入AI，打破AI只适配量化投资固有观念</div>
+        <div class="original-summary">主观策略私募加快引入AI技术</div>
+      </div>
+    </div></div><div class="category" id="cat-tools">
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/how-i-cut-my-ai-api-costs-by-70-without-sacrificing-quality-1hao" target="_blank" rel="noopener">How I Cut My AI API Costs by 70% Without Sacrificing Quality</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 How I Cut My AI API Costs by 70% Without Sacrificing Quality</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kaidanov/track-what-your-ai-coding-tools-actually-cost-link-at-the-bottom-1pb8" target="_blank" rel="noopener">Track what your AI coding tools actually cost - link at the bottom</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Track what your AI coding tools actually cost - link at the bottom</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kaidanov/zero-stall-ai-building-a-self-managing-tdd-pipeline-with-autonomous-agents-4ifh" target="_blank" rel="noopener">Zero-Stall AI: Building a Self-Managing TDD Pipeline with Autonomous Agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Zero-Stall AI: Building a Self-Managing TDD Pipeline with Autonomous Agents</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/nithiin7/i-got-tired-of-reading-strangers-codebases-so-i-built-an-ai-that-reads-them-for-me-3l3d" target="_blank" rel="noopener">I Got Tired of Reading Strangers&#39; Codebases, So I Built an AI That Reads Them For Me</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 I Got Tired of Reading Strangers&#39; Codebases, So I Built an AI That Reads Them For Me</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ahmetozel/designing-a-config-driven-agentic-rag-platform-for-customer-support-abo" target="_blank" rel="noopener">Designing a config-driven agentic RAG platform for customer support</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Designing a config-driven agentic RAG platform for customer support</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mickyarun/i-replaced-scrum-jira-and-our-wiki-with-12-ai-agents-on-a-mac-mini-o7o" target="_blank" rel="noopener">I Replaced Scrum, Jira, and Our Wiki With 12 AI Agents on a Mac Mini</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 I Replaced Scrum, Jira, and Our Wiki With 12 AI Agents on a Mac Mini</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://intunedhq.com" target="_blank" rel="noopener">Launch HN: Intuned (YC S22) - Build and run reliable browser automations as code</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">Hey HN, we&amp;#x27;re Faisal and Ahmad from Intuned (https:&amp;#x2F;&amp;#x2F;intunedhq.com). We’re building a platform for building, deploying, and maintaining browser automations.Customers primari</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Launch HN: Intuned (YC S22) - Build and run reliable browser automations as code</div>
+        <div class="original-summary">Hey HN, we&amp;#x27;re Faisal and Ahmad from Intuned (https:&amp;#x2F;&amp;#x2F;intunedhq.com). We’re building a platform for building, deploying, and maintaining browser automations.Customers primarily use the Intuned AI agent to automate websites that don&amp;#x27;t expose APIs. Common use-cases include scraping data, pulling reports, and submitting forms. As the website changes, our agent also helps automatically heal the automation.On Intuned, browser automations are created by an AI agent a</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/pachicodes/agente-local-ou-agente-na-nuvem-qual-faz-sentido-para-voce-5co0" target="_blank" rel="noopener">Agente local ou agente na nuvem: qual faz sentido para voce?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Agente local ou agente na nuvem: qual faz sentido para voce?</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/shuo_wu_00d47f641aed077d6/flat-chat-threads-suck-for-reading-books-so-i-built-a-local-first-ai-tree-companion-3oai" target="_blank" rel="noopener">Flat Chat Threads Suck for Reading Books. So I Built a Local-First AI Tree Companion.</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Flat Chat Threads Suck for Reading Books. So I Built a Local-First AI Tree Companion.</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sumayea104/building-my-first-ai-agent-api-with-fastapi-and-mistral-ai-3ign" target="_blank" rel="noopener">Building My First AI Agent API with FastAPI and Mistral AI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Building My First AI Agent API with FastAPI and Mistral AI</div>
+        <div class="original-summary"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://gitdot.io/" target="_blank" rel="noopener">Show HN: Gitdot – a better GitHub. Open-source, anti-AI, and written in Rust</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">What works now: user signups, org creations, private&amp;#x2F;public repos, and importing GitHub repositories (both as read-only mirrors and full migrations). So basically, you can create, push and pu</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Show HN: Gitdot – a better GitHub. Open-source, anti-AI, and written in Rust</div>
+        <div class="original-summary">What works now: user signups, org creations, private&amp;#x2F;public repos, and importing GitHub repositories (both as read-only mirrors and full migrations). So basically, you can create, push and pull to a repo, but we don&amp;#x27;t have many features quite yet (issues, PRs, CI).What is a bit unique is: 1) we built it in Rust and 2) the website is a little odd. Its design is inspired by CLIs (e.g., fzf, broot, vim) instead of web apps, and as such, lacks some affordances that you might typica</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://developer.apple.com/documentation/coreai/" target="_blank" rel="noopener">Apple Core AI Framework</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">63 points by anonymous | 0 comments</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Apple Core AI Framework</div>
+        <div class="original-summary">63 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://news.ycombinator.com/item?id=48449187" target="_blank" rel="noopener">Ask HN: What are tools you have made for yourself since the advent of AI?</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">HackerNews</span>
+        <span>2026-06-09</span>
+      </div>
+      <div class="summary">64 points by anonymous | 0 comments</div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 Ask HN: What are tools you have made for yourself since the advent of AI?</div>
+        <div class="original-summary">64 points by anonymous | 0 comments</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/billionaire664/how-i-added-hard-spending-limits-to-ai-agents-and-why-logging-isnt-enough-4jle" target="_blank" rel="noopener">How I added hard spending limits to AI agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span>
+      <div class="original">
+        <div class="original-title">📖 How I added hard spending limits to AI agents</div>
+        <div class="original-summary"></div>
+      </div>
+    </div></div><div class="category" id="cat-academic">
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2603.28944" target="_blank" rel="noopener">AI prediction leads people to forgo guaranteed rewards</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-03-30</span>
+      </div>
+      <div class="summary">Artificial intelligence (AI) is understood to affect the content of people&#39;s decisions. Here, using a behavioral implementation of the classic Newcomb&#39;s paradox in 1,305 participants, we show </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI prediction leads people to forgo guaranteed rewards</div>
+        <div class="original-summary">Artificial intelligence (AI) is understood to affect the content of people&#39;s decisions. Here, using a behavioral implementation of the classic Newcomb&#39;s paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guara</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2501.02842" target="_blank" rel="noopener">Foundations of GenIR</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-01-06</span>
+      </div>
+      <div class="summary">The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of g</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Foundations of GenIR</div>
+        <div class="original-summary">The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation a</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2601.16513" target="_blank" rel="noopener">Competing Visions of Ethical AI: A Case Study of OpenAI</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-01-23</span>
+      </div>
+      <div class="summary">Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has Ope</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Competing Visions of Ethical AI: A Case Study of OpenAI</div>
+        <div class="original-summary">Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI&#39;s public discourse leveraged &#39;ethics&#39;, &#39;safety&#39;, &#39;alignment&#39; and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2503.12687" target="_blank" rel="noopener">AI Agents: Evolution, Architecture, and Real-World Applications</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-03-16</span>
+      </div>
+      <div class="summary">This paper examines the evolution, architecture, and practical applications of AI agents from their early, rule-based incarnations to modern sophisticated systems that integrate large language models </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI Agents: Evolution, Architecture, and Real-World Applications</div>
+        <div class="original-summary">This paper examines the evolution, architecture, and practical applications of AI agents from their early, rule-based incarnations to modern sophisticated systems that integrate large language models with dedicated modules for perception, planning, and tool use. Emphasizing both theoretical foundations and real-world deployments, the paper reviews key agent paradigms, discusses limitations of current evaluation benchmarks, and proposes a holistic evaluation framework that balances task effective</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2601.00360" target="_blank" rel="noopener">Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-01-01</span>
+      </div>
+      <div class="summary">As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains hav</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems</div>
+        <div class="original-summary">As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains have accumulated centuries of anti-collusion mechanisms, it remains unclear how these can be adapted to AI settings. This paper addresses that gap by (i) developing a taxonomy of human anti-collusion mechanisms, including sanctions, leniency &amp; whistleblowing, monitoring &amp; auditing, market desig</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI: a comprehensive survey of safety, robustness, privacy, and system security</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-17</span>
+      </div>
+      <div class="summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interactions -- can execute complex tasks autonomously, but their multi-step trajectories</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Towards trustworthy agentic AI: a comprehensive survey of safety, robustness, privacy, and system security</div>
+        <div class="original-summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interactions -- can execute complex tasks autonomously, but their multi-step trajectories introduce new failure modes that challenge trustworthiness. This survey provides a focused examination of trustworthy agentic AI through two core dimensions that are critical for high-risk deployments: Safety and Robustness, and Privacy and System Security. For each dimension, we clarify key concep</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2605.21825" target="_blank" rel="noopener">Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness for Solving Complex Data Visualization Tasks</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2026-05-20</span>
+      </div>
+      <div class="summary">The ability to inspect, interpret, and communicate complex data is crucial for virtually any scientific endeavor, but often requires significant expertise outside the core domain ranging from data man</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Toward AI VIS Co-Scientists: A General and End-to-End Agent Harness for Solving Complex Data Visualization Tasks</div>
+        <div class="original-summary">The ability to inspect, interpret, and communicate complex data is crucial for virtually any scientific endeavor, but often requires significant expertise outside the core domain ranging from data management and analysis to visualization design and implementation. We present an end-to-end agentic harness that, based on only the data and a high level description of the tasks, independently designs custom visual analysis applications (VIS apps). This represents an important step towards a general </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2112.01298" target="_blank" rel="noopener">Meaningful human control: actionable properties for AI system development</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2021-11-25</span>
+      </div>
+      <div class="summary">How can humans remain in control of artificial intelligence (AI)-based systems designed to perform tasks autonomously? Such systems are increasingly ubiquitous, creating benefits - but also undesirabl</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Meaningful human control: actionable properties for AI system development</div>
+        <div class="original-summary">How can humans remain in control of artificial intelligence (AI)-based systems designed to perform tasks autonomously? Such systems are increasingly ubiquitous, creating benefits - but also undesirable situations where moral responsibility for their actions cannot be properly attributed to any particular person or group. The concept of meaningful human control has been proposed to address responsibility gaps and mitigate them by establishing conditions that enable a proper attribution of respons</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2508.08544" target="_blank" rel="noopener">AI Agents and the Law</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-08-12</span>
+      </div>
+      <div class="summary">As AI becomes more &quot;agentic,&quot; it faces technical and socio-legal issues it must address if it is to fulfill its promise of increased economic productivity and efficiency. This paper uses tec</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 AI Agents and the Law</div>
+        <div class="original-summary">As AI becomes more &quot;agentic,&quot; it faces technical and socio-legal issues it must address if it is to fulfill its promise of increased economic productivity and efficiency. This paper uses technical and legal perspectives to explain how things change when AI systems start being able to directly execute tasks on behalf of a user. We show how technical conceptions of agents track some, but not all, socio-legal conceptions of agency. That is, both computer science and the law recognize the </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2402.11651" target="_blank" rel="noopener">Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-02-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation inste</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents</div>
+        <div class="original-summary">Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.10793" target="_blank" rel="noopener">Demystifying Instruction Mixing for Fine-tuning Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-17</span>
+      </div>
+      <div class="summary">Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tun</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Demystifying Instruction Mixing for Fine-tuning Large Language Models</div>
+        <div class="original-summary">Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tuning is still poorly understood. This study categorizes instructions into three primary types: NLP downstream tasks, coding, and general chat. We explore the effects of instruction tuning on different combinations of datasets on LLM performance, and find that certain instruction types are more advant</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2304.12244" target="_blank" rel="noopener">WizardLM: Empowering large pre-trained language models to follow complex instructions</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-04-24</span>
+      </div>
+      <div class="summary">Training large language models (LLMs) with open-domain instruction following data brings colossal success. However, manually creating such instruction data is very time-consuming and labor-intensive. </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 WizardLM: Empowering large pre-trained language models to follow complex instructions</div>
+        <div class="original-summary">Training large language models (LLMs) with open-domain instruction following data brings colossal success. However, manually creating such instruction data is very time-consuming and labor-intensive. Moreover, humans may struggle to produce high-complexity instructions. In this paper, we show an avenue for creating large amounts of instruction data with varying levels of complexity using LLM instead of humans. Starting with an initial set of instructions, we use our proposed Evol-Instruct to rew</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2310.00034" target="_blank" rel="noopener">PB-LLM: Partially Binarized Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-09-29</span>
+      </div>
+      <div class="summary">This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binariza</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 PB-LLM: Partially Binarized Large Language Models</div>
+        <div class="original-summary">This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binarization methods collapsing LLMs, we propose a novel approach, Partially-Binarized LLM (PB-LLM), which can achieve extreme low-bit quantization while maintaining the linguistic reasoning capacity of quantized LLMs. Specifically, our exploration first uncovers the ineffectiveness of naive applications of</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2503.21676" target="_blank" rel="noopener">How do language models learn facts? Dynamics, curricula and hallucinations</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-03-27</span>
+      </div>
+      <div class="summary">Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language mode</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 How do language models learn facts? Dynamics, curricula and hallucinations</div>
+        <div class="original-summary">Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2308.16149" target="_blank" rel="noopener">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-08-30</span>
+      </div>
+      <div class="summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only archi</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models</div>
+        <div class="original-summary">We introduce Jais and Jais-chat, new state-of-the-art Arabic-centric foundation and instruction-tuned open generative large language models (LLMs). The models are based on the GPT-3 decoder-only architecture and are pretrained on a mixture of Arabic and English texts, including source code in various programming languages. With 13 billion parameters, they demonstrate better knowledge and reasoning capabilities in Arabic than any existing open Arabic and multilingual models by a sizable margin, b</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank" rel="noopener">PediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-05-29</span>
+      </div>
+      <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advance</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 PediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications</div>
+        <div class="original-summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advances in Large Language Models (LLMs) for Chinese medicine, their performance is sub-optimal in pediatric applications due to inadequate instruction data and vulnerable training procedures. To address the above issues, this paper builds PedCorpus, a high-quality dataset of over 300,000 multi-task instru</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2405.11357" target="_blank" rel="noopener">Large Language Models Lack Understanding of Character Composition of Words</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-05-18</span>
+      </div>
+      <div class="summary">Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs&#39; successes have been largely restricted to tasks concerning words, sente</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Large Language Models Lack Understanding of Character Composition of Words</div>
+        <div class="original-summary">Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs&#39; successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simp</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2312.05434" target="_blank" rel="noopener">Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-12-09</span>
+      </div>
+      <div class="summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface tex</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models</div>
+        <div class="original-summary">The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2206.09242" target="_blank" rel="noopener">GaLeNet: Multimodal Learning for Disaster Prediction, Management and Relief</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2022-06-18</span>
+      </div>
+      <div class="summary">After a natural disaster, such as a hurricane, millions are left in need of emergency assistance. To allocate resources optimally, human planners need to accurately analyze data that can flow in large</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 GaLeNet: Multimodal Learning for Disaster Prediction, Management and Relief</div>
+        <div class="original-summary">After a natural disaster, such as a hurricane, millions are left in need of emergency assistance. To allocate resources optimally, human planners need to accurately analyze data that can flow in large volumes from several sources. This motivates the development of multimodal machine learning frameworks that can integrate multiple data sources and leverage them efficiently. To date, the research community has mainly focused on unimodal reasoning to provide granular assessments of the damage. More</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2403.06024" target="_blank" rel="noopener">Semi-Supervised Multimodal Multi-Instance Learning for Aortic Stenosis Diagnosis</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-03-09</span>
+      </div>
+      <div class="summary">Automated interpretation of ultrasound imaging of the heart (echocardiograms) could improve the detection and treatment of aortic stenosis (AS), a deadly heart disease. However, existing deep learning</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Semi-Supervised Multimodal Multi-Instance Learning for Aortic Stenosis Diagnosis</div>
+        <div class="original-summary">Automated interpretation of ultrasound imaging of the heart (echocardiograms) could improve the detection and treatment of aortic stenosis (AS), a deadly heart disease. However, existing deep learning pipelines for assessing AS from echocardiograms have two key limitations. First, most methods rely on limited 2D cineloops, thereby ignoring widely available Doppler imaging that contains important complementary information about pressure gradients and blood flow abnormalities associated with AS. S</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2008.13369" target="_blank" rel="noopener">Introducing Representations of Facial Affect in Automated Multimodal Deception Detection</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2020-08-31</span>
+      </div>
+      <div class="summary">Automated deception detection systems can enhance health, justice, and security in society by helping humans detect deceivers in high-stakes situations across medical and legal domains, among others. </div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Introducing Representations of Facial Affect in Automated Multimodal Deception Detection</div>
+        <div class="original-summary">Automated deception detection systems can enhance health, justice, and security in society by helping humans detect deceivers in high-stakes situations across medical and legal domains, among others. This paper presents a novel analysis of the discriminative power of dimensional representations of facial affect for automated deception detection, along with interpretable features from visual, vocal, and verbal modalities. We used a video dataset of people communicating truthfully or deceptively i</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2412.02527" target="_blank" rel="noopener">The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2024-12-03</span>
+      </div>
+      <div class="summary">The Multimodal Universe Collaboration...</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data</div>
+        <div class="original-summary">The Multimodal Universe Collaboration...</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1605.05212" target="_blank" rel="noopener">Multimodal Sparse Coding for Event Detection</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2016-05-17</span>
+      </div>
+      <div class="summary">Youngjune Gwon, William Campbell, Kevin Brady, Douglas Sturim, Miriam Cha, H. T. Kung</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Multimodal Sparse Coding for Event Detection</div>
+        <div class="original-summary">Youngjune Gwon, William Campbell, Kevin Brady, Douglas Sturim, Miriam Cha, H. T. Kung</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2210.02884" target="_blank" rel="noopener">Vision+X: A Survey on Multimodal Learning in the Light of Data</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2022-10-05</span>
+      </div>
+      <div class="summary">Ye Zhu, Yu Wu, Nicu Sebe, Yan Yan</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Vision+X: A Survey on Multimodal Learning in the Light of Data</div>
+        <div class="original-summary">Ye Zhu, Yu Wu, Nicu Sebe, Yan Yan</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1705.00470" target="_blank" rel="noopener">Learning Multimodal Transition Dynamics for Model-Based Reinforcement Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2017-05-01</span>
+      </div>
+      <div class="summary">Thomas M. Moerland, Joost Broekens, Catholijn M. Jonker</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Learning Multimodal Transition Dynamics for Model-Based Reinforcement Learning</div>
+        <div class="original-summary">Thomas M. Moerland, Joost Broekens, Catholijn M. Jonker</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2302.08893" target="_blank" rel="noopener">Active learning for data streams: a survey</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2023-02-17</span>
+      </div>
+      <div class="summary">Davide Cacciarelli, Murat Kulahci</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Active learning for data streams: a survey</div>
+        <div class="original-summary">Davide Cacciarelli, Murat Kulahci</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2506.09781" target="_blank" rel="noopener">On the Similarities of Embeddings in Contrastive Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2025-06-11</span>
+      </div>
+      <div class="summary">Chungpa Lee, Sehee Lim, Kibok Lee, Jy-yong Sohn</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 On the Similarities of Embeddings in Contrastive Learning</div>
+        <div class="original-summary">Chungpa Lee, Sehee Lim, Kibok Lee, Jy-yong Sohn</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/1905.07435" target="_blank" rel="noopener">Alpha MAML: Adaptive Model-Agnostic Meta-Learning</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">arXiv</span>
+        <span>2019-05-17</span>
+      </div>
+      <div class="summary">Harkirat Singh Behl, Atılım Güneş Baydin, Philip H. S. Torr</div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Alpha MAML: Adaptive Model-Agnostic Meta-Learning</div>
+        <div class="original-summary">Harkirat Singh Behl, Atılım Güneş Baydin, Philip H. S. Torr</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/akdevcraft/telegram-integration-0-personal-agentic-ai-assistant-part-5-4m2n" target="_blank" rel="noopener">Telegram Integration - $0 Personal Agentic AI Assistant - Part 5</a></div>
+        <div class="expand-icon">▾</div>
+      </div>
+      <div class="meta">
+        <span class="source">DevTo</span>
+        <span>2026-06-08</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span>
+      <div class="original">
+        <div class="original-title">📖 Telegram Integration - $0 Personal Agentic AI Assistant - Part 5</div>
+        <div class="original-summary"></div>
+      </div>
+    </div></div>
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-06-09</div>
+<script>
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
