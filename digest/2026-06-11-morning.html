@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-06-11</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">开启一天的 AI 资讯 · 2026-06-11</div>
+  <div class="stats">
+    <span>📊 47 条</span>
+    <span>📡 5 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">🏠 全部</div>
+<div class="tab" data-cat="model">🤖 模型与技术</div>
+<div class="tab" data-cat="biz">💼 商业与融资</div>
+<div class="tab" data-cat="app">🏭 产业应用</div>
+<div class="tab" data-cat="tool">🔧 工具与开源</div>
+<div class="tab" data-cat="academic">📚 学术与政策</div>
+
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mehartung/ai-writes-the-code-now-which-is-exactly-why-architecture-matters-more-193c" target="_blank">AI Writes the Code Now - Which Is Exactly Why Architecture Matters More</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ccc40/how-do-chinese-access-claudegpt-api-at-02x-pricing-5882" target="_blank">How do Chinese access Claude/GPT API at 0.2x pricing?</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://lobste.rs/s/wv1dx8/language_models_transmit_behavioural" target="_blank">Language models transmit behavioural traits</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">Lobsters</span> · <span>2026-06-06</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://github.com/anthropics/claude-code/issues/29045" target="_blank">Claude Desktop spins up a VM without no way of stopping it</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">31 points by tonyrice | 13 comments</div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/shrsv/mixture-of-experts-moe-explained-simply-how-modern-ai-models-get-bigger-without-getting-slower-25mm" target="_blank">Mixture of Experts (MoE) Explained Simply: How Modern AI Models Get Bigger Without Getting Slower</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mik3fly__/what-i-shipped-in-one-claude-code-session-a-real-time-mempool-rug-detector-pipeline-2014" target="_blank">What I shipped in one Claude Code session: a real-time mempool rug-detector pipeline</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/gdg/configuring-firebase-ai-logic-for-android-to-use-gemini-models-4eb7" target="_blank">Configuring Firebase AI Logic for Android to Use Gemini Models</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/savi444/tokens-per-word-gpt-5-vs-claude-vs-gpt-4-measured-across-7-languages-4419" target="_blank">Tokens per Word: GPT-5 vs Claude vs GPT-4, Measured Across 7 Languages</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/nazar_batrak_6b8cc4a2d418/why-i-stopped-trusting-a-single-ai-model-3a" target="_blank">Why I stopped trusting a single AI model</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/soytuber/coheres-north-mini-code-llm-token-optimization-openmed-healthcare-ai-highlight-local-ai-2c4f" target="_blank">Cohere&#x27;s North Mini Code, LLM Token Optimization &amp; OpenMed Healthcare AI Highlight Local AI Advancements</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokonomics/we-tracked-1m-llm-api-calls-60-were-wasting-money-on-the-wrong-model-h7p" target="_blank">We Tracked 1M LLM API Calls - 60% Were Wasting Money on the Wrong Model</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3847971876984064?f=rss" target="_blank">Altman预计OpenAI将于未来一年内IPO</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-11</span></div>
+  <div class="summary">据知情人士透露，OpenAI的CEO Altman周一发送员工内部信息，预计OpenAI将在未来一年内上市。该公司正在筹备全新的人工智能（AI）模型。（财联社）</div>
+  <div><span class="tag">商业与融资</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846046471277059?f=rss" target="_blank">在反外挂前线，游戏厂商开启了军备竞赛</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-09</span></div>
+  <div class="summary">破坏公平就该受到惩罚这几乎是所有人心中的共识</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://jivx.com/eki" target="_blank">All 9,300 Japanese train station, animated by the year it opened (1872-2026)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">101 points by momentmaker | 35 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://darioamodei.com/post/policy-on-the-ai-exponential" target="_blank">Policy on the AI Exponential</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">50 points by yjp20 | 23 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://mceglowski.substack.com/p/laffaire-siloxane" target="_blank">L&#x27;Affaire Siloxane</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">42 points by idlewords | 9 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aditya_learnai/integrating-generative-ai-into-an-enterprise-e-learning-authoring-tool-what-i-actually-learned-2kb" target="_blank">Integrating Generative AI Into an Enterprise E-Learning Authoring Tool — What I Actually Learned</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/soytuber/ai-systems-at-scale-context-engineering-automation-stacks-erp-integration-3ibo" target="_blank">AI Systems at Scale: Context Engineering, Automation Stacks, &amp; ERP Integration</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3847969578669318?f=rss" target="_blank">高盛警示AI涨势过热但尚未达泡沫极值</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-11</span></div>
+  <div class="summary">高盛近日发布报告称，当前由人工智能驱动的美股上涨行情虽显示出过热迹象，市场热情显著升温，但多项狂热指标仍低于互联网泡沫及2021年市场高峰期时的历史极端水平。（新浪财经）</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846793046133257?f=rss" target="_blank">最前线｜AI跨境电商工具混战，StoreClaw想用一个大脑接管卖家的店</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-10</span></div>
+  <div class="summary">AI跨境电商工具混战</div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saez520/why-your-multi-turn-ai-agents-lose-their-train-of-thought-and-how-to-fix-it-4be2" target="_blank">Why Your Multi-Turn AI Agents Lose Their Train of Thought (And How to Fix It)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aleksandrshchuka/mirabilis-a-one-command-sandbox-for-autonomous-claude-code-that-ended-up-patching-itself-4k1d" target="_blank">mirabilis: a one-command sandbox for autonomous Claude Code that ended up patching itself</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akshay_sharma_06637368320/i-cut-my-coding-agents-token-usage-61-by-giving-it-a-code-graph-n3g" target="_blank">I cut my coding agent&#x27;s token usage 61% by giving it a code graph</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mrvlad/the-write-your-agents-lost-and-why-nothing-errored-k1n" target="_blank">The write your agents lost - and why nothing errored</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/iayanpahwa/why-everyone-is-talking-about-loop-engineering-and-how-is-it-changing-agentic-ai-workflows-claude-59fk" target="_blank">Why everyone is talking about loop-engineering and how is it changing agentic ai workflows? Claude Code and Web Scraping examples</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/prashar32/i-kill-9d-a-running-ai-agent-mid-task-it-resumed-without-re-spending-a-cent-423e" target="_blank">I kill -9&#x27;d a running AI agent mid-task. It resumed without re-spending a cent.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/martinhavel/your-mcp-server-passes-every-test-and-claude-still-rejects-the-tool-2oaa" target="_blank">Your MCP Server Passes Every Test — and Claude Still Rejects the Tool</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alex_spinov/your-agent-returns-200-and-lies-verify-before-you-trust-2cm3" target="_blank">Your Agent Returns 200 and Lies. Verify Before You Trust</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/kadircancelik/the-zero-latency-deep-dive-architecting-concurrent-voice-ai-in-python-1967" target="_blank">The Zero-Latency Deep Dive: Architecting Concurrent Voice AI in Python</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ntctech/most-ai-control-planes-have-a-single-region-failure-domain-361j" target="_blank">Most AI Control Planes Have a Single-Region Failure Domain</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dev48v/i-built-an-offline-ai-crop-disease-identifier-for-smart-india-hackathon-2a8l" target="_blank">I Built an Offline AI Crop Disease Identifier for Smart India Hackathon</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/prathyusha_kilaru/i-built-the-tool-stackones-ceo-said-every-developer-needs-491j" target="_blank">I built the tool StackOnes CEO said every developer needs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/entire/how-to-make-coding-agents-remember-past-solutions-4a71" target="_blank">How to Make Coding Agents Remember Past Solutions</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/josaphatstar/learning-to-code-in-the-ai-era-feels-broken-and-nobody-talks-about-it-1911" target="_blank">Learning to Code in the AI Era Feels Broken. And Nobody Talks About It.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/marrouchi/how-i-built-a-discord-ai-assistant-that-talks-to-gmail-1ha3" target="_blank">How I Built a Discord AI Assistant That Talks to Gmail</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saintchris_21/i-built-a-multi-platform-publishing-cli-for-ai-agents-2cji" target="_blank">I Built a Multi-Platform Publishing CLI for AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/brandswarm/the-cloudflare-toggle-thats-blocking-your-brand-from-chatgpt-2jgi" target="_blank">The Cloudflare toggle that&#x27;s blocking your brand from ChatGPT</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dev48v/show-your-llm-2-examples-and-it-will-copy-the-format-forever-few-shot-prompting-2h9" target="_blank">Show Your LLM 2 Examples and It Will Copy the Format Forever — Few-Shot Prompting</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zeslava/db-mcp-connect-your-database-to-ai-47l5" target="_blank">db-mcp: connect your database to AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/scarab-systems/the-real-ai-coding-breakthrough-is-not-more-context-it-is-better-diagnostics-1b3d" target="_blank">The Real AI Coding Breakthrough Is Not More Context. It Is Better Diagnostics.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/artem_a/everyone-is-building-smarter-agents-nobody-is-fixing-what-they-run-on-296d" target="_blank">Everyone is building smarter Agents. Nobody is fixing what they run on.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dezotech/i-parsed-my-own-firewall-logs-and-found-which-ai-tools-my-org-was-really-talking-to-including-one-3bnl" target="_blank">I parsed my own firewall logs and found which AI tools my org was really talking to — including one routing data to China</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zep1997/permission-is-not-purpose-the-next-failure-mode-in-agent-memory-claim-29-39fk" target="_blank">Permission Is Not Purpose: The Next Failure Mode in Agent Memory (CLAIM-29)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saintchris_21/how-to-get-hermes-agent-to-use-agentmail-and-why-its-harder-than-it-should-be-1f4n" target="_blank">How to Get Hermes Agent to Use AgentMail</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/" target="_blank">Cybersecurity researchers aren&#x27;t happy about the guardrails on Anthropic&#x27;s Fable</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">3 points by speckx | 2 comments</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank">Towards trustworthy agentic AI: a comprehensive survey</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">arXiv</span> · <span>2026-05-17</span></div>
+  <div class="summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interacti...</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank">PediatricsGPT: Large Language Models as Chinese Medical Assistants</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">arXiv</span> · <span>2024-05-29</span></div>
+  <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, es...</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+  </div>
+  <div class="category" id="cat-model">
+  <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mehartung/ai-writes-the-code-now-which-is-exactly-why-architecture-matters-more-193c" target="_blank">AI Writes the Code Now - Which Is Exactly Why Architecture Matters More</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ccc40/how-do-chinese-access-claudegpt-api-at-02x-pricing-5882" target="_blank">How do Chinese access Claude/GPT API at 0.2x pricing?</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://lobste.rs/s/wv1dx8/language_models_transmit_behavioural" target="_blank">Language models transmit behavioural traits</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">Lobsters</span> · <span>2026-06-06</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://github.com/anthropics/claude-code/issues/29045" target="_blank">Claude Desktop spins up a VM without no way of stopping it</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">31 points by tonyrice | 13 comments</div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/shrsv/mixture-of-experts-moe-explained-simply-how-modern-ai-models-get-bigger-without-getting-slower-25mm" target="_blank">Mixture of Experts (MoE) Explained Simply: How Modern AI Models Get Bigger Without Getting Slower</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mik3fly__/what-i-shipped-in-one-claude-code-session-a-real-time-mempool-rug-detector-pipeline-2014" target="_blank">What I shipped in one Claude Code session: a real-time mempool rug-detector pipeline</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/gdg/configuring-firebase-ai-logic-for-android-to-use-gemini-models-4eb7" target="_blank">Configuring Firebase AI Logic for Android to Use Gemini Models</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/savi444/tokens-per-word-gpt-5-vs-claude-vs-gpt-4-measured-across-7-languages-4419" target="_blank">Tokens per Word: GPT-5 vs Claude vs GPT-4, Measured Across 7 Languages</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/nazar_batrak_6b8cc4a2d418/why-i-stopped-trusting-a-single-ai-model-3a" target="_blank">Why I stopped trusting a single AI model</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/soytuber/coheres-north-mini-code-llm-token-optimization-openmed-healthcare-ai-highlight-local-ai-2c4f" target="_blank">Cohere&#x27;s North Mini Code, LLM Token Optimization &amp; OpenMed Healthcare AI Highlight Local AI Advancements</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokonomics/we-tracked-1m-llm-api-calls-60-were-wasting-money-on-the-wrong-model-h7p" target="_blank">We Tracked 1M LLM API Calls - 60% Were Wasting Money on the Wrong Model</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">模型与技术</span></div>
+</div>
+</div>
+<div class="category" id="cat-biz">
+  <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3847971876984064?f=rss" target="_blank">Altman预计OpenAI将于未来一年内IPO</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-11</span></div>
+  <div class="summary">据知情人士透露，OpenAI的CEO Altman周一发送员工内部信息，预计OpenAI将在未来一年内上市。该公司正在筹备全新的人工智能（AI）模型。（财联社）</div>
+  <div><span class="tag">商业与融资</span></div>
+</div>
+</div>
+<div class="category" id="cat-app">
+  <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846046471277059?f=rss" target="_blank">在反外挂前线，游戏厂商开启了军备竞赛</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-09</span></div>
+  <div class="summary">破坏公平就该受到惩罚这几乎是所有人心中的共识</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://jivx.com/eki" target="_blank">All 9,300 Japanese train station, animated by the year it opened (1872-2026)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">101 points by momentmaker | 35 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://darioamodei.com/post/policy-on-the-ai-exponential" target="_blank">Policy on the AI Exponential</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">50 points by yjp20 | 23 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://mceglowski.substack.com/p/laffaire-siloxane" target="_blank">L&#x27;Affaire Siloxane</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">42 points by idlewords | 9 comments</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aditya_learnai/integrating-generative-ai-into-an-enterprise-e-learning-authoring-tool-what-i-actually-learned-2kb" target="_blank">Integrating Generative AI Into an Enterprise E-Learning Authoring Tool — What I Actually Learned</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/soytuber/ai-systems-at-scale-context-engineering-automation-stacks-erp-integration-3ibo" target="_blank">AI Systems at Scale: Context Engineering, Automation Stacks, &amp; ERP Integration</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3847969578669318?f=rss" target="_blank">高盛警示AI涨势过热但尚未达泡沫极值</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-11</span></div>
+  <div class="summary">高盛近日发布报告称，当前由人工智能驱动的美股上涨行情虽显示出过热迹象，市场热情显著升温，但多项狂热指标仍低于互联网泡沫及2021年市场高峰期时的历史极端水平。（新浪财经）</div>
+  <div><span class="tag">产业应用</span></div>
+</div>
+</div>
+<div class="category" id="cat-tool">
+  <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846793046133257?f=rss" target="_blank">最前线｜AI跨境电商工具混战，StoreClaw想用一个大脑接管卖家的店</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">36kr</span> · <span>2026-06-10</span></div>
+  <div class="summary">AI跨境电商工具混战</div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saez520/why-your-multi-turn-ai-agents-lose-their-train-of-thought-and-how-to-fix-it-4be2" target="_blank">Why Your Multi-Turn AI Agents Lose Their Train of Thought (And How to Fix It)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aleksandrshchuka/mirabilis-a-one-command-sandbox-for-autonomous-claude-code-that-ended-up-patching-itself-4k1d" target="_blank">mirabilis: a one-command sandbox for autonomous Claude Code that ended up patching itself</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akshay_sharma_06637368320/i-cut-my-coding-agents-token-usage-61-by-giving-it-a-code-graph-n3g" target="_blank">I cut my coding agent&#x27;s token usage 61% by giving it a code graph</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/mrvlad/the-write-your-agents-lost-and-why-nothing-errored-k1n" target="_blank">The write your agents lost - and why nothing errored</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/iayanpahwa/why-everyone-is-talking-about-loop-engineering-and-how-is-it-changing-agentic-ai-workflows-claude-59fk" target="_blank">Why everyone is talking about loop-engineering and how is it changing agentic ai workflows? Claude Code and Web Scraping examples</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/prashar32/i-kill-9d-a-running-ai-agent-mid-task-it-resumed-without-re-spending-a-cent-423e" target="_blank">I kill -9&#x27;d a running AI agent mid-task. It resumed without re-spending a cent.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/martinhavel/your-mcp-server-passes-every-test-and-claude-still-rejects-the-tool-2oaa" target="_blank">Your MCP Server Passes Every Test — and Claude Still Rejects the Tool</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-11</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alex_spinov/your-agent-returns-200-and-lies-verify-before-you-trust-2cm3" target="_blank">Your Agent Returns 200 and Lies. Verify Before You Trust</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/kadircancelik/the-zero-latency-deep-dive-architecting-concurrent-voice-ai-in-python-1967" target="_blank">The Zero-Latency Deep Dive: Architecting Concurrent Voice AI in Python</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ntctech/most-ai-control-planes-have-a-single-region-failure-domain-361j" target="_blank">Most AI Control Planes Have a Single-Region Failure Domain</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dev48v/i-built-an-offline-ai-crop-disease-identifier-for-smart-india-hackathon-2a8l" target="_blank">I Built an Offline AI Crop Disease Identifier for Smart India Hackathon</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/prathyusha_kilaru/i-built-the-tool-stackones-ceo-said-every-developer-needs-491j" target="_blank">I built the tool StackOnes CEO said every developer needs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/entire/how-to-make-coding-agents-remember-past-solutions-4a71" target="_blank">How to Make Coding Agents Remember Past Solutions</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/josaphatstar/learning-to-code-in-the-ai-era-feels-broken-and-nobody-talks-about-it-1911" target="_blank">Learning to Code in the AI Era Feels Broken. And Nobody Talks About It.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/marrouchi/how-i-built-a-discord-ai-assistant-that-talks-to-gmail-1ha3" target="_blank">How I Built a Discord AI Assistant That Talks to Gmail</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saintchris_21/i-built-a-multi-platform-publishing-cli-for-ai-agents-2cji" target="_blank">I Built a Multi-Platform Publishing CLI for AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/brandswarm/the-cloudflare-toggle-thats-blocking-your-brand-from-chatgpt-2jgi" target="_blank">The Cloudflare toggle that&#x27;s blocking your brand from ChatGPT</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dev48v/show-your-llm-2-examples-and-it-will-copy-the-format-forever-few-shot-prompting-2h9" target="_blank">Show Your LLM 2 Examples and It Will Copy the Format Forever — Few-Shot Prompting</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zeslava/db-mcp-connect-your-database-to-ai-47l5" target="_blank">db-mcp: connect your database to AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/scarab-systems/the-real-ai-coding-breakthrough-is-not-more-context-it-is-better-diagnostics-1b3d" target="_blank">The Real AI Coding Breakthrough Is Not More Context. It Is Better Diagnostics.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/artem_a/everyone-is-building-smarter-agents-nobody-is-fixing-what-they-run-on-296d" target="_blank">Everyone is building smarter Agents. Nobody is fixing what they run on.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/dezotech/i-parsed-my-own-firewall-logs-and-found-which-ai-tools-my-org-was-really-talking-to-including-one-3bnl" target="_blank">I parsed my own firewall logs and found which AI tools my org was really talking to — including one routing data to China</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zep1997/permission-is-not-purpose-the-next-failure-mode-in-agent-memory-claim-29-39fk" target="_blank">Permission Is Not Purpose: The Next Failure Mode in Agent Memory (CLAIM-29)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saintchris_21/how-to-get-hermes-agent-to-use-agentmail-and-why-its-harder-than-it-should-be-1f4n" target="_blank">How to Get Hermes Agent to Use AgentMail</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">DevTo</span> · <span>2026-06-10</span></div>
+  <div class="summary"></div>
+  <div><span class="tag">工具与开源</span></div>
+</div>
+</div>
+<div class="category" id="cat-academic">
+  <div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/" target="_blank">Cybersecurity researchers aren&#x27;t happy about the guardrails on Anthropic&#x27;s Fable</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">HackerNews</span> · <span>2026-06-11</span></div>
+  <div class="summary">3 points by speckx | 2 comments</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank">Towards trustworthy agentic AI: a comprehensive survey</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">arXiv</span> · <span>2026-05-17</span></div>
+  <div class="summary">Agentic AI systems -- Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interacti...</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+<div class="card">
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2405.19266" target="_blank">PediatricsGPT: Large Language Models as Chinese Medical Assistants</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="meta"><span class="source">arXiv</span> · <span>2024-05-29</span></div>
+  <div class="summary">Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, es...</div>
+  <div><span class="tag">学术与政策</span></div>
+</div>
+</div>
+
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-06-11</div>
+<script>
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+
+// Accordion: click title to expand/collapse card
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
