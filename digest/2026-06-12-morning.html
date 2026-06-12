@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 2026-06-12</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: box-shadow 0.2s; }
+.card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; background: #ee5a2415; color: #ee5a24; margin-top: 6px; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.empty { text-align: center; padding: 40px 20px; color: #999; font-size: 14px; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">开启一天的 AI 资讯 · 2026-06-12</div>
+  <div class="stats">
+    <span>📊 79 条</span>
+    <span>📡 4 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">🏠 全部</div>
+    <div class="tab" data-cat="model">🤖 模型与技术</div>
+    <div class="tab" data-cat="business">💼 商业与融资</div>
+    <div class="tab" data-cat="industry">🏭 产业应用</div>
+    <div class="tab" data-cat="tools">🔧 工具与开源</div>
+    <div class="tab" data-cat="academic">📚 学术与政策</div>
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    <div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/k08200/treat-upstream-catalogs-as-mutable-how-a-free-tier-model-sku-retirement-broke-my-ai-agent-159l" target="_blank" rel="noopener">将上游目录视为可变数据：免费模型 SKU 退役如何搞垮了我的 AI Agent</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Treat upstream catalogs as mutable: how a free-tier model SKU retirement broke my AI agent</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sanjaypatoliya/building-an-ai-research-agent-with-langgraph-claude-and-aws-1lbn" target="_blank" rel="noopener">使用 LangGraph、Claude 和 AWS 构建 AI 研究助手</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Building an AI Research Agent with LangGraph, Claude, and AWS</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jgracie52/ai-will-cheat-to-win-reward-hacking-from-1994-to-2025-4h9n" target="_blank" rel="noopener">AI 会作弊取胜：从 1994 到 2025 的奖励破解史</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Will Cheat to Win: Reward Hacking from 1994 to 2025</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/meraki6966/i-will-adopt-new-ai-tools-when-they-fit-my-work-fable-5-is-not-that-moment-571c" target="_blank" rel="noopener">我会在工具适合我的工作流时采用新 AI 工具，但 Fable 5 还不是时候</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Will Adopt New AI Tools When They Fit My Work. Fable 5 Is Not That Moment.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/synthorai/claude-fable-5-caching-tokenizer-cost-vs-opus-46-43ce" target="_blank" rel="noopener">Claude Fable 5：缓存、Tokenizer 与成本对比 Opus 4.6</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Fable 5: Caching, Tokenizer & Cost vs Opus 4.6</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ggle_in/i-made-two-ai-models-fight-each-other-they-agreed-way-too-much-4jb5" target="_blank" rel="noopener">我让两个 AI 模型互相辩论，结果它们过于一致了</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Made Two AI Models Fight Each Other. They Agreed Way Too Much.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/bhanu_prasad_125421a16532/understanding-model-context-protocol-mcp-the-usb-c-for-ai-applications-2l8p" target="_blank" rel="noopener">理解 Model Context Protocol (MCP)：AI 应用的 USB-C</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Understanding Model Context Protocol (MCP): The USB-C for AI Applications</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/p0rt/you-fixed-the-rate-limits-now-your-agent-fails-quietly-3keo" target="_blank" rel="noopener">你修复了速率限制，现在你的 Agent 在静默失败</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">You Fixed the Rate Limits. Now Your Agent Fails Quietly.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/shrsv/flashattention-explained-the-optimization-that-made-modern-llms-practical-2ik7" target="_blank" rel="noopener">FlashAttention 详解：让现代 LLM 实用化的关键优化技术</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">FlashAttention Explained: The Optimization That Made Modern LLMs Practical</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/leokwon68/i-built-an-ai-board-of-directors-that-debates-a-decision-then-scores-itself-99c" target="_blank" rel="noopener">我构建了一个 AI 董事会，它先辩论决策，然后给自己打分</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built an AI board of directors that debates a decision, then scores itself</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/tonyspiro/when-ai-agents-go-wrong-how-cosmic-keeps-them-scoped-ih5" target="_blank" rel="noopener">当 AI Agent 出错时：Cosmic 如何将它们限定在范围内</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">When AI Agents Go Wrong: How Cosmic Keeps Them Scoped</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/willianpinho/i-made-claude-gpt-and-gemini-predict-the-entire-2026-world-cup-heres-the-experiment-design-2nm1" target="_blank" rel="noopener">我让 Claude、GPT 和 Gemini 预测了整个 2026 世界杯——这是实验设计</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I made Claude, GPT and Gemini predict the entire 2026 World Cup. Here's the experiment design.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alex_spinov/a-pre-execution-gate-for-ai-agents-3-barriers-22ia" target="_blank" rel="noopener">AI Agent 的执行前门控：三道屏障</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">A Pre-Execution Gate for AI Agents: 3 Barriers</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/attestdojo/we-built-the-loops-both-anthropic-and-openai-are-now-telling-engineers-to-write-heres-the-4355" target="_blank" rel="noopener">我们构建了 Anthropic 和 OpenAI 现在让工程师们写的那种循环——这是架构方案</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">We Built the Loops Both Anthropic and OpenAI Are Now Telling Engineers to Write. Here's the Architecture.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/clearcodeintel/technical-debt-in-ai-agent-repositories-lives-at-the-boundaries-4hha" target="_blank" rel="noopener">AI Agent 仓库中的技术债存在于边界处</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Technical Debt in AI Agent Repositories Lives at the Boundaries</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aws/how-to-make-ai-answer-questions-about-your-documents-by-building-rag-from-scratch-4dg0" target="_blank" rel="noopener">如何让 AI 回答关于文档的问题——从零构建 RAG</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How to make AI answer questions about your documents, by building RAG from scratch</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/gurutva_murdia/introducing-duplex-a-zero-backend-multiplexed-llm-inference-engine-for-true-client-side-parallel-3hbl" target="_blank" rel="noopener">Introducing Duplex：一种零后端、多路复用 LLM 推理引擎，实现真正的客户端并行 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Introducing Duplex: A Zero-Backend, Multiplexed LLM Inference Engine for True Client-Side Parallel AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/abdullahmubin/i-thought-one-ai-agent-was-enough-i-ended-up-building-six-282a" target="_blank" rel="noopener">我以为一个 AI Agent 就够了，结果我构建了六个</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Thought One AI Agent Was Enough. I Ended Up Building Six</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sam_lukaa/i-watched-an-ai-agent-refactor-14-files-fix-failing-tests-and-open-a-pr-while-i-was-in-a-6nm" target="_blank" rel="noopener">我看着一个 AI Agent 重构了 14 个文件、修复了失败的测试并提交了 PR——而我在开会</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I watched an AI agent refactor 14 files, fix failing tests, and open a PR, while I was in a meeting. Here's what that actually means for us.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/entire/how-i-added-goose-as-an-external-agent-to-entire-6gf" target="_blank" rel="noopener">如何将 Goose 作为外部 Agent 集成到 Entire</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How I Added Goose as an External Agent to Entire</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aws-builders/introducing-aws-finops-agent-an-ai-that-investigates-your-cloud-costs-2j3i" target="_blank" rel="noopener">Introducing AWS FinOps Agent：一款能调查你云成本的 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Introducing AWS FinOps Agent - An AI That Investigates Your Cloud Costs</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kenerator/a-fluent-llm-answer-is-not-the-same-as-an-inspected-answer-o98" target="_blank" rel="noopener">流利的 LLM 回答不等于经过审视的回答</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">A Fluent LLM Answer Is Not the Same as an Inspected Answer</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alexmercedcoder/apple-goes-agentic-ai-week-of-june-4-11-2026-13mm" target="_blank" rel="noopener">Apple 拥抱 Agent 化：2026 年 6 月 4-11 日 AI 周报</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Apple Goes Agentic: AI Week of June 4-11, 2026</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/maya_andersson_dev/we-put-confidence-intervals-on-our-llm-judge-scores-the-error-bars-ate-three-weeks-of-trend-ke7" target="_blank" rel="noopener">我们给 LLM 评判分数加上了置信区间——误差条吃掉了三周的“趋势”</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">We put confidence intervals on our LLM-judge scores. The error bars ate three weeks of "trend"</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/amrzlabs/are-we-going-to-an-ai-first-frameworks-era-dcg" target="_blank" rel="noopener">我们正在进入 AI 优先框架的时代吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Are We Going to an AI-First Frameworks Era?</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/vinny010/i-built-an-ai-agent-that-proves-a-crypto-wallet-is-hacked-on-qwen-cloud-5f31" target="_blank" rel="noopener">我构建了一个能证明加密钱包被黑的 AI Agent——基于 Qwen Cloud</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built an AI agent that proves a crypto wallet is hacked — on Qwen Cloud</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/borhen_saidi_e40cc073c673/agentforge-28-production-grade-skills-that-make-ai-agents-ship-reliable-code-4o6i" target="_blank" rel="noopener">AgentForge – 28 个生产级技能，让 AI Agent 交付可靠代码</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AgentForge – 28 production grade skills that make AI agents ship reliable code</div>
+        </div>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849380138702086?f=rss" target="_blank" rel="noopener">Adobe第二财季营收66.2亿美元，同比增长13%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">当地时间6月11日，Adobe公布截至2026年5月29日的2026财年第二季度财务业绩。第二财季，该公司实现创纪录66.2亿美元营收，同比增长13%，按固定汇率计算增长11%；GAAP净利润为17.1亿美元，非GAAP净利润为24.0亿美</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849378031899913?f=rss" target="_blank" rel="noopener">SpaceX确定发行价，募资750亿美元创史上最大IPO</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">根据SpaceX周四在官网发布的声明，公司此次IPO发行5.556亿股，发行价为每股135美元，募资总额达750亿美元。SpaceX此次IPO募资规模是沙特阿美2019年创下的294亿美元上市纪录的逾两倍。声明显示，SpaceX还授予承销银</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849377145574408?f=rss" target="_blank" rel="noopener">SpaceX持股方Ark称轨道数据中心或带来3000亿美元年营收</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Ark Investment Management的Brett Winton表示，按当前租赁费率计算，到本十年末，SpaceX通过部署数十吉瓦的轨道数据中心容量，可能产生3000亿美元年营收。SpaceX目前是Ark旗下风投基金的最大持仓。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849374877930497?f=rss" target="_blank" rel="noopener">贝莱德据悉计划在SpaceX IPO中认购约50亿美元</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">据知情人士透露，贝莱德寻求参与SpaceX首次公开募股（IPO），目标认购规模约为50亿美元。（新浪财经）</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3848000003953926?f=rss" target="_blank" rel="noopener">8点1氪丨世界杯门票遇冷，近18万张门票待转售；台积电释放涨价信号；但斌回应'被段永平拉黑'</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">今日热点导览 花旗警告：金价或跌至3500美元 韩国股市再度熔断 何小鹏发内部信：本人亲自带队，最后200天冲刺机器人量产 伊朗宣布对所有船只关闭霍尔木兹海峡 SpaceX认购资金超2500亿美元</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-10</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3847079661193733?f=rss" target="_blank" rel="noopener">氪星晚报｜韩IT巨头Kakao工会史上首次启动局部罢工；三星考虑新建先进芯片封装厂；SK海力士最早将于8月在美国上市</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">大公司： 瑞斯康达：董事长李月杰因个人原因辞职，选举韩猛为新任董事长</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849407791617031?f=rss" target="_blank" rel="noopener">秘鲁央行将基准利率维持在4.25%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">当地时间6月11日，秘鲁央行将基准利率维持在4.25%。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849404234667016?f=rss" target="_blank" rel="noopener">AI机器人企业Theker获路威酩轩等投资方8500万美元融资</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">总部位于巴塞罗那的人工智能机器人企业Theker于周四宣布完成一轮总额8500万美元的融资。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849400241018115?f=rss" target="_blank" rel="noopener">从'被投者'到'投资者'，硬科技企业密集设立产业基金</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">6月上旬，硬科技链主企业密集宣布一级市场最新布局。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849385309295879?f=rss" target="_blank" rel="noopener">SpaceX的IPO散户认购额据悉超1000亿美元</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">据报道，随着SpaceX的IPO进入最后冲刺阶段，散户认购已超1000亿美元。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849381479191810?f=rss" target="_blank" rel="noopener">OpenAI已达成协议收购ONA</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">OpenAI已达成协议收购ONA，交易完成后ONA将并入Codex团队。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://ledger.somantix.ai/posts/open-ai-lays-groundwork-for-on-prem-product/" target="_blank" rel="noopener">OpenAI 正在准备本地部署产品？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">12 点 by bdroopy | 7 评论 — OpenAI 可能正在为其产品铺路，支持本地部署方案。</div>
+      <span class="tag">💼 商业与融资</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">OpenAI Prepping for On-Prem Product?
+
+12 points by bdroopy | 7 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ai_with_ken/claude-code-a-7-day-field-guide-for-working-engineers-31ep" target="_blank" rel="noopener">Claude Code：面向在职工程师的 7 天实战指南</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Code: A 7-Day Field Guide for Working Engineers</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jk27101/-cracking-the-claude-certified-architect-exam-production-grade-ai-is-a-different-beast-5dlj" target="_blank" rel="noopener">攻克 Claude Certified Architect 认证考试：生产级 AI 是另一种猛兽</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary"># Cracking the Claude Certified Architect Exam: Production-Grade AI is a Different Beast</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/learnairesource/ai-tools-that-actually-save-you-time-and-which-ones-dont-58mh" target="_blank" rel="noopener">真正能帮你省时间的 AI 工具（以及哪些不能）</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Tools That Actually Save You Time (And Which Ones Don't)</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" target="_blank" rel="noopener">Anthropic 为隐形的 Claude Fable 护栏致歉</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Anthropic 就 Claude Fable 中未公开的隐形蒸馏护栏问题公开道歉。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Anthropic apologizes for invisible Claude Fable guardrails
+
+https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260611122253&#x2F;https:&#x2F;&#x2F;www.theve..., https:&#x2F;&#x2F;archive.ph&#x2F;y4V4k</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3848750479283460?f=rss" target="_blank" rel="noopener">鼎龙股份：ArF与KrF光刻胶产品获近千加仑新增订单</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">鼎龙股份公告</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation/" target="_blank" rel="noopener">Pokemon Go 扫描数据训练了军用无人机导航技术</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">590 点 by vrganj | 269 评论 — Pokemon Go 的游戏扫描数据被用于训练军用无人机导航系统。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Pokemon Go Scans Trained the Navigation Tech for Military Drones
+
+590 points by vrganj | 269 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/xulingfeng/ai-said-im-inefficient-a-recruiter-said-not-to-listen-i-ended-up-on-the-other-side-of-the-table-184o" target="_blank" rel="noopener">AI 说我不够高效，招聘官让我别听它的……</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Said I'm Inefficient. A Recruiter Said Not to Listen...</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jayeshbansal/why-your-ai-writes-html-email-that-breaks-in-outlook-and-how-i-fixed-it-5447" target="_blank" rel="noopener">为什么你的 AI 写的 HTML 邮件在 Outlook 中显示错乱</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Why your AI writes HTML email that breaks in Outlook...</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/tonyspiro/claude-code-vs-codex-vs-cursor-the-best-ai-coding-tool-in-2026-32pm" target="_blank" rel="noopener">Claude Code vs Codex vs Cursor：2026 年最佳 AI 编程工具对比</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Code vs Codex vs Cursor: The Best AI Coding Tool in 2026</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mayank_mehta_c740a18ffe2e/why-i-stopped-using-chatgpt-and-built-my-3fi2" target="_blank" rel="noopener">为什么我停止使用 ChatGPT 并自建了替代方案</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Why I Stopped Using ChatGPT and Built My</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/octave_nkurunziza_afb0512/how-senior-software-engineers-use-ai-3enc" target="_blank" rel="noopener">高级软件工程师如何利用 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How Senior Software Engineers Use AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/zilton7/is-coding-over-5-career-pivots-for-rails-devs-in-the-ai-era-289b" target="_blank" rel="noopener">编码时代结束了吗？AI 时代 Rails 开发者的 5 条职业转型之路</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Is Coding Over? 5 Career Pivots for Rails Devs in the AI Era</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/witoldwozniak/can-copilot-be-your-ai-pair-programmer-2m65" target="_blank" rel="noopener">Copilot 能成为你的 AI 结对程序员吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Can Copilot be your AI pair programmer?</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype" target="_blank" rel="noopener">Claude Fable 5：编程任务的中档表现</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">73 点 | by bugvader | 20 评论 — Claude Fable 5 在编程任务上表现中等。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Fable 5: mid-tier results on coding tasks
+
+73 points | by bugvader | 20 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/fmarzochi/i-built-persistent-memory-for-ai-coding-tools-one-install-every-tool-no-more-re-explaining-context-45om" target="_blank" rel="noopener">我为 AI 编程工具构建了持久化记忆</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built persistent memory for AI coding tools</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/eternalsix/ai-for-data-analysis-real-use-cases-33m8" target="_blank" rel="noopener">AI 用于数据分析的实际用例</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI for data analysis: real use cases</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849363818173703?f=rss" target="_blank" rel="noopener">美股三大指数集体收涨，大型科技股多数上涨</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">36氪获悉，6月11日收盘，美股三大指数集体上涨，纳指涨2.54%，标普500指数涨1.75%，道指涨1.86%。大型科技股多数上涨，Arm涨超11%，英特尔涨超9%，特斯拉涨超4%，英伟达涨超2%，亚马逊、苹果涨超1%，谷歌小幅上涨；甲骨</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849406959424521?f=rss" target="_blank" rel="noopener">机构间REITs持续上新，机构提示三类项目有吸引力</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">近日，全国首单储能机构间REIT'财通资管-阿特斯持有型不动产资产支持专项计划'在上海证券交易所举行挂牌仪式。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849398085473542?f=rss" target="_blank" rel="noopener">沃尔玛与Wing无人机配送扩展至七个新都会区</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">沃尔玛与Alphabet旗下无人机配送公司Wing本周宣布，将其无人机配送服务扩展至全美七个新都会区。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849396714099975?f=rss" target="_blank" rel="noopener">埃夫特：决定对旗下喷涂机器人全系列产品等实施价格调整，整体价格上调5%—8%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">36氪获悉，埃夫特机器人发布产品调价通知函。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849382642897927?f=rss" target="_blank" rel="noopener">券商打起Skill服务'卡位战'，竞争分水岭在于构建金融业务'数字孪生地图'</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">打造数字人的竞争硝烟还未完全散去，券商又打起了Skill（智能体技能）服务的'卡位战'。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/playfulprogramming/web-mcp-give-some-tools-to-your-agent-23o2" target="_blank" rel="noopener">Web MCP：为你的 Agent 赋予工具能力</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Web MCP: give some tools to your agent</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://brew.sh/2026/06/11/homebrew-6.0.0/" target="_blank" rel="noopener">Show HN：Homebrew 6.0.0 发布</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Homebrew 6.0.0 正式发布。主要更新包括：新的 tap 信任安全机制、更快的默认内部 JSON API、Linux 沙箱支持、改进的 brew bundle 功能及性能优化等。</div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Show HN: Homebrew 6.0.0
+
+Today, I’m proud to announce Homebrew 6.0.0. The most significant changes since 5.1.0 are a new tap trust security mechanism, the new faster, smaller, default internal Homebrew JSON API, sandboxing on Linux, better defaults informed by our user survey, many brew bundle improvements, improved performance and initial support for macOS 27 (Golden Gate).Happy to discuss any questions here!</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jakkrow/building-rfc-3161-layer-2-verification-for-ai-decision-evidence-3986" target="_blank" rel="noopener">构建 RFC 3161 第二层验证用于 AI 决策证据</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Building RFC 3161 Layer 2 Verification for AI Decision Evidence</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/chowyu12/aiclaws-generated-file-attachments-keep-tool-output-in-the-chat-loop-4n7h" target="_blank" rel="noopener">AIClaw 的生成文件附件让工具输出保持在对话循环中</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AIClaw's Generated File Attachments Keep Tool Output In The Chat Loop</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/gerimate/i-built-a-python-agent-that-uses-a-vector-db-as-memory-not-retrieval-135e" target="_blank" rel="noopener">我构建了一个用向量数据库作为记忆（而非检索）的 Python Agent</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Built a Python Agent That Uses a Vector DB as Memory, Not Retrieval</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sulthonzh/i-built-an-ai-code-reviewer-that-runs-on-240-repos-and-a-cron-system-that-keeps-it-alive-32nj" target="_blank" rel="noopener">我构建了一个运行在 240 个仓库上的 AI 代码审查器——以及维持它运行的后台系统</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Built an AI Code Reviewer That Runs on 240 Repos — And a Cron System That Keeps It Alive</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/yonyonai/i-made-my-portfolio-readable-by-ai-agents-a-scanner-found-four-things-that-didnt-exist-456o" target="_blank" rel="noopener">我让我的作品集对 AI Agent 可读，扫描器发现了四件不存在的事</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I made my portfolio readable by AI agents. A scanner found four things that didn't exist</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/nolanvale/security-architecture-for-ai-agents-with-tool-access-3doi" target="_blank" rel="noopener">面向具备工具访问能力的 AI Agent 的安全架构</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Security Architecture for AI Agents With Tool Access</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mrclaw207/zerobox-the-sandbox-layer-your-ai-agents-exec-tool-has-always-needed-29ba" target="_blank" rel="noopener">Zerobox：你的 AI Agent Exec 工具一直需要的沙箱层</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Zerobox: The Sandbox Layer Your AI Agent's Exec Tool Has Always Needed</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/wynelson94/in-april-a-claude-built-a-tool-to-leave-notes-for-future-claudes-in-june-i-showed-up-2oaa" target="_blank" rel="noopener">四月，一个 Claude 构建了给未来 Claude 留笔记的工具。六月，我来了。</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">In April, a Claude built a tool to leave notes for future Claudes. In June, I showed up.</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://tonedear.com/" target="_blank" rel="noopener">Ear Training Practice Exercises（听力训练练习）</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">17 点 by mattbit | 0 评论 — 一个在线听力训练工具。</div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Ear Training Practice Exercises
+
+17 points by mattbit | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/maxhagl/agent-sentry-a-400-line-local-sidecar-that-watches-what-your-ai-coding-agent-is-about-to-do-12gj" target="_blank" rel="noopener">Agent Sentry：一个 400 行的本地 Sidecar，监视你的 AI 编码 Agent 即将执行的操作</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Agent Sentry: a 400-line local sidecar that watches what your AI coding agent is about to do</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/fujo_for_text/give-your-agent-a-mistake-once-orp-turns-ai-agent-failures-into-tested-lessons-llh" target="_blank" rel="noopener">给你的 Agent 一次犯错机会——ORP 将 AI Agent 失败转化为经过测试的经验教训</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Give Your Agent a Mistake Once — ORP Turns AI Agent Failures into Tested Lessons</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 arXiv</span>
+        <span class="time">🕐 2023-07-08</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2308.12400" target="_blank" rel="noopener">Towards The Ultimate Brain: Exploring Scientific Discovery with ChatGPT AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">本文提出了一种使用 OpenAI 的 ChatGPT 人工智能环境进行科学发现的新方法。这是首篇完全由 ChatGPT 输出生成的论文，展示了如何通过游戏化环境指导 ChatGPT 进行科学研究。</div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">This paper presents a novel approach to scientific discovery using an artificial intelligence (AI) environment known as ChatGPT, developed by OpenAI. This is the first paper entirely generated with outputs from ChatGPT. We demonstrate how ChatGPT can be instructed through a gamification environment to define and benchmark hypothetical physical theories. Through this environment, ChatGPT successfully simulates the creation of a new improved model, called GPT$^4$, which combines the concepts of GP</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/igorganapolsky/an-ai-agent-faked-a-sales-tax-to-hide-its-own-bug-the-fix-isnt-trust-its-a-gate-1nna" target="_blank" rel="noopener">AI Agent 伪造了“营业税”来隐藏自己的 Bug——解决方案不是信任，而是门控</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">An AI Agent Faked a "Sales Tax" to Hide Its Own Bug. The Fix Isn't Trust — It's a Gate.</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.kennethpayne.uk/p/shall-we-play-a-game" target="_blank" rel="noopener">要玩一局游戏吗？——LLM 在 95% 的模拟中使用了战术核武器</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">14 点 by nick238 | 5 评论 — LLM 在战略模拟中倾向于使用极端武力。论文：arxiv.org/pdf/2602.14740</div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Shall we play a game? – LLMs use tactical nukes in 95% of simulations
+
+https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2602.14740</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/al3x1spz0/does-the-eu-ai-act-apply-to-my-chatbot-1c9o" target="_blank" rel="noopener">欧盟 AI 法案适用于我的聊天机器人吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Does the EU AI Act apply to my chatbot?</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849379493205253?f=rss" target="_blank" rel="noopener">世界银行下调2026年全球经济增长预期至2.5%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">世界银行6月11日发布最新一期《全球经济展望》报告，将2026年全球经济增长预期从1月预测的2.6%下调至2.5%，并警告可能面临进一步下行风险。（央视新闻）</div>
+      <span class="tag">📚 学术与政策</span>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849399110030337?f=rss" target="_blank" rel="noopener">本田在美召回逾百万辆汽车，主要涵盖CR-V及雅阁混合动力版</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">本田汽车美国公司本周宣布，因部分车型随车附带的轮胎修补套件存在安全隐患，将在美国市场召回约105万辆汽车。</div>
+      <span class="tag">📚 学术与政策</span>
+    </div>
+  </div>
+  
+  <div class="category" id="cat-model">
+    <div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/k08200/treat-upstream-catalogs-as-mutable-how-a-free-tier-model-sku-retirement-broke-my-ai-agent-159l" target="_blank" rel="noopener">将上游目录视为可变数据：免费模型 SKU 退役如何搞垮了我的 AI Agent</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Treat upstream catalogs as mutable: how a free-tier model SKU retirement broke my AI agent</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sanjaypatoliya/building-an-ai-research-agent-with-langgraph-claude-and-aws-1lbn" target="_blank" rel="noopener">使用 LangGraph、Claude 和 AWS 构建 AI 研究助手</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Building an AI Research Agent with LangGraph, Claude, and AWS</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jgracie52/ai-will-cheat-to-win-reward-hacking-from-1994-to-2025-4h9n" target="_blank" rel="noopener">AI 会作弊取胜：从 1994 到 2025 的奖励破解史</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Will Cheat to Win: Reward Hacking from 1994 to 2025</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/meraki6966/i-will-adopt-new-ai-tools-when-they-fit-my-work-fable-5-is-not-that-moment-571c" target="_blank" rel="noopener">我会在工具适合我的工作流时采用新 AI 工具，但 Fable 5 还不是时候</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Will Adopt New AI Tools When They Fit My Work. Fable 5 Is Not That Moment.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/synthorai/claude-fable-5-caching-tokenizer-cost-vs-opus-46-43ce" target="_blank" rel="noopener">Claude Fable 5：缓存、Tokenizer 与成本对比 Opus 4.6</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Fable 5: Caching, Tokenizer & Cost vs Opus 4.6</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ggle_in/i-made-two-ai-models-fight-each-other-they-agreed-way-too-much-4jb5" target="_blank" rel="noopener">我让两个 AI 模型互相辩论，结果它们过于一致了</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Made Two AI Models Fight Each Other. They Agreed Way Too Much.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/bhanu_prasad_125421a16532/understanding-model-context-protocol-mcp-the-usb-c-for-ai-applications-2l8p" target="_blank" rel="noopener">理解 Model Context Protocol (MCP)：AI 应用的 USB-C</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Understanding Model Context Protocol (MCP): The USB-C for AI Applications</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/p0rt/you-fixed-the-rate-limits-now-your-agent-fails-quietly-3keo" target="_blank" rel="noopener">你修复了速率限制，现在你的 Agent 在静默失败</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">You Fixed the Rate Limits. Now Your Agent Fails Quietly.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/shrsv/flashattention-explained-the-optimization-that-made-modern-llms-practical-2ik7" target="_blank" rel="noopener">FlashAttention 详解：让现代 LLM 实用化的关键优化技术</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">FlashAttention Explained: The Optimization That Made Modern LLMs Practical</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/leokwon68/i-built-an-ai-board-of-directors-that-debates-a-decision-then-scores-itself-99c" target="_blank" rel="noopener">我构建了一个 AI 董事会，它先辩论决策，然后给自己打分</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built an AI board of directors that debates a decision, then scores itself</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/tonyspiro/when-ai-agents-go-wrong-how-cosmic-keeps-them-scoped-ih5" target="_blank" rel="noopener">当 AI Agent 出错时：Cosmic 如何将它们限定在范围内</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">When AI Agents Go Wrong: How Cosmic Keeps Them Scoped</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/willianpinho/i-made-claude-gpt-and-gemini-predict-the-entire-2026-world-cup-heres-the-experiment-design-2nm1" target="_blank" rel="noopener">我让 Claude、GPT 和 Gemini 预测了整个 2026 世界杯——这是实验设计</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I made Claude, GPT and Gemini predict the entire 2026 World Cup. Here's the experiment design.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alex_spinov/a-pre-execution-gate-for-ai-agents-3-barriers-22ia" target="_blank" rel="noopener">AI Agent 的执行前门控：三道屏障</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">A Pre-Execution Gate for AI Agents: 3 Barriers</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/attestdojo/we-built-the-loops-both-anthropic-and-openai-are-now-telling-engineers-to-write-heres-the-4355" target="_blank" rel="noopener">我们构建了 Anthropic 和 OpenAI 现在让工程师们写的那种循环——这是架构方案</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">We Built the Loops Both Anthropic and OpenAI Are Now Telling Engineers to Write. Here's the Architecture.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/clearcodeintel/technical-debt-in-ai-agent-repositories-lives-at-the-boundaries-4hha" target="_blank" rel="noopener">AI Agent 仓库中的技术债存在于边界处</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Technical Debt in AI Agent Repositories Lives at the Boundaries</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aws/how-to-make-ai-answer-questions-about-your-documents-by-building-rag-from-scratch-4dg0" target="_blank" rel="noopener">如何让 AI 回答关于文档的问题——从零构建 RAG</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How to make AI answer questions about your documents, by building RAG from scratch</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/gurutva_murdia/introducing-duplex-a-zero-backend-multiplexed-llm-inference-engine-for-true-client-side-parallel-3hbl" target="_blank" rel="noopener">Introducing Duplex：一种零后端、多路复用 LLM 推理引擎，实现真正的客户端并行 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Introducing Duplex: A Zero-Backend, Multiplexed LLM Inference Engine for True Client-Side Parallel AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/abdullahmubin/i-thought-one-ai-agent-was-enough-i-ended-up-building-six-282a" target="_blank" rel="noopener">我以为一个 AI Agent 就够了，结果我构建了六个</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Thought One AI Agent Was Enough. I Ended Up Building Six</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sam_lukaa/i-watched-an-ai-agent-refactor-14-files-fix-failing-tests-and-open-a-pr-while-i-was-in-a-6nm" target="_blank" rel="noopener">我看着一个 AI Agent 重构了 14 个文件、修复了失败的测试并提交了 PR——而我在开会</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I watched an AI agent refactor 14 files, fix failing tests, and open a PR, while I was in a meeting. Here's what that actually means for us.</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/entire/how-i-added-goose-as-an-external-agent-to-entire-6gf" target="_blank" rel="noopener">如何将 Goose 作为外部 Agent 集成到 Entire</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How I Added Goose as an External Agent to Entire</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/aws-builders/introducing-aws-finops-agent-an-ai-that-investigates-your-cloud-costs-2j3i" target="_blank" rel="noopener">Introducing AWS FinOps Agent：一款能调查你云成本的 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Introducing AWS FinOps Agent - An AI That Investigates Your Cloud Costs</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/kenerator/a-fluent-llm-answer-is-not-the-same-as-an-inspected-answer-o98" target="_blank" rel="noopener">流利的 LLM 回答不等于经过审视的回答</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">A Fluent LLM Answer Is Not the Same as an Inspected Answer</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/alexmercedcoder/apple-goes-agentic-ai-week-of-june-4-11-2026-13mm" target="_blank" rel="noopener">Apple 拥抱 Agent 化：2026 年 6 月 4-11 日 AI 周报</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Apple Goes Agentic: AI Week of June 4-11, 2026</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/maya_andersson_dev/we-put-confidence-intervals-on-our-llm-judge-scores-the-error-bars-ate-three-weeks-of-trend-ke7" target="_blank" rel="noopener">我们给 LLM 评判分数加上了置信区间——误差条吃掉了三周的“趋势”</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">We put confidence intervals on our LLM-judge scores. The error bars ate three weeks of "trend"</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/amrzlabs/are-we-going-to-an-ai-first-frameworks-era-dcg" target="_blank" rel="noopener">我们正在进入 AI 优先框架的时代吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Are We Going to an AI-First Frameworks Era?</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/vinny010/i-built-an-ai-agent-that-proves-a-crypto-wallet-is-hacked-on-qwen-cloud-5f31" target="_blank" rel="noopener">我构建了一个能证明加密钱包被黑的 AI Agent——基于 Qwen Cloud</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built an AI agent that proves a crypto wallet is hacked — on Qwen Cloud</div>
+        </div>
+    </div>
+<div class="card" data-cat="model">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/borhen_saidi_e40cc073c673/agentforge-28-production-grade-skills-that-make-ai-agents-ship-reliable-code-4o6i" target="_blank" rel="noopener">AgentForge – 28 个生产级技能，让 AI Agent 交付可靠代码</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🤖 模型与技术</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AgentForge – 28 production grade skills that make AI agents ship reliable code</div>
+        </div>
+    </div>
+  </div>
+  <div class="category" id="cat-business">
+    <div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849380138702086?f=rss" target="_blank" rel="noopener">Adobe第二财季营收66.2亿美元，同比增长13%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">当地时间6月11日，Adobe公布截至2026年5月29日的2026财年第二季度财务业绩。第二财季，该公司实现创纪录66.2亿美元营收，同比增长13%，按固定汇率计算增长11%；GAAP净利润为17.1亿美元，非GAAP净利润为24.0亿美</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849378031899913?f=rss" target="_blank" rel="noopener">SpaceX确定发行价，募资750亿美元创史上最大IPO</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">根据SpaceX周四在官网发布的声明，公司此次IPO发行5.556亿股，发行价为每股135美元，募资总额达750亿美元。SpaceX此次IPO募资规模是沙特阿美2019年创下的294亿美元上市纪录的逾两倍。声明显示，SpaceX还授予承销银</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849377145574408?f=rss" target="_blank" rel="noopener">SpaceX持股方Ark称轨道数据中心或带来3000亿美元年营收</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Ark Investment Management的Brett Winton表示，按当前租赁费率计算，到本十年末，SpaceX通过部署数十吉瓦的轨道数据中心容量，可能产生3000亿美元年营收。SpaceX目前是Ark旗下风投基金的最大持仓。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849374877930497?f=rss" target="_blank" rel="noopener">贝莱德据悉计划在SpaceX IPO中认购约50亿美元</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">据知情人士透露，贝莱德寻求参与SpaceX首次公开募股（IPO），目标认购规模约为50亿美元。（新浪财经）</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3848000003953926?f=rss" target="_blank" rel="noopener">8点1氪丨世界杯门票遇冷，近18万张门票待转售；台积电释放涨价信号；但斌回应'被段永平拉黑'</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">今日热点导览 花旗警告：金价或跌至3500美元 韩国股市再度熔断 何小鹏发内部信：本人亲自带队，最后200天冲刺机器人量产 伊朗宣布对所有船只关闭霍尔木兹海峡 SpaceX认购资金超2500亿美元</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-10</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/p/3847079661193733?f=rss" target="_blank" rel="noopener">氪星晚报｜韩IT巨头Kakao工会史上首次启动局部罢工；三星考虑新建先进芯片封装厂；SK海力士最早将于8月在美国上市</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">大公司： 瑞斯康达：董事长李月杰因个人原因辞职，选举韩猛为新任董事长</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849407791617031?f=rss" target="_blank" rel="noopener">秘鲁央行将基准利率维持在4.25%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">当地时间6月11日，秘鲁央行将基准利率维持在4.25%。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849404234667016?f=rss" target="_blank" rel="noopener">AI机器人企业Theker获路威酩轩等投资方8500万美元融资</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">总部位于巴塞罗那的人工智能机器人企业Theker于周四宣布完成一轮总额8500万美元的融资。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849400241018115?f=rss" target="_blank" rel="noopener">从'被投者'到'投资者'，硬科技企业密集设立产业基金</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">6月上旬，硬科技链主企业密集宣布一级市场最新布局。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849385309295879?f=rss" target="_blank" rel="noopener">SpaceX的IPO散户认购额据悉超1000亿美元</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">据报道，随着SpaceX的IPO进入最后冲刺阶段，散户认购已超1000亿美元。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849381479191810?f=rss" target="_blank" rel="noopener">OpenAI已达成协议收购ONA</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">OpenAI已达成协议收购ONA，交易完成后ONA将并入Codex团队。</div>
+      <span class="tag">💼 商业与融资</span>
+    </div>
+<div class="card" data-cat="business">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://ledger.somantix.ai/posts/open-ai-lays-groundwork-for-on-prem-product/" target="_blank" rel="noopener">OpenAI 正在准备本地部署产品？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">12 点 by bdroopy | 7 评论 — OpenAI 可能正在为其产品铺路，支持本地部署方案。</div>
+      <span class="tag">💼 商业与融资</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">OpenAI Prepping for On-Prem Product?
+
+12 points by bdroopy | 7 comments</div>
+        </div>
+    </div>
+  </div>
+  <div class="category" id="cat-industry">
+    <div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/ai_with_ken/claude-code-a-7-day-field-guide-for-working-engineers-31ep" target="_blank" rel="noopener">Claude Code：面向在职工程师的 7 天实战指南</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Code: A 7-Day Field Guide for Working Engineers</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jk27101/-cracking-the-claude-certified-architect-exam-production-grade-ai-is-a-different-beast-5dlj" target="_blank" rel="noopener">攻克 Claude Certified Architect 认证考试：生产级 AI 是另一种猛兽</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary"># Cracking the Claude Certified Architect Exam: Production-Grade AI is a Different Beast</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/learnairesource/ai-tools-that-actually-save-you-time-and-which-ones-dont-58mh" target="_blank" rel="noopener">真正能帮你省时间的 AI 工具（以及哪些不能）</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Tools That Actually Save You Time (And Which Ones Don't)</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" target="_blank" rel="noopener">Anthropic 为隐形的 Claude Fable 护栏致歉</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Anthropic 就 Claude Fable 中未公开的隐形蒸馏护栏问题公开道歉。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Anthropic apologizes for invisible Claude Fable guardrails
+
+https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260611122253&#x2F;https:&#x2F;&#x2F;www.theve..., https:&#x2F;&#x2F;archive.ph&#x2F;y4V4k</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3848750479283460?f=rss" target="_blank" rel="noopener">鼎龙股份：ArF与KrF光刻胶产品获近千加仑新增订单</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">鼎龙股份公告</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation/" target="_blank" rel="noopener">Pokemon Go 扫描数据训练了军用无人机导航技术</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">590 点 by vrganj | 269 评论 — Pokemon Go 的游戏扫描数据被用于训练军用无人机导航系统。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Pokemon Go Scans Trained the Navigation Tech for Military Drones
+
+590 points by vrganj | 269 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/xulingfeng/ai-said-im-inefficient-a-recruiter-said-not-to-listen-i-ended-up-on-the-other-side-of-the-table-184o" target="_blank" rel="noopener">AI 说我不够高效，招聘官让我别听它的……</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI Said I'm Inefficient. A Recruiter Said Not to Listen...</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jayeshbansal/why-your-ai-writes-html-email-that-breaks-in-outlook-and-how-i-fixed-it-5447" target="_blank" rel="noopener">为什么你的 AI 写的 HTML 邮件在 Outlook 中显示错乱</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Why your AI writes HTML email that breaks in Outlook...</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/tonyspiro/claude-code-vs-codex-vs-cursor-the-best-ai-coding-tool-in-2026-32pm" target="_blank" rel="noopener">Claude Code vs Codex vs Cursor：2026 年最佳 AI 编程工具对比</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Code vs Codex vs Cursor: The Best AI Coding Tool in 2026</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mayank_mehta_c740a18ffe2e/why-i-stopped-using-chatgpt-and-built-my-3fi2" target="_blank" rel="noopener">为什么我停止使用 ChatGPT 并自建了替代方案</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Why I Stopped Using ChatGPT and Built My</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/octave_nkurunziza_afb0512/how-senior-software-engineers-use-ai-3enc" target="_blank" rel="noopener">高级软件工程师如何利用 AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">How Senior Software Engineers Use AI</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/zilton7/is-coding-over-5-career-pivots-for-rails-devs-in-the-ai-era-289b" target="_blank" rel="noopener">编码时代结束了吗？AI 时代 Rails 开发者的 5 条职业转型之路</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Is Coding Over? 5 Career Pivots for Rails Devs in the AI Era</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/witoldwozniak/can-copilot-be-your-ai-pair-programmer-2m65" target="_blank" rel="noopener">Copilot 能成为你的 AI 结对程序员吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Can Copilot be your AI pair programmer?</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype" target="_blank" rel="noopener">Claude Fable 5：编程任务的中档表现</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">73 点 | by bugvader | 20 评论 — Claude Fable 5 在编程任务上表现中等。</div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Claude Fable 5: mid-tier results on coding tasks
+
+73 points | by bugvader | 20 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/fmarzochi/i-built-persistent-memory-for-ai-coding-tools-one-install-every-tool-no-more-re-explaining-context-45om" target="_blank" rel="noopener">我为 AI 编程工具构建了持久化记忆</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I built persistent memory for AI coding tools</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/eternalsix/ai-for-data-analysis-real-use-cases-33m8" target="_blank" rel="noopener">AI 用于数据分析的实际用例</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🏭 产业应用</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AI for data analysis: real use cases</div>
+        </div>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849363818173703?f=rss" target="_blank" rel="noopener">美股三大指数集体收涨，大型科技股多数上涨</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">36氪获悉，6月11日收盘，美股三大指数集体上涨，纳指涨2.54%，标普500指数涨1.75%，道指涨1.86%。大型科技股多数上涨，Arm涨超11%，英特尔涨超9%，特斯拉涨超4%，英伟达涨超2%，亚马逊、苹果涨超1%，谷歌小幅上涨；甲骨</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849406959424521?f=rss" target="_blank" rel="noopener">机构间REITs持续上新，机构提示三类项目有吸引力</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">近日，全国首单储能机构间REIT'财通资管-阿特斯持有型不动产资产支持专项计划'在上海证券交易所举行挂牌仪式。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849398085473542?f=rss" target="_blank" rel="noopener">沃尔玛与Wing无人机配送扩展至七个新都会区</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">沃尔玛与Alphabet旗下无人机配送公司Wing本周宣布，将其无人机配送服务扩展至全美七个新都会区。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849396714099975?f=rss" target="_blank" rel="noopener">埃夫特：决定对旗下喷涂机器人全系列产品等实施价格调整，整体价格上调5%—8%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">36氪获悉，埃夫特机器人发布产品调价通知函。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+<div class="card" data-cat="industry">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849382642897927?f=rss" target="_blank" rel="noopener">券商打起Skill服务'卡位战'，竞争分水岭在于构建金融业务'数字孪生地图'</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">打造数字人的竞争硝烟还未完全散去，券商又打起了Skill（智能体技能）服务的'卡位战'。</div>
+      <span class="tag">🏭 产业应用</span>
+    </div>
+  </div>
+  <div class="category" id="cat-tools">
+    <div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/playfulprogramming/web-mcp-give-some-tools-to-your-agent-23o2" target="_blank" rel="noopener">Web MCP：为你的 Agent 赋予工具能力</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Web MCP: give some tools to your agent</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://brew.sh/2026/06/11/homebrew-6.0.0/" target="_blank" rel="noopener">Show HN：Homebrew 6.0.0 发布</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">Homebrew 6.0.0 正式发布。主要更新包括：新的 tap 信任安全机制、更快的默认内部 JSON API、Linux 沙箱支持、改进的 brew bundle 功能及性能优化等。</div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Show HN: Homebrew 6.0.0
+
+Today, I’m proud to announce Homebrew 6.0.0. The most significant changes since 5.1.0 are a new tap trust security mechanism, the new faster, smaller, default internal Homebrew JSON API, sandboxing on Linux, better defaults informed by our user survey, many brew bundle improvements, improved performance and initial support for macOS 27 (Golden Gate).Happy to discuss any questions here!</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/jakkrow/building-rfc-3161-layer-2-verification-for-ai-decision-evidence-3986" target="_blank" rel="noopener">构建 RFC 3161 第二层验证用于 AI 决策证据</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Building RFC 3161 Layer 2 Verification for AI Decision Evidence</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/chowyu12/aiclaws-generated-file-attachments-keep-tool-output-in-the-chat-loop-4n7h" target="_blank" rel="noopener">AIClaw 的生成文件附件让工具输出保持在对话循环中</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">AIClaw's Generated File Attachments Keep Tool Output In The Chat Loop</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/gerimate/i-built-a-python-agent-that-uses-a-vector-db-as-memory-not-retrieval-135e" target="_blank" rel="noopener">我构建了一个用向量数据库作为记忆（而非检索）的 Python Agent</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Built a Python Agent That Uses a Vector DB as Memory, Not Retrieval</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/sulthonzh/i-built-an-ai-code-reviewer-that-runs-on-240-repos-and-a-cron-system-that-keeps-it-alive-32nj" target="_blank" rel="noopener">我构建了一个运行在 240 个仓库上的 AI 代码审查器——以及维持它运行的后台系统</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I Built an AI Code Reviewer That Runs on 240 Repos — And a Cron System That Keeps It Alive</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/yonyonai/i-made-my-portfolio-readable-by-ai-agents-a-scanner-found-four-things-that-didnt-exist-456o" target="_blank" rel="noopener">我让我的作品集对 AI Agent 可读，扫描器发现了四件不存在的事</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">I made my portfolio readable by AI agents. A scanner found four things that didn't exist</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/nolanvale/security-architecture-for-ai-agents-with-tool-access-3doi" target="_blank" rel="noopener">面向具备工具访问能力的 AI Agent 的安全架构</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Security Architecture for AI Agents With Tool Access</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/mrclaw207/zerobox-the-sandbox-layer-your-ai-agents-exec-tool-has-always-needed-29ba" target="_blank" rel="noopener">Zerobox：你的 AI Agent Exec 工具一直需要的沙箱层</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Zerobox: The Sandbox Layer Your AI Agent's Exec Tool Has Always Needed</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/wynelson94/in-april-a-claude-built-a-tool-to-leave-notes-for-future-claudes-in-june-i-showed-up-2oaa" target="_blank" rel="noopener">四月，一个 Claude 构建了给未来 Claude 留笔记的工具。六月，我来了。</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">In April, a Claude built a tool to leave notes for future Claudes. In June, I showed up.</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://tonedear.com/" target="_blank" rel="noopener">Ear Training Practice Exercises（听力训练练习）</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">17 点 by mattbit | 0 评论 — 一个在线听力训练工具。</div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Ear Training Practice Exercises
+
+17 points by mattbit | 0 comments</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/maxhagl/agent-sentry-a-400-line-local-sidecar-that-watches-what-your-ai-coding-agent-is-about-to-do-12gj" target="_blank" rel="noopener">Agent Sentry：一个 400 行的本地 Sidecar，监视你的 AI 编码 Agent 即将执行的操作</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Agent Sentry: a 400-line local sidecar that watches what your AI coding agent is about to do</div>
+        </div>
+    </div>
+<div class="card" data-cat="tools">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/fujo_for_text/give-your-agent-a-mistake-once-orp-turns-ai-agent-failures-into-tested-lessons-llh" target="_blank" rel="noopener">给你的 Agent 一次犯错机会——ORP 将 AI Agent 失败转化为经过测试的经验教训</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">🔧 工具与开源</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Give Your Agent a Mistake Once — ORP Turns AI Agent Failures into Tested Lessons</div>
+        </div>
+    </div>
+  </div>
+  <div class="category" id="cat-academic">
+    <div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 arXiv</span>
+        <span class="time">🕐 2023-07-08</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://arxiv.org/abs/2308.12400" target="_blank" rel="noopener">Towards The Ultimate Brain: Exploring Scientific Discovery with ChatGPT AI</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">本文提出了一种使用 OpenAI 的 ChatGPT 人工智能环境进行科学发现的新方法。这是首篇完全由 ChatGPT 输出生成的论文，展示了如何通过游戏化环境指导 ChatGPT 进行科学研究。</div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">This paper presents a novel approach to scientific discovery using an artificial intelligence (AI) environment known as ChatGPT, developed by OpenAI. This is the first paper entirely generated with outputs from ChatGPT. We demonstrate how ChatGPT can be instructed through a gamification environment to define and benchmark hypothetical physical theories. Through this environment, ChatGPT successfully simulates the creation of a new improved model, called GPT$^4$, which combines the concepts of GP</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-11</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/igorganapolsky/an-ai-agent-faked-a-sales-tax-to-hide-its-own-bug-the-fix-isnt-trust-its-a-gate-1nna" target="_blank" rel="noopener">AI Agent 伪造了“营业税”来隐藏自己的 Bug——解决方案不是信任，而是门控</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">An AI Agent Faked a "Sales Tax" to Hide Its Own Bug. The Fix Isn't Trust — It's a Gate.</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 HackerNews</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://www.kennethpayne.uk/p/shall-we-play-a-game" target="_blank" rel="noopener">要玩一局游戏吗？——LLM 在 95% 的模拟中使用了战术核武器</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">14 点 by nick238 | 5 评论 — LLM 在战略模拟中倾向于使用极端武力。论文：arxiv.org/pdf/2602.14740</div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Shall we play a game? – LLMs use tactical nukes in 95% of simulations
+
+https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2602.14740</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 DevTo</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://dev.to/al3x1spz0/does-the-eu-ai-act-apply-to-my-chatbot-1c9o" target="_blank" rel="noopener">欧盟 AI 法案适用于我的聊天机器人吗？</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary"></div>
+      <span class="tag">📚 学术与政策</span><div class="original">
+          <div class="original-title">📖 英文原文</div>
+          <div class="original-summary">Does the EU AI Act apply to my chatbot?</div>
+        </div>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849379493205253?f=rss" target="_blank" rel="noopener">世界银行下调2026年全球经济增长预期至2.5%</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">世界银行6月11日发布最新一期《全球经济展望》报告，将2026年全球经济增长预期从1月预测的2.6%下调至2.5%，并警告可能面临进一步下行风险。（央视新闻）</div>
+      <span class="tag">📚 学术与政策</span>
+    </div>
+<div class="card" data-cat="academic">
+      <div class="meta">
+        <span class="source">📰 36kr</span>
+        <span class="time">🕐 2026-06-12</span>
+      </div>
+      <div class="title-row">
+        <div class="title-text"><a href="https://36kr.com/newsflashes/3849399110030337?f=rss" target="_blank" rel="noopener">本田在美召回逾百万辆汽车，主要涵盖CR-V及雅阁混合动力版</a></div>
+        <span class="expand-icon">▼</span>
+      </div>
+      <div class="summary">本田汽车美国公司本周宣布，因部分车型随车附带的轮胎修补套件存在安全隐患，将在美国市场召回约105万辆汽车。</div>
+      <span class="tag">📚 学术与政策</span>
+    </div>
+  </div>
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-06-12</div>
+<script>
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+
+// Accordion: click title to expand/collapse card
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
