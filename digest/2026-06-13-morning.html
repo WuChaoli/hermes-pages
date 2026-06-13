@@ -5,38 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>☀️ AI 晨报 · 6月13日</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
-.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
-.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-.header .sub { font-size: 13px; opacity: 0.85; }
-.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
-.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
-.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
-.tabs::-webkit-scrollbar { display: none; }
-.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
-.tab:hover { color: #ee5a24; }
-.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
-.content { padding: 12px 16px; }
-.category { display: none; }
-.category.active { display: block; }
-.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
-.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
-.card .title-text a { color: inherit; text-decoration: none; }
-.card .title-text a:hover { color: #ee5a24; }
-.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
-.card.expanded .expand-icon { transform: rotate(180deg); }
-.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
-.card .meta .source { color: #636e72; }
-.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
-.card.expanded .summary { max-height: none; }
-.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
-.card.expanded .original { display: block; }
-.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
-.card .original-summary { line-height: 1.5; }
-.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
-.tab-badge { display: inline-block; font-size: 11px; background: #ee5a2420; color: #ee5a24; padding: 1px 6px; border-radius: 8px; margin-left: 4px; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif; background:#f5f6fa; color:#2d3436; line-height:1.6; }
+.header { background:linear-gradient(135deg,#ff6b6b,#ee5a24); color:white; padding:28px 20px 24px; text-align:center; }
+.header h1 { font-size:22px; font-weight:700; margin-bottom:6px; }
+.header .sub { font-size:13px; opacity:0.85; }
+.header .stats { margin-top:12px; display:flex; justify-content:center; gap:20px; font-size:13px; }
+.header .stats span { background:rgba(255,255,255,0.2); padding:4px 14px; border-radius:12px; }
+.tabs { display:flex; overflow-x:auto; background:white; border-bottom:1px solid #e8e8e8; position:sticky; top:0; z-index:10; -webkit-overflow-scrolling:touch; }
+.tabs::-webkit-scrollbar { display:none; }
+.tab { flex-shrink:0; padding:12px 14px; font-size:14px; color:#636e72; cursor:pointer; border-bottom:2px solid transparent; transition:all 0.2s; white-space:nowrap; user-select:none; }
+.tab:hover { color:#ee5a24; }
+.tab.active { color:#ee5a24; border-bottom-color:#ee5a24; font-weight:600; }
+.tab-badge { display:inline-block; font-size:11px; background:#ee5a2420; color:#ee5a24; padding:1px 7px; border-radius:8px; margin-left:3px; }
+.content { padding:12px 16px; }
+.category { display:none; }
+.category.active { display:block; }
+.card { background:white; border-radius:10px; padding:14px 16px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display:flex; justify-content:space-between; align-items:flex-start; cursor:pointer; user-select:none; }
+.card .title-text { font-size:15px; font-weight:600; color:#2d3436; line-height:1.4; flex:1; padding-right:8px; }
+.card .title-text a { color:inherit; text-decoration:none; }
+.card .title-text a:hover { color:#ee5a24; }
+.card .expand-icon { font-size:14px; color:#999; transition:transform 0.2s; flex-shrink:0; margin-top:2px; }
+.card.expanded .expand-icon { transform:rotate(180deg); }
+.card .meta { font-size:12px; color:#999; margin-bottom:4px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.card .tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:6px; background:#ee5a2415; color:#ee5a24; }
+.card .summary { font-size:13px; color:#555; line-height:1.5; max-height:3em; overflow:hidden; transition:max-height 0.3s ease; word-break:break-word; }
+.card.expanded .summary { max-height:none; }
+.card .original { display:none; margin-top:10px; padding-top:10px; border-top:1px dashed #eee; font-size:12px; color:#888; }
+.card.expanded .original { display:block; }
+.card .original-title { font-weight:600; color:#666; margin-bottom:4px; }
+.card .original-summary { line-height:1.5; }
+.footer { text-align:center; padding:20px; font-size:12px; color:#999; }
 </style>
 </head>
 <body>
@@ -44,26 +44,25 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
   <h1>☀️ AI 晨报</h1>
   <div class="sub">6月13日 · 开启一天的 AI 资讯</div>
   <div class="stats">
-    <span>📊 52 条</span>
+    <span>📊 60 条</span>
     <span>📡 5 个来源</span>
   </div>
 </div>
 <div class="tabs" id="tabs">
-  <div class="tab active" data-cat="all">全部</div>
-<div class="tab" data-cat="模型_技术">模型与技术</div>
-<div class="tab" data-cat="商业_融资">商业与融资</div>
-<div class="tab" data-cat="产业应用">产业应用</div>
-<div class="tab" data-cat="工具_开源">工具与开源</div>
-<div class="tab" data-cat="学术_政策">学术与政策</div>
-<div class="tab" data-cat="其他">其他</div>
-
+  <div class="tab active" data-cat="all">全部 <span class="tab-badge">60</span></div>
+<div class="tab" data-cat="模型_技术">模型与技术 <span class="tab-badge">12</span></div>
+<div class="tab" data-cat="商业_融资">商业与融资 <span class="tab-badge">13</span></div>
+<div class="tab" data-cat="产业应用">产业应用 <span class="tab-badge">2</span></div>
+<div class="tab" data-cat="工具_开源">工具与开源 <span class="tab-badge">5</span></div>
+<div class="tab" data-cat="学术_政策">学术与政策 <span class="tab-badge">5</span></div>
+<div class="tab" data-cat="其他">其他 <span class="tab-badge">23</span></div>
 </div>
 <div class="content">
   <div class="category active" id="cat-all">
     <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851106394117383" target="_blank" rel="noopener">“宁王系”，排队 IPO</a></div>
@@ -75,7 +74,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851073239372809" target="_blank" rel="noopener">读懂SpaceX的两万亿故事</a></div>
@@ -87,7 +86,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851015329027336" target="_blank" rel="noopener">突发！Anthropic全球停用Claude 5</a></div>
@@ -99,7 +98,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850902095336449" target="_blank" rel="noopener">SpaceX 2万亿美元市值</a></div>
@@ -111,7 +110,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3849942472512769" target="_blank" rel="noopener">氪星晚报：SpaceX确定发行价募资750亿美元</a></div>
@@ -123,7 +122,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851099090998277" target="_blank" rel="noopener">法国调查显示公众对人工智能态度分化明显</a></div>
@@ -135,7 +134,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851097260004610" target="_blank" rel="noopener">摩尔线程：完成MiniMax M3大模型适配</a></div>
@@ -147,7 +146,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851096396322055" target="_blank" rel="noopener">蓝思科技：收购同昇光电，加速布局光通信</a></div>
@@ -159,7 +158,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851097792632066" target="_blank" rel="noopener">新通教育与36氪研究院联合发布《AI时代留学就业白皮书》</a></div>
@@ -171,7 +170,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引</a></div>
@@ -183,7 +182,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850904887268611" target="_blank" rel="noopener">36氪首发：核心材料成本降至进口材料五分之一</a></div>
@@ -195,7 +194,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850898430989577" target="_blank" rel="noopener">9点1氪：SpaceX市���破2.1万亿美元</a></div>
@@ -207,82 +206,70 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 arXiv</span>
-    <span>2026-05-17</span>
+    <span>2026-05-17 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
-  
+  <div class="summary">作者：Jinhu Qi, Muzhi Li, Jiahong Liu 等。探讨如何构建可信赖的自主 AI 系统。</div>
+  <div class="original"><div class="original-title">Towards trustworthy agentic AI</div><div class="original-summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open source AI must win</a></div>
+    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">开源 AI 必须获胜</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">587 points by vednig | 186 comments</div>
-  
+  <div class="summary">587 points by vednig | 186 comments — 关于开源 AI 重要性的讨论。</div>
+  <div class="original"><div class="original-title">Open source AI must win</div><div class="original-summary">587 points by vednig | 186 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day a daily mini golf game</a></div>
+    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day — 每日迷你高尔夫</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">125 points by ellg | 64 comments</div>
-  
+  <div class="summary">125 points by ellg | 64 comments — 一个每日一关的迷你高尔夫网页游戏。</div>
+  <div class="original"><div class="original-title">Show HN: Putt.day a daily mini golf game</div><div class="original-summary">125 points by ellg | 64 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">How to setup a local coding agent on macOS</a></div>
+    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">如何在 macOS 上搭建本地编码 Agent</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">328 points by kkm | 79 comments</div>
-  
+  <div class="summary">328 points by kkm | 79 comments — 在 macOS 上配置本地 AI 编程助手的完整指南。</div>
+  <div class="original"><div class="original-title">How to setup a local coding agent on macOS</div><div class="original-summary">328 points by kkm | 79 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 ProductHunt</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent</a></div>
+    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent — 在 Slack 中直接查询数据</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Ask about your data without leaving Slack</div>
-  
+  <div class="summary">无需离开 Slack 即可查询你的数据。</div>
+  <div class="original"><div class="original-title">Slack Data Agent</div><div class="original-summary">Ask about your data without leaving Slack</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What 'Click' Got Right About Agentic AI</a></div>
-    <div class="expand-icon">▼</div>
-  </div>
-  <div class="summary"></div>
-  
-</div>
-<div class="card">
-  <div class="meta">
-    <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
-  </div>
-  <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You</a></div>
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">远程已经存在：'Click' 对 Agentic AI 的正确理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -291,10 +278,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">Lessons from a 109-agent code audit workflow</a></div>
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">你的 Agent 日志在欺骗你</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -303,10 +290,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">I Switched to the Agent Toolkit for AWS. Here's Why.</a></div>
+    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">109 个 Agent 代码审计工作流的经验教训</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -315,10 +302,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-12 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI assistants lie about citations. Here's how to catch them.</a></div>
+    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">我为什么切换到 AWS Agent Toolkit</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -327,10 +314,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make</a></div>
+    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI 助手会伪造引用——教你如何识破</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -339,10 +326,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains</a></div>
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">AI 时代的调试：初学者常犯的 10 个错误</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -351,10 +338,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget</a></div>
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">发布 BabyChain：持久的图像和视频模型链</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -363,10 +350,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-12 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended</a></div>
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">如何给你的 AI Agent 设定预算</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -375,10 +362,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">Why AgentTrail Exists: Building Open-Source Audit Trails for AI Agents</a></div>
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">我查明了 Claude Fable 5 被暂停的原因</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -387,10 +374,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">The Missing Layer Between AI and Production Systems</a></div>
+    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">AgentTrail 存在的意义：为 AI Agent 构建开源审计追踪</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">AI 与生产系统之间缺失的一层</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -399,7 +398,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851073239372809?f=rss" target="_blank" rel="noopener">读懂SpaceX的两万亿故事：为什么马斯克每一手棋，永远都可以提前摆好？</a></div>
@@ -411,7 +410,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850904887268611?f=rss" target="_blank" rel="noopener">36氪首发 | 核心材料成本降至进口材料五分之一，电致变色技术厂商获投，车规级产线建设中</a></div>
@@ -423,7 +422,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850902095336449?f=rss" target="_blank" rel="noopener">SpaceX 2万亿美元市值这一夜，回望中国商业航天十年冷暖</a></div>
@@ -435,7 +434,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850898430989577?f=rss" target="_blank" rel="noopener">9点1氪｜SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍；胖东来回应“员工不值这么多钱”等言论；FIFA联名款labubu世界杯销量暴涨30倍</a></div>
@@ -447,7 +446,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3849942472512769?f=rss" target="_blank" rel="noopener">氪星晚报｜SpaceX确定发行价，募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划；中央网信办举报中心开设“涉AI应用乱象举报专区”</a></div>
@@ -459,7 +458,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851101538718722?f=rss" target="_blank" rel="noopener">逾200家机构调研两公司，电子元件行业最受青睐</a></div>
@@ -471,7 +470,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851094130676997?f=rss" target="_blank" rel="noopener">迭代快韧性足，A股出口企业估值静待重构</a></div>
@@ -483,7 +482,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">产业应用</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851093396886529?f=rss" target="_blank" rel="noopener">11部门发文推动新能源重卡应用</a></div>
@@ -495,7 +494,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851003216418055?f=rss" target="_blank" rel="noopener">今年前五个月全国铁路发送旅客19.69亿人次 创历史新高</a></div>
@@ -507,7 +506,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">产业应用</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851000746087432?f=rss" target="_blank" rel="noopener">美瑞新材：目前PPDA产品已成功产出合格产品，正处于下游客户开发及产品验证阶段</a></div>
@@ -519,7 +518,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462?f=rss" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引，严重偏离投资方向将被纳入负面考核指标</a></div>
@@ -531,22 +530,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 arXiv</span>
-    <span>2025-08-06</span>
+    <span>2025-08-06 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://arxiv.org/abs/2508.04848" target="_blank" rel="noopener">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div>
-  
+  <div class="summary">作者：Chang Tian 等。研究大语言模型在 RL 微调后在非理想条件下的推理能力。</div>
+  <div class="original"><div class="original-title">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</div><div class="original-summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What "Click" Got Right About Agentic AI</a></div>
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">远程已经存在：'Click' 对 Agentic AI 的正确理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -555,10 +554,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">Every Step Was Allowed. The Sequence Was the Attack. (AI Memory Judgment, CLAIM-30)</a></div>
+    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">每一步都合法，组合起来就是攻击（AI 记忆判断，CLAIM-30）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -567,10 +566,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You: What to Actually Trace in an Agentic System</a></div>
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">你的 Agent 日志在欺骗你：Agent 系统中真正需要追踪什么</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -579,10 +578,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make When They Stop Thinking</a></div>
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">AI 时代的调试：初学者停止思考时常犯的 10 个错误</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -591,10 +590,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains on AWS Aurora and Vercel</a></div>
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">发布 BabyChain：在 AWS Aurora 和 Vercel 上的持久图像与视频模型链</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -603,10 +602,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget (Before It Gives Itself One)</a></div>
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">如何给你的 AI Agent 设定预算（在它给自己设定之前）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -615,10 +614,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">I Use AI to Write Most of My Code. So I Built a Tool That Tests Whether I Understand It.</a></div>
+    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">我用 AI 写大部分代码，所以我建了个工具测试自己是否真的理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -627,10 +626,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended 4 Days After Launch. This Is Not an Outage.</a></div>
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">我查明了 Claude Fable 5 上线 4 天即被暂停的原因——这不是宕机</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -639,10 +638,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">When My AI API Went Down: Building a Resilient Fallback Pipeline</a></div>
+    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">当我的 AI API 宕机时：构建弹性 Fallback 流水线</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -651,10 +650,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">I built a "what do I need on my final" calculator with AI auto-fill (Next.js 16 + Gemini)</a></div>
+    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">我用 AI 自动填写做了一个'期末需要多少分'计算器（Next.js 16 + Gemini）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -663,10 +662,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap: Shipping an Endless Climber with an AI Pair Programmer</a></div>
+    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap：与 AI 结对编程搭档发布无尽攀岩游戏</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -675,10 +674,106 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">The "Demo vs. Production" Trap: Building a Scalable Kafka Pipeline for LLMs</a></div>
+    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">'演示 vs. 生产'陷阱：为 LLM 构建可扩展的 Kafka 流水线</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846972367866119?f=rss" target="_blank" rel="noopener">36氪研究院 | AI时代留学就业白皮书：中国留学生全球就业趋势与人才价值重塑</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">在AI浪潮重塑全球产业逻辑的当下，传统留学路径所依赖的学历溢价与信息差正在系统性失效，大量高薪专业的基础性任务面临被AI批量化替代的风险。70/80后家长遭遇教育投资回报率骤降，05后年轻一代则陷入人机协同时代“何以确立自身不可替代价值”的</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851102420325382?f=rss" target="_blank" rel="noopener">印度政府出台汽柴油限购措施</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">印度媒体12日报道，印度政府出台一项为期90天的汽油和柴油限购措施，禁止货运公司等机构用户在面向个人用户的加油站购买汽油和柴油，同时对普通消费者每日柴油购买量设限，以防止囤积和倒卖燃油加剧供应紧张。（新华社）</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://koenvangilst.nl/lab/claude-fable-shepherds-dog" target="_blank" rel="noopener">Shepherd's Dog：最危险 AI 模型制作的游戏</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">4 points by vnglst | 0 comments — 一个由 AI 生成的游戏。</div>
+  <div class="original"><div class="original-title">Shepherd's Dog: A Game by the Most Dangerous AI Model</div><div class="original-summary">4 points by vnglst | 0 comments</div></div>
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/pn_28428886923dfc665/co-authored-by-copilot-is-not-an-audit-trail-heres-what-one-actually-looks-like-65a" target="_blank" rel="noopener">'Co-authored-by: Copilot' 不是审计追踪——真正的审计长什么样</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/bradleymatera/the-ai-review-trap-why-verification-matters-more-than-prompting-3lak" target="_blank" rel="noopener">AI 审查陷阱：为什么验证比 Prompt 更重要</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/theunstopabble/building-texfolio-an-ai-powered-latex-resume-builder-with-hono-langgraph-bullmq-1p0k" target="_blank" rel="noopener">构建 TexFolio：AI 驱动的 LaTeX 简历生成器（Hono + LangGraph + BullMQ）</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/xu_xu_b2179aa8fc958d531d1/why-your-local-llm-setup-is-costing-more-than-you-think-and-what-happens-when-it-breaks-513b" target="_blank" rel="noopener">为什么你的本地 LLM 部署比你想象的更贵——以及宕机时会发生什么</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/olaughter/linear-ensembles-can-erase-llm-watermarks-34oo" target="_blank" rel="noopener">线性集成可以擦除 LLM 水印</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -686,10 +781,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 </div>
   </div>
   <div class="category" id="cat-模型_技术">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851015329027336" target="_blank" rel="noopener">突发！Anthropic全球停用Claude 5</a></div>
@@ -701,10 +796,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains</a></div>
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">发布 BabyChain：持久的图像和视频模型链</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -713,10 +808,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended</a></div>
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">我查明了 Claude Fable 5 被暂停的原因</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -725,22 +820,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 arXiv</span>
-    <span>2025-08-06</span>
+    <span>2025-08-06 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://arxiv.org/abs/2508.04848" target="_blank" rel="noopener">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div>
-  
+  <div class="summary">作者：Chang Tian 等。研究大语言模型在 RL 微调后在非理想条件下的推理能力。</div>
+  <div class="original"><div class="original-title">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</div><div class="original-summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains on AWS Aurora and Vercel</a></div>
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">发布 BabyChain：在 AWS Aurora 和 Vercel 上的持久图像与视频模型链</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -749,10 +844,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended 4 Days After Launch. This Is Not an Outage.</a></div>
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">我查明了 Claude Fable 5 上线 4 天即被暂停的原因——这不是宕机</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -761,10 +856,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">I built a "what do I need on my final" calculator with AI auto-fill (Next.js 16 + Gemini)</a></div>
+    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">我用 AI 自动填写做了一个'期末需要多少分'计算器（Next.js 16 + Gemini）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -773,21 +868,69 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">The "Demo vs. Production" Trap: Building a Scalable Kafka Pipeline for LLMs</a></div>
+    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">'演示 vs. 生产'陷阱：为 LLM 构建可扩展的 Kafka 流水线</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
   
 </div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
   </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://koenvangilst.nl/lab/claude-fable-shepherds-dog" target="_blank" rel="noopener">Shepherd's Dog：最危险 AI 模型制作的游戏</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">4 points by vnglst | 0 comments — 一个由 AI 生成的游戏。</div>
+  <div class="original"><div class="original-title">Shepherd's Dog: A Game by the Most Dangerous AI Model</div><div class="original-summary">4 points by vnglst | 0 comments</div></div>
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/theunstopabble/building-texfolio-an-ai-powered-latex-resume-builder-with-hono-langgraph-bullmq-1p0k" target="_blank" rel="noopener">构建 TexFolio：AI 驱动的 LaTeX 简历生成器（Hono + LangGraph + BullMQ）</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/xu_xu_b2179aa8fc958d531d1/why-your-local-llm-setup-is-costing-more-than-you-think-and-what-happens-when-it-breaks-513b" target="_blank" rel="noopener">为什么你的本地 LLM 部署比你想象的更贵——以及宕机时会发生什么</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">模型与技术</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/olaughter/linear-ensembles-can-erase-llm-watermarks-34oo" target="_blank" rel="noopener">线性集成可以擦除 LLM 水印</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+</div>
 <div class="category" id="cat-商业_融资">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851106394117383" target="_blank" rel="noopener">“宁王系”，排队 IPO</a></div>
@@ -799,7 +942,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850902095336449" target="_blank" rel="noopener">SpaceX 2万亿美元市值</a></div>
@@ -811,7 +954,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3849942472512769" target="_blank" rel="noopener">氪星晚报：SpaceX确定发行价募资750亿美元</a></div>
@@ -823,7 +966,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851096396322055" target="_blank" rel="noopener">蓝思科技：收购同昇光电，加速布局光通信</a></div>
@@ -835,7 +978,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引</a></div>
@@ -847,7 +990,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850904887268611?f=rss" target="_blank" rel="noopener">36氪首发 | 核心材料成本降至进口材料五分之一，电致变色技术厂商获投，车规级产线建设中</a></div>
@@ -859,7 +1002,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850902095336449?f=rss" target="_blank" rel="noopener">SpaceX 2万亿美元市值这一夜，回望中国商业航天十年冷暖</a></div>
@@ -871,7 +1014,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850898430989577?f=rss" target="_blank" rel="noopener">9点1氪｜SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍；胖东来回应“员工不值这么多钱”等言论；FIFA联名款labubu世界杯销量暴涨30倍</a></div>
@@ -883,7 +1026,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3849942472512769?f=rss" target="_blank" rel="noopener">氪星晚报｜SpaceX确定发行价，募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划；中央网信办举报中心开设“涉AI应用乱象举报专区”</a></div>
@@ -895,7 +1038,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851101538718722?f=rss" target="_blank" rel="noopener">逾200家机构调研两公司，电子元件行业最受青睐</a></div>
@@ -907,7 +1050,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851094130676997?f=rss" target="_blank" rel="noopener">迭代快韧性足，A股出口企业估值静待重构</a></div>
@@ -919,7 +1062,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462?f=rss" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引，严重偏离投资方向将被纳入负面考核指标</a></div>
@@ -928,12 +1071,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
   <div class="summary">6月12日，中国证券投资基金业协会发布《公开募集证券投资基金主题投资风格管理指引》（下称“指引”）。指引要求，主题投资基金的名称必须明示投资方向，不得出现“名实不符”的情形，并明确基金管理人应加强对基金经理投资交易行为的监控、分析和评估，将</div>
   
 </div>
-  </div>
-<div class="category" id="cat-产业应用">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">商业与融资</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3846972367866119?f=rss" target="_blank" rel="noopener">36氪研究院 | AI时代留学就业白皮书：中国留学生全球就业趋势与人才价值重塑</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">在AI浪潮重塑全球产业逻辑的当下，传统留学路径所依赖的学历溢价与信息差正在系统性失效，大量高薪专业的基础性任务面临被AI批量化替代的风险。70/80后家长遭遇教育投资回报率骤降，05后年轻一代则陷入人机协同时代“何以确立自身不可替代价值”的</div>
+  
+</div>
+</div>
+<div class="category" id="cat-产业应用">
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13 <span class="tag">产业应用</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851093396886529?f=rss" target="_blank" rel="noopener">11部门发文推动新能源重卡应用</a></div>
@@ -945,7 +1100,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">产业应用</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851000746087432?f=rss" target="_blank" rel="noopener">美瑞新材：目前PPDA产品已成功产出合格产品，正处于下游客户开发及产品验证阶段</a></div>
@@ -954,12 +1109,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
   <div class="summary">36氪获悉，美瑞新材在互动平台表示，PPDA（对苯二胺）属于芳香二胺，是对位芳纶及聚酰亚胺的核心原材料，同时也可用于制取偶氮染料、硫化染料等。目前PPDA产品已成功产出合格产品，性能指标达到预定目标，正处于下游客户开发及产品验证阶段，公司销</div>
   
 </div>
-  </div>
+</div>
 <div class="category" id="cat-工具_开源">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851099090998277" target="_blank" rel="noopener">法国调查显示公众对人工智能态度分化明显</a></div>
@@ -971,22 +1126,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open source AI must win</a></div>
+    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">开源 AI 必须获胜</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">587 points by vednig | 186 comments</div>
-  
+  <div class="summary">587 points by vednig | 186 comments — 关于开源 AI 重要性的讨论。</div>
+  <div class="original"><div class="original-title">Open source AI must win</div><div class="original-summary">587 points by vednig | 186 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">I Switched to the Agent Toolkit for AWS. Here's Why.</a></div>
+    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">我为什么切换到 AWS Agent Toolkit</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -995,24 +1150,36 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">When My AI API Went Down: Building a Resilient Fallback Pipeline</a></div>
+    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">我用 AI 写大部分代码，所以我建了个工具测试自己是否真的理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
   
 </div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">工具与开源</span></span>
   </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">当我的 AI API 宕机时：构建弹性 Fallback 流水线</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+</div>
 <div class="category" id="cat-学术_政策">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You</a></div>
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">你的 Agent 日志在欺骗你</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1021,10 +1188,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">Lessons from a 109-agent code audit workflow</a></div>
+    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">109 个 Agent 代码审计工作流的经验教训</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1033,10 +1200,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">Why AgentTrail Exists: Building Open-Source Audit Trails for AI Agents</a></div>
+    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">AgentTrail 存在的意义：为 AI Agent 构建开源审计追踪</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1045,21 +1212,33 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You: What to Actually Trace in an Agentic System</a></div>
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">你的 Agent 日志在欺骗你：Agent 系统中真正需要追踪什么</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
   
 </div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">学术与政策</span></span>
   </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/pn_28428886923dfc665/co-authored-by-copilot-is-not-an-audit-trail-heres-what-one-actually-looks-like-65a" target="_blank" rel="noopener">'Co-authored-by: Copilot' 不是审计追踪——真正的审计长什么样</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+</div>
 <div class="category" id="cat-其他">
-    <div class="card">
+<div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851073239372809" target="_blank" rel="noopener">读懂SpaceX的两万亿故事</a></div>
@@ -1071,7 +1250,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851097260004610" target="_blank" rel="noopener">摩尔线程：完成MiniMax M3大模型适配</a></div>
@@ -1083,7 +1262,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851097792632066" target="_blank" rel="noopener">新通教育与36氪研究院联合发布《AI时代留学就业白皮书》</a></div>
@@ -1095,7 +1274,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850904887268611" target="_blank" rel="noopener">36氪首发：核心材料成本降至进口材料五分之一</a></div>
@@ -1107,7 +1286,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3850898430989577" target="_blank" rel="noopener">9点1氪：SpaceX市���破2.1万亿美元</a></div>
@@ -1119,70 +1298,58 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 arXiv</span>
-    <span>2026-05-17</span>
+    <span>2026-05-17 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
-  
+  <div class="summary">作者：Jinhu Qi, Muzhi Li, Jiahong Liu 等。探讨如何构建可信赖的自主 AI 系统。</div>
+  <div class="original"><div class="original-title">Towards trustworthy agentic AI</div><div class="original-summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day a daily mini golf game</a></div>
+    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day — 每日迷你高尔夫</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">125 points by ellg | 64 comments</div>
-  
+  <div class="summary">125 points by ellg | 64 comments — 一个每日一关的迷你高尔夫网页游戏。</div>
+  <div class="original"><div class="original-title">Show HN: Putt.day a daily mini golf game</div><div class="original-summary">125 points by ellg | 64 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 HackerNews</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">How to setup a local coding agent on macOS</a></div>
+    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">如何在 macOS 上搭建本地编码 Agent</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">328 points by kkm | 79 comments</div>
-  
+  <div class="summary">328 points by kkm | 79 comments — 在 macOS 上配置本地 AI 编程助手的完整指南。</div>
+  <div class="original"><div class="original-title">How to setup a local coding agent on macOS</div><div class="original-summary">328 points by kkm | 79 comments</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 ProductHunt</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent</a></div>
+    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent — 在 Slack 中直接查询数据</a></div>
     <div class="expand-icon">▼</div>
   </div>
-  <div class="summary">Ask about your data without leaving Slack</div>
-  
+  <div class="summary">无需离开 Slack 即可查询你的数据。</div>
+  <div class="original"><div class="original-title">Slack Data Agent</div><div class="original-summary">Ask about your data without leaving Slack</div></div>
 </div>
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-12 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What 'Click' Got Right About Agentic AI</a></div>
-    <div class="expand-icon">▼</div>
-  </div>
-  <div class="summary"></div>
-  
-</div>
-<div class="card">
-  <div class="meta">
-    <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
-  </div>
-  <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI assistants lie about citations. Here's how to catch them.</a></div>
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">远程已经存在：'Click' 对 Agentic AI 的正确理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1191,10 +1358,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make</a></div>
+    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI 助手会伪造引用——教你如何识破</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1203,10 +1370,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-12</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget</a></div>
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">AI 时代的调试：初学者常犯的 10 个错误</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1215,10 +1382,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-12 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">The Missing Layer Between AI and Production Systems</a></div>
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">如何给你的 AI Agent 设定预算</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">AI 与生产系统之间缺失的一层</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1227,7 +1406,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/p/3851073239372809?f=rss" target="_blank" rel="noopener">读懂SpaceX的两万亿故事：为什么马斯克每一手棋，永远都可以提前摆好？</a></div>
@@ -1239,7 +1418,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 36kr</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
     <div class="title-text"><a href="https://36kr.com/newsflashes/3851003216418055?f=rss" target="_blank" rel="noopener">今年前五个月全国铁路发送旅客19.69亿人次 创历史新高</a></div>
@@ -1251,10 +1430,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What "Click" Got Right About Agentic AI</a></div>
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">远程已经存在：'Click' 对 Agentic AI 的正确理解</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1263,10 +1442,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">Every Step Was Allowed. The Sequence Was the Attack. (AI Memory Judgment, CLAIM-30)</a></div>
+    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">每一步都合法，组合起来就是攻击（AI 记忆判断，CLAIM-30）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1275,10 +1454,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make When They Stop Thinking</a></div>
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">AI 时代的调试：初学者停止思考时常犯的 10 个错误</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1287,10 +1466,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget (Before It Gives Itself One)</a></div>
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">如何给你的 AI Agent 设定预算（在它给自己设定之前）</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1299,10 +1478,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 <div class="card">
   <div class="meta">
     <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">I Use AI to Write Most of My Code. So I Built a Tool That Tests Whether I Understand It.</a></div>
+    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap：与 AI 结对编程搭档发布无尽攀岩游戏</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
@@ -1310,36 +1489,48 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC'
 </div>
 <div class="card">
   <div class="meta">
-    <span class="source">📡 DevTo</span>
-    <span>2026-06-13</span>
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
   </div>
   <div class="title-row">
-    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap: Shipping an Endless Climber with an AI Pair Programmer</a></div>
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851102420325382?f=rss" target="_blank" rel="noopener">印度政府出台汽柴油限购措施</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">印度媒体12日报道，印度政府出台一项为期90天的汽油和柴油限购措施，禁止货运公司等机构用户在面向个人用户的加油站购买汽油和柴油，同时对普通消费者每日柴油购买量设限，以防止囤积和倒卖燃油加剧供应紧张。（新华社）</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13 <span class="tag">其他</span></span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/bradleymatera/the-ai-review-trap-why-verification-matters-more-than-prompting-3lak" target="_blank" rel="noopener">AI 审查陷阱：为什么验证比 Prompt 更重要</a></div>
     <div class="expand-icon">▼</div>
   </div>
   <div class="summary"></div>
   
 </div>
-  </div>
+</div>
 
 </div>
 <div class="footer">基于 AI 自动采集，仅供参考 · 2026-06-13</div>
 <script>
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('cat-'+t.dataset.cat).classList.add('active');
   });
 });
-document.querySelectorAll('.card .title-row').forEach(row => {
-  row.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') return;
-    const card = row.closest('.card');
-    const wasExpanded = card.classList.contains('expanded');
-    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
-    if (!wasExpanded) card.classList.add('expanded');
+document.querySelectorAll('.card .title-row').forEach(r=>{
+  r.addEventListener('click',e=>{
+    if(e.target.tagName==='A') return;
+    const c=r.closest('.card');
+    const w=c.classList.contains('expanded');
+    c.closest('.category').querySelectorAll('.card.expanded').forEach(x=>x.classList.remove('expanded'));
+    if(!w) c.classList.add('expanded');
   });
 });
 </script>
