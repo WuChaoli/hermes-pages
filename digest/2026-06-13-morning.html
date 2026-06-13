@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>☀️ AI 晨报 · 6月13日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; padding: 28px 20px 24px; text-align: center; }
+.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.header .sub { font-size: 13px; opacity: 0.85; }
+.header .stats { margin-top: 12px; display: flex; justify-content: center; gap: 20px; font-size: 13px; }
+.header .stats span { background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 12px; }
+.tabs { display: flex; overflow-x: auto; background: white; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; z-index: 10; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex-shrink: 0; padding: 12px 16px; font-size: 14px; color: #636e72; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; user-select: none; }
+.tab:hover { color: #ee5a24; }
+.tab.active { color: #ee5a24; border-bottom-color: #ee5a24; font-weight: 600; }
+.content { padding: 12px 16px; }
+.category { display: none; }
+.category.active { display: block; }
+.card { background: white; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card .title-row { display: flex; justify-content: space-between; align-items: flex-start; cursor: pointer; user-select: none; }
+.card .title-text { font-size: 15px; font-weight: 600; color: #2d3436; line-height: 1.4; flex: 1; padding-right: 8px; }
+.card .title-text a { color: inherit; text-decoration: none; }
+.card .title-text a:hover { color: #ee5a24; }
+.card .expand-icon { font-size: 14px; color: #999; transition: transform 0.2s; flex-shrink: 0; margin-top: 2px; }
+.card.expanded .expand-icon { transform: rotate(180deg); }
+.card .meta { font-size: 12px; color: #999; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+.card .meta .source { color: #636e72; }
+.card .summary { font-size: 13px; color: #555; line-height: 1.5; max-height: 3em; overflow: hidden; transition: max-height 0.3s ease; }
+.card.expanded .summary { max-height: none; }
+.card .original { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #eee; font-size: 12px; color: #888; }
+.card.expanded .original { display: block; }
+.card .original-title { font-weight: 600; color: #666; margin-bottom: 4px; }
+.card .original-summary { line-height: 1.5; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+.tab-badge { display: inline-block; font-size: 11px; background: #ee5a2420; color: #ee5a24; padding: 1px 6px; border-radius: 8px; margin-left: 4px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>☀️ AI 晨报</h1>
+  <div class="sub">6月13日 · 开启一天的 AI 资讯</div>
+  <div class="stats">
+    <span>📊 52 条</span>
+    <span>📡 5 个来源</span>
+  </div>
+</div>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="all">全部</div>
+<div class="tab" data-cat="模型_技术">模型与技术</div>
+<div class="tab" data-cat="商业_融资">商业与融资</div>
+<div class="tab" data-cat="产业应用">产业应用</div>
+<div class="tab" data-cat="工具_开源">工具与开源</div>
+<div class="tab" data-cat="学术_政策">学术与政策</div>
+<div class="tab" data-cat="其他">其他</div>
+
+</div>
+<div class="content">
+  <div class="category active" id="cat-all">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851106394117383" target="_blank" rel="noopener">“宁王系”，排队 IPO</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">越来越多CVC在路上。宁德时代又出手了。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851073239372809" target="_blank" rel="noopener">读懂SpaceX的两万亿故事</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX市值突破2万亿美元，马斯克成为历史上第一位万亿美元身价的富豪。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851015329027336" target="_blank" rel="noopener">突发！Anthropic全球停用Claude 5</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Anthropic突然下线了地表最强Claude Fable 5，上线72小时被全球下架。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850902095336449" target="_blank" rel="noopener">SpaceX 2万亿美元市值</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX以史上最大估值完成IPO，股价冲高至176美元，市值突破2万亿美元。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3849942472512769" target="_blank" rel="noopener">氪星晚报：SpaceX确定发行价募资750亿美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851099090998277" target="_blank" rel="noopener">法国调查显示公众对人工智能态度分化明显</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">65%的法国人使用人工智能工具，但公众对AI的态度分化明显。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851097260004610" target="_blank" rel="noopener">摩尔线程：完成MiniMax M3大模型适配</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">MiniMax M3开源，摩尔线程旗舰AI训推一体智算卡MTT S5000完成Day-0极速适配。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851096396322055" target="_blank" rel="noopener">蓝思科技：收购同昇光电，加速布局光通信</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">蓝思科技战略收购同昇光电控股权，完善光电核心技术与产能布局。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851097792632066" target="_blank" rel="noopener">新通教育与36氪研究院联合发布《AI时代留学就业白皮书》</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">67.91%的企业认为协作能力是海归人才最大短板。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">主题投资基金的名称必须明示投资方向，不得出现名实不符。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850904887268611" target="_blank" rel="noopener">36氪首发：核心材料成本降至进口材料五分之一</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">中科电墨获投，车规级电致变色产线建设中。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850898430989577" target="_blank" rel="noopener">9点1氪：SpaceX市���破2.1万亿美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 arXiv</span>
+    <span>2026-05-17</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open source AI must win</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">587 points by vednig | 186 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day a daily mini golf game</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">125 points by ellg | 64 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">How to setup a local coding agent on macOS</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">328 points by kkm | 79 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 ProductHunt</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Ask about your data without leaving Slack</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What 'Click' Got Right About Agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">Lessons from a 109-agent code audit workflow</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">I Switched to the Agent Toolkit for AWS. Here's Why.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI assistants lie about citations. Here's how to catch them.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">Why AgentTrail Exists: Building Open-Source Audit Trails for AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">The Missing Layer Between AI and Production Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851073239372809?f=rss" target="_blank" rel="noopener">读懂SpaceX的两万亿故事：为什么马斯克每一手棋，永远都可以提前摆好？</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">飞向宇宙、浩瀚无垠 作者｜曹思颀 编辑｜靖宇 6 月 12 日，在 SpaceX 正式挂牌当天，马斯克选择前往得州的星舰基地，和数百名员工一起，远程敲响了纳斯达克的开市钟。 在现场，他用熟悉的那股自嘲范儿说：「如果当年有人告诉我会有今天，我</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850904887268611?f=rss" target="_blank" rel="noopener">36氪首发 | 核心材料成本降至进口材料五分之一，电致变色技术厂商获投，车规级产线建设中</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">硬氪获悉，中科电墨近日完成数千万元Pre-A轮融资，由西安龙鼎投资独家投资。本轮融资将主要用于车规级电致变色产线建设、核心材料研发迭代以及汽车领域市场拓展。 伴随新能源汽车向智能化、舒适化方向升级，汽车玻璃正从传统结构件逐步演变为集隔热、防</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850902095336449?f=rss" target="_blank" rel="noopener">SpaceX 2万亿美元市值这一夜，回望中国商业航天十年冷暖</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">6月12日晚，SpaceX以史上最大估值完成IPO，股价冲高至176美元，截至目前市值已经突破2万亿美元。 马斯克成为历史上第一位万亿美元身价的富豪。 马斯克在得克萨斯“星际基地”（Starbase）敲钟 其实在SpaceX敲钟之前，大洋彼</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850898430989577?f=rss" target="_blank" rel="noopener">9点1氪｜SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍；胖东来回应“员工不值这么多钱”等言论；FIFA联名款labubu世界杯销量暴涨30倍</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">今日热点导览 Kimi与一国有银行合作，全球首张AI原生信用卡开放预约 韩美半导体将使用500亿韩元投资于SpaceX SK海力士回应本月发生第二起火灾 杭州小龙虾降价超50% 金价连跌，批发商集中补货 TOP3大新闻 SpaceX市值破2</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3849942472512769?f=rss" target="_blank" rel="noopener">氪星晚报｜SpaceX确定发行价，募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划；中央网信办举报中心开设“涉AI应用乱象举报专区”</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">大公司： OpenAI CEO奥特曼推迟访韩计划 据报道，OpenAI首席执行官山姆·奥特曼因个人原因推迟访韩计划。奥特曼原定于14日至15日访韩，会见三星电子、Kakao、NAVER等企业负责人。 Alphabet旗下自动驾驶公司Waym</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851101538718722?f=rss" target="_blank" rel="noopener">逾200家机构调研两公司，电子元件行业最受青睐</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">本周（6月8日—12日）共有222家A股上市公司接受机构调研。从赚钱效应看，本周实现正收益的机构调研股不到三成，不过仍有表现不俗的个股。富信科技周内涨近70%，股价创下历史新高；莱伯泰科、中捷精工、联瑞新材股价涨逾20%，安德利、泰和新材、</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851094130676997?f=rss" target="_blank" rel="noopener">迭代快韧性足，A股出口企业估值静待重构</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">在全球经济增长乏力、地缘冲突此起彼伏等多重压力交织的背景下，A股上市公司出口业务非但没有收缩，反而实现量质同升。以沪市主板公司为例，2025年实现海外收入7.3万亿元，同比增长14%，海外创利0.9万亿元，同比增长21%，两项指标增速较上年</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851093396886529?f=rss" target="_blank" rel="noopener">11部门发文推动新能源重卡应用</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">近日，交通运输部、国家发展改革委、工业和信息化部等11个部门联合发布《推动新能源重卡规模化应用实施方案》，明确提出到2030年，新能源重卡渗透率达到40%，保有量突破160万辆，占总保有量的20%左右。此举旨在加快交通运输领域的绿色低碳转型</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851003216418055?f=rss" target="_blank" rel="noopener">今年前五个月全国铁路发送旅客19.69亿人次 创历史新高</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">36氪获悉，据中国铁路消息，今年1至5月，全国铁路发送旅客19.69亿人次、同比增长5.7%。客流总量、单日客流量和跨境客流等多项指标均创历史同期新高。今年前五个月，旅客出行需求旺盛，国铁集团充分运用铁路12306售票和候补购票大数据，动态</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851000746087432?f=rss" target="_blank" rel="noopener">美瑞新材：目前PPDA产品已成功产出合格产品，正处于下游客户开发及产品验证阶段</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">36氪获悉，美瑞新材在互动平台表示，PPDA（对苯二胺）属于芳香二胺，是对位芳纶及聚酰亚胺的核心原材料，同时也可用于制取偶氮染料、硫化染料等。目前PPDA产品已成功产出合格产品，性能指标达到预定目标，正处于下游客户开发及产品验证阶段，公司销</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462?f=rss" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引，严重偏离投资方向将被纳入负面考核指标</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">6月12日，中国证券投资基金业协会发布《公开募集证券投资基金主题投资风格管理指引》（下称“指引”）。指引要求，主题投资基金的名称必须明示投资方向，不得出现“名实不符”的情形，并明确基金管理人应加强对基金经理投资交易行为的监控、分析和评估，将</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 arXiv</span>
+    <span>2025-08-06</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2508.04848" target="_blank" rel="noopener">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What "Click" Got Right About Agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">Every Step Was Allowed. The Sequence Was the Attack. (AI Memory Judgment, CLAIM-30)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You: What to Actually Trace in an Agentic System</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make When They Stop Thinking</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains on AWS Aurora and Vercel</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget (Before It Gives Itself One)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">I Use AI to Write Most of My Code. So I Built a Tool That Tests Whether I Understand It.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended 4 Days After Launch. This Is Not an Outage.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">When My AI API Went Down: Building a Resilient Fallback Pipeline</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">I built a "what do I need on my final" calculator with AI auto-fill (Next.js 16 + Gemini)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap: Shipping an Endless Climber with an AI Pair Programmer</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">The "Demo vs. Production" Trap: Building a Scalable Kafka Pipeline for LLMs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+  </div>
+  <div class="category" id="cat-模型_技术">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851015329027336" target="_blank" rel="noopener">突发！Anthropic全球停用Claude 5</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Anthropic突然下线了地表最强Claude Fable 5，上线72小时被全球下架。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 arXiv</span>
+    <span>2025-08-06</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2508.04848" target="_blank" rel="noopener">Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Chang Tian, Matthew B. Blaschko, Mingzhe Xing, Xiuxing Li, Yinliang Yue, Marie-Francine Moens</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/akirayuusha/launching-babychain-durable-image-and-video-model-chains-on-aws-aurora-and-vercel-1p5h" target="_blank" rel="noopener">Launching BabyChain: durable image and video model chains on AWS Aurora and Vercel</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tokenmixai/i-checked-why-claude-fable-5-was-suspended-4-days-after-launch-this-is-not-an-outage-54f2" target="_blank" rel="noopener">I Checked Why Claude Fable 5 Was Suspended 4 Days After Launch. This Is Not an Outage.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/yashmitb/i-built-a-what-do-i-need-on-my-final-calculator-with-ai-auto-fill-nextjs-16-gemini-899" target="_blank" rel="noopener">I built a "what do I need on my final" calculator with AI auto-fill (Next.js 16 + Gemini)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/shalini2410/the-demo-vs-production-trap-building-a-scalable-kafka-pipeline-for-llms-5eli" target="_blank" rel="noopener">The "Demo vs. Production" Trap: Building a Scalable Kafka Pipeline for LLMs</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+  </div>
+<div class="category" id="cat-商业_融资">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851106394117383" target="_blank" rel="noopener">“宁王系”，排队 IPO</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">越来越多CVC在路上。宁德时代又出手了。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850902095336449" target="_blank" rel="noopener">SpaceX 2万亿美元市值</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX以史上最大估值完成IPO，股价冲高至176美元，市值突破2万亿美元。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3849942472512769" target="_blank" rel="noopener">氪星晚报：SpaceX确定发行价募资750亿美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851096396322055" target="_blank" rel="noopener">蓝思科技：收购同昇光电，加速布局光通信</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">蓝思科技战略收购同昇光电控股权，完善光电核心技术与产能布局。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">主题投资基金的名称必须明示投资方向，不得出现名实不符。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850904887268611?f=rss" target="_blank" rel="noopener">36氪首发 | 核心材料成本降至进口材料五分之一，电致变色技术厂商获投，车规级产线建设中</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">硬氪获悉，中科电墨近日完成数千万元Pre-A轮融资，由西安龙鼎投资独家投资。本轮融资将主要用于车规级电致变色产线建设、核心材料研发迭代以及汽车领域市场拓展。 伴随新能源汽车向智能化、舒适化方向升级，汽车玻璃正从传统结构件逐步演变为集隔热、防</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850902095336449?f=rss" target="_blank" rel="noopener">SpaceX 2万亿美元市值这一夜，回望中国商业航天十年冷暖</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">6月12日晚，SpaceX以史上最大估值完成IPO，股价冲高至176美元，截至目前市值已经突破2万亿美元。 马斯克成为历史上第一位万亿美元身价的富豪。 马斯克在得克萨斯“星际基地”（Starbase）敲钟 其实在SpaceX敲钟之前，大洋彼</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850898430989577?f=rss" target="_blank" rel="noopener">9点1氪｜SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍；胖东来回应“员工不值这么多钱”等言论；FIFA联名款labubu世界杯销量暴涨30倍</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">今日热点导览 Kimi与一国有银行合作，全球首张AI原生信用卡开放预约 韩美半导体将使用500亿韩元投资于SpaceX SK海力士回应本月发生第二起火灾 杭州小龙虾降价超50% 金价连跌，批发商集中补货 TOP3大新闻 SpaceX市值破2</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3849942472512769?f=rss" target="_blank" rel="noopener">氪星晚报｜SpaceX确定发行价，募资750亿美元创史上最大IPO；OpenAI CEO奥特曼推迟访韩计划；中央网信办举报中心开设“涉AI应用乱象举报专区”</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">大公司： OpenAI CEO奥特曼推迟访韩计划 据报道，OpenAI首席执行官山姆·奥特曼因个人原因推迟访韩计划。奥特曼原定于14日至15日访韩，会见三星电子、Kakao、NAVER等企业负责人。 Alphabet旗下自动驾驶公司Waym</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851101538718722?f=rss" target="_blank" rel="noopener">逾200家机构调研两公司，电子元件行业最受青睐</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">本周（6月8日—12日）共有222家A股上市公司接受机构调研。从赚钱效应看，本周实现正收益的机构调研股不到三成，不过仍有表现不俗的个股。富信科技周内涨近70%，股价创下历史新高；莱伯泰科、中捷精工、联瑞新材股价涨逾20%，安德利、泰和新材、</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851094130676997?f=rss" target="_blank" rel="noopener">迭代快韧性足，A股出口企业估值静待重构</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">在全球经济增长乏力、地缘冲突此起彼伏等多重压力交织的背景下，A股上市公司出口业务非但没有收缩，反而实现量质同升。以沪市主板公司为例，2025年实现海外收入7.3万亿元，同比增长14%，海外创利0.9万亿元，同比增长21%，两项指标增速较上年</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3850990241043462?f=rss" target="_blank" rel="noopener">中基协发布公募基金主题投资风格管理指引，严重偏离投资方向将被纳入负面考核指标</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">6月12日，中国证券投资基金业协会发布《公开募集证券投资基金主题投资风格管理指引》（下称“指引”）。指引要求，主题投资基金的名称必须明示投资方向，不得出现“名实不符”的情形，并明确基金管理人应加强对基金经理投资交易行为的监控、分析和评估，将</div>
+  
+</div>
+  </div>
+<div class="category" id="cat-产业应用">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851093396886529?f=rss" target="_blank" rel="noopener">11部门发文推动新能源重卡应用</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">近日，交通运输部、国家发展改革委、工业和信息化部等11个部门联合发布《推动新能源重卡规模化应用实施方案》，明确提出到2030年，新能源重卡渗透率达到40%，保有量突破160万辆，占总保有量的20%左右。此举旨在加快交通运输领域的绿色低碳转型</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851000746087432?f=rss" target="_blank" rel="noopener">美瑞新材：目前PPDA产品已成功产出合格产品，正处于下游客户开发及产品验证阶段</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">36氪获悉，美瑞新材在互动平台表示，PPDA（对苯二胺）属于芳香二胺，是对位芳纶及聚酰亚胺的核心原材料，同时也可用于制取偶氮染料、硫化染料等。目前PPDA产品已成功产出合格产品，性能指标达到预定目标，正处于下游客户开发及产品验证阶段，公司销</div>
+  
+</div>
+  </div>
+<div class="category" id="cat-工具_开源">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851099090998277" target="_blank" rel="noopener">法国调查显示公众对人工智能态度分化明显</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">65%的法国人使用人工智能工具，但公众对AI的态度分化明显。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open source AI must win</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">587 points by vednig | 186 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/aws/i-switched-to-the-agent-toolkit-for-aws-heres-why-5hf" target="_blank" rel="noopener">I Switched to the Agent Toolkit for AWS. Here's Why.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/__c1b9e06dc90a7e0a676b/when-my-ai-api-went-down-building-a-resilient-fallback-pipeline-1omg" target="_blank" rel="noopener">When My AI API Went Down: Building a Resilient Fallback Pipeline</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+  </div>
+<div class="category" id="cat-学术_政策">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/ayoubzulfiqar/lessons-from-a-109-agent-code-audit-workflow-4a5m" target="_blank" rel="noopener">Lessons from a 109-agent code audit workflow</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/agenttrail/why-agenttrail-exists-building-open-source-audit-trails-for-ai-agents-2i38" target="_blank" rel="noopener">Why AgentTrail Exists: Building Open-Source Audit Trails for AI Agents</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/saurav_bhattacharya/your-agent-logs-are-lying-to-you-what-to-actually-trace-in-an-agentic-system-k8o" target="_blank" rel="noopener">Your Agent Logs Are Lying to You: What to Actually Trace in an Agentic System</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+  </div>
+<div class="category" id="cat-其他">
+    <div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851073239372809" target="_blank" rel="noopener">读懂SpaceX的两万亿故事</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX市值突破2万亿美元，马斯克成为历史上第一位万亿美元身价的富豪。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851097260004610" target="_blank" rel="noopener">摩尔线程：完成MiniMax M3大模型适配</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">MiniMax M3开源，摩尔线程旗舰AI训推一体智算卡MTT S5000完成Day-0极速适配。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851097792632066" target="_blank" rel="noopener">新通教育与36氪研究院联合发布《AI时代留学就业白皮书》</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">67.91%的企业认为协作能力是海归人才最大短板。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850904887268611" target="_blank" rel="noopener">36氪首发：核心材料成本降至进口材料五分之一</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">中科电墨获投，车规级电致变色产线建设中。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3850898430989577" target="_blank" rel="noopener">9点1氪：SpaceX市���破2.1万亿美元</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">SpaceX市值破2.1万亿美元，马斯克身家达巴菲特7倍。</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 arXiv</span>
+    <span>2026-05-17</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://arxiv.org/abs/2605.23989" target="_blank" rel="noopener">Towards trustworthy agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Authors: Jinhu Qi, Muzhi Li, Jiahong Liu et al.</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://putt.day/" target="_blank" rel="noopener">Show HN: Putt.day a daily mini golf game</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">125 points by ellg | 64 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 HackerNews</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank" rel="noopener">How to setup a local coding agent on macOS</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">328 points by kkm | 79 comments</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 ProductHunt</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://www.producthunt.com/products/basedash" target="_blank" rel="noopener">Slack Data Agent</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">Ask about your data without leaving Slack</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What 'Click' Got Right About Agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608" target="_blank" rel="noopener">AI assistants lie about citations. Here's how to catch them.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-12</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/rapidkit/the-missing-layer-between-ai-and-production-systems-f9c" target="_blank" rel="noopener">The Missing Layer Between AI and Production Systems</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/p/3851073239372809?f=rss" target="_blank" rel="noopener">读懂SpaceX的两万亿故事：为什么马斯克每一手棋，永远都可以提前摆好？</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">飞向宇宙、浩瀚无垠 作者｜曹思颀 编辑｜靖宇 6 月 12 日，在 SpaceX 正式挂牌当天，马斯克选择前往得州的星舰基地，和数百名员工一起，远程敲响了纳斯达克的开市钟。 在现场，他用熟悉的那股自嘲范儿说：「如果当年有人告诉我会有今天，我</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 36kr</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://36kr.com/newsflashes/3851003216418055?f=rss" target="_blank" rel="noopener">今年前五个月全国铁路发送旅客19.69亿人次 创历史新高</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary">36氪获悉，据中国铁路消息，今年1至5月，全国铁路发送旅客19.69亿人次、同比增长5.7%。客流总量、单日客流量和跨境客流等多项指标均创历史同期新高。今年前五个月，旅客出行需求旺盛，国铁集团充分运用铁路12306售票和候补购票大数据，动态</div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/alexmercedcoder/the-remote-already-exists-what-click-got-right-about-agentic-ai-1d97" target="_blank" rel="noopener">The Remote Already Exists: What "Click" Got Right About Agentic AI</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/zep1997/every-step-was-allowed-the-sequence-was-the-attack-ai-memory-judgment-claim-30-4ehc" target="_blank" rel="noopener">Every Step Was Allowed. The Sequence Was the Attack. (AI Memory Judgment, CLAIM-30)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/sarim_nadeem_888180307df8/debugging-in-the-age-of-ai-10-blunders-beginners-make-when-they-stop-thinking-1d2d" target="_blank" rel="noopener">Debugging in the Age of AI: 10 Blunders Beginners Make When They Stop Thinking</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/tonyspiro/how-to-give-your-ai-agent-a-budget-before-it-gives-itself-one-52ia" target="_blank" rel="noopener">How to Give Your AI Agent a Budget (Before It Gives Itself One)</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/jemhrice/i-use-ai-to-write-most-of-my-code-so-i-built-a-tool-that-tests-whether-i-understand-it-5fmj" target="_blank" rel="noopener">I Use AI to Write Most of My Code. So I Built a Tool That Tests Whether I Understand It.</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+<div class="card">
+  <div class="meta">
+    <span class="source">📡 DevTo</span>
+    <span>2026-06-13</span>
+  </div>
+  <div class="title-row">
+    <div class="title-text"><a href="https://dev.to/bsymbolic/lava-leap-shipping-an-endless-climber-with-an-ai-pair-programmer-30f3" target="_blank" rel="noopener">Lava Leap: Shipping an Endless Climber with an AI Pair Programmer</a></div>
+    <div class="expand-icon">▼</div>
+  </div>
+  <div class="summary"></div>
+  
+</div>
+  </div>
+
+</div>
+<div class="footer">基于 AI 自动采集，仅供参考 · 2026-06-13</div>
+<script>
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cat-' + tab.dataset.cat).classList.add('active');
+  });
+});
+document.querySelectorAll('.card .title-row').forEach(row => {
+  row.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') return;
+    const card = row.closest('.card');
+    const wasExpanded = card.classList.contains('expanded');
+    card.closest('.category').querySelectorAll('.card.expanded').forEach(c => c.classList.remove('expanded'));
+    if (!wasExpanded) card.classList.add('expanded');
+  });
+});
+</script>
+</body>
+</html>
